@@ -1,11 +1,11 @@
-package airspace;
+package airspaceengine.waypoint;
 
 public class Waypoint {
 
     //instance variables
-    private double x;
-    private double y;
-    private double z;
+    private final double x;
+    private final double y;
+    private final double z;
 
     //constructor
     public Waypoint(double x_input, double y_input, double z_input) {

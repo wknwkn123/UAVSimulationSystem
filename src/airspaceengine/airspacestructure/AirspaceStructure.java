@@ -1,4 +1,7 @@
-package airspace;
+package airspaceengine.airspacestructure;
+import airspaceengine.routesegment.RouteSegment;
+import airspaceengine.waypoint.Waypoint;
+
 import java.util.List;
 
 public class AirspaceStructure {
