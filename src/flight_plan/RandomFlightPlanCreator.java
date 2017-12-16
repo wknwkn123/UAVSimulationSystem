@@ -1,6 +1,6 @@
-package simulationengine.flightplan;
+package flight_plan;
 
-import airspaceengine.airspacestructure.AirspaceStructure;
+import airspace_engine.airspace_structure.AirspaceStructure;
 
 import java.util.ArrayList;
 import java.util.List;

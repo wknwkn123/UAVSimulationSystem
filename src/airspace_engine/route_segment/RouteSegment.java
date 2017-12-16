@@ -1,6 +1,6 @@
-package airspaceengine.routesegment;
+package airspace_engine.route_segment;
 
-import airspaceengine.waypoint.Waypoint;
+import airspace_engine.waypoint.Waypoint;
 
 public class RouteSegment {
 

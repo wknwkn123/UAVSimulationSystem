@@ -1,6 +1,6 @@
-package airspaceengine;
+package airspace_engine;
 
-import airspaceengine.airspacestructure.*;
+import airspace_engine.airspace_structure.*;
 
 public class AirspaceEngine {
     private AirspaceStructure airMap;

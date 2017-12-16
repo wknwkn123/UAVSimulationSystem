@@ -1,6 +1,6 @@
-package simulationengine;
+package simulation_engine;
 
-import airspaceengine.AirspaceEngine;
+import airspace_engine.AirspaceEngine;
 
 public class SimulationApp {
 	

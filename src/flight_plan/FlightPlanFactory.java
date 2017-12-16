@@ -1,4 +1,4 @@
-package simulationengine.flightplan;
+package flight_plan;
 
 public class FlightPlanFactory {
     public static FlightPlanCreator getFlightPlanCreator(String type) {

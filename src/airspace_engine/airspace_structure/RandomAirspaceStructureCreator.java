@@ -1,6 +1,6 @@
-package airspaceengine.airspacestructure;
-import airspaceengine.waypoint.Waypoint;
-import airspaceengine.routesegment.RouteSegment;
+package airspace_engine.airspace_structure;
+import airspace_engine.waypoint.Waypoint;
+import airspace_engine.route_segment.RouteSegment;
 
 import java.util.ArrayList;
 import java.util.List;

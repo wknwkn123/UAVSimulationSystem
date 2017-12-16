@@ -1,4 +1,4 @@
-package airspaceengine.waypoint;
+package airspace_engine.waypoint;
 
 public class Waypoint {
 

@@ -1,4 +1,4 @@
-package airspaceengine.airspacestructure;
+package airspace_engine.airspace_structure;
 
 public class AirspaceStructureFactory {
     public static AirspaceStructureCreator getAirspaceStructureCreator(String type) {
