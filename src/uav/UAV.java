@@ -1,14 +1,20 @@
 package uav;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
+import flight_plan.FlightPlan;
 import uav.UAVInfo;
 
 public class UAV {
     private UAVInfo UAVInfo;
     private UAVOperation UAVOperation;
+    private List<FlightPlan> schedule;
 
     //constructor
     public UAV(String uav_name, String uav_owner, String uav_manufacturer, String model_type, double max_speed, double max_altitude, Date last_certification_date) {
         UAVInfo = new UAVInfo(uav_name, uav_owner, uav_manufacturer, model_type, max_speed, max_altitude, last_certification_date);
+        schedule = new ArrayList<>();
     }
 
     public void printUAVInfo() {
@@ -24,5 +30,9 @@ public class UAV {
 
     public UAVInfo getUAVInfo() {
         return UAVInfo;
+    }
+
+    public void addJob(FlightPlan job) {
+        schedule.add(job);
     }
 }

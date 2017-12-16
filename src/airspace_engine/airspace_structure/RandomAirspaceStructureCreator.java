@@ -12,22 +12,20 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
     public AirspaceStructure createAirspaceStructure(){
         //create nodes
         List<Waypoint> nodes = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 6; i++) {
             nodes.add(new Waypoint(i, i, 1));
             System.out.println("Waypoint " + nodes.get(i).getX() + " initialized");
         }
 
         //create edges
         List<RouteSegment> routeSegments = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (i != j) {
-                    int randomNum = ThreadLocalRandom.current().nextInt(0, 25);
-                    routeSegments.add(new RouteSegment(nodes.get(i), nodes.get(j), randomNum));
-                    routeSegments.add(new RouteSegment(nodes.get(j), nodes.get(i), randomNum));
-                }
-            }
-        }
+        routeSegments.add(new RouteSegment(nodes.get(0), nodes.get(1), 15));
+        routeSegments.add(new RouteSegment(nodes.get(1), nodes.get(2), 12));
+        routeSegments.add(new RouteSegment(nodes.get(0), nodes.get(3), 10));
+        routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(3), 5));
+        routeSegments.add(new RouteSegment(nodes.get(4), nodes.get(5), 7));
+        routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(5), 9));
+
         for (int i = 0; i < routeSegments.size(); i++) {
             System.out.println(routeSegments.get(i) + " Route Segment " + routeSegments.get(i).getTo().getX() + " to " + routeSegments.get(i).getFrom().getX() + " initialized with weight " + routeSegments.get(i).getWeight());
         }

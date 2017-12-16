@@ -6,6 +6,12 @@ public class FlightSegment {
     private Waypoint origin;
     private Waypoint destination;
 
+    public FlightSegment(Waypoint origin, Waypoint destination) {
+        this.origin = origin;
+        this.destination = destination;
+
+    }
+
     public Waypoint getOrigin() {
         return origin;
     }

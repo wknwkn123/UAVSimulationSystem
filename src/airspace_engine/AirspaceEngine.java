@@ -19,11 +19,19 @@ public class AirspaceEngine {
     		switch(type) {
     			case "RANDOM":
     				AirspaceStructureCreator airspaceCreator = AirspaceStructureFactory.getAirspaceStructureCreator("RANDOM");
-    		        airMap = airspaceCreator.createAirspaceStructure();
+    		        setAirMap(airspaceCreator.createAirspaceStructure());
     		        break;
     		    default:
     		    		System.out.println("Default is printed. This should not happen.");
     		    		break;
     		}        
     }
+
+	public AirspaceStructure getAirMap() {
+		return airMap;
+	}
+
+	public void setAirMap(AirspaceStructure airMap) {
+		this.airMap = airMap;
+	}
 }

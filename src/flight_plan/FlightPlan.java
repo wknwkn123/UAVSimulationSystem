@@ -59,4 +59,6 @@ public class FlightPlan {
         this.progress = progress;
     }
 
+
+
 }
