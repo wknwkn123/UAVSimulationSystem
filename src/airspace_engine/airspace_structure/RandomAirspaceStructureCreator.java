@@ -14,7 +14,7 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
         List<Waypoint> nodes = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             nodes.add(new Waypoint(i, i, 1));
-            System.out.println("Waypoint " + nodes.get(i).getX() + " initialized");
+            System.out.println("Waypoint " + nodes.get(i).getId() + " initialized");
         }
 
         //create edges
@@ -27,7 +27,7 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
         routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(5), 9));
 
         for (int i = 0; i < routeSegments.size(); i++) {
-            System.out.println(routeSegments.get(i) + " Route Segment " + routeSegments.get(i).getTo().getX() + " to " + routeSegments.get(i).getFrom().getX() + " initialized with weight " + routeSegments.get(i).getWeight());
+            System.out.println("Route Segment " + routeSegments.get(i).getId() + " from " + routeSegments.get(i).getTo().getX() + " to " + routeSegments.get(i).getFrom().getX() + " initialized with weight " + routeSegments.get(i).getWeight());
         }
 
         //create airspace

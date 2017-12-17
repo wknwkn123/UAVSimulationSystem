@@ -7,14 +7,18 @@ import flight_plan.FlightPlan;
 import uav.UAVInfo;
 
 public class UAV {
+    private String id;
     private UAVInfo UAVInfo;
     private UAVOperation UAVOperation;
     private List<FlightPlan> schedule;
+    private static int uavID = 0;
 
     //constructor
     public UAV(String uav_name, String uav_owner, String uav_manufacturer, String model_type, double max_speed, double max_altitude, Date last_certification_date) {
         UAVInfo = new UAVInfo(uav_name, uav_owner, uav_manufacturer, model_type, max_speed, max_altitude, last_certification_date);
         schedule = new ArrayList<>();
+        id = "UA" + String.format("%05d", uavID);
+        uavID++;
     }
 
     public void printUAVInfo() {
@@ -31,6 +35,8 @@ public class UAV {
     public UAVInfo getUAVInfo() {
         return UAVInfo;
     }
+
+    public String getId() { return id; }
 
     public void addJob(FlightPlan job) {
         schedule.add(job);
