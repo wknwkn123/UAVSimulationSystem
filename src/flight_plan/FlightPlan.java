@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlightPlan {
+    private String id;
+    private static int flightPlanID = 0;
     private Waypoint startPoint;
     private Waypoint endPoint;
 //    private DateTime targetStartTime;
@@ -21,6 +23,8 @@ public class FlightPlan {
         completed = false;
         this.payload = load;
         this.setProgress(0);
+        id = "FP" + String.format("%05d", flightPlanID);
+        flightPlanID++;
     }
 
     public List<FlightSegment> getFlightPath() {

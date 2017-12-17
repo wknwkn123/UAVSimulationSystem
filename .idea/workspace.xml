@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e9ea44-e61f-4155-a9e8-5c251422c3de" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/simulation_engine/SimulationApp.java" afterPath="$PROJECT_DIR$/src/simulation_engine/SimulationApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightPlan.java" afterPath="$PROJECT_DIR$/src/flight_plan/FlightPlan.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,13 +15,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FlightPlan.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlightPlan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="390">
+              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Waypoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/airspace_engine/waypoint/Waypoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="54" />
+              <folding>
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,7 +53,7 @@
       <file leaf-file-name="FlightPlanEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="153">
               <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/simulation_engine/SimulationApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/flight_plan/FlightPlan.java" />
         <option value="$PROJECT_DIR$/src/simulation_engine/Time.java" />
         <option value="$PROJECT_DIR$/src/airspace_engine/AirspaceEngine.java" />
         <option value="$PROJECT_DIR$/src/flight_plan/FlightSegment.java" />
@@ -96,6 +107,7 @@
         <option value="$PROJECT_DIR$/src/airspace_engine/airspace_structure/RandomAirspaceStructureCreator.java" />
         <option value="$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java" />
         <option value="$PROJECT_DIR$/src/simulation_engine/SimulationApp.java" />
+        <option value="$PROJECT_DIR$/src/flight_plan/FlightPlan.java" />
       </list>
     </option>
   </component>
@@ -151,6 +163,13 @@
               <item name="SimulationUAV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="airspace_engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimulationUAV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulationUAV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="airspace_engine" type="462c0819:PsiDirectoryNode" />
+              <item name="waypoint" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimulationUAV" type="b2602c69:ProjectViewProjectNode" />
@@ -316,12 +335,12 @@
       <updated>1513420028736</updated>
       <workItem from="1513420030053" duration="3490000" />
       <workItem from="1513437580899" duration="137000" />
-      <workItem from="1513497040776" duration="1046000" />
+      <workItem from="1513497040776" duration="1434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4673000" />
+    <option name="totallyTimeSpent" value="5061000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -345,8 +364,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27114427" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3868159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27114427" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3868159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2453505" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -483,17 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/airspace_engine/waypoint/Waypoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/airspace_engine/airspace_structure/RandomAirspaceStructureCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -518,28 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/airspace_engine/AirspaceEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -551,7 +537,40 @@
     <entry file="file://$PROJECT_DIR$/src/simulation_engine/SimulationApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/airspace_engine/waypoint/Waypoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="54" />
+          <folding>
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flight_plan/FlightPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
