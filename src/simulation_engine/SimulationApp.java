@@ -1,6 +1,7 @@
 package simulation_engine;
 
 import airspace_engine.AirspaceEngine;
+import flight_plan.FlightPlanEngine;
 
 public class SimulationApp {
 	
@@ -9,6 +10,9 @@ public class SimulationApp {
 		AirspaceEngine.getInstance().createAirspace("RANDOM");
 
 		//create schedule/demand
+		FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
+
+		//assign schedule to UAVs
 
         //run simulation
 	}
