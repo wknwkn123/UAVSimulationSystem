@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class UAVInfo {
     private static int idCount = 1;
-    private int Id;
+    private String id;
     private String name;
     private String owner;
     private String manufacturer;
@@ -21,7 +21,7 @@ public class UAVInfo {
         maxSpeed = max_speed;
         maxAltitude = max_altitude;
         lastCertificationDate = last_certification_date;
-        Id = idCount;
+        id = "UA" + String.format("%05d", idCount);
         idCount++;
     }
 
@@ -33,12 +33,8 @@ public class UAVInfo {
         UAVInfo.idCount = idCount;
     }
 
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        Id = id;
+    public String getId() {
+        return id;
     }
 
     public String getName() {
@@ -93,7 +89,5 @@ public class UAVInfo {
         return lastCertificationDate;
     }
 
-    public void setLastCertificationDate(Date lastCertificationDate) {
-        this.lastCertificationDate = lastCertificationDate;
-    }
+    public void setLastCertificationDate(Date lastCertificationDate) { this.lastCertificationDate = lastCertificationDate; }
 }

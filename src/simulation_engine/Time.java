@@ -11,4 +11,6 @@ public class Time {
     private Time() {
         unit = 0;
     }
+
+    public int getUnit() { return unit; }
 }

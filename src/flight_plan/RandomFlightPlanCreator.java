@@ -12,27 +12,28 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
 
     public List<FlightPlan> createFlightPlans(AirspaceStructure airMap) {
         //hardcoding flight plans
-        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(5), 5));
-        flightPlans.add(new FlightPlan(airMap.getNodes().get(2), airMap.getNodes().get(4), 2));
-        flightPlans.add(new FlightPlan(airMap.getNodes().get(3), airMap.getNodes().get(4), 2));
-        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(2), 4));
-        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(1), 3));
+        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(5), 5, 0, 5));
+        flightPlans.add(new FlightPlan(airMap.getNodes().get(2), airMap.getNodes().get(4), 2, 2, 4));
+        flightPlans.add(new FlightPlan(airMap.getNodes().get(3), airMap.getNodes().get(4), 2, 5, 8));
+        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(2), 4, 5, 9));
+        flightPlans.add(new FlightPlan(airMap.getNodes().get(0), airMap.getNodes().get(1), 3, 10, 13));
 
         //hardcoding flight path for each plan
-        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getNodes().get(0), airMap.getNodes().get(1)));
-        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getNodes().get(1), airMap.getNodes().get(2)));
-        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getNodes().get(2), airMap.getNodes().get(5)));
+        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().get(0)));
+        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().get(1)));
+        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().get(5)));
 
-        flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getNodes().get(2), airMap.getNodes().get(5)));
-        flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getNodes().get(5), airMap.getNodes().get(4)));
+        flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getEdges().get(5)));
+        flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getEdges().get(10)));
 
-        flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getNodes().get(3), airMap.getNodes().get(2)));
-        flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getNodes().get(2), airMap.getNodes().get(4)));
+        flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getEdges().get(6)));
+        flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getEdges().get(5)));
+        flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getEdges().get(8)));
 
-        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getNodes().get(0), airMap.getNodes().get(3)));
-        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getNodes().get(3), airMap.getNodes().get(2)));
+        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().get(2)));
+        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().get(6)));
 
-        flightPlans.get(4).addFlightSegment(new FlightSegment(airMap.getNodes().get(0), airMap.getNodes().get(1)));
+        flightPlans.get(4).addFlightSegment(new FlightSegment(airMap.getEdges().get(0)));
         return flightPlans;
     }
 

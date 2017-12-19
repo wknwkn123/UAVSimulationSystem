@@ -3,22 +3,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import airspace_engine.waypoint.Waypoint;
 import flight_plan.FlightPlan;
+import flight_plan.FlightSegment;
+import simulation_engine.Time;
 import uav.UAVInfo;
 
-public class UAV {
-    private String id;
+public class UAV implements Runnable{
     private UAVInfo UAVInfo;
-    private UAVOperation UAVOperation;
+    private UAVOperation operation;
     private List<FlightPlan> schedule;
-    private static int uavID = 0;
-
     //constructor
     public UAV(String uav_name, String uav_owner, String uav_manufacturer, String model_type, double max_speed, double max_altitude, Date last_certification_date) {
         UAVInfo = new UAVInfo(uav_name, uav_owner, uav_manufacturer, model_type, max_speed, max_altitude, last_certification_date);
         schedule = new ArrayList<>();
-        id = "UA" + String.format("%05d", uavID);
-        uavID++;
+        operation = new UAVOperation();
     }
 
     public void printUAVInfo() {
@@ -36,9 +35,24 @@ public class UAV {
         return UAVInfo;
     }
 
-    public String getId() { return id; }
-
     public void addJob(FlightPlan job) {
         schedule.add(job);
+    }
+
+    public void run() {
+            for (FlightPlan plan : schedule) {
+                for (FlightSegment segment : plan.getFlightPath()) {
+                    Waypoint origin = segment.getSegment().getFrom();
+                    Waypoint destination = segment.getSegment().getTo();
+                    double x = destination.getX() - origin.getX();
+                    double y = destination.getY() - origin.getY();
+                    double z = destination.getZ() - origin.getZ();
+                    while (operation.getCurrentX() != destination.getX() && operation.getCurrentY() != destination.getY() && operation.getCurrentZ() != destination.getZ()) {
+                        operation.setCurrentX(operation.getCurrentX() + (1 / segment.getSegment().getWeight()) * x);
+                        operation.setCurrentY(operation.getCurrentZ() + (1 / segment.getSegment().getWeight()) * y);
+                        operation.setCurrentZ(operation.getCurrentZ() + (1 / segment.getSegment().getWeight()) * z);
+                    }
+                }
+            }
     }
 }

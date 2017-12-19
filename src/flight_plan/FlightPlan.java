@@ -7,22 +7,24 @@ import java.util.List;
 
 public class FlightPlan {
     private String id;
-    private static int flightPlanID = 0;
+    private static int flightPlanID = 1;
     private Waypoint startPoint;
     private Waypoint endPoint;
-//    private DateTime targetStartTime;
-//    private DateTime targetEndTime;
+    private int targetStartTime;
+    private int targetEndTime;
     private List<FlightSegment> flightPath = new ArrayList<>();
     private boolean completed;
     private double payload;
     private double progress;
 
-    public FlightPlan(Waypoint start_point, Waypoint end_point, double load) {
+    public FlightPlan(Waypoint start_point, Waypoint end_point, double load, int start, int end) {
         startPoint = start_point;
         endPoint = end_point;
         completed = false;
         this.payload = load;
         this.setProgress(0);
+        this.targetStartTime = start;
+        this.targetEndTime = end;
         id = "FP" + String.format("%05d", flightPlanID);
         flightPlanID++;
     }
@@ -58,6 +60,14 @@ public class FlightPlan {
     public double getProgress() {
         return progress;
     }
+
+    public static int getFlightPlanID() { return flightPlanID; }
+
+    public int getTargetStartTime() { return targetStartTime; }
+
+    public int getTargetEndTime() { return targetEndTime; }
+
+    public boolean isCompleted() { return completed; }
 
     public void setProgress(double progress) {
         this.progress = progress;

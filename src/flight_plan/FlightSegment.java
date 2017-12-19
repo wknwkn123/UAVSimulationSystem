@@ -1,30 +1,16 @@
 package flight_plan;
 
+import airspace_engine.route_segment.RouteSegment;
 import airspace_engine.waypoint.Waypoint;
 
 public class FlightSegment {
-    private Waypoint origin;
-    private Waypoint destination;
+    private RouteSegment segment;
 
-    public FlightSegment(Waypoint origin, Waypoint destination) {
-        this.origin = origin;
-        this.destination = destination;
-
+    public FlightSegment(RouteSegment segment) {
+        this.segment = segment;
     }
 
-    public Waypoint getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(Waypoint origin) {
-        this.origin = origin;
-    }
-
-    public Waypoint getDestination() {
-        return destination;
-    }
-
-    public void setDestination(Waypoint destination) {
-        this.destination = destination;
+    public RouteSegment getSegment() {
+        return segment;
     }
 }

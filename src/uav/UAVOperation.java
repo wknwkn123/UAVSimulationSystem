@@ -5,6 +5,7 @@ public class UAVOperation {
     private double currentY;
     private double currentZ;
     private double remainingBatteryLevel;
+    private int state;
 
     public double getCurrentX() {
         return currentX;
@@ -34,7 +35,9 @@ public class UAVOperation {
         return remainingBatteryLevel;
     }
 
-    public void setRemainingBatteryLevel(double remainingBatteryLevel) {
-        this.remainingBatteryLevel = remainingBatteryLevel;
-    }
+    public void setRemainingBatteryLevel(double remainingBatteryLevel) { this.remainingBatteryLevel = remainingBatteryLevel; }
+
+    public int getState() { return state; }
+
+    public void setState(int state) { this.state = state; }
 }

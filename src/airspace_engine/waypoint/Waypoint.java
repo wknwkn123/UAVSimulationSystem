@@ -7,7 +7,7 @@ public class Waypoint {
     private final double y;
     private final double z;
     private final String id;
-    private static int waypointID = 0;
+    private static int waypointID = 1;
 
     //constructor
     public Waypoint(double x_input, double y_input, double z_input) {

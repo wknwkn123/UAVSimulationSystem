@@ -11,7 +11,7 @@ public class RouteSegment {
     private double targetSpeed;
     private double actualSpeed;
     private final int weight;
-    private static int routeSegmentID = 0;
+    private static int routeSegmentID = 1;
 
     //constructor
     public RouteSegment(Waypoint origin, Waypoint end, int weight) {

@@ -25,6 +25,12 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
         routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(3), 5));
         routeSegments.add(new RouteSegment(nodes.get(4), nodes.get(5), 7));
         routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(5), 9));
+        routeSegments.add(new RouteSegment(nodes.get(1), nodes.get(0), 15));
+        routeSegments.add(new RouteSegment(nodes.get(2), nodes.get(1), 12));
+        routeSegments.add(new RouteSegment(nodes.get(3), nodes.get(0), 10));
+        routeSegments.add(new RouteSegment(nodes.get(3), nodes.get(2), 5));
+        routeSegments.add(new RouteSegment(nodes.get(5), nodes.get(4), 7));
+        routeSegments.add(new RouteSegment(nodes.get(5), nodes.get(2), 9));
 
         for (int i = 0; i < routeSegments.size(); i++) {
             System.out.println("Route Segment " + routeSegments.get(i).getId() + " from " + routeSegments.get(i).getTo().getX() + " to " + routeSegments.get(i).getFrom().getX() + " initialized with weight " + routeSegments.get(i).getWeight());

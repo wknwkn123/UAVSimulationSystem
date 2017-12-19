@@ -9,10 +9,14 @@ public class SimulationApp {
 	    //create airspace
 		AirspaceEngine.getInstance().createAirspace("RANDOM");
 
+		//create UAVs
+
+
 		//create schedule/demand
 		FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
 
 		//assign schedule to UAVs
+
 
         //run simulation
 	}
