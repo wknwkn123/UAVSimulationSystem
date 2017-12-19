@@ -8,7 +8,7 @@ public class AirspaceStructure {
     private final List<Waypoint> nodes;
     private final List<RouteSegment> edges;
 
-    public AirspaceStructure(List<Waypoint> nodes, List<RouteSegment> edges) {
+    AirspaceStructure(List<Waypoint> nodes, List<RouteSegment> edges) {
         this.nodes = nodes;
         this.edges = edges;
     }

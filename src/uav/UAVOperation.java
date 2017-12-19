@@ -1,9 +1,18 @@
 package uav;
 
+import airspaceengine.routesegment.RouteSegment;
+import airspaceengine.waypoint.Waypoint;
+
 public class UAVOperation {
     private double currentX;
     private double currentY;
-    private double currentZ;
+    // Ziji : For now, we just consider 2D case
+    private double currentZ=10;
+
+    // TODO : calculate the actural position given time, currentRouteSegment, and currentWayPoint.
+    private RouteSegment currentRouteSegment;
+    private Waypoint currentWayPoint;
+
     private double remainingBatteryLevel;
 
     public double getCurrentX() {

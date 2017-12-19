@@ -8,20 +8,20 @@
       "size-y": "100m"
     },
     "nodes": [
-      {"id": "A", "type": "transferable", "meta-data": {"name": "name for human","x":15,"y": 15}},
-      {"id": "B", "type": "transferable", "meta-data": {"name": "name for human","x":65, "y":10}},
-      {"id": "C", "type": "transferable", "meta-data": {"name": "name for human","x":50, "y":15}},
-      {"id": "D", "type": "transferable", "meta-data": {"name": "name for human","x":55, "y":45}},
-      {"id": "E", "type": "transferable", "meta-data": {"name": "name for human","x":30, "y":60}},
-      {"id": "F", "type": "transferable", "meta-data": {"name": "name for human","x":80, "y":50}},
-      {"id": "G", "type": "transferable", "meta-data": {"name": "name for human","x":40, "y":35}},
-      {"id": "H", "type": "transferable", "meta-data": {"name": "name for human","x":10, "y":60}},
-      {"id": "I", "type": "transferable", "meta-data": {"name": "name for human","x":70, "y":75}},
-      {"id": "J", "type": "transferable", "meta-data": {"name": "name for human","x":55, "y":70}},
-      {"id": "K", "type": "transferable", "meta-data": {"name": "name for human","x":80, "y":20}},
-      {"id": "L", "type": "transferable", "meta-data": {"name": "name for human","x":70, "y":30}},
-      {"id": "M", "type": "transferable", "meta-data": {"name": "name for human","x":60, "y":30}},
-      {"id": "N", "type": "transferable", "meta-data": {"name": "name for human","x":15, "y":80}}
+      {"id": "A", "type": "transferable", "meta-data": {"address": "address","x":15,"y": 15}},
+      {"id": "B", "type": "transferable", "meta-data": {"address": "address","x":65, "y":10}},
+      {"id": "C", "type": "transferable", "meta-data": {"address": "address","x":50, "y":15}},
+      {"id": "D", "type": "transferable", "meta-data": {"address": "address","x":55, "y":45}},
+      {"id": "E", "type": "transferable", "meta-data": {"address": "address","x":30, "y":60}},
+      {"id": "F", "type": "transferable", "meta-data": {"address": "address","x":80, "y":50}},
+      {"id": "G", "type": "transferable", "meta-data": {"address": "address","x":40, "y":35}},
+      {"id": "H", "type": "transferable", "meta-data": {"address": "address","x":10, "y":60}},
+      {"id": "I", "type": "transferable", "meta-data": {"address": "address","x":70, "y":75}},
+      {"id": "J", "type": "transferable", "meta-data": {"address": "address","x":55, "y":70}},
+      {"id": "K", "type": "transferable", "meta-data": {"address": "address","x":80, "y":20}},
+      {"id": "L", "type": "transferable", "meta-data": {"address": "address","x":70, "y":30}},
+      {"id": "M", "type": "transferable", "meta-data": {"address": "address","x":60, "y":30}},
+      {"id": "N", "type": "transferable", "meta-data": {"address": "address","x":15, "y":80}}
 
     ],
     "edges": [
