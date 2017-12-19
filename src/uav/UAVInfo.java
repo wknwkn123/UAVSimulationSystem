@@ -5,22 +5,16 @@ import java.util.Date;
 public class UAVInfo {
     private static int idCount = 1;
     private String id;
-    private String name;
-    private String owner;
     private String manufacturer;
     private String modelType;
     private double maxSpeed;
     private double maxAltitude;
-    private Date lastCertificationDate;
 
-    public UAVInfo(String uav_name, String uav_owner, String uav_manufacturer, String model_type, double max_speed, double max_altitude, Date last_certification_date) {
-        name = uav_name;
-        owner = uav_owner;
+    public UAVInfo(String uav_manufacturer, String model_type, double max_speed, double max_altitude) {
         manufacturer = uav_manufacturer;
         modelType = model_type;
         maxSpeed = max_speed;
         maxAltitude = max_altitude;
-        lastCertificationDate = last_certification_date;
         id = "UA" + String.format("%05d", idCount);
         idCount++;
     }
@@ -29,28 +23,8 @@ public class UAVInfo {
         return idCount;
     }
 
-    public static void setIdCount(int idCount) {
-        UAVInfo.idCount = idCount;
-    }
-
     public String getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
     }
 
     public String getManufacturer() {
@@ -85,9 +59,4 @@ public class UAVInfo {
         this.maxAltitude = maxAltitude;
     }
 
-    public Date getLastCertificationDate() {
-        return lastCertificationDate;
-    }
-
-    public void setLastCertificationDate(Date lastCertificationDate) { this.lastCertificationDate = lastCertificationDate; }
 }
