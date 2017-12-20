@@ -2,29 +2,39 @@ package airspaceengine.routesegment;
 
 import airspaceengine.waypoint.Waypoint;
 
+/**
+ *
+ * RouteSegment is the edges of graph, its ID begins with RS.
+ *
+ * Assuming UAV capacity is equal to 1.
+ */
+
 public class RouteSegment {
 
     //instance variables
-    private final Waypoint from;
-    private final Waypoint to;
+    private final String EdgeID;
+    private final Waypoint sourceWaypoint;
+    private final Waypoint destinationWaypoint;
     private double targetSpeed;
     private double actualSpeed;
-    private final int weight;
+    private int UAVCapacity;
+    private final double weight;
 
     //constructor
-    public RouteSegment(Waypoint origin, Waypoint end, int weight) {
-        this.from = origin;
-        this.to = end;
+    public RouteSegment(String edgeID, Waypoint origin, Waypoint end, double weight) {
+        EdgeID = edgeID;
+        this.sourceWaypoint = origin;
+        this.destinationWaypoint = end;
         this.weight = weight;
     }
 
     //getter methods
-    public Waypoint getFrom() {
-        return from;
+    public Waypoint getSource() {
+        return this.sourceWaypoint;
     }
 
-    public Waypoint getTo() {
-        return to;
+    public Waypoint getDestination() {
+        return this.destinationWaypoint;
     }
 
     public double getTargetSpeed() {
@@ -35,8 +45,11 @@ public class RouteSegment {
         return actualSpeed;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
+    public String getEdgeID() {
+        return EdgeID;
+    }
 }

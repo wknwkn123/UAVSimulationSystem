@@ -1,42 +1,87 @@
 package airspaceengine.airspacestructure;
 
+import airspaceengine.routesegment.RSList;
 import airspaceengine.routesegment.RouteSegment;
+import airspaceengine.waypoint.WPList;
 import airspaceengine.waypoint.Waypoint;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import collision_avoidance_engine.assets.Node;
+import org.json.JSONObject;
+import org.json.JSONArray;
+
+
 /**
  * Created by Ziji Shi on 19/12/17.
+ *
+ * Generate graph based on demo.json file.
  */
 
 public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
-    public AirspaceStructure createAirspaceStructure(){
+    private String pathToMap = "demo.json";
+    private String content = new String (Files.readAllBytes(Paths.get(pathToMap)));
+    private JSONObject jobj = new JSONObject(content);
+    WPList Nodes = new WPList();
+    RSList Edges = new RSList();
+
+    public PlanarAirspaceStructureCreator() throws IOException {
+    }
+
+    private List<Waypoint> findAdjacentWaypoint(String nodeID){
+
+    }
+
+    public AirspaceStructure createAirspaceStructure() throws IOException {
+
         //create nodes
-        List<Waypoint> nodes = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            nodes.add(new Waypoint(i, i, 1));
-            System.out.println("Waypoint " + nodes.get(i).getX() + " initialized");
+        JSONArray nodeArr = jobj.getJSONObject("graph").getJSONArray("nodes");
+        for (int i = 0; i < nodeArr.length(); i++) {
+            JSONObject curObj = nodeArr.getJSONObject(i);
+
+            String nodeID = "WP_"+curObj.getJSONObject("id").toString();
+            boolean isTransferable = curObj.getJSONObject("id").toString().equals("transferable");
+            double x_input = curObj.getJSONObject("meta-data").getDouble("x");
+            double y_input = curObj.getJSONObject("meta-data").getDouble("y");
+            double z_input = 20;
+
+            Waypoint curNode = new Waypoint(nodeID,isTransferable,x_input,y_input,z_input);
+            this.Nodes.addWaypoint(curNode);
+
+            System.out.println("Waypoint " + nodeID + " initialized");
+        }
+
+        //find adjacent node; since this is a bigraph, we only need to find half of it.
+        for (int i =0; i< nodeArr.length()/2;i++){
+            JSONObject curNode = nodeArr.getJSONObject(i);
+
+
+
+
+
         }
 
         //create edges
-        List<RouteSegment> routeSegments = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (i != j) {
-                    int randomNum = ThreadLocalRandom.current().nextInt(0, 25);
-                    routeSegments.add(new RouteSegment(nodes.get(i), nodes.get(j), randomNum));
-                    routeSegments.add(new RouteSegment(nodes.get(j), nodes.get(i), randomNum));
-                }
-            }
-        }
-        for (int i = 0; i < routeSegments.size(); i++) {
-            System.out.println(routeSegments.get(i) + " Route Segment " + routeSegments.get(i).getTo().getX() + " to " + routeSegments.get(i).getFrom().getX() + " initialized with weight " + routeSegments.get(i).getWeight());
+        JSONArray edgeArr = jobj.getJSONObject("graph").getJSONArray("edges");
+        for (int i = 0; i < edgeArr.length(); i++) {
+            JSONObject curObj = edgeArr.getJSONObject(i);
+            String edgeID = "RS_"+Integer.toString(i);
+            Waypoint origin = this.Nodes.getWaypointByID(curObj.getJSONObject("source").toString());
+            Waypoint end = this.Nodes.getWaypointByID(curObj.getJSONObject("end").toString());
+            double weight = curObj.getJSONObject("meta-data").getDouble("weight");
+
+            this.Edges.addRouteSegment(new RouteSegment(edgeID,origin,end, weight));
+
+            System.out.println("Route Segment " + edgeID + " initialized");
         }
 
         //create airspace
-        AirspaceStructure airMap = new AirspaceStructure(nodes, routeSegments);
+        AirspaceStructure airMap = new AirspaceStructure(Nodes, Edges);
         System.out.println("Airmap created.");
         return airMap;
     }

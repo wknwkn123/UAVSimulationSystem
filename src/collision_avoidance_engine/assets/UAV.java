@@ -1,6 +1,6 @@
 package collision_avoidance_engine.assets;
 
-import static collision_avoidance_engine.constants.Constant.BatteryLife;
+import static collision_avoidance_engine.constants.Constant.BATTERY_LIFE;
 
 /**
  * Created by Ziji Shi on 19/12/17.
@@ -17,7 +17,7 @@ public class UAV {
     public UAV(int ID){
         this.UAV_ID=ID;
         // In this simulation, we assume battery capacity is 30 minutes, but since it will run return trip, we use 15 mins.
-        this.BatteryCapacity = BatteryLife/2;
+        this.BatteryCapacity = BATTERY_LIFE /2;
     }
 
     public int getUAVID(){

@@ -1,5 +1,7 @@
 package airspaceengine.airspacestructure;
 
+import java.io.IOException;
+
 public interface AirspaceStructureCreator {
-    AirspaceStructure createAirspaceStructure();
+    AirspaceStructure createAirspaceStructure() throws IOException;
 }

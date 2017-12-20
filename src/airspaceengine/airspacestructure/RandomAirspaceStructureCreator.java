@@ -13,7 +13,7 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
         //create nodes
         List<Waypoint> nodes = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            nodes.add(new Waypoint(i, i, 1));
+            nodes.add(new Waypoint(nodeID, isTransferable, i, i, 1, adjacientNodes));
             System.out.println("Waypoint " + nodes.get(i).getX() + " initialized");
         }
 
@@ -23,8 +23,8 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
             for (int j = 0; j < 10; j++) {
                 if (i != j) {
                     int randomNum = ThreadLocalRandom.current().nextInt(0, 25);
-                    routeSegments.add(new RouteSegment(nodes.get(i), nodes.get(j), randomNum));
-                    routeSegments.add(new RouteSegment(nodes.get(j), nodes.get(i), randomNum));
+                    routeSegments.add(new RouteSegment(edgeID, nodes.get(i), nodes.get(j), randomNum));
+                    routeSegments.add(new RouteSegment(edgeID, nodes.get(j), nodes.get(i), randomNum));
                 }
             }
         }
