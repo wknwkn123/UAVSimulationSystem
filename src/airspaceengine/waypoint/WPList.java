@@ -17,6 +17,10 @@ public class WPList {
         this.WaypointList.add(wp);
     }
 
+    public int getSize() {
+        return WaypointList.size();
+    }
+
     public Waypoint getWaypointByID (String targetID){
         for (int i =0; i < WaypointList.size(); i++){
             if (WaypointList.get(i).getNodeID().equals(targetID))

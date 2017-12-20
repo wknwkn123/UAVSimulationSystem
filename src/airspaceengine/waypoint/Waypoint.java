@@ -5,7 +5,7 @@ import java.util.List;
 public class Waypoint {
 
     //instance variables
-    private final String NodeID;
+    private final String NodeID;    // In form of WP_ID
     private final boolean isTransferable;
     private final double x;
     private final double y;
@@ -47,7 +47,7 @@ public class Waypoint {
         return NodeID;
     }
 
-    public void setAdjacentWaypoint(List<Waypoint> adjacentWaypoint) {
-        AdjacentWaypoint = adjacentWaypoint;
+    public void addAdjacentWaypoint(Waypoint wp) {
+        AdjacentWaypoint.add(wp);
     }
 }

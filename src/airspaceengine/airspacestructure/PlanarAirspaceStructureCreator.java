@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 import collision_avoidance_engine.assets.Node;
+import com.sun.javafx.tools.packager.bundlers.WinAppBundler;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
@@ -27,14 +28,10 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
     private String pathToMap = "demo.json";
     private String content = new String (Files.readAllBytes(Paths.get(pathToMap)));
     private JSONObject jobj = new JSONObject(content);
-    WPList Nodes = new WPList();
-    RSList Edges = new RSList();
+    private WPList Nodes = new WPList();
+    private RSList Edges = new RSList();
 
-    public PlanarAirspaceStructureCreator() throws IOException {
-    }
-
-    private List<Waypoint> findAdjacentWaypoint(String nodeID){
-
+    PlanarAirspaceStructureCreator() throws IOException {
     }
 
     public AirspaceStructure createAirspaceStructure() throws IOException {
@@ -56,17 +53,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             System.out.println("Waypoint " + nodeID + " initialized");
         }
 
-        //find adjacent node; since this is a bigraph, we only need to find half of it.
-        for (int i =0; i< nodeArr.length()/2;i++){
-            JSONObject curNode = nodeArr.getJSONObject(i);
-
-
-
-
-
-        }
-
-        //create edges
+        //create edges.
         JSONArray edgeArr = jobj.getJSONObject("graph").getJSONArray("edges");
         for (int i = 0; i < edgeArr.length(); i++) {
             JSONObject curObj = edgeArr.getJSONObject(i);
@@ -78,6 +65,12 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             this.Edges.addRouteSegment(new RouteSegment(edgeID,origin,end, weight));
 
             System.out.println("Route Segment " + edgeID + " initialized");
+        }
+
+        //find adjacent node; since this is a bigraph, we only need to find half of it.
+        for (int i =0; i< this.Edges.getSize();i++){
+            Edges.getByIndex(i).getSource().addAdjacentWaypoint(Edges.getByIndex(i).getDestination());
+            Edges.getByIndex(i).getDestination().addAdjacentWaypoint(Edges.getByIndex(i).getSource());
         }
 
         //create airspace

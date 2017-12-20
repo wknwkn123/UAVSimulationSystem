@@ -19,6 +19,13 @@ public class RSList {
         this.RouteSegList.add(rs);
     }
 
+    public int getSize(){
+        return RouteSegList.size();
+    }
+    public RouteSegment getByIndex(int i){
+        return RouteSegList.get(i);
+    }
+
     public RouteSegment getRouteSegmentByID(String targetID){
         for (int i =0; i < RouteSegList.size(); i++){
             if (RouteSegList.get(i).getEdgeID().equals(targetID))

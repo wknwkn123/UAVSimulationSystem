@@ -21,6 +21,14 @@ public class AirspaceStructure {
         nodes.addWaypoint(new_node);
     }
 
+    public Waypoint getWPByID(String targetID){
+        return this.nodes.getWaypointByID(targetID);
+    }
+
+    public RouteSegment getRSByID(String targetID){
+        return this.edges.getRouteSegmentByID(targetID);
+    }
+
     public void addEdge(RouteSegment new_edge) {
         edges.addRouteSegment(new_edge);
     }

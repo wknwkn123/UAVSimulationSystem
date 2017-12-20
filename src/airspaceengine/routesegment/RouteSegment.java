@@ -12,7 +12,7 @@ import airspaceengine.waypoint.Waypoint;
 public class RouteSegment {
 
     //instance variables
-    private final String EdgeID;
+    private final String EdgeID;        // in form of RS_id
     private final Waypoint sourceWaypoint;
     private final Waypoint destinationWaypoint;
     private double targetSpeed;
