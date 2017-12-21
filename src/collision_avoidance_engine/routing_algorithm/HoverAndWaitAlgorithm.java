@@ -1,5 +1,7 @@
 package collision_avoidance_engine.routing_algorithm;
 
+import airspaceengine.airspacestructure.AirspaceStructure;
+
 /**
  * Created by StevenShi on 17/12/17.
  *
@@ -18,5 +20,7 @@ package collision_avoidance_engine.routing_algorithm;
  * transferable delivery.
  */
 public class HoverAndWaitAlgorithm {
+    AirspaceStructure graph ;
+
 
 }

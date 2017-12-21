@@ -3,9 +3,6 @@ import airspaceengine.routesegment.RSList;
 import airspaceengine.routesegment.RouteSegment;
 import airspaceengine.waypoint.WPList;
 import airspaceengine.waypoint.Waypoint;
-import collision_avoidance_engine.assets.Edge;
-
-import java.util.List;
 
 public class AirspaceStructure {
     private final WPList nodes;

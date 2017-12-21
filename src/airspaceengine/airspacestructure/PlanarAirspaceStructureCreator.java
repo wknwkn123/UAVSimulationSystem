@@ -8,12 +8,7 @@ import airspaceengine.waypoint.Waypoint;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
-import collision_avoidance_engine.assets.Node;
-import com.sun.javafx.tools.packager.bundlers.WinAppBundler;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
@@ -67,8 +62,9 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             System.out.println("Route Segment " + edgeID + " initialized");
         }
 
-        //find adjacent node; since this is a bigraph, we only need to find half of it.
-        for (int i =0; i< this.Edges.getSize();i++){
+        //find adjacency relationship between two nodes given an edge; since this is a bigraph, we only need to find half of it.
+        for (int i =0; i< this.Edges.getSize()/2;i++){
+            // src is adjacent to dest, and vice versa
             Edges.getByIndex(i).getSource().addAdjacentWaypoint(Edges.getByIndex(i).getDestination());
             Edges.getByIndex(i).getDestination().addAdjacentWaypoint(Edges.getByIndex(i).getSource());
         }

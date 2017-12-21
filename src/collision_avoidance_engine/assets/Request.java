@@ -1,4 +1,4 @@
-package collision_avoidance_engine;
+package collision_avoidance_engine.assets;
 
 /**
  * Created by StevenShi on 18/12/17.

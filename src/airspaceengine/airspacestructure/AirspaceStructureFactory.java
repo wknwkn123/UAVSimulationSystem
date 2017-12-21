@@ -1,10 +1,10 @@
 package airspaceengine.airspacestructure;
 
+import java.io.IOException;
+
 public class AirspaceStructureFactory {
-    public static AirspaceStructureCreator getAirspaceStructureCreator(String type) {
+    public static AirspaceStructureCreator getAirspaceStructureCreator(String type) throws IOException {
         switch(type) {
-            case "RANDOM":
-                return new RandomAirspaceStructureCreator();
             case "PLANARGRAPH":
                 return new PlanarAirspaceStructureCreator();
             default:
