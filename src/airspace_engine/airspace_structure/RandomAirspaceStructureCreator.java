@@ -12,9 +12,15 @@ class RandomAirspaceStructureCreator implements AirspaceStructureCreator{
     public AirspaceStructure createAirspaceStructure(){
         //create nodes
         List<Waypoint> nodes = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            nodes.add(new Waypoint(i, i, 1));
-            System.out.println("Waypoint " + nodes.get(i).getId() + " initialized");
+        nodes.add(new Waypoint( 100,  100, 1));
+        nodes.add(new Waypoint(240,  400, 1));
+        nodes.add(new Waypoint(300, 300, 1));
+        nodes.add(new Waypoint(450, 200, 1));
+        nodes.add(new Waypoint(500, 500, 1));
+        nodes.add(new Waypoint(550, 250, 1));
+
+        for (Waypoint node : nodes) {
+            System.out.println("Waypoint " + node.getId() + " initialized");
         }
 
         //create edges

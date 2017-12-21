@@ -7,6 +7,12 @@ public class UAVOperation {
     private double remainingBatteryLevel;
     private int state;
 
+    public UAVOperation() {
+        currentX = 10;
+        currentY = 20;
+        currentZ = 30;
+    }
+
     public double getCurrentX() {
         return currentX;
     }

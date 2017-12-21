@@ -30,4 +30,8 @@ public class FlightPlanEngine {
     public void setFlightPlans(List<FlightPlan> flightPlans) {
         this.flightPlans = flightPlans;
     }
+
+    public List<FlightPlan> getFlightPlans() {
+        return flightPlans;
+    }
 }

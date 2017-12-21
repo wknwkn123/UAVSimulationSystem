@@ -1,6 +1,9 @@
 package airspace_engine;
 
 import airspace_engine.airspace_structure.*;
+import airspace_engine.waypoint.Waypoint;
+
+import java.awt.geom.Point2D;
 
 public class AirspaceEngine {
     private AirspaceStructure airMap;

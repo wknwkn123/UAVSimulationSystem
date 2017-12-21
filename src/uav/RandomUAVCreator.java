@@ -9,7 +9,7 @@ public class RandomUAVCreator implements UAVCreator {
         List<UAV> UAVs = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             UAVs.add(new UAV("DJI", "Drone", 50, 200));
-            System.out.println("UAV" + UAVs.get(i).getUAVInfo().getId() + " initialized");
+            System.out.println("UAV " + UAVs.get(i).getUAVInfo().getId() + " initialized");
         }
         return UAVs;
     }

@@ -1,24 +1,37 @@
 package simulation_engine;
 
-import airspace_engine.AirspaceEngine;
-import flight_plan.FlightPlanEngine;
 import uav.UAVEngine;
 
-public class SimulationApp {
-	
-	public static void main(String[] args) {
-	    //create airspace
-		AirspaceEngine.getInstance().createAirspace("RANDOM");
+import java.util.concurrent.TimeUnit;
 
-		//create UAVs
-        UAVEngine.getInstance().createUAVs("RANDOM");
+public class SimulationApp implements Runnable{
+    private boolean stopWork;
+    private static SimulationApp instance = new SimulationApp();
 
-		//create schedule/demand
-		FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
+    public static SimulationApp getInstance() {
+        return instance;
+    }
 
-		//assign schedule to UAVs
+    public SimulationApp(){}
 
-
-        //run simulation
+    public void run() {
+        while (!stopWork) {
+            Time.getInstance().setCompleted(false);
+            for (int j = 0; j < 25; j++) {
+                Time.getInstance().tick();
+                try {
+                    TimeUnit.MILLISECONDS.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            Time.getInstance().setCompleted(true);
+            this.stopWork();
+        }
 	}
+
+	public void stopWork() {
+        stopWork = true;
+        UAVEngine.getInstance().stopThread();
+    }
 }
