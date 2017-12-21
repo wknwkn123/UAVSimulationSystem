@@ -2,33 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20e9ea44-e61f-4155-a9e8-5c251422c3de" name="Default" comment="Building foundations for CDA package. &#10;- Modified RouteSeg and Waypoint class;&#10;- Finished PlanarGraphCreator">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/StevenShi.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/collision_avoidance_engine/assets/Status.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/RandomAirspaceStructureCreator.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/collision_avoidance_engine/Request.java" afterPath="$PROJECT_DIR$/src/collision_avoidance_engine/assets/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/AirspaceEngine.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/AirspaceEngine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructure.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructure.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureCreator.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureFactory.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/routesegment/RouteSegment.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/routesegment/RouteSegment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/waypoint/Waypoint.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/waypoint/Waypoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulationengine/SimulationApp.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/simulationengine/SimulationApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAV.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVInfo.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/AirspaceEngine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructure.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureCreator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/routesegment/RouteSegment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/waypoint/Waypoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulationengine/SimulationApp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAV.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SimulationUAV.iml" afterPath="$PROJECT_DIR$/SimulationUAV.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/airspaceengine/AirspaceEngine.java" afterPath="$PROJECT_DIR$/src/airspaceengine/AirspaceEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructure.java" afterPath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructureFactory.java" afterPath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructureFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" afterPath="$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/collision_avoidance_engine/FlightPlanSchedueler.java" afterPath="$PROJECT_DIR$/src/collision_avoidance_engine/FlightPlanSchedueler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/collision_avoidance_engine/routing_algorithm/HoverAndWaitAlgorithm.java" afterPath="$PROJECT_DIR$/src/collision_avoidance_engine/routing_algorithm/HoverAndWaitAlgorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simulationengine/SimulationApp.java" afterPath="$PROJECT_DIR$/src/simulationengine/SimulationApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simulationengine/flightplan/FlightPlanCreator.java" afterPath="$PROJECT_DIR$/src/simulationengine/flightplan/FlightPlanCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/simulationengine/flightplan/RandomFlightPlanCreator.java" afterPath="$PROJECT_DIR$/src/simulationengine/flightplan/RandomFlightPlanCreator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +32,8 @@
       <file leaf-file-name="PlanarAirspaceStructureCreatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="60">
+              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlanarAirspaceStructureCreator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlanarAirspaceStructureCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="705">
+              <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,17 +67,17 @@
         <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructureCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AirspaceEngine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AirspaceEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/airspaceengine/AirspaceEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -300,6 +284,9 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -363,9 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -815,7 +799,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23733863" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -833,6 +816,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68321747" sideWeight="0.3328125" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23733863" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1051,7 +1035,7 @@
     <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/AirspaceStructureCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1071,16 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/collision_avoidance_engine/routing_algorithm/HoverAndWaitAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1091,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="60">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1101,8 +1075,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/airspaceengine/AirspaceEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
