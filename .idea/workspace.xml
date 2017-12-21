@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20e9ea44-e61f-4155-a9e8-5c251422c3de" name="Default" comment="Building foundations for CDA package. &#10;- Modified RouteSeg and Waypoint class;&#10;- Finished PlanarGraphCreator">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/AirspaceEngine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructure.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureCreator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/airspacestructure/AirspaceStructureFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/routesegment/RouteSegment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspaceengine/waypoint/Waypoint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulationengine/SimulationApp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAV.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" afterPath="" />
+    <list default="true" id="20e9ea44-e61f-4155-a9e8-5c251422c3de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -54,8 +44,8 @@
       <file leaf-file-name="PlanarAirspaceStructureCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="450">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -756,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513753835678</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merged from mapping branch.">
+      <created>1513865911789</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1513865911789</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -828,7 +825,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Building foundations for CDA package. &#10;- Added WPList and RSList for easy access to individual members. &#10;- Merging assets to use the same interface as airspacestructure&#10;- Implemented PlannarAirspaceStructure.&#10;- Modified the RouteSegment and Waypoint class with necessary attributes." />
     <MESSAGE value="Building foundations for CDA package. &#10;- Modified RouteSeg and Waypoint class;&#10;- Finished PlanarGraphCreator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Building foundations for CDA package. &#10;- Modified RouteSeg and Waypoint class;&#10;- Finished PlanarGraphCreator" />
+    <MESSAGE value="Merged from mapping branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged from mapping branch." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1085,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
