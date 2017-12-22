@@ -1,4 +1,4 @@
-package collision_avoidance_engine.routing_algorithm;
+package collisionavoidanceengine.routing_algorithm;
 
 /**
  * Created by StevenShi on 18/12/17.

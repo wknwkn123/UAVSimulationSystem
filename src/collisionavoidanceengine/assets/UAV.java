@@ -1,6 +1,6 @@
-package collision_avoidance_engine.assets;
+package collisionavoidanceengine.assets;
 
-import static collision_avoidance_engine.constants.Constant.BATTERY_LIFE;
+import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
 
 /**
  * Created by Ziji Shi on 19/12/17.

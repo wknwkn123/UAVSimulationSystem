@@ -1,4 +1,4 @@
-package collision_avoidance_engine.evaluation;
+package collisionavoidanceengine.evaluation;
 
 /**
  * Created by Ziji Shi on 18/12/17.

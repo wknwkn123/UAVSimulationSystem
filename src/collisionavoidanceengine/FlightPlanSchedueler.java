@@ -1,4 +1,4 @@
-package collision_avoidance_engine;
+package collisionavoidanceengine;
 
 import airspaceengine.airspacestructure.AirspaceStructure;
 

@@ -1,4 +1,4 @@
-package collision_avoidance_engine.constants;
+package collisionavoidanceengine.constants;
 
 /**
  * Created by Ziji Shi on 19/12/17.
@@ -12,4 +12,5 @@ public class Constant {
     public static final double WAITING_PENALTY_AT_LANDING_NODE = 3;
     public static final double WAITING_PENALTY_AT_NON_LANDING_NODE = 0.3;
     public static final double SPEED = 500;
+    public static final int INITIAL_FLIGHT_CAPACITY = 100;
 }

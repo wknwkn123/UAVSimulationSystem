@@ -17,6 +17,8 @@ public class WPList {
         this.WaypointList.add(wp);
     }
 
+    public Waypoint getByIndex (int i){return WaypointList.get(i);}
+
     public int getSize() {
         return WaypointList.size();
     }
