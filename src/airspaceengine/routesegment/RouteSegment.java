@@ -4,7 +4,7 @@ import airspaceengine.waypoint.Waypoint;
 
 /**
  *
- * RouteSegment is the edges of graph, its ID begins with RS.
+ * RouteSegment is the edges of mapbuilder.graph, its ID begins with RS.
  *
  * Assuming UAV capacity is equal to 1.
  */

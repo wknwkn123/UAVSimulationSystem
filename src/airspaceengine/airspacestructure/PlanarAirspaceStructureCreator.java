@@ -16,7 +16,7 @@ import org.json.JSONArray;
 /**
  * Created by Ziji Shi on 19/12/17.
  *
- * Generate graph based on demo.json file.
+ * Generate mapbuilder.graph based on demo.json file.
  */
 
 public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
@@ -32,7 +32,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
     public AirspaceStructure createAirspaceStructure() throws IOException {
 
         //create nodes
-        JSONArray nodeArr = jobj.getJSONObject("graph").getJSONArray("nodes");
+        JSONArray nodeArr = jobj.getJSONObject("mapbuilder/graph").getJSONArray("nodes");
         for (int i = 0; i < nodeArr.length(); i++) {
             JSONObject curObj = nodeArr.getJSONObject(i);
 
@@ -49,7 +49,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
         }
 
         //create edges.
-        JSONArray edgeArr = jobj.getJSONObject("graph").getJSONArray("edges");
+        JSONArray edgeArr = jobj.getJSONObject("mapbuilder/graph").getJSONArray("edges");
         for (int i = 0; i < edgeArr.length(); i++) {
             JSONObject curObj = edgeArr.getJSONObject(i);
             String edgeID = "RS_"+Integer.toString(i);

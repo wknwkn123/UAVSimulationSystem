@@ -6,7 +6,7 @@ import java.util.List;
  *
  * Graph consists of edge (RouteSegment) and node (Waypoint).
  *
- * For here, we use demo.json as input graph file, but we will give a unique ID for
+ * For here, we use demo.json as input mapbuilder.graph file, but we will give a unique ID for
  * each node and edge.
  */
 public class Graph {
