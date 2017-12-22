@@ -24,7 +24,7 @@ public class JsonLoader {
 
         JSONObject jobj = new JSONObject(content);
         ArrayList<Vector2D> pointSet = new ArrayList<>();
-        JSONArray arr = jobj.getJSONObject("mapbuilder/graph").getJSONArray("nodes");
+        JSONArray arr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("nodes");
         JSONObject node;
         for (int i = 0; i < arr.length(); i++) {
             node = arr.getJSONObject(i).getJSONObject("meta-data");

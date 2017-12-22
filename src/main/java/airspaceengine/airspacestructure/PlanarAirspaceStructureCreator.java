@@ -32,7 +32,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
     public AirspaceStructure createAirspaceStructure() throws IOException {
 
         //create nodes
-        JSONArray nodeArr = jobj.getJSONObject("mapbuilder/graph").getJSONArray("nodes");
+        JSONArray nodeArr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("nodes");
         for (int i = 0; i < nodeArr.length(); i++) {
             JSONObject curObj = nodeArr.getJSONObject(i);
 
@@ -49,7 +49,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
         }
 
         //create edges.
-        JSONArray edgeArr = jobj.getJSONObject("mapbuilder/graph").getJSONArray("edges");
+        JSONArray edgeArr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("edges");
         for (int i = 0; i < edgeArr.length(); i++) {
             JSONObject curObj = edgeArr.getJSONObject(i);
             String edgeID = "RS_"+Integer.toString(i);

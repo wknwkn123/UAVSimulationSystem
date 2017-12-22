@@ -1,6 +1,6 @@
 package mapbuilder.graph;
 
-import triangulation.WeightedEdge;
+import mapbuilder.triangulation.WeightedEdge;
 
 import java.io.Serializable;
 

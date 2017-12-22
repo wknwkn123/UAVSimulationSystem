@@ -1,7 +1,5 @@
 package airspaceengine.routesegment;
 
-import airspaceengine.waypoint.Waypoint;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,5 @@
 package simulationengine;
 
-import airspaceengine.AirspaceEngine;
-
 public class SimulationApp {
 	
 	public static void main(String[] args) {

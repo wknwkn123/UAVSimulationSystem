@@ -1,6 +1,5 @@
 package uav;
 import java.util.Date;
-import uav.UAVInfo;
 
 public class UAV {
     private UAVInfo UAVInfo;
