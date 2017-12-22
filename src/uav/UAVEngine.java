@@ -52,4 +52,9 @@ public class UAVEngine {
     public List<Thread> getUAVThread() {
         return UAVThread;
     }
+
+    public void setOrigins() {
+        for (UAV uav : UAVs)
+            uav.setOrigin();
+    }
 }

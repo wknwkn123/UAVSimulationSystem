@@ -40,7 +40,7 @@ public class UAV implements Runnable{
     }
 
     public void setOrigin() {
-        if (schedule.size() > 1) {
+        if (schedule.size() > 0) {
             operation.setCurrentX(schedule.get(0).getStartPoint().getX());
             operation.setCurrentY(schedule.get(0).getStartPoint().getY());
             operation.setCurrentZ(schedule.get(0).getStartPoint().getZ());
@@ -90,5 +90,9 @@ public class UAV implements Runnable{
 
     protected void done() {
         done = true;
+    }
+
+    public UAVOperation getOperation() {
+        return operation;
     }
 }

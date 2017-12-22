@@ -18,14 +18,14 @@ public class FlightPlan {
     private double progress;
 
     public FlightPlan(Waypoint start_point, Waypoint end_point, double load, int start, int end) {
-        startPoint = start_point;
-        endPoint = end_point;
-        completed = false;
+        this.startPoint = start_point;
+        this.endPoint = end_point;
+        this.completed = false;
         this.payload = load;
         this.setProgress(0);
         this.targetStartTime = start;
         this.targetEndTime = end;
-        id = "FP" + String.format("%05d", flightPlanID);
+        this.id = "FP" + String.format("%05d", flightPlanID);
         flightPlanID++;
     }
 
@@ -73,6 +73,7 @@ public class FlightPlan {
         this.progress = progress;
     }
 
-
-
+    public String getId() {
+        return id;
+    }
 }

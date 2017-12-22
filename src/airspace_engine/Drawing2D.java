@@ -2,6 +2,8 @@ package airspace_engine;
 
 import airspace_engine.route_segment.RouteSegment;
 import airspace_engine.waypoint.Waypoint;
+import uav.UAV;
+import uav.UAVEngine;
 
 import java.awt.*;       // Using AWT's Graphics and Color
 import java.awt.event.*; // Using AWT event classes and listener interfaces
@@ -60,13 +62,12 @@ public class Drawing2D {
                 super.paintComponent(g);     // paint parent's background
                 setBackground(Color.BLACK);  // set background color for this JPanel
 
-                // Your custom painting codes. For example,
-                // Drawing primitive shapes
                 g.setColor(Color.RED);    // set the drawing color
                 for (Waypoint wp : AirspaceEngine.getInstance().getAirMap().getNodes()) {
                     Double x = wp.getX();
                     Double y = wp.getY();
-                    g.drawOval(x.intValue(), y.intValue(), 10, 10);
+                    g.drawOval(x.intValue(), y.intValue(), 20, 20);
+                    g.fillOval(x.intValue(), y.intValue(), 20, 20);
                 }
 
                 g.setColor(Color.YELLOW);
@@ -78,13 +79,17 @@ public class Drawing2D {
                     g.drawLine(x1.intValue(), y1.intValue(), x2.intValue(), y2.intValue());
                 }
 
-//                g.drawOval(150, 180, 10, 10);
-//                g.drawRect(200, 210, 20, 30);
-//                g.setColor(Color.RED);       // change the drawing color
-//                g.fillOval(300, 310, 30, 50);
-//                g.fillRect(400, 350, 60, 50);
-                // Printing texts
                 g.setColor(Color.GREEN);
+                for (UAV uav : UAVEngine.getInstance().getUAVs()) {
+                    uav.setOrigin();
+                    Double x = uav.getOperation().getCurrentX();
+                    Double y = uav.getOperation().getCurrentY();
+                    g.drawRect(x.intValue(), y.intValue(), 15, 15);
+                    g.fillRect(x.intValue(), y.intValue(), 15, 15);
+                }
+
+                // Printing texts
+                g.setColor(Color.WHITE);
                 g.setFont(new Font("Monospaced", Font.PLAIN, 12));
                 g.drawString("Airspace Simulation ...", 10, 20);
             }
