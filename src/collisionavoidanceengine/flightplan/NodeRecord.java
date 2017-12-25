@@ -43,7 +43,7 @@ public class NodeRecord {
     }
 
     public double getWaitingPenalty (int newArrival){
-        for (int i=0; i<historyList.size();i++){
+        for (int i=historyList.size()-1; i>=0;i--){
             MetaNodeRecord currentSchedule = historyList.get(i);
 
             // When two UAV arrives at the same node at same time, we let the previously scheduled UAV fly first

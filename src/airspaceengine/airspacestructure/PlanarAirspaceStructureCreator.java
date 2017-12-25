@@ -12,6 +12,8 @@ import java.nio.file.Paths;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
+import static collisionavoidanceengine.constants.Constant.UAV_SPEED;
+
 
 /**
  * Created by Ziji Shi on 19/12/17.
@@ -55,7 +57,8 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             String edgeID = "RS_"+Integer.toString(i);
             Waypoint origin = this.Nodes.getWaypointByID(curObj.getJSONObject("source").toString());
             Waypoint end = this.Nodes.getWaypointByID(curObj.getJSONObject("end").toString());
-            double weight = curObj.getJSONObject("meta-data").getDouble("weight");
+            // weight = time  = distance/speed , notice that distance is measured in hundred meters
+            double weight = curObj.getJSONObject("meta-data").getDouble("weight")*100/UAV_SPEED;
 
             this.Edges.addRouteSegment(new RouteSegment(edgeID,origin,end, weight));
 

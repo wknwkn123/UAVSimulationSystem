@@ -47,7 +47,8 @@ public class EdgeRecord {
 
     // Loop through the list of meta-record to see whether a given time falls in an existing schedule,
     public double getWaitingPenalty(int newArrival){
-        for (int i=0;i<historyList.size();i++){
+        // Reverse iteration so that some search time may be saved
+        for (int i=historyList.size()-1;i>=0;i--){
             int existingScheduledArrival = historyList.get(i).getValue();
 
             // When two UAV arrives at the same time, we let the previously scheduled UAV fly first

@@ -27,7 +27,7 @@
     "edges": [
 
       {"source":"N", "target":"I", "meta-data":{"weight":55.23}},
-      {"source":"N", "target":"J", "meta-data":{"weight":41.23 }},
+      {"source":"N", "target":"J", "meta-data":{"weight":41.23}},
       {"source":"J", "target":"E", "meta-data":{"weight":26.93}},
       {"source":"H", "target":"E", "meta-data":{"weight":20}},
       {"source":"H", "target":"N", "meta-data":{"weight":20.62}},
@@ -59,7 +59,7 @@
       {"source":"K", "target":"F", "meta-data":{"weight":30}},
 
       {"source":"I", "target":"N", "meta-data":{"weight":55.23}},
-      {"source":"J", "target":"N", "meta-data":{"weight":41.23 }},
+      {"source":"J", "target":"N", "meta-data":{"weight":41.23}},
       {"source":"E", "target":"J", "meta-data":{"weight":26.93}},
       {"source":"E", "target":"H", "meta-data":{"weight":20}},
       {"source":"N", "target":"H", "meta-data":{"weight":20.62}},
