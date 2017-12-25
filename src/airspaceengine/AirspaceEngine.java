@@ -5,10 +5,10 @@ import airspaceengine.airspacestructure.*;
 import java.io.IOException;
 
 public class AirspaceEngine {
-    private AirspaceStructure airMap;
+    public AirspaceStructure airMap;
     private static AirspaceEngine singleton;
 
-    protected AirspaceEngine(){}
+    public AirspaceEngine(){}
 
     public static AirspaceEngine getInstance() {
         if(singleton == null) {
