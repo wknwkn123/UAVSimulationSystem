@@ -30,6 +30,14 @@ public class AirspaceStructure {
         edges.addRouteSegment(new_edge);
     }
 
+    public int getNodeNumbers(){
+        return nodes.getSize();
+    }
+
+    public int getEdgeNumbers(){
+        return edges.getSize();
+    }
+
 //	public void removeNode(EnroutePoint node) {
 //		List<EnroutePoint> deleteCandidates = new ArrayList<EnroutePoint>();
 //		deleteCandidates.add(node);
