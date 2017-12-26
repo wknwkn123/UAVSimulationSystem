@@ -1,16 +1,17 @@
 package collisionavoidanceengine.request;
 
+import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
+import airspaceengine.routesegment.RouteSegment;
+import airspaceengine.waypoint.Waypoint;
 
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by Ziji Shi on 22/12/17.
  */
 public class RandomRequestCreator implements RequestCreator{
+    private AirspaceStructure airMap;
     private PriorityQueue<Request> requestQueue = new PriorityQueue<Request>(100, startTimeComparartor);
 
     // Compare two requests based on their startTime, if they are equal, randomly choose one request
@@ -21,28 +22,29 @@ public class RandomRequestCreator implements RequestCreator{
         }
     };
 
-    // Pick a pair of node from airMap to generate random flight request
-    public Request addRequest(AirspaceStructure airMap){
-        Random randomizer = new Random();
 
-        //Pick a pair of nodes from graph
-        String src = airMap.getNodes().getByIndex(randomizer.nextInt(airMap.getNodes().getSize())).getNodeID();
-        String dest= airMap.getNodes().getByIndex(randomizer.nextInt(airMap.getNodes().getSize())).getNodeID();
-
-        //Make sure those two nodes are not identical
-        while(src.equals(dest)){
-            dest= airMap.getNodes().getByIndex(randomizer.nextInt(airMap.getNodes().getSize())).getNodeID();
-        }
-
-        //We are simulating one day, i.e., 1440 minutes.
-        return new Request(src,dest,randomizer.nextInt(1440));
-    }
 
     @Override
     public PriorityQueue<Request> generateRequest(int numRequest, AirspaceStructure airMap) {
+        Random       random    = new Random();
+        List<String> keys      = new ArrayList<String>(airMap.getNodes().getWaypointMap().keySet());
+
         for (int i=0; i<numRequest; i++){
-            // Generate random requests given a graph
-            requestQueue.add(this.addRequest(airMap));
+            // Randomly pick a pair of nodes from graph
+            Waypoint randomSrc  =   airMap.getNodes().getWaypointMap().get(keys.get(random.nextInt(keys.size())));
+            Waypoint randomDest =   airMap.getNodes().getWaypointMap().get(keys.get(random.nextInt(keys.size())));
+
+            // We are simulating one day, i.e., 1440 minutes.
+            int time = random.nextInt(1440);
+
+            // Make sure those two nodes are not identical
+            while(randomSrc.getNodeID().equals(randomDest.getNodeID())){
+                // Regenerate the destination node if duplicate is found
+                randomDest= airMap.getNodes().getWaypointMap().get(keys.get(random.nextInt(keys.size())));
+            }
+
+            requestQueue.add(new Request(randomSrc.getNodeID(),randomDest.getNodeID(),time));
+            System.out.printf("Request to route from "+randomSrc.getNodeID()+" to "+randomDest.getNodeID()+" at time"+ Integer.toString(time));
         }
         return this.requestQueue;
     }

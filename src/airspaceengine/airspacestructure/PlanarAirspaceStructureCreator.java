@@ -1,13 +1,14 @@
 package airspaceengine.airspacestructure;
 
-import airspaceengine.routesegment.RSList;
+import airspaceengine.routesegment.RSMap;
 import airspaceengine.routesegment.RouteSegment;
-import airspaceengine.waypoint.WPList;
+import airspaceengine.waypoint.WPMap;
 import airspaceengine.waypoint.Waypoint;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Map;
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -25,8 +26,8 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
     private String pathToMap = "demo.json";
     private String content = new String (Files.readAllBytes(Paths.get(pathToMap)));
     private JSONObject jobj = new JSONObject(content);
-    private WPList Nodes = new WPList();
-    private RSList Edges = new RSList();
+    private WPMap Nodes = new WPMap();
+    private RSMap Edges = new RSMap();
 
     PlanarAirspaceStructureCreator() throws IOException {
     }
@@ -65,11 +66,13 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             System.out.println("Route Segment " + edgeID + " initialized");
         }
 
-        //find adjacency relationship between two nodes given an edge; since this is a bigraph, we only need to find half of it.
-        for (int i =0; i< this.Edges.getSize()/2;i++){
-            // src is adjacent to dest, and vice versa
-            Edges.getByIndex(i).getSource().addAdjacentWaypoint(Edges.getByIndex(i).getDestination());
-            Edges.getByIndex(i).getDestination().addAdjacentWaypoint(Edges.getByIndex(i).getSource());
+        //find adjacency relationship between two nodes given an edge; since this is a bi-graph, we only need to find half of it.
+        System.out.printf("Now initializing the adjacency nodes");
+        for (Map.Entry<String, RouteSegment> entry : Edges.getRouteSegMap().entrySet()){
+            Waypoint currentSrc = entry.getValue().getSource();
+            Waypoint currentDest = entry.getValue().getDestination();
+            // src is adjacent to dest
+            currentSrc.addAdjacentWaypoint(currentDest);
         }
 
         //create airspace

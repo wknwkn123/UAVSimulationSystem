@@ -1,22 +1,21 @@
 package collisionavoidanceengine.flightplan;
 
 import airspaceengine.airspacestructure.AirspaceStructure;
-import airspaceengine.routesegment.RSList;
-import airspaceengine.waypoint.WPList;
+import airspaceengine.routesegment.RSMap;
+import airspaceengine.routesegment.RouteSegment;
+import airspaceengine.waypoint.WPMap;
+import airspaceengine.waypoint.Waypoint;
 
-import javax.xml.soap.Node;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by Ziji Shi on 22/12/17.
  */
 public class FlightSchedule {
     private AirspaceStructure airmap;
-    private List<EdgeRecord> edgeAvailability;
-    private List<NodeRecord> nodeAvailability;
+    private Map<String, EdgeRecord> edgeAvailability;
+    private Map<String, NodeRecord> nodeAvailability;
     private List<Flight> flightPlan;
 
     // To ensure thread-safety. Not yet used.
@@ -27,34 +26,35 @@ public class FlightSchedule {
         int numNodes = airmap.getNodeNumbers();
         int numEdges = airmap.getEdgeNumbers();
 
-        WPList myWPL = airmap.getNodes();
-        RSList myRSL = airmap.getEdges();
+        WPMap myWPL = airmap.getNodes();
+        RSMap myRSL = airmap.getEdges();
 
         // Initialize node availability
-        for(int i=0; i<numNodes;i++){
-            nodeAvailability.add(new NodeRecord(myWPL.getByIndex(i).getNodeID(),myWPL.getByIndex(i).isTransferable()));
+        for (Map.Entry<String, Waypoint> entry : myWPL.getWaypointMap().entrySet()) {
+            NodeRecord nr = new NodeRecord(entry.getKey(), entry.getValue().isTransferable());
+            nodeAvailability.put(nr.getNodeID(),nr);
         }
 
         // Initialize edge availability
-        for (int i =0; i<numEdges; i++){
-            edgeAvailability.add(new EdgeRecord(myRSL.getByIndex(i).getEdgeID(),myRSL.getByIndex(i).getWeight()));
+        for (Map.Entry<String, RouteSegment> entry : myRSL.getRouteSegMap().entrySet()) {
+            EdgeRecord rs = new EdgeRecord(entry.getKey(),entry.getValue().getWeight());
+            edgeAvailability.put(rs.getEdgeID(),rs);
         }
     }
 
     public EdgeRecord getEdgeRecByID(String edgeID){
-        for (EdgeRecord record:edgeAvailability){
-            if (record.getEdgeID().equals(edgeID))
-                return record;
+        if (edgeAvailability.containsKey(edgeID)){
+            return edgeAvailability.get(edgeID);
         }
-        return null;
+        else
+            return null;
     }
 
     public NodeRecord getNodeRecByID(String nodeID){
-        for (NodeRecord record:nodeAvailability){
-            if (record.getNodeID().equals(nodeID))
-                return record;
-        }
-        return null;
+        if (nodeAvailability.containsKey(nodeID))
+            return nodeAvailability.get(nodeID);
+        else
+            return null;
     }
 
 
