@@ -2,6 +2,8 @@ package uav;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 import airspace_engine.waypoint.Waypoint;
 import flight_plan.FlightPlan;
@@ -13,7 +15,8 @@ public class UAV implements Runnable{
     private UAVInfo UAVInfo;
     private UAVOperation operation;
     private List<FlightPlan> schedule;
-    private volatile boolean stopWork;;
+    private volatile boolean stopWork;
+    private List<Coordinate> coordinatesList = new ArrayList<>();
     private boolean done;
 
     //constructor
@@ -63,32 +66,113 @@ public class UAV implements Runnable{
                             double prevY = origin.getY();
                             double prevZ = origin.getZ();
                             while (operation.getCurrentX() != destination.getX() || operation.getCurrentY() != destination.getY() || operation.getCurrentZ() != destination.getZ()) {
-                                operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
-                                operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
-                                operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                if (xDirection <= 0 && yDirection <= 0 && zDirection <= 0) {
+                                    if (operation.getCurrentX() > destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() > destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() > destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() <= destination.getX() && operation.getCurrentY() <= destination.getY() && operation.getCurrentZ() <= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection <= 0 && yDirection <= 0 && zDirection > 0) {
+                                    if (operation.getCurrentX() > destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() > destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() < destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() <= destination.getX() && operation.getCurrentY() <= destination.getY() && operation.getCurrentZ() >= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection <= 0 && yDirection > 0 && zDirection <= 0) {
+                                    if (operation.getCurrentX() > destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() < destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() > destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() <= destination.getX() && operation.getCurrentY() <= destination.getY() && operation.getCurrentZ() <= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection <= 0 && yDirection > 0 && zDirection > 0) {
+                                    if (operation.getCurrentX() > destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() < destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() < destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() <= destination.getX() && operation.getCurrentY() >= destination.getY() && operation.getCurrentZ() >= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection > 0 && yDirection <= 0 && zDirection <= 0) {
+                                    if (operation.getCurrentX() < destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() > destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() > destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() >= destination.getX() && operation.getCurrentY() <= destination.getY() && operation.getCurrentZ() <= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection > 0 && yDirection <= 0 && zDirection > 0) {
+                                    if (operation.getCurrentX() < destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() > destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() < destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() >= destination.getX() && operation.getCurrentY() <= destination.getY() && operation.getCurrentZ() >= destination.getZ())
+                                        break;
+                                }
+
+                                else if (xDirection > 0 && yDirection > 0 && zDirection <= 0) {
+                                    if (operation.getCurrentX() < destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() < destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() > destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() >= destination.getX() && operation.getCurrentY() >= destination.getY() && operation.getCurrentZ() <= destination.getZ())
+                                        break;
+                                }
+
+                                // xDirection > 0 && yDirection > 0 && zDirection > 0
+                                else {
+                                    if (operation.getCurrentX() < destination.getX())
+                                        operation.setCurrentX(operation.getCurrentX() + (0.1) * xDirection);
+                                    if (operation.getCurrentY() < destination.getY())
+                                        operation.setCurrentY(operation.getCurrentY() + (0.1) * yDirection);
+                                    if (operation.getCurrentZ() < destination.getZ())
+                                        operation.setCurrentZ(operation.getCurrentZ() + (0.1) * zDirection);
+                                    if (operation.getCurrentX() >= destination.getX() && operation.getCurrentY() >= destination.getY() && operation.getCurrentZ() >= destination.getZ())
+                                        break;
+                                }
+
                                 if (operation.getCurrentX() != prevX || operation.getCurrentY() != prevY || operation.getCurrentZ() != prevZ) {
+                                    coordinatesList.add(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();
                                     prevY = operation.getCurrentY();
                                     prevZ = operation.getCurrentZ();
                                 }
-                                if (xDirection > 0) {
-                                    if (operation.getCurrentX() >= destination.getX())
-                                        break;
-                                }
-                                else if (operation.getCurrentX() < destination.getX())
-                                    break;
 
-//                                break;
+                                try {
+                                    TimeUnit.MILLISECONDS.sleep(200);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
+                        schedule.remove(0);
                     }
-                    schedule.remove(0);
                 }
-//                if (Time.getInstance().getUnit() != prev) {
-//                    System.out.println("UAV " + this.getUAVInfo().getId() + ", Time: " + Time.getInstance().getUnit());
-//                }
-//                prev = Time.getInstance().getUnit();
             }
         }
     }

@@ -20,7 +20,7 @@ public class SimulationApp implements Runnable{
             for (int j = 0; j < 25; j++) {
                 Time.getInstance().tick();
                 try {
-                    TimeUnit.MILLISECONDS.sleep(1000);
+                    TimeUnit.MILLISECONDS.sleep(300);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

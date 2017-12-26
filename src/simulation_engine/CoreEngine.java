@@ -32,6 +32,6 @@ public class CoreEngine {
         UAVEngine.getInstance().startThread();
         Thread t = new Thread(SimulationApp.getInstance());
         t.start();
-        Drawing2D.getInstance().draw2D();
+//        Drawing2D.getInstance().draw2D();
     }
 }
