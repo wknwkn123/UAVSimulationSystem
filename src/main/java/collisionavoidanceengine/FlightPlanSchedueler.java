@@ -3,7 +3,7 @@ package collisionavoidanceengine;
 import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
 import collisionavoidanceengine.flightplan.FlightSchedule;
-import simulationengine.flightplan.FlightPlan;
+import flight_plan.FlightPlan;
 
 import java.io.IOException;
 

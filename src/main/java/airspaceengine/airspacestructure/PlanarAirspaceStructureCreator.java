@@ -51,7 +51,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
         }
 
         //create edges.
-        JSONArray edgeArr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("edges");
+        JSONArray edgeArr = jobj.getJSONObject("/main/java/mapbuilder/graph").getJSONArray("edges");
         for (int i = 0; i < edgeArr.length(); i++) {
             JSONObject curObj = edgeArr.getJSONObject(i);
             String edgeID = "RS_"+Integer.toString(i);

@@ -14,6 +14,7 @@ public class UAV implements Runnable{
     private List<FlightPlan> schedule;
     private volatile boolean stopWork;
     private List<Coordinate> coordinatesList = new ArrayList<>();
+    private UAVJSON jsonData;
     private boolean done;
 
     //constructor
@@ -21,6 +22,8 @@ public class UAV implements Runnable{
         UAVInfo = new UAVInfo(uav_manufacturer, model_type, max_speed, max_altitude);
         schedule = new ArrayList<>();
         operation = new UAVOperation();
+        jsonData = new UAVJSON();
+        jsonData.setId(this.getUAVInfo().getId());
     }
 
     public void printUAVInfo() {
@@ -34,6 +37,8 @@ public class UAV implements Runnable{
     public UAVInfo getUAVInfo() {
         return UAVInfo;
     }
+
+    public UAVJSON getJsonData() { return jsonData; }
 
     public void addJob(FlightPlan job) {
         schedule.add(job);
@@ -52,6 +57,7 @@ public class UAV implements Runnable{
             while(!Time.getInstance().isCompleted()) {
                 if (schedule.size() > 0) {
                     FlightPlan plan = schedule.get(0);
+                    jsonData.setPlanID(plan.getId());
                     if (plan.getTargetStartTime() == Time.getInstance().getUnit()) {
                         for (FlightSegment segment : plan.getFlightPath()) {
                             Waypoint origin = segment.getSegment().getFrom();
@@ -154,6 +160,7 @@ public class UAV implements Runnable{
 
                                 if (operation.getCurrentX() != prevX || operation.getCurrentY() != prevY || operation.getCurrentZ() != prevZ) {
                                     coordinatesList.add(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
+                                    jsonData.getCoordinateList().add(coordinatesList.get(coordinatesList.size() - 1));
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();
                                     prevY = operation.getCurrentY();

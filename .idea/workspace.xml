@@ -2,166 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08b415ff-169a-4f26-b1b6-ff401c1e957b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/demo.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/out.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/simple.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/simple.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/AirspaceEngine.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructure.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/routesegment/RSList.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/routesegment/RouteSegment.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/waypoint/WPList.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/waypoint/Waypoint.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/FlightPlanSchedueler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/assets/UAV.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/constants/Constant.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/evaluation/RoutingAlgorithmEvaluator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/EdgeRecord.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/Flight.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/FlightSchedule.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/MetaNodeRecord.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/NodeRecord.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/request/RandomRequestCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/request/Request.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/request/RequestCreator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/routing_algorithm/DelayToStart.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/routing_algorithm/HoverAndWaitAlgorithm.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/routing_algorithm/RemovePreOccupied.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/Visualizer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/graph/Edge2D.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/graph/Graph.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/graph/PropertyEdge.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/graph/Vector2D.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/graph/loader/JsonLoader.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/DelaunayTriangulator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/Edge.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/Node.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/NotEnoughPointsException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/Triangle2D.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/TriangleSoup.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/mapbuilder/triangulation/WeightedEdge.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/AirspaceEngine.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/AirspaceStructure.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/AirspaceStructureCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/AirspaceStructureFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/routesegment/RSList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/routesegment/RouteSegment.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/waypoint/WPList.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/waypoint/Waypoint.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/FlightPlanSchedueler.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/assets/UAV.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/constants/Constant.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/evaluation/RoutingAlgorithmEvaluator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/flightplan/EdgeRecord.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/flightplan/Flight.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/flightplan/FlightSchedule.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/flightplan/MetaNodeRecord.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/flightplan/NodeRecord.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/request/RandomRequestCreator$1.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/request/RandomRequestCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/request/Request.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/request/RequestCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/routing_algorithm/DelayToStart.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/routing_algorithm/HoverAndWaitAlgorithm.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/collisionavoidanceengine/routing_algorithm/RemovePreOccupied.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/Visualizer$DrawArea.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/Visualizer.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/graph/Edge2D.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/graph/Graph.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/graph/PropertyEdge.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/graph/Vector2D.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/graph/loader/JsonLoader.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/DelaunayTriangulator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/Edge.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/Node.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/NotEnoughPointsException.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/Triangle2D.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/TriangleSoup.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapbuilder/triangulation/WeightedEdge.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/simulationengine/SimulationApp.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlan.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlanCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlanFactory.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/RandomFlightPlanCreator.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/uav/UAVFleetOwner.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/classes/uav/UAVOperation.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ekoedita.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/java.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/websocket/UAVEncoder.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/SimulationUAV.iml" afterPath="$PROJECT_DIR$/SimulationUAV.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/AirspaceEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/Drawing2D$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/Drawing2D$CGTemplate$DrawCanvas.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/Drawing2D$CGTemplate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/Drawing2D.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/airspace_structure/AirspaceStructure.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/airspace_structure/AirspaceStructureCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/airspace_structure/AirspaceStructureFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/airspace_structure/RandomAirspaceStructureCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/route_segment/RouteSegment.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/airspace_engine/waypoint/Waypoint.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/FlightPlan.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/FlightPlanCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/FlightPlanEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/FlightPlanFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/FlightSegment.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/flight_plan/RandomFlightPlanCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulation_engine/CoreEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulation_engine/SimulationApp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/simulation_engine/Time.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/Coordinate.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/RandomUAVCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAV.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVCreator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVFactory.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVFleetOwner.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVInfo.class" afterPath="$PROJECT_DIR$/target/classes/uav/UAVInfo.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" afterPath="$PROJECT_DIR$/out/production/SimulationUAV/uav/UAVOperation.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/SimulationUAV/websocket/Encoder.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/AirspaceEngine.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/Drawing2D.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/Drawing2D.java" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/airspace_structure/AirspaceStructure.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/airspace_structure/AirspaceStructureCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/airspace_structure/AirspaceStructureFactory.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/airspace_structure/RandomAirspaceStructureCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/route_segment/RouteSegment.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/airspace_engine/waypoint/Waypoint.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightPlan.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightPlanCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightPlanEngine.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightPlanFactory.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/FlightSegment.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/flight_plan/RandomFlightPlanCreator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" afterPath="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/FlightPlanSchedueler.java" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/FlightPlanSchedueler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uav/UAV.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
-      <change beforePath="$PROJECT_DIR$/src/simulation_engine/CoreEngine.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java" />
-      <change beforePath="$PROJECT_DIR$/src/simulation_engine/SimulationApp.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/simulation_engine/Time.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/Time.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/Coordinate.java" afterPath="$PROJECT_DIR$/src/main/java/uav/Coordinate.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/RandomUAVCreator.java" afterPath="$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAV.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVCreator.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVEngine.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVFactory.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVFleetOwner.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVFleetOwner.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVInfo.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/uav/UAVOperation.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVOperation.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/uav/UAV.class" afterPath="$PROJECT_DIR$/target/classes/uav/UAV.class" />
+      <change beforePath="$PROJECT_DIR$/src/websocket/Encoder.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.class" afterPath="$PROJECT_DIR$/target/classes/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlan.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlanCreator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/FlightPlanFactory.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/simulationengine/flightplan/RandomFlightPlanCreator.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -174,50 +28,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="UAVEncoder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/websocket/UAVEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#227#228#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CoreEngine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AirspaceEngine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/AirspaceEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AirspaceStructureFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="41" lean-forward="true" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+            <state relative-caret-position="252">
+              <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="41" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RandomAirspaceStructureCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/RandomAirspaceStructureCreator.java">
+      <file leaf-file-name="UAVJSON.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVJSON.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="73" lean-forward="true" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
+            <state relative-caret-position="344">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UAV.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="169" column="37" lean-forward="true" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -248,7 +106,6 @@
         <option value="$PROJECT_DIR$/src/main/java/simulationengine/flightplan/FlightPlan.java" />
         <option value="$PROJECT_DIR$/src/main/java/airspaceengine/routesegment/RouteSegment.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightSegment.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanCreator.java" />
@@ -259,6 +116,13 @@
         <option value="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/RandomAirspaceStructureCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/airspaceengine/AirspaceEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/FlightPlanSchedueler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/websocket/Encoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uav/UAVJSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/websocket/UAVEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java" />
       </list>
     </option>
@@ -377,6 +241,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="uav" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SimulationUAV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimulationUAV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="websocket" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -388,9 +260,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/java/uav" />
       <recent name="$PROJECT_DIR$/src/main/java/simulationengine" />
     </key>
@@ -415,7 +291,7 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application">
+    <configuration name="CoreEngine" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="simulationengine.CoreEngine" />
       <option name="VM_PARAMETERS" value="" />
@@ -517,12 +393,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514310064879</updated>
-      <workItem from="1514310066354" duration="3611000" />
+      <workItem from="1514310066354" duration="6540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3611000" />
+    <option name="totallyTimeSpent" value="6540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -537,8 +413,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36442786" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54228854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3104435" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -697,7 +573,7 @@
         <state relative-caret-position="285">
           <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -727,17 +603,7 @@
         <state relative-caret-position="810">
           <caret line="74" column="108" lean-forward="false" selection-start-line="74" selection-start-column="108" selection-end-line="74" selection-end-column="108" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="55" column="61" lean-forward="false" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,14 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/waypoint/Waypoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-123">
@@ -795,7 +653,7 @@
         <state relative-caret-position="267">
           <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
-            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -805,17 +663,7 @@
         <state relative-caret-position="210">
           <caret line="19" column="66" lean-forward="false" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
           <folding>
-            <element signature="e#520#521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/RandomAirspaceStructureCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="73" lean-forward="true" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -828,10 +676,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/collisionavoidanceengine/FlightPlanSchedueler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="41" lean-forward="true" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+        <state relative-caret-position="195">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/PlanarAirspaceStructureCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="53" column="48" lean-forward="false" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -841,29 +699,168 @@
         <state relative-caret-position="306">
           <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1180#1181#0" expanded="false" />
+            <element signature="e#1209#1210#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/AirspaceStructureFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/airspacestructure/RandomAirspaceStructureCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="73" lean-forward="false" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mapbuilder/Visualizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="169" column="37" lean-forward="true" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/websocket/UAVEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="41" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SimulationUAV</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.json:json:20171018</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
