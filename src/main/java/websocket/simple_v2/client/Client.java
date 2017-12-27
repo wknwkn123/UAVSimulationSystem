@@ -1,11 +1,12 @@
-//package websocket;
+//package websocket.simple_v2.client;
 //
+//import javax.websocket.ClientEndpoint;
 //import javax.websocket.Session;
 //import java.util.Scanner;
 //
 //public class Client {
 //
-//    public static final String SERVER = "sync with andre";
+//    public static final String SERVER = "ws://localhost:9001";
 //
 //    public void connectToServer() {
 //        ClientManager client = ClientManager.createClient();

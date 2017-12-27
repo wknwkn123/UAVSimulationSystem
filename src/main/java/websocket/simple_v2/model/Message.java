@@ -1,4 +1,4 @@
-package websocket;
+package websocket.simple_v2.model;
 
 import uav.Coordinate;
 import uav.UAV;

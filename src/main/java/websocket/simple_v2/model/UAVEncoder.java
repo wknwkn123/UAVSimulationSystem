@@ -1,4 +1,4 @@
-package websocket;
+package websocket.simple_v2.model;
 
 import com.google.gson.Gson;
 import uav.UAV;

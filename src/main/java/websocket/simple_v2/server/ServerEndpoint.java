@@ -1,17 +1,14 @@
-package websocket;
+package websocket.simple_v2.server;
 
 import uav.UAVJSON;
+import websocket.simple_v2.model.MessageDecoder;
+import websocket.simple_v2.model.MessageEncoder;
 
 import javax.websocket.*;
-import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 
-@ServerEndpoint(
-        value="to sync with andre",
-        decoders = MessageDecoder.class,
-        encoders = MessageEncoder.class )
-public class Server {
-
+@javax.websocket.server.ServerEndpoint(value="ws://localhost:9001", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
+public class ServerEndpoint {
     @OnOpen
     public void onOpen(Session session) throws IOException {
         // Get session and WebSocket connection

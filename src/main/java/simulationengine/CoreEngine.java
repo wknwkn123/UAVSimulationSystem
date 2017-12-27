@@ -5,10 +5,8 @@ import flight_plan.FlightPlan;
 import flight_plan.FlightPlanEngine;
 import uav.UAV;
 import uav.UAVEngine;
-import websocket.UAVEncoder;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class CoreEngine {
 
