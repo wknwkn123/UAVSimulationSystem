@@ -8,9 +8,9 @@ import java.util.Comparator;
 public class ThreadComparator implements Comparator<Thread> {
     @Override
     public int compare(Thread t1, Thread t2) {
-        if (t1.weight-t2.weight<0)
+        if (t1.fCost-t2.fCost<0)
             return -1;
-        else if (t1.weight-t2.weight>0)
+        else if (t1.fCost-t2.fCost>0)
             return 1;
         else
             return 0;

@@ -59,7 +59,7 @@ public class FlightSchedule {
 
 
     // Get the waiting period for waiting at a specific node
-    public double getWaitingPenaltyAtNode(String nodeID, int time){
+    public double getWaitingPenaltyAtNode(String nodeID, double time){
         return this.getNodeRecByID(nodeID).getWaitingPenalty(time);
     }
 

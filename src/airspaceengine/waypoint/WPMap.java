@@ -1,8 +1,6 @@
 package airspaceengine.waypoint;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,6 +12,11 @@ public class WPMap {
 
     public Map<String,Waypoint> getWaypointMap() {
         return WaypointMap;
+    }
+
+    // Return a list of WayPoints (order is not guaranteed)
+    public Waypoint[] getWaypointList(){
+        return WaypointMap.values().toArray(new Waypoint[0]);
     }
 
     public void addWaypoint(Waypoint wp){
