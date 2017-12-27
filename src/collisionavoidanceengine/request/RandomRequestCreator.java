@@ -1,8 +1,6 @@
 package collisionavoidanceengine.request;
 
-import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
-import airspaceengine.routesegment.RouteSegment;
 import airspaceengine.waypoint.Waypoint;
 
 import java.util.*;
@@ -12,10 +10,10 @@ import java.util.*;
  */
 public class RandomRequestCreator implements RequestCreator{
     private AirspaceStructure airMap;
-    private PriorityQueue<Request> requestQueue = new PriorityQueue<Request>(100, startTimeComparartor);
+    private PriorityQueue<Request> requestQueue = new PriorityQueue<Request>(100, startTimeComparator);
 
     // Compare two requests based on their startTime, if they are equal, randomly choose one request
-    public static Comparator<Request> startTimeComparartor = new Comparator<Request>() {
+    public static Comparator<Request> startTimeComparator = new Comparator<Request>() {
         @Override
         public int compare(Request o1, Request o2) {
             return o1.getStartTime()-o2.getStartTime();

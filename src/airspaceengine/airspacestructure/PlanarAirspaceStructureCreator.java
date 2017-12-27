@@ -55,7 +55,7 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
         JSONArray edgeArr = jobj.getJSONObject("graph").getJSONArray("edges");
         for (int i = 0; i < edgeArr.length(); i++) {
             JSONObject curObj = edgeArr.getJSONObject(i);
-            String edgeID = "RS_"+Integer.toString(i);
+            String edgeID = "RS_"+curObj.getJSONObject("source").toString()+"-"+curObj.getJSONObject("end").toString();
             Waypoint origin = this.Nodes.getWaypointByID(curObj.getJSONObject("source").toString());
             Waypoint end = this.Nodes.getWaypointByID(curObj.getJSONObject("end").toString());
             // weight = time  = distance/speed , notice that distance is measured in hundred meters
