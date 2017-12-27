@@ -58,7 +58,14 @@ public class UAV implements Runnable{
                 if (schedule.size() > 0) {
                     FlightPlan plan = schedule.get(0);
                     jsonData.setPlanID(plan.getId());
-                    if (plan.getTargetStartTime() == Time.getInstance().getUnit()) {
+                    if (plan.getTargetStartTime() - Time.getInstance().getUnit() > 0) {
+                        try {
+                            TimeUnit.MILLISECONDS.sleep(300 * (plan.getTargetStartTime() - Time.getInstance().getUnit()) - 400);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    if (plan.getTargetStartTime() <= Time.getInstance().getUnit()) {
                         for (FlightSegment segment : plan.getFlightPath()) {
                             Waypoint origin = segment.getSegment().getFrom();
                             Waypoint destination = segment.getSegment().getTo();

@@ -31,6 +31,8 @@ public class CoreEngine {
             i++;
         }
 
+        FlightPlanEngine.getInstance().printPlanDetails();
+
         //run simulation
         UAVEngine.getInstance().startThread();
         Thread t = new Thread(SimulationApp.getInstance());
@@ -40,7 +42,7 @@ public class CoreEngine {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
+//        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
 //        Drawing2D.getInstance().draw2D();
     }
 }
