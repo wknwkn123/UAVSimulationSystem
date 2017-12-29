@@ -15,7 +15,7 @@ public class DelaunayTriangulator {
 
     private List<Vector2D> pointSet;
     private TriangleSoup triangleSoup;
-
+    private List<Edge2D> edges;
     /**
      * Constructor of the SimpleDelaunayTriangulator class used to create source new
      * triangulator instance.
@@ -212,12 +212,16 @@ public class DelaunayTriangulator {
     }
 
     public List<Edge2D> getEdges(){
-        Set<Edge2D> edges = new HashSet<>();
-        for(Triangle2D t: triangleSoup.getTriangles()){
-            edges.add(new Edge(t.a, t.b));
-            edges.add(new Edge(t.a, t.c));
-            edges.add(new Edge(t.b, t.c));
+        if(edges==null) {
+            Set<Edge2D> edges = new HashSet<>();
+            for (Triangle2D t : triangleSoup.getTriangles()) {
+                edges.add(new Edge(t.a, t.b));
+                edges.add(new Edge(t.a, t.c));
+                edges.add(new Edge(t.b, t.c));
+            }
+            return new ArrayList<>(edges);
+        } else{
+            return edges;
         }
-        return new ArrayList<>(edges);
     }
 }
