@@ -27,10 +27,9 @@ import static java.lang.StrictMath.sqrt;
 public class Triangulate {
     public static void main(String[] args) throws IOException, NotEnoughPointsException {
         JsonLoader loader = new JsonLoader();
-        String input = args[1];
-        String output= args[2];
+        String file= args[0];
 
-        Vector<Vector2D> pointSet = loader.loadNodesList(input);
+        Vector<Vector2D> pointSet = loader.loadNodesList(file);
         DelaunayTriangulator delaunayTriangulator = new DelaunayTriangulator(pointSet);
         delaunayTriangulator.triangulate();
         List<Edge2D> edges= delaunayTriangulator.getEdges();
@@ -44,7 +43,7 @@ public class Triangulate {
         }
 
 
-        loader.writeEdges2Json(output, jsonEdges);
+        loader.writeEdges2Json(file, jsonEdges);
 
 
     }

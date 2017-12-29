@@ -19,6 +19,7 @@ collisionavoidanceengine/request/RandomRequestCreator$1.class
 airspaceengine/airspacestructure/PlanarAirspaceStructureCreatorTest.class
 simulationengine/SimulationApp.class
 airspaceengine/airspacestructure/AirspaceStructureCreator.class
+mapbuilder/Triangulate.class
 mapbuilder/graph/Graph.class
 mapbuilder/graph/PropertyEdge.class
 collisionavoidanceengine/FlightPlanSchedueler.class
