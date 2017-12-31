@@ -1,19 +1,19 @@
 package airspaceengine.airspacestructure;
-import airspaceengine.routesegment.RSList;
+import airspaceengine.routesegment.RSMap;
 import airspaceengine.routesegment.RouteSegment;
-import airspaceengine.waypoint.WPList;
+import airspaceengine.waypoint.WPMap;
 import airspaceengine.waypoint.Waypoint;
 
 public class AirspaceStructure {
-    private final WPList nodes;
-    private final RSList edges;
+    private final WPMap nodes;
+    private final RSMap edges;
 
-    AirspaceStructure(WPList nodes, RSList edges) {
+    AirspaceStructure(WPMap nodes, RSMap edges) {
         this.nodes = nodes;
         this.edges = edges;
     }
 
-    // Use the method implemented in RSList and WPList
+    // Use the method implemented in RSMap and WPMap
     public void addNode(Waypoint new_node) {
         nodes.addWaypoint(new_node);
     }
@@ -46,11 +46,11 @@ public class AirspaceStructure {
 //		 }
 //	}
 
-    public WPList getNodes(){
+    public WPMap getNodes(){
         return nodes;
     }
 
-    public RSList getEdges() {
+    public RSMap getEdges() {
         return edges;
     }
 }

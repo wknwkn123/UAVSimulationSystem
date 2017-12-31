@@ -32,8 +32,6 @@ public class NodeRecord {
         this.nodeID = nodeID;
     }
 
-
-
     public boolean isTransferable() {
         return isTransferable;
     }
@@ -42,17 +40,28 @@ public class NodeRecord {
         isTransferable = transferable;
     }
 
-    public double getWaitingPenalty (int newArrival){
+    public double getWaitingPenalty (double newArrival){
         for (int i=historyList.size()-1; i>=0;i--){
             MetaNodeRecord currentSchedule = historyList.get(i);
 
-            // When two UAV arrives at the same node at same time, we let the previously scheduled UAV fly first
-            if(currentSchedule.reachTime==newArrival)
-                // If the former UAV is attempting to land
-                if (this.isTransferable && currentSchedule.isLanding)
-                    return WAITING_PENALTY_AT_LANDING_NODE;
-                else
+            // If this is a transferable node
+            if (this.isTransferable){
+                if (currentSchedule.isLanding){
+                    // When current UAV start landing
+                    double lowBound = currentSchedule.reachTime;
+                    // When current UAV finishes landing
+                    double uppBound  = lowBound+WAITING_PENALTY_AT_LANDING_NODE;
+                    // If the new UAV is passing a node while current UAV is landing
+                    if (lowBound<=newArrival && newArrival<=uppBound)
+                        return uppBound-newArrival;
+                }
+                // If none of the UAVs is landing, but they arrives at the same time, we let the previously scheduled UAV fly first
+                if (currentSchedule.reachTime == newArrival)
                     return WAITING_PENALTY_AT_NON_LANDING_NODE;
+            }
+            // If this is a non-transferable node, but they arrive at the same time
+            else if (currentSchedule.reachTime == newArrival)
+                return WAITING_PENALTY_AT_NON_LANDING_NODE;
         }
         // No waiting penalty; this node is free to use.
         return 0.0;
