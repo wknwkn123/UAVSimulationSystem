@@ -29,6 +29,7 @@ public class FlightPlanSchedueler {
     public FlightSchedule currentFlightPlan = new FlightSchedule(myAirMap);
     // Solution is presented in reversed order
     List<Waypoint> solution = new ArrayList<>();
+    Map<String, List<Waypoint>> solution = new HashMap<>();
 
     FlightPlanSchedueler(String airMapType, String requestQueueTyoe){
         // Initialization
