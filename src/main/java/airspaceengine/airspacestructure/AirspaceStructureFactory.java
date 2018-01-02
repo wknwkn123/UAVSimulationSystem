@@ -6,7 +6,7 @@ public class AirspaceStructureFactory {
     public static AirspaceStructureCreator getAirspaceStructureCreator(String type) throws IOException {
         switch(type) {
             case "PLANARGRAPH":
-                return new PlanarAirspaceStructureCreator();
+                return new PlanarAirspaceStructureCreator("data/demo.json");
             default:
                 System.out.println("Default printed. This should not happen");
                 return null;

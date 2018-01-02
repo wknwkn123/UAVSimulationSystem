@@ -23,19 +23,25 @@ import static collisionavoidanceengine.constants.Constant.UAV_SPEED;
  */
 
 public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
-    private String pathToMap = "data/demo.json";
-    private String content = new String (Files.readAllBytes(Paths.get(pathToMap)));
-    private JSONObject jobj = new JSONObject(content);
-    private WPMap Nodes = new WPMap();
-    private RSMap Edges = new RSMap();
+    private String pathToMap;
+    private String content ;
+    private JSONObject jobj;
+    private WPMap Nodes;
+    private RSMap Edges;
 
-    PlanarAirspaceStructureCreator() throws IOException {
+    public PlanarAirspaceStructureCreator(String pathToMapJSON) throws IOException {
+        //pathToMapJSON = "/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/demo.json"
+        pathToMap = pathToMapJSON;
+        content = new String (Files.readAllBytes(Paths.get(pathToMap)));
+        jobj = new JSONObject(content);
+        Nodes = new WPMap();
+        Edges = new RSMap();
     }
 
     public AirspaceStructure createAirspaceStructure() throws IOException {
 
         //create nodes
-        JSONArray nodeArr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("nodes");
+        JSONArray nodeArr = jobj.getJSONObject("graph").getJSONArray("nodes");
         for (int i = 0; i < nodeArr.length(); i++) {
             JSONObject curObj = nodeArr.getJSONObject(i);
 
