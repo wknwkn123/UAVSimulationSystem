@@ -12,7 +12,7 @@ class PlanarAirspaceStructureCreatorTest {
 
     @Test
     void createAirspaceStructure() throws IOException {
-        PlanarAirspaceStructureCreator pc = new PlanarAirspaceStructureCreator("data/demo.json");
+        PlanarAirspaceStructureCreator pc = new PlanarAirspaceStructureCreator();
         AirspaceStructure as = pc.createAirspaceStructure();
     }
 
