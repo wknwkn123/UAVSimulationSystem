@@ -8,25 +8,23 @@ import org.json.JSONObject;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import mapbuilder.triangulation.Node;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JsonLoader {
-    public static List<Edge2D> loadEdges(String file) throws IOException, JSONException {
+    public List<Edge2D> loadEdges(String file) throws IOException, JSONException {
         throw new NotImplementedException();
     }
 
-    public static List<Vector2D> loadNodesList(String file) throws IOException, JSONException {
+    public Vector<Vector2D> loadNodesList(String file) throws IOException, JSONException {
         String content = new String(Files.readAllBytes(Paths.get(file)));
 
         JSONObject jobj = new JSONObject(content);
-        ArrayList<Vector2D> pointSet = new ArrayList<>();
-        JSONArray arr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("nodes");
+        Vector<Vector2D> pointSet = new Vector<>();
+        JSONArray arr = jobj.getJSONObject("graph").getJSONArray("nodes");
         JSONObject node;
         for (int i = 0; i < arr.length(); i++) {
             node = arr.getJSONObject(i).getJSONObject("meta-data");
@@ -36,12 +34,13 @@ public class JsonLoader {
         }
         return pointSet;
     }
-    public static Map<String,Vector2D> loadNodesMap(String file) throws IOException, JSONException {
+
+    public Map<String,Vector2D> loadNodesMap(String file) throws IOException, JSONException {
         String content = new String(Files.readAllBytes(Paths.get(file)));
 
         JSONObject jobj = new JSONObject(content);
         Map<String,Vector2D> pointMap = new HashMap<>();
-        JSONArray arr = jobj.getJSONObject("main/java/mapbuilder/graph").getJSONArray("nodes");
+        JSONArray arr = jobj.getJSONObject("graph").getJSONArray("nodes");
         JSONObject node;
         for (int i = 0; i < arr.length(); i++) {
             String id = arr.getJSONObject(i).getString("id");
@@ -55,4 +54,19 @@ public class JsonLoader {
 
     }
 
+    public void writeEdges2Json(String file, JSONArray jsonEdges) throws IOException {
+
+        String content = new String(Files.readAllBytes(Paths.get(file)));
+        JSONObject jobj = new JSONObject(content);
+        jobj.getJSONObject("graph").put("edges", jsonEdges);
+
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(jobj.toString());
+            fileWriter.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 }
