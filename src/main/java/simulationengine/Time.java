@@ -4,6 +4,7 @@ public class Time {
     private static Time ourInstance = new Time();
     private int unit;
     private boolean completed = false;
+    private int multiplier = 1;
 
     public static Time getInstance() {
         return ourInstance;
@@ -26,5 +27,13 @@ public class Time {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    public void setMultiplier(int multiplier) {
+        this.multiplier = multiplier;
+    }
+
+    public double getRealTime() {
+        return unit/multiplier;
     }
 }

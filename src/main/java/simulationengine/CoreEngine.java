@@ -5,8 +5,11 @@ import flight_plan.FlightPlan;
 import flight_plan.FlightPlanEngine;
 import uav.UAV;
 import uav.UAVEngine;
+import websocket.simple_v2.model.UAVEncoder;
+import websocket.simple_v2.server.Server;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class CoreEngine {
 
@@ -29,18 +32,21 @@ public class CoreEngine {
             i++;
         }
 
-        FlightPlanEngine.getInstance().printPlanDetails();
+//        FlightPlanEngine.getInstance().printPlanDetails();
 
         //run simulation
         UAVEngine.getInstance().startThread();
         Thread t = new Thread(SimulationApp.getInstance());
         t.start();
-//        try {
-//            TimeUnit.MILLISECONDS.sleep(2000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
+        try {
+            TimeUnit.MILLISECONDS.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
 //        Drawing2D.getInstance().draw2D();
+
+        //start websocket server
+//        Server.getInstance().startServer();
     }
 }

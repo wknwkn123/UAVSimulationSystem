@@ -4,12 +4,16 @@ import java.util.Scanner;
 import javax.websocket.DeploymentException;
 
 public class Server {
+    private static Server instance = new Server();
 
-    public static void main(String[] args) {
+    public Server() {};
 
-        org.glassfish.tyrus.server.Server server;
-        server = new org.glassfish.tyrus.server.Server("localhost", 9001, "/ws", null , ServerEndpoint.class);
+    public static Server getInstance() {
+        return instance;
+    }
 
+    public static void startServer() {
+        org.glassfish.tyrus.server.Server server = new org.glassfish.tyrus.server.Server("localhost", 9001, "/ws" , null , ServerEndpoint.class);
         try {
             server.start();
             System.out.println("Press any key to stop the server..");

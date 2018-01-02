@@ -57,7 +57,6 @@ public class UAV implements Runnable{
             while(!Time.getInstance().isCompleted()) {
                 if (schedule.size() > 0) {
                     FlightPlan plan = schedule.get(0);
-                    jsonData.setPlanID(plan.getId());
                     if (plan.getTargetStartTime() - Time.getInstance().getUnit() > 0) {
                         try {
                             TimeUnit.MILLISECONDS.sleep(300 * (plan.getTargetStartTime() - Time.getInstance().getUnit()) - 400);
@@ -166,8 +165,7 @@ public class UAV implements Runnable{
                                 }
 
                                 if (operation.getCurrentX() != prevX || operation.getCurrentY() != prevY || operation.getCurrentZ() != prevZ) {
-                                    coordinatesList.add(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
-                                    jsonData.getCoordinateList().add(coordinatesList.get(coordinatesList.size() - 1));
+                                    setJSONData();
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();
                                     prevY = operation.getCurrentY();
@@ -175,7 +173,7 @@ public class UAV implements Runnable{
                                 }
 
                                 try {
-                                    TimeUnit.MILLISECONDS.sleep(200);
+                                    TimeUnit.MILLISECONDS.sleep(250);
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
@@ -186,6 +184,12 @@ public class UAV implements Runnable{
                 }
             }
         }
+    }
+
+    public void setJSONData() {
+        jsonData.setTime(Time.getInstance().getRealTime());
+        jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentZ(), operation.getCurrentY()));
+        jsonData.setPlanID(schedule.get(0).getId());
     }
 
     public void stopWork() {

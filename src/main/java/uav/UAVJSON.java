@@ -1,15 +1,20 @@
 package uav;
 
+import simulationengine.Time;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class UAVJSON {
     private String id;
     private String planID;
-    private List<Coordinate> coordinateList = new ArrayList<>();
+    private Coordinate coordinate;
+    private double time;
 
-    public List<Coordinate> getCoordinateList() {
-        return coordinateList;
+    public Coordinate getCoordinate() { return coordinate; }
+
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
     }
 
     public void setId(String id) {
@@ -22,5 +27,9 @@ public class UAVJSON {
 
     public String getPlanID() {
         return planID;
+    }
+
+    public void setTime(double time) {
+        this.time = time;
     }
 }

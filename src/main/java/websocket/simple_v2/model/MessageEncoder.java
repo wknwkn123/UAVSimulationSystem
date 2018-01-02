@@ -1,19 +1,23 @@
 package websocket.simple_v2.model;
 
 import com.google.gson.Gson;
+import uav.UAV;
 import uav.UAVJSON;
 
 import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 
-public class MessageEncoder implements Encoder.Text<UAVJSON> {
+public class MessageEncoder implements Encoder.Text<UAV> {
 
     private static Gson gson = new Gson();
 
     @Override
-    public String encode(UAVJSON message) throws EncodeException {
-        return gson.toJson(message);
+    public String encode(UAV uav) {
+        Gson gson = new Gson();
+        String jsonUAVs = gson.toJson(uav.getJsonData());
+        System.out.println("UAV JSON DATA = " + jsonUAVs);
+        return jsonUAVs;
     }
 
     @Override
