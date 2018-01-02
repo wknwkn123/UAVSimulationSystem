@@ -5,6 +5,7 @@ target/
 .DS_Store
 .AppleDouble
 .LSOverride
+.class
 
 # Icon must end with two \r
 Icon
@@ -30,3 +31,4 @@ Temporary Items
 .apdisk
 .idea/
 misc.xml
+
