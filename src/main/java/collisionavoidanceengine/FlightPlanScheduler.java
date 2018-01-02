@@ -3,56 +3,87 @@ package collisionavoidanceengine;
 import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
 import airspaceengine.waypoint.Waypoint;
-import collisionavoidanceengine.assets.Thread;
-import collisionavoidanceengine.assets.ThreadComparator;
+import collisionavoidanceengine.assets.RoutingResult;
+import collisionavoidanceengine.assets.WorkingTableEntry;
+import collisionavoidanceengine.assets.WorkingTableEntryComparator;
 import collisionavoidanceengine.flightplan.FlightSchedule;
 
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 
 
-import javax.xml.soap.Node;
 import java.io.IOException;
 import java.util.*;
 
 import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
 import static collisionavoidanceengine.constants.Constant.INITIAL_FLIGHT_CAPACITY;
-import static collisionavoidanceengine.constants.Constant.WAITING_PENALTY_AT_NON_LANDING_NODE;
 
 /**
  * Created by StevenShi on 17/12/17.
  */
-public class FlightPlanSchedueler {
+public class FlightPlanScheduler {
     public int currentTime=0;
     public PriorityQueue<Request> myRequestQ;
     public AirspaceStructure myAirMap ;
     public FlightSchedule currentFlightPlan = new FlightSchedule(myAirMap);
-    // Solution is presented in reversed order
-    List<Waypoint> solution = new ArrayList<>();
-    Map<String, List<Waypoint>> solution = new HashMap<>();
+    // Solution is a map of routing result
+    public Map<String, RoutingResult> solution = new HashMap<>();
+    public int UAVCounter =0;
 
-    FlightPlanSchedueler(String airMapType, String requestQueueTyoe){
+    ArrayList<String> solutionSingleTripTemp = new ArrayList<>();
+
+    public FlightPlanScheduler(String airMapType, String requestQueueTyoe){
+        System.out.printf("ERROR : CANNOT CREATE AIRMAP!");
         // Initialization
         try {
             AirspaceEngine myAirEngine = AirspaceEngine.getInstance();
             // TODO:to be substituted with airMapType
+            System.out.printf("befroe AirMap created.");
             myAirEngine.createAirspace("PLANARGRAPH");
+            System.out.printf("AirMap created.");
             myAirMap=myAirEngine.airMap;
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.printf("ERROR : CANNOT CREATE AIRMAP!");
         }
         // Notice that request must be initialized after AirMap is created
         // This is because RequestQueue will require the topology of AirMap
         try{
-            // to be substituted with requestQueueTyoe
+            // todo : to be substituted with requestQueueType
             RequestCreatorSelector rcs = new RequestCreatorSelector();
             rcs.setRequestCreator("RANDOM");
             myRequestQ = rcs.getRequestCreator().generateRequest(INITIAL_FLIGHT_CAPACITY,myAirMap);
         }
         catch (Exception e){
-            e.printStackTrace();;
+            e.printStackTrace();
             System.out.printf("ERROR: CANNOT CREATE REQUEST QUEUE!");
+        }
+    }
+
+    public void updateSchedule(double startTime, String flightID, ArrayList<String> flightPath){
+        double reachTime = startTime;
+        for (int i = 0; i<flightPath.size();i++){
+            String currentWP  = flightPath.get(i);
+            String nextWP     = flightPath.get((i+i));
+            String routeSegID = "RS_"+currentWP+"-"+nextWP;
+
+            // Update the edge availability
+            currentFlightPlan.edgeAvailability.get(routeSegID).addRecord(flightID,reachTime);
+
+
+            // Update the node availability
+            reachTime += myAirMap.getEdges().getRouteSegmentByID(routeSegID).getWeight();
+            if(i==0||i==flightPath.size()-1){
+                if(i==0)
+                    // if this is the origin, set isTakingOff to true
+                    currentFlightPlan.nodeAvailability.get(currentWP).addRecord(reachTime,flightID,false,true);
+                else
+                    // if this is the destination, set isLanding to true
+                    currentFlightPlan.nodeAvailability.get(currentWP).addRecord(reachTime,flightID,true,false);
+            }
+            else
+                // those are non-landing nodes in between
+                currentFlightPlan.nodeAvailability.get(currentWP).addRecord(reachTime,flightID,false,false);
         }
     }
 
@@ -71,11 +102,11 @@ public class FlightPlanSchedueler {
     }
 
     public double doModifiedAStar(Request req, int currentTime){
-        // The following thread refers to Thread class under collisionavoidanceengine.asset
-        Comparator <Thread> threadComparator = new ThreadComparator();
+        // The following thread refers to WorkingTableEntry class under collisionavoidanceengine.asset
+        Comparator <WorkingTableEntry> threadComparator = new WorkingTableEntryComparator();
 
         // Initialize the "OPEN" list, which stores the frontier nodes
-        PriorityQueue<Thread> OPEN = new PriorityQueue<Thread>(myAirMap.getNodes().getSize(),threadComparator);
+        PriorityQueue<WorkingTableEntry> OPEN = new PriorityQueue<WorkingTableEntry>(myAirMap.getNodes().getSize(),threadComparator);
         // To facilitate search, we use a set. NOTICE : every addition/deletion to OPEN has to have a counterpart to NodeInOpen set
         Set<String> NodeInOpen = new HashSet<>();
 
@@ -89,16 +120,16 @@ public class FlightPlanSchedueler {
         Waypoint goal = myAirMap.getNodes().getWaypointByID(req.getDestinationID());
 
         // Put the origin to OPEN list
-        OPEN.add(new Thread(origin,
+        OPEN.add(new WorkingTableEntry(origin,
                 calcEuclideanDistance(origin,goal)+currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime),
                 calcEuclideanDistance(origin,goal)));
         NodeInOpen.add(origin.getNodeID());
 
         while(!OPEN.isEmpty()){
-            //Pop the Thread(node) with the least cost
-            Thread currentThread = OPEN.poll();
-            double costSoFar = currentThread.gCost;
-            Waypoint currentNode = currentThread.wp;
+            //Pop the WorkingTableEntry(node) with the least cost
+            WorkingTableEntry currentWorkingTableEntry = OPEN.poll();
+            double costSoFar = currentWorkingTableEntry.gCost;
+            Waypoint currentNode = currentWorkingTableEntry.wp;
 
             // Generate all successors of current node using adjacency node list
             for (Waypoint succ : currentNode.getAdjacientWaypoints()){
@@ -109,17 +140,14 @@ public class FlightPlanSchedueler {
                     PARENT.put(succ,currentNode);
                     // Backtrack to get all the route segments on the flight path
                     Waypoint anchor = goal;
-                    List<Waypoint> solutionTemp = new ArrayList<>();
-                    solutionTemp.add(anchor);
-                    while (PARENT.get(anchor)!=origin){
-                        anchor=PARENT.get(anchor);
-                        solutionTemp.add(anchor);
-                    }
-                    solutionTemp.add(origin);
 
-                    for (int i=solutionTemp.size()-1;i>=0;i--){
-                        solution.add(solutionTemp.get(i));
+                    solutionSingleTripTemp.add(anchor.getNodeID());
+                    while (PARENT.get(anchor)!=origin){
+                        // get parent, and push to solutionTemp queue
+                        anchor=PARENT.get(anchor);
+                        solutionSingleTripTemp.add(anchor.getNodeID());
                     }
+                    solutionSingleTripTemp.add(origin.getNodeID());
 
                     return costSoFar;
                 }
@@ -133,7 +161,7 @@ public class FlightPlanSchedueler {
 	                 which has a lower f than successor, skip this successor
                  */
                 boolean hasUpdatedOpen = false;
-                for (Thread td : OPEN){
+                for (WorkingTableEntry td : OPEN){
                     if(td.wp.getNodeID().equals(succ.getNodeID())&&td.fCost < succFCost){
                         PARENT.put(td.wp,currentNode);
                         td.fCost = succFCost;
@@ -154,7 +182,7 @@ public class FlightPlanSchedueler {
 //
 //                }
 
-                OPEN.add(new Thread(succ,succFCost,succGCost));
+                OPEN.add(new WorkingTableEntry(succ,succFCost,succGCost));
             }
             // Push current node to CLOSED list
         }
@@ -163,22 +191,39 @@ public class FlightPlanSchedueler {
     }
 
 
-    public List<Waypoint> ScheduleFlight(){
+    public void ScheduleFlight(){
         currentTime=0;
         while(!myRequestQ.isEmpty()){
             Request currentRequest = myRequestQ.poll();
             double requestedTime=doModifiedAStar(currentRequest,currentTime);
             if (requestedTime<=BATTERY_LIFE/2 &&requestedTime>0){
-                // Add to flight path
-                // Update all nodes and edges on the flight path
-                return this.solution;
+                //  Make a new RoutingResult record
+                String flightID  = "FL_"+currentRequest.getRequestID().substring(3);
+
+                // UAVID value is incremented by 1
+                UAVCounter++;
+                currentRequest.setUAVID("UV_"+UAVCounter);
+
+                // Reverse the solutionTemp queue so that the first element is origi
+
+                // Add this routing result to solution
+                Collections.reverse(solutionSingleTripTemp);
+                RoutingResult curResult  = new RoutingResult(flightID,currentRequest.getStartTime(),requestedTime,solutionSingleTripTemp);
+                solution.put(curResult.getFlightID(),curResult);
+
+                // update all nodes and edges on the flight path
+                updateSchedule(currentRequest.getStartTime(),flightID, solutionSingleTripTemp);
+
+                // Clean up the temporary variable
+                solutionSingleTripTemp=null;
+
             }
-
-                //todo: implement DFS
+            else
+            {    //todo: implement DFS
                 // Do a DFS search on all possible routing combinations
-
+                System.out.printf("Need to re-route!");
+            }
         }
-        return null;
     }
 
 

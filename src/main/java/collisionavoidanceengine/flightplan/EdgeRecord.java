@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import static collisionavoidanceengine.constants.Constant.WAITING_PENALTY_AT_NON_LANDING_NODE;
+
 /**
  * Created by Ziji Shi on 22/12/17.
  */
 public class EdgeRecord {
     private String edgeID;
     private double passingTime;     // time needed for a UAV to pass that edge
-    public List<Map.Entry<String,Integer>> historyList = new ArrayList<>();
+    public List<Map.Entry<String,Double>> historyList = new ArrayList<>();      // in form of <flightID, reachTime>
 
     public EdgeRecord(String edgeID, double passingTime) {
         // Copy the information from the graph
@@ -19,13 +21,13 @@ public class EdgeRecord {
         this.passingTime = passingTime;
     }
 
-    public void addRecord(String UAVID, int reachTime){
+    public void addRecord(String flightID, double reachTime){
         // leaveTime  = reachTime + passingTime. To reduce data redundancy, we ommit the leaveTime field.
-        Map.Entry<String, Integer > newRecord = new AbstractMap.SimpleEntry<String, Integer>(UAVID,reachTime);
+        Map.Entry<String, Double> newRecord = new AbstractMap.SimpleEntry<String, Double>(flightID, reachTime);
         historyList.add(newRecord);
     }
 
-    public List<Map.Entry<String, Integer>> getHistoryList() {
+    public List<Map.Entry<String, Double>> getHistoryList() {
         return historyList;
     }
 
@@ -49,10 +51,10 @@ public class EdgeRecord {
     public double getWaitingPenalty(int newArrival){
         // Reverse iteration so that some search time may be saved
         for (int i=historyList.size()-1;i>=0;i--){
-            int existingScheduledArrival = historyList.get(i).getValue();
+            double existingScheduledArrival = historyList.get(i).getValue();
 
             // When two UAV arrives at the same time, we let the previously scheduled UAV fly first
-            if(existingScheduledArrival==newArrival)
+            if((existingScheduledArrival-newArrival)<WAITING_PENALTY_AT_NON_LANDING_NODE)
                 // the latter will have to wait for the whole period
                 return passingTime;
             // If new UAV arrives while another one is already occupying that edge

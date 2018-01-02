@@ -7,10 +7,12 @@ public class MetaNodeRecord {
     public double reachTime;
     public String flightID;
     public boolean isLanding;
+    public boolean isTakingOff;
 
-    public MetaNodeRecord(int reachTime, String flightID, boolean isLanding) {
+    public MetaNodeRecord(double reachTime, String flightID, boolean isLanding, boolean isTakingOff) {
         this.reachTime=reachTime;
         this.flightID=flightID;
         this.isLanding=isLanding;
+        this.isTakingOff=isTakingOff;
     }
 }

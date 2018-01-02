@@ -19,8 +19,8 @@ public class NodeRecord {
         this.isTransferable = isTransferable;
     }
 
-    public void addRecord(int reachTime, String flightID, boolean isLanding){
-        MetaNodeRecord newRecord = new MetaNodeRecord(reachTime,flightID, isLanding);
+    public void addRecord(double reachTime, String flightID, boolean isLanding, boolean isTakingOff){
+        MetaNodeRecord newRecord = new MetaNodeRecord(reachTime,flightID, isLanding,isTakingOff);
         historyList.add(newRecord);
     }
 
@@ -46,7 +46,7 @@ public class NodeRecord {
 
             // If this is a transferable node
             if (this.isTransferable){
-                if (currentSchedule.isLanding){
+                if (currentSchedule.isLanding || currentSchedule.isTakingOff){
                     // When current UAV start landing
                     double lowBound = currentSchedule.reachTime;
                     // When current UAV finishes landing

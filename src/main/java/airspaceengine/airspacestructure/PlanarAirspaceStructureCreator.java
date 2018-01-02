@@ -23,7 +23,7 @@ import static collisionavoidanceengine.constants.Constant.UAV_SPEED;
  */
 
 public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
-    private String pathToMap = "demo.json";
+    private String pathToMap = "data/demo.json";
     private String content = new String (Files.readAllBytes(Paths.get(pathToMap)));
     private JSONObject jobj = new JSONObject(content);
     private WPMap Nodes = new WPMap();

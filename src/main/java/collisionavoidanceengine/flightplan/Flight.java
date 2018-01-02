@@ -11,16 +11,15 @@ public class Flight {
     private String flightID;
     private String requestID;
     private String UAVID;
-    private ArrayList<String> flightPath;
+    private ArrayList<String> flightPath;    // An array list of nodes on the flight path
     private int departTime;
     private int arrivalTime;
 
 
-    public Flight(String flightID, String requestID, String UAVID, ArrayList<String> flightPath, int departTime, int arrivalTime) {
+    public Flight(String flightID, String requestID, String UAVID, int departTime, int arrivalTime) {
         this.flightID = flightID;
         this.requestID = requestID;
         this.UAVID = UAVID;
-        this.flightPath = flightPath;
         this.departTime = departTime;
         this.arrivalTime = arrivalTime;
     }
@@ -59,5 +58,9 @@ public class Flight {
 
     public void setUAVID(String UAVID) {
         this.UAVID = UAVID;
+    }
+
+    public void setFlightPath(ArrayList<String> flightPath) {
+        this.flightPath = flightPath;
     }
 }

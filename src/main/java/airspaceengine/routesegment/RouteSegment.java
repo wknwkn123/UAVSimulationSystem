@@ -13,11 +13,11 @@ public class RouteSegment {
 
     //instance variables
     private final String EdgeID;        // in form of RS_id
-    private final Waypoint sourceWaypoint;
-    private final Waypoint destinationWaypoint;
-    private double targetSpeed;
-    private double actualSpeed;
-    private int UAVCapacity;
+    private final Waypoint sourceWaypoint; // source node of edge
+    private final Waypoint destinationWaypoint;  // destination node of edge
+    private double targetSpeed;         // Estimated speed, used as 500m/s here to calculate the time to pass edge
+    private double actualSpeed;         // Actual flying speed on that edge, may vary due to real-life conditions like weather, animal, or non-flying zone
+    private int UAVCapacity;            // max weight that a UAV can carry
     private final double weight;
 
     //constructor

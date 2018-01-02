@@ -8,12 +8,14 @@ package collisionavoidanceengine.request;
  *
  */
 public class Request {
+    private String requestID;
     private String originID;
     private String destinationID;
     private String UAVID;
     private int startTime;
 
-    public Request(String originID, String destinationID, int startTime) {
+    public Request(String requestID, String originID, String destinationID, int startTime) {
+        this.requestID=requestID;
         this.originID = originID;
         this.destinationID = destinationID;
         this.startTime = startTime;
@@ -49,5 +51,9 @@ public class Request {
 
     public String getUAVID() {
         return UAVID;
+    }
+
+    public String getRequestID() {
+        return requestID;
     }
 }

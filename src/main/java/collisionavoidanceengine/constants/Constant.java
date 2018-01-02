@@ -13,7 +13,7 @@ public class Constant {
     public static final double BATTERY_LIFE = 30;
     // When the other UAV want to land at the junction, it will wish to keep it clear for a longer period
     public static final double WAITING_PENALTY_AT_LANDING_NODE = 2;
-    // When the other UAV just want to pass the node, the waiting time is shorter
+    // When the other UAV just want to pass the node, the waiting time is shorter. This is also the minimum time required to pass a node
     public static final double WAITING_PENALTY_AT_NON_LANDING_NODE = 0.3;
     // Assumes all UAV fly at a constant speed
     public static final double UAV_SPEED = 500;

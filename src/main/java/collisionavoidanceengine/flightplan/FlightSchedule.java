@@ -6,6 +6,7 @@ import airspaceengine.routesegment.RouteSegment;
 import airspaceengine.waypoint.WPMap;
 import airspaceengine.waypoint.Waypoint;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,17 +15,14 @@ import java.util.Map;
  */
 public class FlightSchedule {
     private AirspaceStructure airmap;
-    private Map<String, EdgeRecord> edgeAvailability;
-    private Map<String, NodeRecord> nodeAvailability;
-    private List<Flight> flightPlan;
+    public Map<String, EdgeRecord> edgeAvailability;
+    public Map<String, NodeRecord> nodeAvailability;
+    private Map<String, Flight> flightPlan;   // <flightID, flight>
 
     // To ensure thread-safety. Not yet used.
     private boolean mutex;
 
     public FlightSchedule(AirspaceStructure airmap) {
-
-        int numNodes = airmap.getNodeNumbers();
-        int numEdges = airmap.getEdgeNumbers();
 
         WPMap myWPL = airmap.getNodes();
         RSMap myRSL = airmap.getEdges();
@@ -69,10 +67,20 @@ public class FlightSchedule {
     }
 
 
+    public Map<String, Flight> getFlightPlan() {
+        return flightPlan;
+    }
 
+    public void setFlightPlan(Map<String, Flight> flightPlan) {
+        this.flightPlan = flightPlan;
+    }
 
+    // Search individual flight
+    public Flight getFlightPlanByID(String flightID) {
+        return this.flightPlan.get(flightID);
+    }
 
-
-
-
+    public void setFlightPlanByID(String flightID, ArrayList<String> path) {
+        this.flightPlan.get(flightID).setFlightPath(path);
+    }
 }

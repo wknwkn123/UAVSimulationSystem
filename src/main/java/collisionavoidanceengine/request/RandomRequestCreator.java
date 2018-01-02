@@ -41,7 +41,9 @@ public class RandomRequestCreator implements RequestCreator{
                 randomDest= airMap.getNodes().getWaypointMap().get(keys.get(random.nextInt(keys.size())));
             }
 
-            requestQueue.add(new Request(randomSrc.getNodeID(),randomDest.getNodeID(),time));
+            String reqID  = "RQ_"+i;
+
+            requestQueue.add(new Request(reqID,randomSrc.getNodeID(),randomDest.getNodeID(),time));
             System.out.printf("Request to route from "+randomSrc.getNodeID()+" to "+randomDest.getNodeID()+" at time"+ Integer.toString(time));
         }
         return this.requestQueue;
