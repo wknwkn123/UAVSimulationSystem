@@ -5,6 +5,7 @@ import flight_plan.FlightPlan;
 import flight_plan.FlightPlanEngine;
 import uav.UAV;
 import uav.UAVEngine;
+import websocket.simple.master.Master;
 import websocket.simple_v2.model.UAVEncoder;
 import websocket.simple_v2.server.Server;
 
@@ -15,38 +16,38 @@ public class CoreEngine {
 
     public static void main(String[] args) throws IOException {
         //create airspace
-        AirspaceEngine.getInstance().createAirspace("RANDOM");
-
-        //create UAVs
-        UAVEngine.getInstance().createUAVs("RANDOM");
-
-        //create schedule/demand
-        FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
-
-        //assign schedule to UAVs
-        int i = 0;
-        for (FlightPlan plan :  FlightPlanEngine.getInstance().getFlightPlans()) {
-            UAV uav = UAVEngine.getInstance().getUAVs().get(i % 5);
-            uav.addJob(plan);
-            System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
-            i++;
-        }
-
-//        FlightPlanEngine.getInstance().printPlanDetails();
-
-        //run simulation
-        UAVEngine.getInstance().startThread();
-        Thread t = new Thread(SimulationApp.getInstance());
-        t.start();
-        try {
-            TimeUnit.MILLISECONDS.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
+//        AirspaceEngine.getInstance().createAirspace("RANDOM");
+//
+//        //create UAVs
+//        UAVEngine.getInstance().createUAVs("RANDOM");
+//
+//        //create schedule/demand
+//        FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
+//
+//        //assign schedule to UAVs
+//        int i = 0;
+//        for (FlightPlan plan :  FlightPlanEngine.getInstance().getFlightPlans()) {
+//            UAV uav = UAVEngine.getInstance().getUAVs().get(i % 5);
+//            uav.addJob(plan);
+//            System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
+//            i++;
+//        }
+//
+////        FlightPlanEngine.getInstance().printPlanDetails();
+//
+//        //run simulation
+//        UAVEngine.getInstance().startThread();
+//        Thread t = new Thread(SimulationApp.getInstance());
+//        t.start();
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        UAVEncoder.getInstance().encode(UAVEngine.getInstance().getUAVs().get(0));
 //        Drawing2D.getInstance().draw2D();
 
         //start websocket server
-//        Server.getInstance().startServer();
+        Master.getInstance().startServer();
     }
 }

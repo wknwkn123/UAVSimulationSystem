@@ -9,6 +9,11 @@ public class Master {
 
     private int port;
     public void setPort(int p){ this.port = p; }
+    private static Master instance = new Master();
+
+    public static Master getInstance() {
+        return instance;
+    }
 
     protected void start() {
         ServerSocket s;
@@ -34,10 +39,10 @@ public class Master {
         }
     }
 
-    public static void main(String args[]) {
+    public void startServer() {
         int p;
         try {
-            p = Integer.parseInt(args[0]);
+            p = Integer.parseInt("9001");
             Master ws = new Master();
             ws.setPort(p);
             ws.start();

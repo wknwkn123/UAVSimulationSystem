@@ -7,12 +7,11 @@ import websocket.simple_v2.model.MessageEncoder;
 import javax.websocket.*;
 import java.io.IOException;
 
-@javax.websocket.server.ServerEndpoint(value="/trial", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
+@javax.websocket.server.ServerEndpoint(value="/", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
 public class ServerEndpoint {
     @OnOpen
     public void onOpen(Session session) throws IOException {
         // Get session and WebSocket connection
-        System.out.println("Websocket server started");
     }
 
     @OnMessage
