@@ -15,9 +15,7 @@ import mapbuilder.triangulation.Node;
 
 import java.util.*;
 
-import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
-import static collisionavoidanceengine.constants.Constant.INITIAL_FLIGHT_CAPACITY;
-import static collisionavoidanceengine.constants.Constant.MAX_DELAY;
+import static collisionavoidanceengine.constants.Constant.*;
 
 /**
  * Created by StevenShi on 17/12/17.
@@ -90,7 +88,8 @@ public class FlightPlanScheduler {
 
     // Heuristic Function
     public double calcEuclideanDistance(Waypoint origin, Waypoint target){
-        return Math.sqrt((origin.getX()-target.getX())*(origin.getX()-target.getX())+(origin.getY()-target.getY())*(origin.getY()-target.getY()));
+        double distanceInMeter =  Math.sqrt((origin.getX()-target.getX())*(origin.getX()-target.getX())+(origin.getY()-target.getY())*(origin.getY()-target.getY()));
+        return distanceInMeter/UAV_SPEED;
     }
 
     // Uniform-cost search
@@ -114,9 +113,9 @@ public class FlightPlanScheduler {
 //        Set<String> NodeInOpen = new HashSet<>();
 
         // Initialize the PARENT list, which stores the parent information in form of <current WP, previous WP>
-        Map<Waypoint, Waypoint> PARENT = new HashMap<>();
+        Map<String, String> PARENT = new HashMap<>();
         for (Waypoint wp : myAirMap.getNodes().getWaypointList())
-            PARENT.put(wp,null);
+            PARENT.put(wp.getNodeID(),null);
 
         Waypoint origin = myAirMap.getNodes().getWaypointByID(req.getOriginID());
         Waypoint goal = myAirMap.getNodes().getWaypointByID(req.getDestinationID());
@@ -141,17 +140,25 @@ public class FlightPlanScheduler {
                 // If the successor is in goal state
                 if (succ.getNodeID().equals(goal.getNodeID())){
                     // Update their parent node information
-                    PARENT.put(succ,currentNode);
+                    PARENT.put(succ.getNodeID(),currentNode.getNodeID());
 
                     // Backtrack to get all the route segments on the flight path
-                    Waypoint anchor = goal;
-                    while (PARENT.get(anchor)!=origin){
-                        //System.out.printf("        <-"+anchor.getNodeID());
-                        // get parent, and push to solutionTemp queue
-                        solutionSingleTripTemp.add(anchor.getNodeID());
-                        anchor=PARENT.get(anchor);
+                    String anchor = goal.getNodeID();
+                    solutionSingleTripTemp.add(anchor);
+                    System.out.printf("Shortest path for "+req.getRequestID()+" is : (goal)"+anchor);
+
+                    while (!PARENT.get(anchor).equals(origin.getNodeID())){
+                            anchor=PARENT.get(anchor);
+                            // get previous WP ID, and push to solutionTemp queue
+                            solutionSingleTripTemp.add(anchor);
+                            System.out.printf("  <-"+anchor);
                     }
+
+                    // Only origin on the path has a null pointer
+
                     solutionSingleTripTemp.add(origin.getNodeID());
+                    System.out.printf("  <-"+origin.getNodeID()+"\n");
+
 
                     // Reverse the solutionTemp queue so that the first element is origin node
                     Collections.reverse(solutionSingleTripTemp);
@@ -170,9 +177,11 @@ public class FlightPlanScheduler {
                 boolean hasUpdatedOpen = false;
 
                 // TODO : can optimize the code here by reducing search time
+                // TODO : add UAV speed to be a attribute of UAV
+                // TODO : make number of UAV to be a attribute of Node
                 for (WorkingTableEntry td : OPEN){
                     if(td.wp.getNodeID().equals(succ.getNodeID())&&td.fCost < succFCost){
-                        PARENT.put(td.wp,currentNode);
+                        PARENT.put(td.wp.getNodeID(),currentNode.getNodeID());
                         td.fCost = succFCost;
                         td.gCost = succGCost;
                         hasUpdatedOpen = true;
@@ -193,7 +202,7 @@ public class FlightPlanScheduler {
 //                }
 
                 // Update their parent node information
-                PARENT.put(succ,currentNode);
+                PARENT.put(succ.getNodeID(),currentNode.getNodeID());
                 OPEN.add(new WorkingTableEntry(succ,succFCost,succGCost));
 //                NodeInOpen.add(succ.getNodeID());
             }
@@ -217,7 +226,7 @@ public class FlightPlanScheduler {
                 currentTime++;
 
             Request currentRequest = myRequestQ.poll();
-            System.out.printf("Now routing request "+currentRequest.getRequestID()+"n");
+            System.out.printf("Now routing request "+currentRequest.getRequestID()+"\n");
             double requestedTime = doModifiedAStar(currentRequest, currentTime);
             if (requestedTime <= BATTERY_LIFE / 2 && requestedTime > 0) {
                 //  Make a new RoutingResult record

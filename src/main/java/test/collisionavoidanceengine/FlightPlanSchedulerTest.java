@@ -1,5 +1,6 @@
 package collisionavoidanceengine;
 
+import collisionavoidanceengine.request.Request;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +18,8 @@ class FlightPlanSchedulerTest {
     @Test
     void scheduleFlight() {
         FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
-        fps.ScheduleFlight();
+        Request req = new Request("RQ_1000","WP_B71","WP_KM3",100);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,20));
     }
 
 }
