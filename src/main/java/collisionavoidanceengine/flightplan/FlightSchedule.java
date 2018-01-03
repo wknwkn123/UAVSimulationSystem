@@ -7,6 +7,7 @@ import airspaceengine.waypoint.WPMap;
 import airspaceengine.waypoint.Waypoint;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,27 +15,31 @@ import java.util.Map;
  * Created by Ziji Shi on 22/12/17.
  */
 public class FlightSchedule {
-    private AirspaceStructure airmap;
+    public AirspaceStructure airmap;
     public Map<String, EdgeRecord> edgeAvailability;
     public Map<String, NodeRecord> nodeAvailability;
-    private Map<String, Flight> flightPlan;   // <flightID, flight>
+    public Map<String, Flight> flightPlan;          // <flightID, flight>
 
     // To ensure thread-safety. Not yet used.
     private boolean mutex;
 
-    public FlightSchedule(AirspaceStructure airmap) {
+    public FlightSchedule(AirspaceStructure inAirMap) {
+        this.airmap=inAirMap;
 
-        WPMap myWPL = airmap.getNodes();
-        RSMap myRSL = airmap.getEdges();
+        this.edgeAvailability = new HashMap<>();
+        this.nodeAvailability = new HashMap<>();
 
-        // Initialize node availability
-        for (Map.Entry<String, Waypoint> entry : myWPL.getWaypointMap().entrySet()) {
+//        WPMap myWPL = airmap.getNodes();
+//        RSMap myRSL = airmap.getEdges();
+
+        // Initialize node availability by setting the static info
+        for (Map.Entry<String, Waypoint> entry : airmap.getNodes().getWaypointMap().entrySet()) {
             NodeRecord nr = new NodeRecord(entry.getKey(), entry.getValue().isTransferable());
             nodeAvailability.put(nr.getNodeID(),nr);
         }
 
-        // Initialize edge availability
-        for (Map.Entry<String, RouteSegment> entry : myRSL.getRouteSegMap().entrySet()) {
+        // Initialize edge availability by setting the static info
+        for (Map.Entry<String, RouteSegment> entry : airmap.getEdges().getRouteSegMap().entrySet()) {
             EdgeRecord rs = new EdgeRecord(entry.getKey(),entry.getValue().getWeight());
             edgeAvailability.put(rs.getEdgeID(),rs);
         }
@@ -62,7 +67,7 @@ public class FlightSchedule {
     }
 
     // Get the waiting period for using a specific edge
-    public  double getWaitingPenaltyAtEdge(String edgeID, int time){
+    public  double getWaitingPenaltyAtEdge(String edgeID, double time){
         return  this.getEdgeRecByID(edgeID).getWaitingPenalty(time);
     }
 

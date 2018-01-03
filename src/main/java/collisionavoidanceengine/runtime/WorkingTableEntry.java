@@ -1,12 +1,12 @@
-package collisionavoidanceengine.assets;
+package collisionavoidanceengine.runtime;
 
 import airspaceengine.waypoint.Waypoint;
 
 /**
  * Created by Ziji Shi on 26/12/17.
  *
- *
  * WorkingTableEntry is just a class that combines a WayPoint with its weight
+ *
  */
 public class WorkingTableEntry {
     public Waypoint wp;

@@ -48,7 +48,7 @@ public class EdgeRecord {
     }
 
     // Loop through the list of meta-record to see whether a given time falls in an existing schedule,
-    public double getWaitingPenalty(int newArrival){
+    public double getWaitingPenalty(double newArrival){
         // Reverse iteration so that some search time may be saved
         for (int i=historyList.size()-1;i>=0;i--){
             double existingScheduledArrival = historyList.get(i).getValue();

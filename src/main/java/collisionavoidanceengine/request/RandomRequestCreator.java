@@ -44,7 +44,7 @@ public class RandomRequestCreator implements RequestCreator{
             String reqID  = "RQ_"+i;
 
             requestQueue.add(new Request(reqID,randomSrc.getNodeID(),randomDest.getNodeID(),time));
-            System.out.printf("Request to route from "+randomSrc.getNodeID()+" to "+randomDest.getNodeID()+" at time"+ Integer.toString(time));
+            System.out.printf("Request "+reqID+" to route from "+randomSrc.getNodeID()+" to "+randomDest.getNodeID()+" at time "+ Integer.toString(time)+'\n');
         }
         return this.requestQueue;
     }

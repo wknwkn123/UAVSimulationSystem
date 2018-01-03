@@ -1,8 +1,7 @@
-package collisionavoidanceengine.assets;
+package collisionavoidanceengine.runtime;
 
 import collisionavoidanceengine.flightplan.MetaNodeRecord;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

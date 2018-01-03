@@ -1,5 +1,7 @@
 package airspaceengine.waypoint;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Waypoint {
@@ -10,7 +12,7 @@ public class Waypoint {
     private final double x;
     private final double y;
     private final double z;
-    private List<Waypoint> AdjacentWaypoint;
+    private List<Waypoint> AdjacentWaypoint = new ArrayList<>();  // List of successor Waypoint ID <>
 
     //constructor
     public Waypoint(String nodeID, boolean isTransferable, double x_input, double y_input, double z_input) {

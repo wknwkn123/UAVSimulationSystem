@@ -6,14 +6,12 @@ package collisionavoidanceengine.request;
 public class RequestCreatorSelector {
     private RequestCreator requestCreator;
 
-    // Set the concrete request creation strategy at run time
-    public void setRequestCreator(String type) throws Exception {
+    public RequestCreatorSelector(String type) {
         switch(type) {
             case "RANDOM":
                 this.requestCreator=new RandomRequestCreator();
             default:
                 System.out.println("!!! Default request creator printed. This should not happen !!!");
-                throw new Exception();
         }
     }
 

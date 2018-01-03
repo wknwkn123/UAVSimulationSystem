@@ -30,11 +30,6 @@ public class WPMap {
     }
 
     public Waypoint getWaypointByID (String targetID){
-        for (int i =0; i < WaypointMap.size(); i++){
-            if (WaypointMap.get(i).getNodeID().equals(targetID))
-                return WaypointMap.get(i);
-        }
-        System.out.print("ERROR : No waypoint with ID "+targetID+" found!");
-        return null;
+        return this.WaypointMap.get(targetID);
     }
 }

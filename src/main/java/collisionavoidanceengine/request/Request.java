@@ -13,12 +13,15 @@ public class Request {
     private String destinationID;
     private String UAVID;
     private int startTime;
+    private int delayedTime;
+    // todo : add aging measures to increase priority along with time
 
     public Request(String requestID, String originID, String destinationID, int startTime) {
         this.requestID=requestID;
         this.originID = originID;
         this.destinationID = destinationID;
         this.startTime = startTime;
+        this.delayedTime =0;
     }
 
     public void setUAVID(String UAVID) {

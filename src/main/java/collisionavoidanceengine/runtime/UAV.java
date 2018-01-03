@@ -1,4 +1,4 @@
-package collisionavoidanceengine.assets;
+package collisionavoidanceengine.runtime;
 
 import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
 

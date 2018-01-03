@@ -5,8 +5,8 @@ import airspaceengine.waypoint.WPMap;
 import airspaceengine.waypoint.Waypoint;
 
 public class AirspaceStructure {
-    private final WPMap nodes;
-    private final RSMap edges;
+    private  WPMap nodes;
+    private  RSMap edges;
 
     AirspaceStructure(WPMap nodes, RSMap edges) {
         this.nodes = nodes;

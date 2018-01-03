@@ -1,6 +1,5 @@
-package collisionavoidanceengine.assets;
+package collisionavoidanceengine.runtime;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
