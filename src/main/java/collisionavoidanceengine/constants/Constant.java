@@ -21,4 +21,6 @@ public class Constant {
     public static final int INITIAL_FLIGHT_CAPACITY = 1000;
     // Max allowable delay time
     public static final int MAX_DELAY=15;
+    public static final String SPACER = "       ";
+
 }

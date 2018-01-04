@@ -1,8 +1,11 @@
 package airspaceengine.waypoint;
 
+import collisionavoidanceengine.UAV.UAV;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Waypoint {
 
@@ -12,6 +15,7 @@ public class Waypoint {
     private final double x;
     private final double y;
     private final double z;
+    private PriorityQueue<UAV> uavPriorityQueue;
     private List<Waypoint> AdjacentWaypoint = new ArrayList<>();  // List of successor Waypoint ID <>
 
     //constructor
@@ -21,6 +25,8 @@ public class Waypoint {
         x = x_input;
         y = y_input;
         z = z_input;
+        // PriorityQueue<UAV> uavPQ
+        //this.uavPriorityQueue = new PriorityQueue<>();
     }
 
     //getters and setters

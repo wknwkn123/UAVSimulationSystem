@@ -10,4 +10,5 @@ import java.util.PriorityQueue;
 public interface RequestCreator {
     // Given the number of requests to be generated, return a priority queue of requests
     PriorityQueue<Request> generateRequest(int numRequest, AirspaceStructure airMap);
+    void writeToCsv ();
 }

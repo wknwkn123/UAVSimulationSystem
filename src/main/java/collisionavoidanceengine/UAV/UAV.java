@@ -1,4 +1,4 @@
-package collisionavoidanceengine.runtime;
+package collisionavoidanceengine.UAV;
 
 import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
 
@@ -10,22 +10,21 @@ import static collisionavoidanceengine.constants.Constant.BATTERY_LIFE;
  */
 public class UAV {
     private int UAV_ID;
-    private double BatteryCapacity;
+    private double nextAvailableTime;
     private double currentX;
     private double currentY;
 
     public UAV(int ID){
         this.UAV_ID=ID;
-        // In this simulation, we assume battery capacity is 30 minutes, but since it will run return trip, we use 15 mins.
-        this.BatteryCapacity = BATTERY_LIFE /2;
+        this.nextAvailableTime = 0;
     }
 
     public int getUAVID(){
         return this.UAV_ID;
     }
 
-    public double getBatteryCapacity(){
-        return this.BatteryCapacity;
+    public double getNextAvailableTime(){
+        return this.nextAvailableTime;
     }
 
     public double getCurrentX(){

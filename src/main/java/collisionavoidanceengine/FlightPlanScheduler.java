@@ -177,7 +177,7 @@ public class FlightPlanScheduler {
                 boolean hasUpdatedOpen = false;
 
                 // TODO : can optimize the code here by reducing search time
-                // TODO : add UAV speed to be a attribute of UAV
+                // TODO : add UAV speed to be an attribute of UAV
                 // TODO : make number of UAV to be a attribute of Node
                 for (WorkingTableEntry td : OPEN){
                     if(td.wp.getNodeID().equals(succ.getNodeID())&&td.fCost < succFCost){
@@ -251,7 +251,6 @@ public class FlightPlanScheduler {
 
                 // Clean up the temporary variable
                 solutionSingleTripTemp = new ArrayList<>();
-
             } else
             // Find viable connections
             {   // Segment the flight path into multiple shorter trips with similar number of stops in between
@@ -266,7 +265,9 @@ public class FlightPlanScheduler {
 
                 }
             }
+
         }
+        System.out.printf("All Requests Finished Scheduling. ");
     }
 
 

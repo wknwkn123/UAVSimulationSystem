@@ -16,10 +16,16 @@ class FlightPlanSchedulerTest {
     }
 
     @Test
+    void scheduleSingleFlight() {
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1000","WP_IABY","WP_RHM3",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0));
+    }
+
+    @Test
     void scheduleFlight() {
         FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
-        Request req = new Request("RQ_1000","WP_B71","WP_KM3",100);
-        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,20));
+        fps.ScheduleFlight();
     }
 
 }
