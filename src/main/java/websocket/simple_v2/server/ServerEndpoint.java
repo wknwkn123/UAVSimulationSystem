@@ -7,7 +7,7 @@ import websocket.simple_v2.model.MessageEncoder;
 import javax.websocket.*;
 import java.io.IOException;
 
-@javax.websocket.server.ServerEndpoint(value="/", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
+@javax.websocket.server.ServerEndpoint(value="/simulation", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
 public class ServerEndpoint {
     @OnOpen
     public void onOpen(Session session) throws IOException {

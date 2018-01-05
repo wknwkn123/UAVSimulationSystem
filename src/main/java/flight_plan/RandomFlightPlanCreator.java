@@ -25,8 +25,8 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
         flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(9)));
         flightPlans.get(2).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(11)));
 
-        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(2)));
-        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(6)));
+        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(0)));
+        flightPlans.get(3).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(1)));
 
         flightPlans.get(4).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(0)));
         return flightPlans;

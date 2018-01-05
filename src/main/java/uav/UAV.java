@@ -76,16 +76,16 @@ public class UAV implements Runnable{
                             double prevY = origin.getY();
                             double prevZ = origin.getZ();
 
-                            while (Math.abs(operation.getCurrentX() - destination.getX()) > 1 || Math.abs(operation.getCurrentY() - destination.getY()) > 1 || Math.abs(operation.getCurrentZ() - destination.getZ()) > 1) {
-                                if (Math.abs(operation.getCurrentX() - destination.getX()) > 0) {
+                            while (Math.abs(operation.getCurrentX() - destination.getX()) > 5 || Math.abs(operation.getCurrentY() - destination.getY()) > 5 || Math.abs(operation.getCurrentZ() - destination.getZ()) > 5) {
+                                if (Math.abs(operation.getCurrentX() - destination.getX()) > 5) {
                                     operation.setCurrentX(operation.getCurrentX() + (0.05) * xDirection);
                                 }
 
-                                if (Math.abs(operation.getCurrentY() - destination.getY()) > 0) {
+                                if (Math.abs(operation.getCurrentY() - destination.getY()) > 5) {
                                     operation.setCurrentY(operation.getCurrentY() + (0.05) * yDirection);
                                 }
 
-                                if (Math.abs(operation.getCurrentZ() - destination.getZ()) > 0) {
+                                if (Math.abs(operation.getCurrentZ() - destination.getZ()) > 5) {
                                     operation.setCurrentZ(operation.getCurrentZ() + (0.05) * zDirection);
                                 }
 

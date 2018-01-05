@@ -4,6 +4,8 @@ package flight_plan;
 import airspaceengine.airspacestructure.AirspaceStructure;
 import collisionavoidanceengine.flightplan.Flight;
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import uav.UAV;
+import uav.UAVEngine;
 
 import java.util.List;
 
@@ -45,5 +47,22 @@ public class FlightPlanEngine {
 
     public List<FlightPlan> getFlightPlans() {
         return flightPlans;
+    }
+
+    public void assignFlightPlans(String type) {
+        switch (type) {
+            case "RANDOM":
+                int i = 0;
+                for (FlightPlan plan :  FlightPlanEngine.getInstance().getFlightPlans()) {
+                    UAV uav = UAVEngine.getInstance().getUAVs().get(i % 5);
+                    uav.addJob(plan);
+                    System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
+                    i++;
+                }
+                break;
+            default:
+                System.out.println("Default printed. This should not happen.");
+
+        }
     }
 }
