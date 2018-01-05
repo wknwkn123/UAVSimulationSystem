@@ -10,7 +10,7 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
 
     public List<FlightPlan> createFlightPlans(AirspaceStructure airMap) {
         //hardcoding flight plans
-        flightPlans.add(new FlightPlan(airMap.getNodes().getWaypointList().get(0), airMap.getNodes().getWaypointList().get(5), 5, 0, 5));
+        flightPlans.add(new FlightPlan(airMap.getNodes().getWaypointList().get(0), airMap.getNodes().getWaypointList().get(1), 5, 0, 5));
         flightPlans.add(new FlightPlan(airMap.getNodes().getWaypointList().get(2), airMap.getNodes().getWaypointList().get(4), 2, 2, 4));
         flightPlans.add(new FlightPlan(airMap.getNodes().getWaypointList().get(3), airMap.getNodes().getWaypointList().get(5), 2, 5, 8));
         flightPlans.add(new FlightPlan(airMap.getNodes().getWaypointList().get(0), airMap.getNodes().getWaypointList().get(2), 4, 5, 9));
@@ -18,8 +18,6 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
 
         //hardcoding flight path for each plan
         flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(0)));
-        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(1)));
-        flightPlans.get(0).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(5)));
 
         flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(5)));
         flightPlans.get(1).addFlightSegment(new FlightSegment(airMap.getEdges().getRouteSegList().get(10)));

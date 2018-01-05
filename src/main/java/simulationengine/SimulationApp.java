@@ -17,7 +17,7 @@ public class SimulationApp implements Runnable{
     public void run() {
         while (!stopWork) {
             Time.getInstance().setCompleted(false);
-            for (int j = 0; j < 25; j++) {
+            for (int j = 0; j < 70; j++) {
                 Time.getInstance().tick();
                 try {
                     TimeUnit.MILLISECONDS.sleep(300);

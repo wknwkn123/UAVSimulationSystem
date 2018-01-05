@@ -31,6 +31,7 @@ public class UAVEngine {
     }
 
     public void startThread() {
+        this.setOrigins();
         for (Thread uav : UAVThread)
             uav.start();
     }

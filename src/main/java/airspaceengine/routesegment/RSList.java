@@ -33,7 +33,7 @@ public class RSList {
             if (RouteSegList.get(i).getEdgeID().equals(targetID))
                 return RouteSegList.get(i);
         }
-        System.out.print("ERROR : No route segment with ID "+targetID+" found!");
+        System.out.print("ERROR : No route segment with ID " + targetID + " found!");
         return null;
     }
 

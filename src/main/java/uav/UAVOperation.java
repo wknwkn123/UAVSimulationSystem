@@ -9,7 +9,7 @@ public class UAVOperation {
     // Ziji : For now, we just consider 2D case
     private double currentZ=10;
 
-    // TODO : calculate the actural position given time, currentRouteSegment, and currentWayPoint.
+    // TODO : calculate the actual position given time, currentRouteSegment, and currentWayPoint.
     private RouteSegment currentRouteSegment;
     private Waypoint currentWayPoint;
 
@@ -18,8 +18,7 @@ public class UAVOperation {
 
     public UAVOperation() {
         currentX = 10;
-        currentY = 20;
-        currentZ = 30;
+        currentY = 10;
     }
 
     public double getCurrentX() {
