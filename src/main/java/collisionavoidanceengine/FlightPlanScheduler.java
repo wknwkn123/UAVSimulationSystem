@@ -10,9 +10,11 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
+import com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor;
 import mapbuilder.triangulation.Node;
 
 
+import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
 import static collisionavoidanceengine.constants.Constant.*;
@@ -59,6 +61,17 @@ public class FlightPlanScheduler {
 
     }
 
+    // Print the Open PriorityQueue (the unexplored nodes)
+    public void printOpen(PriorityQueue<WorkingTableEntry> open){
+        System.out.printf("The current open list is:");
+        PriorityQueue<WorkingTableEntry> openCopy = new PriorityQueue<>(open);
+        for (WorkingTableEntry node : open){
+            WorkingTableEntry curNode = openCopy.poll();
+            System.out.printf(curNode.wp.getNodeID()+"("+curNode.fCost+","+curNode.gCost+") ->");
+        }
+        System.out.printf("\n");
+    }
+
     public void updateSchedule(double startTime, String flightID, ArrayList<String> flightPath){
         double reachTime = startTime;
         for (int i = 0; i<flightPath.size();i++){
@@ -68,7 +81,6 @@ public class FlightPlanScheduler {
 
             // Update the edge availability
             currentFlightPlan.edgeAvailability.get(routeSegID).addRecord(flightID, reachTime);
-
 
             // Update the node availability
             reachTime += myAirMap.getEdges().getRouteSegmentByID(routeSegID).getWeight();
@@ -95,10 +107,14 @@ public class FlightPlanScheduler {
     // Uniform-cost search
     public double calcActualCost(double costSoFar, int currentTime , Waypoint currentNode, Waypoint successor){
         String edgeName = "RS_"+currentNode.getNodeID().substring(3)+"-"+successor.getNodeID().substring(3);
-        double passingTime = myAirMap.getEdges().getRouteSegmentByID(edgeName).getWeight();
-        return costSoFar
+        double passingTime = myAirMap.getEdges().getRouteSegmentByID(edgeName).getWeight()/UAV_SPEED;
+        double cost = costSoFar
+                + passingTime
                 + currentFlightPlan.getWaitingPenaltyAtEdge(edgeName,currentTime)
                 + currentFlightPlan.getWaitingPenaltyAtNode(successor.getNodeID(),currentTime+passingTime);
+        if (cost==0)
+            System.out.printf("THE COST is ZERO FOR "+successor.getNodeID());
+        return cost;
     }
 
     public double doModifiedAStar(Request req, int currentTime){
@@ -108,9 +124,8 @@ public class FlightPlanScheduler {
         // Initialize the "OPEN" list, which stores the frontier nodes
         PriorityQueue<WorkingTableEntry> OPEN = new PriorityQueue<WorkingTableEntry>(myAirMap.getNodes().getSize(),entryComparator);
 
-//        // To facilitate search, we use a set.
-//        // NOTICE : every addition/deletion to OPEN must have a counterpart to NodeInOpen set
-//        Set<String> NodeInOpen = new HashSet<>();
+        // This stored the nodes whose successors are fully explored
+        ArrayList<WorkingTableEntry> CLOSED = new ArrayList<>();
 
         // Initialize the PARENT list, which stores the parent information in form of <current WP, previous WP>
         Map<String, String> PARENT = new HashMap<>();
@@ -122,10 +137,10 @@ public class FlightPlanScheduler {
 
 
         // Put the origin to OPEN list
+        // Note that, we need to add the penalty for using origin node for taking off
         OPEN.add(new WorkingTableEntry(origin,
-                calcEuclideanDistance(origin,goal)
-                        +currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime),
-                calcEuclideanDistance(origin,goal)));
+                calcEuclideanDistance(origin,goal)+currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime),
+                currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime)));
 //        NodeInOpen.add(origin.getNodeID());
 
         while(!OPEN.isEmpty()){
@@ -141,23 +156,32 @@ public class FlightPlanScheduler {
                 if (succ.getNodeID().equals(goal.getNodeID())){
                     // Update their parent node information
                     PARENT.put(succ.getNodeID(),currentNode.getNodeID());
+                    System.out.printf("--1---Parent of "+succ.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
 
                     // Backtrack to get all the route segments on the flight path
-                    String anchor = goal.getNodeID();
+                    String anchor = succ.getNodeID();
                     solutionSingleTripTemp.add(anchor);
                     System.out.printf("Shortest path for "+req.getRequestID()+" is : (goal)"+anchor);
 
-                    while (!PARENT.get(anchor).equals(origin.getNodeID())){
+                    int count = 0;
+
+                    while (!PARENT.get(anchor).equals(origin.getNodeID())&&count<=10){
                             anchor=PARENT.get(anchor);
                             // get previous WP ID, and push to solutionTemp queue
                             solutionSingleTripTemp.add(anchor);
                             System.out.printf("  <-"+anchor);
+
+                            count++;
                     }
 
                     // Only origin on the path has a null pointer
 
                     solutionSingleTripTemp.add(origin.getNodeID());
                     System.out.printf("  <-"+origin.getNodeID()+"\n");
+
+                    for (String key : PARENT.keySet()){
+                        System.out.printf("Key : "+key + "    Parent : "+PARENT.get(key) +"\n");
+                    }
 
 
                     // Reverse the solutionTemp queue so that the first element is origin node
@@ -172,7 +196,7 @@ public class FlightPlanScheduler {
 
                 /*
                     if a node with the same position as successor is in the OPEN list \
-	                 which has a lower f than successor, skip this successor
+	                 which has a lower f than successor, update that working table entry and skip this successor
                  */
                 boolean hasUpdatedOpen = false;
 
@@ -180,32 +204,51 @@ public class FlightPlanScheduler {
                 // TODO : add UAV speed to be an attribute of UAV
                 // TODO : make number of UAV to be a attribute of Node
                 for (WorkingTableEntry td : OPEN){
-                    if(td.wp.getNodeID().equals(succ.getNodeID())&&td.fCost < succFCost){
-                        PARENT.put(td.wp.getNodeID(),currentNode.getNodeID());
-                        td.fCost = succFCost;
-                        td.gCost = succGCost;
+                    if(td.wp.getNodeID().equals(succ.getNodeID())){
+                        // No need to have two same node in OPEN
                         hasUpdatedOpen = true;
-                        break;
+                        System.out.printf("Found "+succ.getNodeID()+" in OPEN!");
+                        if(td.fCost > succFCost){
+                            PARENT.put(td.wp.getNodeID(),currentNode.getNodeID());
+                            System.out.printf("--2.Open---Parent of "+td.wp.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
+                            td.fCost = succFCost;
+                            td.gCost = succGCost;
+                            break;
+                        }
                     }
                 }
-
                 if (hasUpdatedOpen)
                     continue;
 
                 /*
                     if a node with the same position as successor is in the CLOSED list \
-	                which has a lower f than successor, skip this successor
+	                 which has a lower f than successor, update that working table entry and skip this successor
                  */
-//                boolean hasUpdatedClose = false;
-//                for (Waypoint wp : CLOSED){
-//
-//                }
+                boolean hasUpdatedClosed = false;
+                for (WorkingTableEntry wte: CLOSED){
+                    if (wte.wp.getNodeID().equals(succ.getNodeID())){
+                        hasUpdatedClosed=true;
+                        if (wte.fCost > succFCost){
+                            PARENT.put(wte.wp.getNodeID(),currentNode.getNodeID());
+                            System.out.printf("--2.Closed---Parent of "+wte.wp.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
+                            wte.fCost = succFCost;
+                            wte.gCost = succGCost;
+                            break;
+                        }
+
+                    }
+                }
+                if (hasUpdatedClosed)
+                    continue;
 
                 // Update their parent node information
                 PARENT.put(succ.getNodeID(),currentNode.getNodeID());
+                System.out.printf("--3---Parent of "+succ.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
                 OPEN.add(new WorkingTableEntry(succ,succFCost,succGCost));
+                printOpen(OPEN);
 //                NodeInOpen.add(succ.getNodeID());
             }
+            CLOSED.add(currentWorkingTableEntry);
             // Push current node to CLOSED list
         }
         // When no solution is found, return error message
@@ -215,7 +258,6 @@ public class FlightPlanScheduler {
     public void doSegmentation(Request request){
 
     }
-
 
     public void ScheduleFlight() {
         currentTime = 0;

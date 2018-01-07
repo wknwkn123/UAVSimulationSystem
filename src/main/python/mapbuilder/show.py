@@ -22,7 +22,7 @@ class point():
         for i in (x,y):
             yield i
 
-FILE = sys.argv[1]
+FILE = "/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/reduced_singapore_muiti_store_parking.json"
 df = pd.read_json(FILE)
 df.head()
 

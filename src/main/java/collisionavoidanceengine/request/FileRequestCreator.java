@@ -55,7 +55,7 @@ public class FileRequestCreator implements RequestCreator{
 
         // Sanity check
         try {
-            // Check 1: number matches the required requests
+            // Check 1: number of requests in the file matches the required requests
             if (requestQueue.size() != numRequest) {
                 throw new RequestNotMatchException();
             }

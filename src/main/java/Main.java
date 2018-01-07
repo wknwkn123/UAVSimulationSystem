@@ -8,8 +8,10 @@ import collisionavoidanceengine.FlightPlanScheduler;
  */
 public class Main {
 
-    String inPathToMapFile = null;      // path to input file
-    String outPathToRequestFile = null; // path to output
-    FlightPlanScheduler scheduler = new FlightPlanScheduler("PLANAR","RANDOM");
-    scheduler.ScheduleFlight()
+    public static void main (String[] args){
+        String inPathToMapFile = null;      // path to input file
+        String outPathToRequestFile = null; // path to output
+        FlightPlanScheduler scheduler = new FlightPlanScheduler("PLANAR","RANDOM");
+        scheduler.ScheduleFlight();
+    }
 }

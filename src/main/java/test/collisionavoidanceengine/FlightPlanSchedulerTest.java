@@ -1,5 +1,6 @@
-package collisionavoidanceengine;
+package test.collisionavoidanceengine;
 
+import collisionavoidanceengine.FlightPlanScheduler;
 import collisionavoidanceengine.request.Request;
 import org.junit.jupiter.api.Test;
 
@@ -12,14 +13,53 @@ class FlightPlanSchedulerTest {
 
     @Test
     void constructorTest() {
-//        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        // FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
     }
 
     @Test
-    void scheduleSingleFlight() {
+        // Test short route
+    void scheduleSingleFlight_A() {
+        // Passed˚
         FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
-        Request req = new Request("RQ_1000","WP_IABY","WP_RHM3",2);
-        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0));
+        Request req = new Request("RQ_1000","WP_BBM6","WP_RHM3",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+    @Test
+        // Test short route
+    void scheduleSingleFlight_A1() {
+        // Passed
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1000","WP_J75M","WP_RHM3",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+    @Test
+    // Test extremely long route
+    void scheduleSingleFlight_B() {
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1001","WP_J75M","WP_C22M",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+    @Test
+        // Test long route
+    void scheduleSingleFlight_B1() {
+        // Passed
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1004","WP_J75M","WP_PM12",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+    @Test
+    // Test the routing when there are two reqeust with closed time and OD pair
+    void scheduleSingleFlight_C1C2() {
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1002","WP_CK34","WP_C22M",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+
+        Request req1 = new Request("RQ_1003","WP_CK34","WP_C28M",4);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
     }
 
     @Test

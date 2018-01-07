@@ -12,7 +12,7 @@ public class WorkingTableEntry {
     public Waypoint wp;
     // fCost is the total cost. i.e, f = g+h
     public double fCost;
-    // gCost is the actually cost so far
+    // gCost is the actual cost so far
     public double gCost;
 
     public WorkingTableEntry(Waypoint wp, double f, double g){
