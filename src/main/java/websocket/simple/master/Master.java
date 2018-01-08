@@ -18,7 +18,7 @@ public class Master {
     protected void start() {
         ServerSocket s;
 
-        System.out.println("Server starting up on port "+port);
+        System.out.println("Websocket starting up on port "+port);
         System.out.println("(press ctrl-c to exit)");
         try {
             // create the main server socket

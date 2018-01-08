@@ -1,31 +1,50 @@
 package websocket.simple_v2.server;
 
-import uav.UAVJSON;
-import websocket.simple_v2.model.MessageDecoder;
-import websocket.simple_v2.model.MessageEncoder;
-
-import javax.websocket.*;
+import org.eclipse.jetty.websocket.api.RemoteEndpoint;
+import org.eclipse.jetty.websocket.api.Session;
+import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
+import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
+import org.eclipse.jetty.websocket.api.annotations.OnWebSocketError;
+import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import java.io.IOException;
 
-@javax.websocket.server.ServerEndpoint(value="/simulation", decoders = MessageDecoder.class, encoders = MessageEncoder.class)
+@org.eclipse.jetty.websocket.api.annotations.WebSocket
 public class ServerEndpoint {
-    @OnOpen
-    public void onOpen(Session session) throws IOException {
-        // Get session and WebSocket connection
+
+    @OnWebSocketClose
+    public void onClose(int statusCode, String reason) {
+        System.out.println("Close: statusCode=" + statusCode + ", reason=" + reason);
     }
 
-    @OnMessage
-    public void onMessage(Session session, UAVJSON message) throws IOException {
-        // Handle new messages
+    @OnWebSocketError
+    public void onError(Throwable t) {
+        System.out.println("Error: " + t.getMessage());
     }
 
-    @OnClose
-    public void onClose(Session session) throws IOException {
-        // WebSocket connection closes
+    @OnWebSocketConnect
+    public void onConnect(Session session) {
+        System.out.println("Connected.");
+        Websocket.getInstance().setSession(session);
+
+
+        RemoteEndpoint remote = session.getRemote();
+    // Blocking Send of a TEXT message to remote endpoint
+        String part1 = "Hello";
+        String part2 = " World";
+        try
+        {
+            remote.sendPartialString(part1,false);
+            remote.sendPartialString(part2,true); // last part
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace(System.err);
+        }
     }
 
-    @OnError
-    public void onError(Session session, Throwable throwable) {
-        // Do error handling here
+    @OnWebSocketMessage
+    public void onMessage(String message) {
+        System.out.println("Message: " + message);
     }
+
 }

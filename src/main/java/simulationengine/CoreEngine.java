@@ -3,7 +3,7 @@ package simulationengine;
 import airspaceengine.AirspaceEngine;
 import flight_plan.FlightPlanEngine;
 import uav.UAVEngine;
-import websocket.simple_v2.server.Server;
+import websocket.simple_v2.server.Websocket;
 
 import java.io.IOException;
 
@@ -28,6 +28,7 @@ public class CoreEngine {
         t.start();
 
         //start websocket server
-        Server.getInstance().startServer();
+        Websocket.getInstance().startServer();
+
     }
 }
