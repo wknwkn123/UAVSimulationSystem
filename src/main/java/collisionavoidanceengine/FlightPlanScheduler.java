@@ -112,8 +112,6 @@ public class FlightPlanScheduler {
                 + passingTime
                 + currentFlightPlan.getWaitingPenaltyAtEdge(edgeName,currentTime)
                 + currentFlightPlan.getWaitingPenaltyAtNode(successor.getNodeID(),currentTime+passingTime);
-        if (cost==0)
-            System.out.printf("THE COST is ZERO FOR "+successor.getNodeID());
         return cost;
     }
 
@@ -256,6 +254,18 @@ public class FlightPlanScheduler {
     }
 
     public void doSegmentation(Request request){
+        // todo : be careful with current time
+        int numNodesInSingleTrip = solutionSingleTripTemp.size();
+        // try with only one en-route
+        Request trip1 = new Request("REQ-Temp1",request.getOriginID(),solutionSingleTripTemp.get(numNodesInSingleTrip/2),request.getStartTime());
+        double costTrip1 = doModifiedAStar(trip1,currentTime);
+
+        double trip2StartTime = request.getStartTime()+costTrip1+WAITING_PENALTY_AT_LANDING_NODE;
+        Request trip2 = new Request("REQ-Temp2",solutionSingleTripTemp.get((numNodesInSingleTrip+1)/2),request.getDestinationID(), (int) trip2StartTime);
+        double costTrip2 = doModifiedAStar(trip2,(int)trip2StartTime);
+         if (costTrip1>15 || costTrip2>15){
+             System.out.printf("Cannot do just two trips!");
+         }
 
     }
 
@@ -304,7 +314,6 @@ public class FlightPlanScheduler {
                     System.out.printf("Need to re-route!");
                     Random randomNum = new Random();
                     currentRequest.setStartTime(currentTime + 1 + randomNum.nextInt(MAX_DELAY - 1));
-
                 }
             }
 

@@ -9,8 +9,14 @@ import collisionavoidanceengine.FlightPlanScheduler;
 public class Main {
 
     public static void main (String[] args){
-        String inPathToMapFile = null;      // path to input file
-        String outPathToRequestFile = null; // path to output
+
+        String inPathRoot = "data/in";
+        String inPathToMapFile = inPathRoot;      // path to input file
+
+        String outPathRoot = "data/out";
+        String outPathToRequestFile = outPathRoot+"/Request.csv"; // path to output
+        String outPathToScheduleFile = outPathRoot+"/Schedule";
+
         FlightPlanScheduler scheduler = new FlightPlanScheduler("PLANAR","RANDOM");
         scheduler.ScheduleFlight();
     }

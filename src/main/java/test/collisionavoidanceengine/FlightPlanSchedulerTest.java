@@ -19,7 +19,7 @@ class FlightPlanSchedulerTest {
     @Test
         // Test short route
     void scheduleSingleFlight_A() {
-        // Passed˚
+        // Passed ?
         FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
         Request req = new Request("RQ_1000","WP_BBM6","WP_RHM3",2);
         System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
@@ -33,6 +33,26 @@ class FlightPlanSchedulerTest {
         Request req = new Request("RQ_1000","WP_J75M","WP_RHM3",2);
         System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
     }
+
+    @Test
+        // Test short route
+    void scheduleSingleFlight_A2() {
+        // Passed
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1006","WP_AM79","WP_GSM",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+    @Test
+        // Test short route
+    void scheduleSingleFlight_A3() {
+        // Passed?
+        FlightPlanScheduler fps = new FlightPlanScheduler("PLANAR","RANDOM");
+        Request req = new Request("RQ_1005","WP_KEM1","WP_PL16",2);
+        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+    }
+
+
 
     @Test
     // Test extremely long route
