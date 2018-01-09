@@ -35,11 +35,13 @@ public class Triangulate {
         List<Edge2D> edges= delaunayTriangulator.getEdges();
 
 
+
         JSONArray jsonEdges = new JSONArray();
         for(Edge2D e: edges){
 //            {"source":"N", "target":"I", "meta-data":{"weight":55.23}},
             double weight = sqrt(abs((e.getSource().getX() - e.getTarget().getX())*(e.getSource().getX() - e.getTarget().getX()) -(e.getSource().getY() - e.getTarget().getY())*(e.getSource().getY() - e.getTarget().getY())));
             jsonEdges.put((JSONString) () -> "{\"source\":\"" + e.getSource().getId() + "\", \"target\":\"" + e.getTarget().getId() + "\", \"meta-data\":{\"weight\":" + weight + "}}");
+            jsonEdges.put((JSONString) () -> "{\"target\":\"" + e.getSource().getId() + "\", \"source\":\"" + e.getTarget().getId() + "\", \"meta-data\":{\"weight\":" + weight + "}}");
         }
 
 

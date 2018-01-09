@@ -1,8 +1,8 @@
-import sys
-import json
 import matplotlib.pyplot as plt
 import pandas as pd
+import sys
 from matplotlib import collections  as mc
+
 
 def xfrange(start, stop, step):
     i = 0
@@ -44,9 +44,12 @@ edges_draw = [
     ] 
     for i in edges]
 
-
 fig, ax = plt.subplots()
 lc = mc.LineCollection(edges_draw, linewidths=1)
 ax.add_collection(lc)
+
+for p in points:
+    ax.annotate(p.id, (p.x, p.y))
+
 plt.plot(points_x, points_y, 'ro')
 plt.show()
