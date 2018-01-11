@@ -17,6 +17,6 @@ public class Constant {
     public static final double WAITING_PENALTY_AT_NON_LANDING_NODE = 0.3;
     // Assumes all UAV fly at a constant speed
     public static final double UAV_SPEED = 500;
-
-    public static final int INITIAL_FLIGHT_CAPACITY = 100;
+    // Number of requested flights in a simulation
+    public static final int INITIAL_FLIGHT_CAPACITY = 1000;
 }
