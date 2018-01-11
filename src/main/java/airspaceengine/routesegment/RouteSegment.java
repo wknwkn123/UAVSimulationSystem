@@ -52,4 +52,12 @@ public class RouteSegment {
     public String getEdgeID() {
         return EdgeID;
     }
+
+    public Waypoint getFrom() {
+        return sourceWaypoint;
+    }
+
+    public Waypoint getTo() {
+        return destinationWaypoint;
+    }
 }

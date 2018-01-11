@@ -17,6 +17,10 @@ public class RSList {
         this.RouteSegList.add(rs);
     }
 
+    public void setRouteSegList(List<RouteSegment> routeSegList) {
+        RouteSegList = routeSegList;
+    }
+
     public int getSize(){
         return RouteSegList.size();
     }
@@ -29,7 +33,7 @@ public class RSList {
             if (RouteSegList.get(i).getEdgeID().equals(targetID))
                 return RouteSegList.get(i);
         }
-        System.out.print("ERROR : No route segment with ID "+targetID+" found!");
+        System.out.print("ERROR : No route segment with ID " + targetID + " found!");
         return null;
     }
 

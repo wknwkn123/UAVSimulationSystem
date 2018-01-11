@@ -8,6 +8,8 @@ public class AirspaceStructureFactory {
             case "PLANARGRAPH":
                 // todo: change later
                 return new PlanarAirspaceStructureCreator("/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/reduced_singapore_muiti_store_parking.json");
+            case "RANDOM":
+                return new RandomAirspaceStructureCreator();
             default:
                 System.out.println("Default printed. This should not happen");
                 return null;

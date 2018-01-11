@@ -23,6 +23,10 @@ public class WPList {
         return WaypointList.size();
     }
 
+    public void setWaypointList(List<Waypoint> waypointList) {
+        WaypointList = waypointList;
+    }
+
     public Waypoint getWaypointByID (String targetID){
         for (int i =0; i < WaypointList.size(); i++){
             if (WaypointList.get(i).getNodeID().equals(targetID))

@@ -1,10 +1,10 @@
-package simulationengine.flightplan;
+package uav;
 
-public class FlightPlanFactory {
-    public static FlightPlanCreator getFlightPlanCreator(String type) {
+public class UAVFactory {
+    public static UAVCreator getUAVCreator(String type) {
         switch(type) {
             case "RANDOM":
-                return new RandomFlightPlanCreator();
+                return new RandomUAVCreator();
             default:
                 System.out.println("Default printed. This should not happen");
                 return null;

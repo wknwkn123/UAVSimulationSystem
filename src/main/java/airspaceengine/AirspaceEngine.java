@@ -19,16 +19,21 @@ public class AirspaceEngine {
 
     public void createAirspace(String type) throws IOException {
     		switch(type) {
-//    			case "RANDOM":
-//    				AirspaceStructureCreator airspaceCreator = AirspaceStructureFactory.getAirspaceStructureCreator("RANDOM");
-//    		        //airMap = airspaceCreator.createAirspaceStructure();
-//    		        break;
+    			case "RANDOM":
+    				AirspaceStructureCreator airspaceCreator = AirspaceStructureFactory.getAirspaceStructureCreator("RANDOM");
+    		        airMap = airspaceCreator.createAirspaceStructure();
+    		        break;
                 case "PLANARGRAPH":
                     AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH");
                     airMap = airspaceC.createAirspaceStructure();
-    		    default:
-    		    		System.out.println("Default is printed. This should not happen.");
-    		    		break;
+                    break;
+                default:
+                    System.out.println("Default is printed. This should not happen.");
+                    break;
     		}        
+    }
+
+    public AirspaceStructure getAirMap() {
+        return airMap;
     }
 }
