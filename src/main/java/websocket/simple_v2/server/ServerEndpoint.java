@@ -25,21 +25,6 @@ public class ServerEndpoint {
     public void onConnect(Session session) {
         System.out.println("Connected.");
         Websocket.getInstance().setSession(session);
-
-
-        RemoteEndpoint remote = session.getRemote();
-    // Blocking Send of a TEXT message to remote endpoint
-        String part1 = "Hello";
-        String part2 = " World";
-        try
-        {
-            remote.sendPartialString(part1,false);
-            remote.sendPartialString(part2,true); // last part
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace(System.err);
-        }
     }
 
     @OnWebSocketMessage

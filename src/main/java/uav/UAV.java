@@ -1,9 +1,13 @@
 package uav;
 import airspaceengine.waypoint.Waypoint;
+import com.google.gson.Gson;
 import flight_plan.FlightPlan;
 import flight_plan.FlightSegment;
+import org.eclipse.jetty.websocket.api.RemoteEndpoint;
 import simulationengine.Time;
+import websocket.simple_v2.server.Websocket;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -105,6 +109,14 @@ public class UAV implements Runnable{
                             }
                         }
                         System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
+                        RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();
+                        try {
+                            Gson gson = new Gson();
+                            String jsonData = gson.toJson(this.jsonData);
+                            remote.sendString(jsonData);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         System.out.println("Flight plan " + plan.getId() + " completed.");
                         System.out.println();
                         schedule.remove(0);
