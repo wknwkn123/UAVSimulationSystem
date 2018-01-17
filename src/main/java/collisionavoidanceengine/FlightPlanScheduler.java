@@ -15,6 +15,8 @@ import mapbuilder.triangulation.Node;
 
 
 import javax.swing.text.html.HTMLDocument;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 import static collisionavoidanceengine.constants.Constant.*;
@@ -24,22 +26,21 @@ import static collisionavoidanceengine.constants.Constant.*;
  */
 public class FlightPlanScheduler {
     public final int MAX_CONNECTIONS = 4;
-    public int currentTime=0;
+    public int currentTime = 0;
     public PriorityQueue<Request> myRequestQ;
     public AirspaceStructure myAirMap ;
     public FlightSchedule currentFlightPlan;
     // Solution is a map of routing result
     public Map<String, RoutingResult> solution;
-    public int UAVCounter =0;
-
+    public int UAVCounter = 0;
     public ArrayList<String> solutionSingleTripTemp ;
 
     public FlightPlanScheduler(String airMapType, String requestQueueTyoe){
         // Initialization
-
         try {
-            PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator("/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/reduced_singapore_muiti_store_parking.json");
-            myAirMap=pl.createAirspaceStructure();
+            Path p = Paths.get("data/reduced_singapore_muiti_store_parking.json");
+            PlanarAirspaceStructureCreator pl = new PlanarAirspaceStructureCreator(p.toAbsolutePath().toString());
+            myAirMap = pl.createAirspaceStructure();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.printf("ERROR : CANNOT CREATE AIRMAP!");
@@ -48,7 +49,7 @@ public class FlightPlanScheduler {
         // This is because RequestQueue will need the topology of AirMap
         try{
             RequestCreatorSelector rcs = new RequestCreatorSelector("RANDOM");
-            myRequestQ = rcs.getRequestCreator().generateRequest(INITIAL_FLIGHT_CAPACITY,myAirMap);
+            myRequestQ = rcs.getRequestCreator().generateRequest(INITIAL_FLIGHT_CAPACITY, myAirMap);
         }
         catch (Exception e){
             e.printStackTrace();
@@ -67,25 +68,26 @@ public class FlightPlanScheduler {
         PriorityQueue<WorkingTableEntry> openCopy = new PriorityQueue<>(open);
         for (WorkingTableEntry node : open){
             WorkingTableEntry curNode = openCopy.poll();
-            System.out.printf(curNode.wp.getNodeID()+"("+curNode.fCost+","+curNode.gCost+") ->");
+            System.out.printf(curNode.wp.getNodeID() + "(" + curNode.fCost + "," + curNode.gCost + ") ->");
         }
         System.out.printf("\n");
     }
 
     public void updateSchedule(double startTime, String flightID, ArrayList<String> flightPath){
         double reachTime = startTime;
-        for (int i = 0; i<flightPath.size();i++){
+        for (int i = 0; i < flightPath.size(); i++){
             String currentWP  = flightPath.get(i);
-            String nextWP     = flightPath.get((i+i));
-            String routeSegID = "RS_"+currentWP.substring(3)+"-"+nextWP.substring(3);
+            String nextWP     = flightPath.get((i + i));
+            String routeSegID = "RS_" + currentWP.substring(3) + "-" + nextWP.substring(3);
+
 
             // Update the edge availability
             currentFlightPlan.edgeAvailability.get(routeSegID).addRecord(flightID, reachTime);
 
             // Update the node availability
             reachTime += myAirMap.getEdges().getRouteSegmentByID(routeSegID).getWeight();
-            if(i==0||i==flightPath.size()-1){
-                if(i==0)
+            if(i == 0 || i == flightPath.size() - 1){
+                if(i == 0)
                     // if this is the origin, set isTakingOff to true
                     currentFlightPlan.nodeAvailability.get(currentWP).addRecord(reachTime,flightID,false,true);
                 else

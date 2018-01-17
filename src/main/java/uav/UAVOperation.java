@@ -4,6 +4,7 @@ import airspaceengine.routesegment.RouteSegment;
 import airspaceengine.waypoint.Waypoint;
 
 public class UAVOperation {
+    private double nextAvailableTime;
     private double currentX;
     private double currentY;
     // Ziji : For now, we just consider 2D case
@@ -19,6 +20,7 @@ public class UAVOperation {
     public UAVOperation() {
         currentX = 10;
         currentY = 10;
+        nextAvailableTime = 0;
     }
 
     public double getCurrentX() {
@@ -54,4 +56,8 @@ public class UAVOperation {
     public int getState() { return state; }
 
     public void setState(int state) { this.state = state; }
+
+    public double getNextAvailableTime() { return nextAvailableTime; }
+
+    public void setNextAvailableTime(double nextAvailableTime) { this.nextAvailableTime = nextAvailableTime; }
 }

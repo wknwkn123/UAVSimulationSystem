@@ -1,4 +1,4 @@
-package collisionavoidanceengine.UAV;
+package uav;
 
 import java.util.Comparator;
 
@@ -8,9 +8,9 @@ import java.util.Comparator;
 public class UAVAvailabilityComparator implements Comparator<UAV>{
     @Override
     public int compare(UAV u1, UAV u2){
-        if(u1.getNextAvailableTime()-u2.getNextAvailableTime()<0)
+        if(u1.getOperation().getNextAvailableTime() - u2.getOperation().getNextAvailableTime() < 0)
             return -1;
-        else if (u1.getNextAvailableTime()-u2.getNextAvailableTime()>0)
+        else if (u1.getOperation().getNextAvailableTime() - u2.getOperation().getNextAvailableTime() > 0)
             return 1;
         else
             return 0;

@@ -93,7 +93,7 @@ public class UAV implements Runnable{
                                     operation.setCurrentZ(operation.getCurrentZ() + (0.05) * zDirection);
                                 }
 
-                                if (operation.getCurrentX() != prevX || operation.getCurrentY() != prevY || operation.getCurrentZ() != prevZ) {
+                                if (Math.abs(operation.getCurrentX() - prevX) > 5 || Math.abs(operation.getCurrentY() - prevY) > 5 || Math.abs(operation.getCurrentZ() - prevZ) > 5) {
                                     setJSONData();
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();

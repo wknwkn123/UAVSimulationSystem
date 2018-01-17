@@ -4,9 +4,10 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
+import simulationengine.SimulationApp;
 
 
-public class Websocket {
+public class Websocket implements Runnable{
     private static Websocket instance = new Websocket();
     private Session session;
 
@@ -17,6 +18,20 @@ public class Websocket {
     }
 
     public void startServer() {
+        Thread t = new Thread(this);
+        t.start();
+    }
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
+
+    @Override
+    public void run() {
         Server server = new Server(9000);
         WebSocketHandler wsHandler = new WebSocketHandler() {
             @Override
@@ -35,13 +50,5 @@ public class Websocket {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    public Session getSession() {
-        return session;
-    }
-
-    public void setSession(Session session) {
-        this.session = session;
     }
 }

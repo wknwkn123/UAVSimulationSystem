@@ -3,7 +3,7 @@ package simulationengine;
 public class SimulationConfiguration {
     private static SimulationConfiguration ourInstance = new SimulationConfiguration();
     private double speed;
-    private String airspaceType = "RANDOM";
+    private String airspaceType = "PLANARGRAPH";
     private String flightScheduleType = "RANDOM";
     private int numberOfUAVs;
 

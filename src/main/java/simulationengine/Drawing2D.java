@@ -12,6 +12,7 @@ import websocket.simple.master.Master;
 import java.awt.*;       // Using AWT's Graphics and Color
 import java.awt.event.*; // Using AWT event classes and listener interfaces
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.swing.*;    // Using Swing's components and containers
 
@@ -103,11 +104,11 @@ public class Drawing2D {
                 }
 
                 g.setColor(Color.black);
-                for (RouteSegment rs : AirspaceEngine.getInstance().getAirMap().getEdges().getRouteSegList()) {
-                    Double x1 = rs.getFrom().getX();
-                    Double x2 = rs.getTo().getX();
-                    Double y1 = rs.getFrom().getY();
-                    Double y2 = rs.getTo().getY();
+                for (Map.Entry<String, RouteSegment> rs : AirspaceEngine.getInstance().getAirMap().getEdges().getRouteSegMap().entrySet()) {
+                    Double x1 = rs.getValue().getFrom().getX();
+                    Double x2 = rs.getValue().getTo().getX();
+                    Double y1 = rs.getValue().getFrom().getY();
+                    Double y2 = rs.getValue().getTo().getY();
                     g.drawLine(x1.intValue(), y1.intValue(), x2.intValue(), y2.intValue());
                 }
 

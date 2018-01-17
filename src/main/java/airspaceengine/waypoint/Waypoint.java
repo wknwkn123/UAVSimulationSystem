@@ -1,14 +1,12 @@
 package airspaceengine.waypoint;
 
-import collisionavoidanceengine.UAV.UAV;
+import uav.UAV;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class Waypoint {
-
     //instance variables
     private final String NodeID;    // In form of WP_ID
     private final boolean isTransferable;
@@ -41,7 +39,6 @@ public class Waypoint {
     public double getZ() {
         return z;
     }
-
 
     public List<Waypoint> getAdjacientWaypoints() {
         return AdjacentWaypoint;
