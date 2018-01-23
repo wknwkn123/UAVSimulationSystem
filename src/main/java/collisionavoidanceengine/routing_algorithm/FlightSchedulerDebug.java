@@ -1,4 +1,25 @@
-package collisionavoidanceengine;
+package collisionavoidanceengine.routing_algorithm;
+
+/**
+ * Created by Ziji Shi on 23/1/18.
+ *
+ * A class used for debugging purpose. Production class is FlightScheduler.
+ */
+
+import airspaceengine.airspacestructure.AirspaceStructure;
+import airspaceengine.airspacestructure.PlanarAirspaceStructureCreator;
+import airspaceengine.waypoint.Waypoint;
+import collisionavoidanceengine.flightplan.FlightSchedule;
+import collisionavoidanceengine.request.Request;
+import collisionavoidanceengine.request.RequestCreatorSelector;
+import collisionavoidanceengine.runtime.RoutingResult;
+import collisionavoidanceengine.runtime.WorkingTableEntry;
+import collisionavoidanceengine.runtime.WorkingTableEntryComparator;
+
+import java.util.*;
+
+import static collisionavoidanceengine.constants.Constant.*;
+import static collisionavoidanceengine.constants.Constant.MAX_DELAY;
 
 import airspaceengine.airspacestructure.AirspaceStructure;
 import airspaceengine.airspacestructure.PlanarAirspaceStructureCreator;
@@ -22,7 +43,7 @@ import static collisionavoidanceengine.constants.Constant.*;
 /**
  * Created by StevenShi on 17/12/17.
  */
-public class FlightPlanScheduler {
+class FlightPlanSchedulerDebug {
     public final int MAX_CONNECTIONS = 4;
     public int currentTime=0;
     public PriorityQueue<Request> myRequestQ;
@@ -34,7 +55,7 @@ public class FlightPlanScheduler {
 
     public ArrayList<String> solutionSingleTripTemp ;
 
-    public FlightPlanScheduler(String airMapType, String requestQueueTyoe){
+    public FlightPlanSchedulerDebug(String airMapType, String requestQueueTyoe){
         // Initialization
         try {
             PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator("/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/result.json");
@@ -100,6 +121,7 @@ public class FlightPlanScheduler {
     // Heuristic Function
     public double calcEuclideanDistance(Waypoint origin, Waypoint target){
         double distanceInMeter =  Math.sqrt((origin.getX()-target.getX())*(origin.getX()-target.getX())+(origin.getY()-target.getY())*(origin.getY()-target.getY()));
+//        System.out.printf("====== From "+origin.getNodeID()+" to "+target.getNodeID()+" is"+ Double.toString(distanceInMeter)+" \n");
         return distanceInMeter/UAV_SPEED;
     }
 
@@ -107,6 +129,7 @@ public class FlightPlanScheduler {
     public double calcActualCost(double costSoFar, int currentTime , Waypoint currentNode, Waypoint successor){
         String edgeName = "RS_"+currentNode.getNodeID().substring(3)+"-"+successor.getNodeID().substring(3);
         double passingTime = myAirMap.getEdges().getRouteSegmentByID(edgeName).getLength();
+//        System.out.printf("****** From "+currentNode.getNodeID()+" to "+successor.getNodeID()+" is"+ Double.toString(passingTime)+" \n");
 
         passingTime=passingTime/UAV_SPEED;
         double cost = costSoFar
@@ -118,7 +141,7 @@ public class FlightPlanScheduler {
 
     public double doModifiedAStar(Request req, int currentTime){
         // The following thread refers to WorkingTableEntry class under collisionavoidanceengine.asset
-        Comparator <WorkingTableEntry> entryComparator = new WorkingTableEntryComparator();
+        Comparator<WorkingTableEntry> entryComparator = new WorkingTableEntryComparator();
 
         // Initialize the "OPEN" list, which stores the frontier nodes
         PriorityQueue<WorkingTableEntry> OPEN = new PriorityQueue<WorkingTableEntry>(myAirMap.getNodes().getSize(),entryComparator);
@@ -140,6 +163,7 @@ public class FlightPlanScheduler {
         OPEN.add(new WorkingTableEntry(origin,
                 calcEuclideanDistance(origin,goal)+currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime),
                 currentFlightPlan.getWaitingPenaltyAtNode(origin.getNodeID(),currentTime)));
+//        NodeInOpen.add(origin.getNodeID());
 
         while(!OPEN.isEmpty()){
             //Pop the WorkingTableEntry(node) with the least cost
@@ -154,6 +178,7 @@ public class FlightPlanScheduler {
                 if (succ.getNodeID().equals(goal.getNodeID())){
                     // Update their parent node information
                     PARENT.put(succ.getNodeID(),currentNode.getNodeID());
+//                    System.out.printf("--1---Parent of "+succ.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
 
                     // Backtrack to get all the route segments on the flight path
                     String anchor = succ.getNodeID();
@@ -161,15 +186,21 @@ public class FlightPlanScheduler {
                     System.out.printf("Shortest path for "+req.getRequestID()+" is : (goal)"+anchor);
 
                     while (!PARENT.get(anchor).equals(origin.getNodeID())){
-                            anchor=PARENT.get(anchor);
-                            // get previous WP ID, and push to solutionTemp queue
-                            solutionSingleTripTemp.add(anchor);
-                            System.out.printf("  <-"+anchor);
+                        anchor=PARENT.get(anchor);
+                        // get previous WP ID, and push to solutionTemp queue
+                        solutionSingleTripTemp.add(anchor);
+                        System.out.printf("  <-"+anchor);
                     }
 
                     // Only origin on the path has a null pointer
+
                     solutionSingleTripTemp.add(origin.getNodeID());
                     System.out.printf("  <-"+origin.getNodeID()+"\n");
+
+//                    for (String key : PARENT.keySet()){
+//                        System.out.printf("Key : "+key + "    Parent : "+PARENT.get(key) +"\n");
+//                    }
+
 
                     // Reverse the solutionTemp queue so that the first element is origin node
                     Collections.reverse(solutionSingleTripTemp);
@@ -193,8 +224,10 @@ public class FlightPlanScheduler {
                     if(td.wp.getNodeID().equals(succ.getNodeID())){
                         // No need to have two same node in OPEN
                         hasUpdatedOpen = true;
+//                        System.out.printf("Found "+succ.getNodeID()+" in OPEN!");
                         if(td.fCost > succFCost){
                             PARENT.put(td.wp.getNodeID(),currentNode.getNodeID());
+//                            System.out.printf("--2.Open---Parent of "+td.wp.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
                             td.fCost = succFCost;
                             td.gCost = succGCost;
                             break;
@@ -214,6 +247,7 @@ public class FlightPlanScheduler {
                         hasUpdatedClosed=true;
                         if (wte.fCost > succFCost){
                             PARENT.put(wte.wp.getNodeID(),currentNode.getNodeID());
+//                            System.out.printf("--2.Closed---Parent of "+wte.wp.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
                             wte.fCost = succFCost;
                             wte.gCost = succGCost;
                             break;
@@ -226,7 +260,10 @@ public class FlightPlanScheduler {
 
                 // Update their parent node information
                 PARENT.put(succ.getNodeID(),currentNode.getNodeID());
+//                System.out.printf("--3---Parent of "+succ.getNodeID()+"is set to"+currentNode.getNodeID()+"\n");
                 OPEN.add(new WorkingTableEntry(succ,succFCost,succGCost));
+//                printOpen(OPEN);
+//                NodeInOpen.add(succ.getNodeID());
             }
             CLOSED.add(currentWorkingTableEntry);
             // Push current node to CLOSED list
@@ -245,9 +282,9 @@ public class FlightPlanScheduler {
         double trip2StartTime = request.getStartTime()+costTrip1+WAITING_PENALTY_AT_LANDING_NODE;
         Request trip2 = new Request("REQ-Temp2",solutionSingleTripTemp.get((numNodesInSingleTrip+1)/2),request.getDestinationID(), (int) trip2StartTime);
         double costTrip2 = doModifiedAStar(trip2,(int)trip2StartTime);
-         if (costTrip1>15 || costTrip2>15){
-             System.out.printf("Cannot do just two trips!");
-         }
+        if (costTrip1>15 || costTrip2>15){
+            System.out.printf("Cannot do just two trips!");
+        }
 
     }
 

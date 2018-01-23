@@ -112,7 +112,7 @@ public class FlightPlan {
     public double getTotalDistance() {
         double total = 0;
         for (RouteSegment edge: this.edges) {
-            total += edge.getWeight();
+            total += edge.getLength();
         }
         return total;
     }

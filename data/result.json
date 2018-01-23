@@ -1,1 +1,3905 @@
-{"graph":{"directed":false,"metadata":{"coordinate-system":"EPSG:3414"},"nodes":[{"meta-data":{"address":"BLK 127 KIM TIAN ROAD","x":27546.4706,"y":29366.694},"id":"KTM6","type":"transferable"},{"meta-data":{"address":"BLK 29C CHAI CHEE AVENUE","x":38125.3637,"y":34059.3926},"id":"B71","type":"transferable"},{"meta-data":{"address":"BLK 73 REDHILL RD","x":26214.2901,"y":30036.7081},"id":"RHM3","type":"transferable"},{"meta-data":{"address":"138 YUAN CHING ROAD","x":15758.1435,"y":34451.3136},"id":"TJ39","type":"transferable"},{"meta-data":{"address":"BLK 217 COMPASSVALE DRIVE","x":34802.6901,"y":41291.5425},"id":"S105","type":"transferable"},{"meta-data":{"address":"BLK 180 EDGEFIELD PLAINS","x":36463.3164,"y":42276.7143},"id":"PL16","type":"transferable"},{"meta-data":{"address":"BLK 413A WOODLANDS STREET 41","x":21205.5217,"y":45525.4699},"id":"W44","type":"transferable"},{"meta-data":{"address":"BLK 925 YISHUN CENTRAL 1","x":28413.6222,"y":45450.4144},"id":"Y54M","type":"transferable"},{"meta-data":{"address":"BLK 522 TAMPINES CTRL 7","x":39699.2218,"y":37846.9485},"id":"TM46","type":"transferable"},{"meta-data":{"address":"BLK 225A PETIR ROAD MSCP","x":21297.0894,"y":39664.6547},"id":"BJ5","type":"transferable"},{"meta-data":{"address":"BLK 371A WOODLANDS AVENUE 1","x":22773.7444,"y":46061.9793},"id":"W63","type":"transferable"},{"meta-data":{"address":"BLK 37B COMMONWEALTH DRIVE","x":24057.579,"y":31174.2517},"id":"THM","type":"transferable"},{"meta-data":{"address":"BLK 13 NORTH BRIDGE ROAD MSCP","x":31304.4327,"y":31815.6323},"id":"NBRM","type":"transferable"},{"meta-data":{"address":"BLK 24 GHIM MOH LINK","x":22713.9209,"y":32338.0954},"id":"GMLM","type":"transferable"},{"meta-data":{"address":"BLK 160 RIVERVALE CRESCENT","x":36285.422,"y":41009.03},"id":"SK55","type":"transferable"},{"meta-data":{"address":"BLK 320 SHUNFU ROAD","x":28391.2848,"y":37128.1198},"id":"SH2","type":"transferable"},{"meta-data":{"address":"BLK 714A BEDOK RESERVOIR ROAD","x":38037.1417,"y":35371.0192},"id":"B97","type":"transferable"},{"meta-data":{"address":"BLK 671A JALAN DAMAI","x":36428.7057,"y":35005.0793},"id":"B74","type":"transferable"},{"meta-data":{"address":"BLK 805 HOUGANG CENTRAL","x":34748.896,"y":39244.171},"id":"HG47","type":"transferable"},{"meta-data":{"address":"BLK 692 CHOA CHU KANG CRESCENT","x":18872.7705,"y":42404.3378},"id":"CK64","type":"transferable"},{"meta-data":{"address":"BLK 431 YISHUN AVE 1","x":29586.1001,"y":44649.9643},"id":"Y61M","type":"transferable"},{"meta-data":{"address":"BLK 6A BOON KENG ROAD","x":31121.6383,"y":33283.2558},"id":"BKRM","type":"transferable"},{"meta-data":{"address":"BLK 1 KAKI BUKIT@AUTOBAY KAKI BT AVE 6","x":36787.2198,"y":35929.5704},"id":"IABY","type":"transferable"},{"meta-data":{"address":"BLK 311A TAMPINES STREET 33","x":41833.9252,"y":37212.6124},"id":"TM7","type":"transferable"},{"meta-data":{"address":"BLK 8A EMPRESS ROAD","x":24983.1434,"y":33218.9585},"id":"FR3M","type":"transferable"},{"meta-data":{"address":"BLK 671 KLANG LANE","x":30136.2998,"y":32358.8836},"id":"KEM1","type":"transferable"},{"meta-data":{"address":"BLK 220-222 HOUGANG STREET 21","x":33679.7387,"y":37636.4156},"id":"HG54","type":"transferable"},{"meta-data":{"address":"BLK 334 YISHUN ST 31","x":29307.9247,"y":46015.4036},"id":"Y64M","type":"transferable"},{"meta-data":{"address":"BLK 788A WOODLANDS CRESCENT","x":24490.3124,"y":47314.8499},"id":"W95","type":"transferable"},{"meta-data":{"address":"BLK 291F BUKIT BATOK STREET 24","x":19289.8168,"y":36112.2533},"id":"BBM6","type":"transferable"},{"meta-data":{"address":"BLK 109A CLEMENTI ST 11","x":20977.2537,"y":33777.6046},"id":"C22M","type":"transferable"},{"meta-data":{"address":"BLK 11A PINE CLOSE","x":33523.1191,"y":32313.2942},"id":"KM3","type":"transferable"},{"meta-data":{"address":"BLK 762A PASIR RIS STREET 71","x":39126.6463,"y":39773.0358},"id":"PM44","type":"transferable"},{"meta-data":{"address":"BLK 631A PASIR RIS DRIVE 3","x":39883.2972,"y":40142.5172},"id":"PM32","type":"transferable"},{"meta-data":{"address":"208 CLEMWENTI AVE 6","x":20070.902,"y":33845.674},"id":"C28M","type":"transferable"},{"meta-data":{"address":"BLK 2A LORONG LEW LIAN","x":32727.6274,"y":36890.9379},"id":"SE29","type":"transferable"},{"meta-data":{"address":"BLK 596 ANG MO KIO STREEET 52","x":30011.8783,"y":39373.9195},"id":"AM79","type":"transferable"},{"meta-data":{"address":"BLK 154A BUKIT BATOK WEST AVE 8","x":18025.9428,"y":36609.4062},"id":"BBM7","type":"transferable"},{"meta-data":{"address":"BLK 574 WOODLANDS DRIVE 16","x":24118.936,"y":45812.819},"id":"W574","type":"transferable"},{"meta-data":{"address":"BLK 184 BEDOK NORTH RD","x":40023.6834,"y":34256.9953},"id":"B85","type":"transferable"},{"meta-data":{"address":"BLK 406A SEMBAWANG DRIVE","x":26218.1896,"y":48230.524},"id":"SB14","type":"transferable"},{"meta-data":{"address":"BLK 488A SEGAR ROAD","x":21094.1509,"y":41302.4805},"id":"BJ59","type":"transferable"},{"meta-data":{"address":"BLK 272A PASIR RIS STREET 21","x":42657.807,"y":38550.2316},"id":"PM12","type":"transferable"},{"meta-data":{"address":"BLK 23A TELOK BLANGAH CRESCENT","x":26584.8423,"y":28673.052},"id":"TBC2","type":"transferable"},{"meta-data":{"address":"BLK 550A SERANGOON NORTH AVENUE 3","x":32084.7485,"y":39394.1524},"id":"SE40","type":"transferable"},{"meta-data":{"address":"183 BOON LAY DRIVE","x":14206.3144,"y":36819.8339},"id":"BL21","type":"transferable"},{"meta-data":{"address":"BLK 112C DEPOT ROAD","x":25165.8976,"y":29305.1091},"id":"DRM2","type":"transferable"},{"meta-data":{"address":"BLK 135A BISHAN STREET 12","x":30026.4687,"y":36336.1338},"id":"BE13","type":"transferable"},{"meta-data":{"address":"BLK 34A MARSILING DR","x":21198.8774,"y":47366.6434},"id":"W12M","type":"transferable"},{"meta-data":{"address":"BLK 921A TAMPINES ST 91","x":40033.712,"y":36628.1391},"id":"TM41","type":"transferable"},{"meta-data":{"address":"BLK 2 GEYLANG SERAI","x":35236.2639,"y":33275.6378},"id":"GSM","type":"transferable"},{"meta-data":{"address":"BLK 470 FERNVALE LINK","x":33130.4351,"y":42095.6631},"id":"S101","type":"transferable"},{"meta-data":{"address":"129 CANBERRA STREET","x":27930.3532,"y":47366.8059},"id":"SB38","type":"transferable"},{"meta-data":{"address":"BLK 1A TOH YI DRIVE","x":21441.5507,"y":35689.479},"id":"TY1","type":"transferable"},{"meta-data":{"address":"BLK 238A SERANGOON AVENUE 2","x":31927.5751,"y":37333.0762},"id":"SE50","type":"transferable"},{"meta-data":{"address":"BLK 660 JURONG WEST ST 64","x":13617.7777,"y":35278.113},"id":"JM17","type":"transferable"},{"meta-data":{"address":"BLK 11A LORONG 8 TOA PAYOH","x":30889.8975,"y":35423.8667},"id":"TPM8","type":"transferable"},{"meta-data":{"address":"BLK 132 JURONG GATEWAY ROAD","x":17576.3345,"y":35155.1132},"id":"J58","type":"transferable"},{"meta-data":{"address":"BLK 161A LORONG 1 TOA PAYOH","x":29290.1401,"y":34713.1702},"id":"TPMD","type":"transferable"},{"meta-data":{"address":"BLK 47A MARINE CRESCENT","x":36809.7582,"y":31975.4666},"id":"MP5M","type":"transferable"},{"meta-data":{"address":"BLK 805 KEAT HONG CLOSE","x":17972.7291,"y":39473.0169},"id":"CK74","type":"transferable"},{"meta-data":{"address":"BLK 105 HOUGANG AVENUE 1","x":34319.1474,"y":37341.5832},"id":"HG95","type":"transferable"},{"meta-data":{"address":"BLK 683 CHOA CHU KANG CRESCENT","x":18268.595,"y":42905.4416},"id":"CK60","type":"transferable"},{"meta-data":{"address":"BLK 3023 UBIPLEX UBI RD 3","x":35077.1934,"y":34638.0926},"id":"IUPX","type":"transferable"},{"meta-data":{"address":"BLK 517B JURONG WEST STREET 52","x":15461.2578,"y":36356.8719},"id":"JM1","type":"transferable"},{"meta-data":{"address":"BLK 531A HONG LIM MSCP","x":29357.8516,"y":29697.9551},"id":"HLM","type":"transferable"},{"meta-data":{"address":"BLK 879C TAMPINES AVE 8","x":38621.1252,"y":37032.665},"id":"TM51","type":"transferable"},{"meta-data":{"address":"BLK 63A TEBAN GARDENS RD","x":17489.3829,"y":33707.3408},"id":"TGM1","type":"transferable"}],"edges":[{"source":"B85", "target":"PM12", "meta-data":{"weight":3391.235762963112}},{"target":"B85", "source":"PM12", "meta-data":{"weight":3391.235762963112}},{"source":"B97", "target":"B85", "meta-data":{"weight":1643.463111846445}},{"target":"B97", "source":"B85", "meta-data":{"weight":1643.463111846445}},{"source":"THM", "target":"GMLM", "meta-data":{"weight":671.8928486001321}},{"target":"THM", "source":"GMLM", "meta-data":{"weight":671.8928486001321}},{"source":"C22M", "target":"TY1", "meta-data":{"weight":1854.84446787325}},{"target":"C22M", "source":"TY1", "meta-data":{"weight":1854.84446787325}},{"source":"KM3", "target":"IUPX", "meta-data":{"weight":1729.3666470705396}},{"target":"KM3", "source":"IUPX", "meta-data":{"weight":1729.3666470705396}},{"source":"S105", "target":"HG47", "meta-data":{"weight":2046.2876141930783}},{"target":"S105", "source":"HG47", "meta-data":{"weight":2046.2876141930783}},{"source":"GMLM", "target":"TY1", "meta-data":{"weight":3100.1962841084755}},{"target":"GMLM", "source":"TY1", "meta-data":{"weight":3100.1962841084755}},{"source":"S105", "target":"S101", "meta-data":{"weight":1466.0040927637276}},{"target":"S105", "source":"S101", "meta-data":{"weight":1466.0040927637276}},{"source":"TM46", "target":"TM41", "meta-data":{"weight":1171.3103773125208}},{"target":"TM46", "source":"TM41", "meta-data":{"weight":1171.3103773125208}},{"source":"Y54M", "target":"Y64M", "meta-data":{"weight":692.8282615482714}},{"target":"Y54M", "source":"Y64M", "meta-data":{"weight":692.8282615482714}},{"source":"W63", "target":"BJ59", "meta-data":{"weight":4452.981023988313}},{"target":"W63", "source":"BJ59", "meta-data":{"weight":4452.981023988313}},{"source":"BKRM", "target":"KM3", "meta-data":{"weight":2197.4312275928}},{"target":"BKRM", "source":"KM3", "meta-data":{"weight":2197.4312275928}},{"source":"KTM6", "target":"KEM1", "meta-data":{"weight":1497.9866488056562}},{"target":"KTM6", "source":"KEM1", "meta-data":{"weight":1497.9866488056562}},{"source":"NBRM", "target":"HLM", "meta-data":{"weight":833.7355695902628}},{"target":"NBRM", "source":"HLM", "meta-data":{"weight":833.7355695902628}},{"source":"IABY", "target":"HG95", "meta-data":{"weight":2024.173905572345}},{"target":"IABY", "source":"HG95", "meta-data":{"weight":2024.173905572345}},{"source":"KTM6", "target":"TBC2", "meta-data":{"weight":667.2293458774127}},{"target":"KTM6", "source":"TBC2", "meta-data":{"weight":667.2293458774127}},{"source":"B97", "target":"TM51", "meta-data":{"weight":1554.948552203577}},{"target":"B97", "source":"TM51", "meta-data":{"weight":1554.948552203577}},{"source":"Y54M", "target":"SB38", "meta-data":{"weight":1854.1216249210838}},{"target":"Y54M", "source":"SB38", "meta-data":{"weight":1854.1216249210838}},{"source":"SH2", "target":"FR3M", "meta-data":{"weight":1916.6731594092928}},{"target":"SH2", "source":"FR3M", "meta-data":{"weight":1916.6731594092928}},{"source":"B71", "target":"B74", "meta-data":{"weight":1408.8623069697053}},{"target":"B71", "source":"B74", "meta-data":{"weight":1408.8623069697053}},{"source":"TBC2", "target":"DRM2", "meta-data":{"weight":1270.4869145331643}},{"target":"TBC2", "source":"DRM2", "meta-data":{"weight":1270.4869145331643}},{"source":"Y54M", "target":"W574", "meta-data":{"weight":4279.71739721211}},{"target":"Y54M", "source":"W574", "meta-data":{"weight":4279.71739721211}},{"source":"BJ5", "target":"BJ59", "meta-data":{"weight":1625.3722650519173}},{"target":"BJ5", "source":"BJ59", "meta-data":{"weight":1625.3722650519173}},{"source":"HG47", "target":"PM44", "meta-data":{"weight":4345.922571790712}},{"target":"HG47", "source":"PM44", "meta-data":{"weight":4345.922571790712}},{"source":"JM17", "target":"BL21", "meta-data":{"weight":1423.99438201139}},{"target":"JM17", "source":"BL21", "meta-data":{"weight":1423.99438201139}},{"source":"Y54M", "target":"AM79", "meta-data":{"weight":5863.132695070102}},{"target":"Y54M", "source":"AM79", "meta-data":{"weight":5863.132695070102}},{"source":"BBM6", "target":"TY1", "meta-data":{"weight":2110.017772437}},{"target":"BBM6", "source":"TY1", "meta-data":{"weight":2110.017772437}},{"source":"TJ39", "target":"J58", "meta-data":{"weight":1676.1587037032025}},{"target":"TJ39", "source":"J58", "meta-data":{"weight":1676.1587037032025}},{"source":"KEM1", "target":"HLM", "meta-data":{"weight":2544.421348754958}},{"target":"KEM1", "source":"HLM", "meta-data":{"weight":2544.421348754958}},{"source":"BE13", "target":"TPMD", "meta-data":{"weight":1446.524455375712}},{"target":"BE13", "source":"TPMD", "meta-data":{"weight":1446.524455375712}},{"source":"TBC2", "target":"MP5M", "meta-data":{"weight":9677.159758937536}},{"target":"TBC2", "source":"MP5M", "meta-data":{"weight":9677.159758937536}},{"source":"W63", "target":"W574", "meta-data":{"weight":1321.7503546434175}},{"target":"W63", "source":"W574", "meta-data":{"weight":1321.7503546434175}},{"source":"SB14", "target":"SB38", "meta-data":{"weight":1477.9878213300676}},{"target":"SB14", "source":"SB38", "meta-data":{"weight":1477.9878213300676}},{"source":"GMLM", "target":"DRM2", "meta-data":{"weight":1785.1568558532888}},{"target":"GMLM", "source":"DRM2", "meta-data":{"weight":1785.1568558532888}},{"source":"HG54", "target":"HG47", "meta-data":{"weight":1201.20897432545}},{"target":"HG54", "source":"HG47", "meta-data":{"weight":1201.20897432545}},{"source":"BE13", "target":"TPM8", "meta-data":{"weight":297.9932885150268}},{"target":"BE13", "source":"TPM8", "meta-data":{"weight":297.9932885150268}},{"source":"KM3", "target":"MP5M", "meta-data":{"weight":3268.570329670145}},{"target":"KM3", "source":"MP5M", "meta-data":{"weight":3268.570329670145}},{"source":"SK55", "target":"HG47", "meta-data":{"weight":867.6727493704063}},{"target":"SK55", "source":"HG47", "meta-data":{"weight":867.6727493704063}},{"source":"KM3", "target":"HLM", "meta-data":{"weight":3242.2368821540476}},{"target":"KM3", "source":"HLM", "meta-data":{"weight":3242.2368821540476}},{"source":"W44", "target":"CK64", "meta-data":{"weight":2073.102023538639}},{"target":"W44", "source":"CK64", "meta-data":{"weight":2073.102023538639}},{"source":"S105", "target":"SK55", "meta-data":{"weight":1455.9412762882987}},{"target":"S105", "source":"SK55", "meta-data":{"weight":1455.9412762882987}},{"source":"B97", "target":"IABY", "meta-data":{"weight":1118.5419080213312}},{"target":"B97", "source":"IABY", "meta-data":{"weight":1118.5419080213312}},{"source":"SE29", "target":"SE50", "meta-data":{"weight":666.1463803099135}},{"target":"SE29", "source":"SE50", "meta-data":{"weight":666.1463803099135}},{"source":"W44", "target":"CK60", "meta-data":{"weight":1327.2411235340774}},{"target":"W44", "source":"CK60", "meta-data":{"weight":1327.2411235340774}},{"source":"SE29", "target":"HG95", "meta-data":{"weight":1526.7819097696959}},{"target":"SE29", "source":"HG95", "meta-data":{"weight":1526.7819097696959}},{"source":"TJ39", "target":"TGM1", "meta-data":{"weight":1562.9539340620374}},{"target":"TJ39", "source":"TGM1", "meta-data":{"weight":1562.9539340620374}},{"source":"Y61M", "target":"AM79", "meta-data":{"weight":5258.854533070867}},{"target":"Y61M", "source":"AM79", "meta-data":{"weight":5258.854533070867}},{"source":"DRM2", "target":"TJ39", "meta-data":{"weight":7874.6639928316945}},{"target":"DRM2", "source":"TJ39", "meta-data":{"weight":7874.6639928316945}},{"source":"CK74", "target":"JM1", "meta-data":{"weight":1846.7723194806663}},{"target":"CK74", "source":"JM1", "meta-data":{"weight":1846.7723194806663}},{"source":"BL21", "target":"W12M", "meta-data":{"weight":7896.274121381552}},{"target":"BL21", "source":"W12M", "meta-data":{"weight":7896.274121381552}},{"source":"BKRM", "target":"IUPX", "meta-data":{"weight":3716.707010244418}},{"target":"BKRM", "source":"IUPX", "meta-data":{"weight":3716.707010244418}},{"source":"W95", "target":"W12M", "meta-data":{"weight":3291.589281790789}},{"target":"W95", "source":"W12M", "meta-data":{"weight":3291.589281790789}},{"source":"C22M", "target":"C28M", "meta-data":{"weight":904.4473450676938}},{"target":"C22M", "source":"C28M", "meta-data":{"weight":904.4473450676938}},{"source":"GSM", "target":"KM3", "meta-data":{"weight":1417.3655139024654}},{"target":"GSM", "source":"KM3", "meta-data":{"weight":1417.3655139024654}},{"source":"BL21", "target":"CK60", "meta-data":{"weight":4532.058252052813}},{"target":"BL21", "source":"CK60", "meta-data":{"weight":4532.058252052813}},{"source":"B71", "target":"B97", "meta-data":{"weight":1309.0454537562857}},{"target":"B71", "source":"B97", "meta-data":{"weight":1309.0454537562857}},{"source":"B97", "target":"B74", "meta-data":{"weight":1566.8200279547107}},{"target":"B97", "source":"B74", "meta-data":{"weight":1566.8200279547107}},{"source":"TM41", "target":"TM51", "meta-data":{"weight":1352.9700661877187}},{"target":"TM41", "source":"TM51", "meta-data":{"weight":1352.9700661877187}},{"source":"BBM7", "target":"BBM6", "meta-data":{"weight":1162.1906039888638}},{"target":"BBM7", "source":"BBM6", "meta-data":{"weight":1162.1906039888638}},{"source":"GMLM", "target":"TGM1", "meta-data":{"weight":5041.429856697403}},{"target":"GMLM", "source":"TGM1", "meta-data":{"weight":5041.429856697403}},{"source":"SH2", "target":"AM79", "meta-data":{"weight":1554.2281042369552}},{"target":"SH2", "source":"AM79", "meta-data":{"weight":1554.2281042369552}},{"source":"SE29", "target":"IUPX", "meta-data":{"weight":671.5623574918416}},{"target":"SE29", "source":"IUPX", "meta-data":{"weight":671.5623574918416}},{"source":"GMLM", "target":"FR3M", "meta-data":{"weight":2092.486559096617}},{"target":"GMLM", "source":"FR3M", "meta-data":{"weight":2092.486559096617}},{"source":"GSM", "target":"IUPX", "meta-data":{"weight":1353.6942047597013}},{"target":"GSM", "source":"IUPX", "meta-data":{"weight":1353.6942047597013}},{"source":"S105", "target":"PL16", "meta-data":{"weight":1337.4213995596153}},{"target":"S105", "source":"PL16", "meta-data":{"weight":1337.4213995596153}},{"source":"SE40", "target":"SE50", "meta-data":{"weight":2055.0114354912967}},{"target":"SE40", "source":"SE50", "meta-data":{"weight":2055.0114354912967}},{"source":"HG47", "target":"TM51", "meta-data":{"weight":3179.1799257041116}},{"target":"HG47", "source":"TM51", "meta-data":{"weight":3179.1799257041116}},{"source":"PM32", "target":"PM12", "meta-data":{"weight":2271.698043314736}},{"target":"PM32", "source":"PM12", "meta-data":{"weight":2271.698043314736}},{"source":"W12M", "target":"CK60", "meta-data":{"weight":3363.869943978215}},{"target":"W12M", "source":"CK60", "meta-data":{"weight":3363.869943978215}},{"source":"W95", "target":"W63", "meta-data":{"weight":1173.9165217339776}},{"target":"W95", "source":"W63", "meta-data":{"weight":1173.9165217339776}},{"source":"W44", "target":"BJ59", "meta-data":{"weight":4221.540950885115}},{"target":"W44", "source":"BJ59", "meta-data":{"weight":4221.540950885115}},{"source":"BJ5", "target":"TY1", "meta-data":{"weight":3972.3908417979214}},{"target":"BJ5", "source":"TY1", "meta-data":{"weight":3972.3908417979214}},{"source":"SB14", "target":"W95", "meta-data":{"weight":1465.2399120963091}},{"target":"SB14", "source":"W95", "meta-data":{"weight":1465.2399120963091}},{"source":"TM46", "target":"TM51", "meta-data":{"weight":706.7446497851964}},{"target":"TM46", "source":"TM51", "meta-data":{"weight":706.7446497851964}},{"source":"RHM3", "target":"TBC2", "meta-data":{"weight":1311.8189661687318}},{"target":"RHM3", "source":"TBC2", "meta-data":{"weight":1311.8189661687318}},{"source":"Y64M", "target":"PL16", "meta-data":{"weight":6101.492850114634}},{"target":"Y64M", "source":"PL16", "meta-data":{"weight":6101.492850114634}},{"source":"W574", "target":"BJ59", "meta-data":{"weight":3345.9713089026927}},{"target":"W574", "source":"BJ59", "meta-data":{"weight":3345.9713089026927}},{"source":"HG47", "target":"SE40", "meta-data":{"weight":2659.773674582106}},{"target":"HG47", "source":"SE40", "meta-data":{"weight":2659.773674582106}},{"source":"AM79", "target":"S101", "meta-data":{"weight":1522.7859337411808}},{"target":"AM79", "source":"S101", "meta-data":{"weight":1522.7859337411808}},{"source":"W574", "target":"SB38", "meta-data":{"weight":3480.8659842056545}},{"target":"W574", "source":"SB38", "meta-data":{"weight":3480.8659842056545}},{"source":"PL16", "target":"PM44", "meta-data":{"weight":909.1534523940389}},{"target":"PL16", "source":"PM44", "meta-data":{"weight":909.1534523940389}},{"source":"SE50", "target":"TPM8", "meta-data":{"weight":1603.3265419121583}},{"target":"SE50", "source":"TPM8", "meta-data":{"weight":1603.3265419121583}},{"source":"BBM6", "target":"J58", "meta-data":{"weight":1420.7462827683203}},{"target":"BBM6", "source":"J58", "meta-data":{"weight":1420.7462827683203}},{"source":"PM44", "target":"PM32", "meta-data":{"weight":660.9750373501256}},{"target":"PM44", "source":"PM32", "meta-data":{"weight":660.9750373501256}},{"source":"TM46", "target":"PM44", "meta-data":{"weight":1839.8369492974098}},{"target":"TM46", "source":"PM44", "meta-data":{"weight":1839.8369492974098}},{"source":"BBM7", "target":"J58", "meta-data":{"weight":1382.9370918447448}},{"target":"BBM7", "source":"J58", "meta-data":{"weight":1382.9370918447448}},{"source":"IABY", "target":"IUPX", "meta-data":{"weight":1121.3469579037524}},{"target":"IABY", "source":"IUPX", "meta-data":{"weight":1121.3469579037524}},{"source":"TM46", "target":"TM7", "meta-data":{"weight":2037.6457003120047}},{"target":"TM46", "source":"TM7", "meta-data":{"weight":2037.6457003120047}},{"source":"S105", "target":"SE40", "meta-data":{"weight":1946.5135499143078}},{"target":"S105", "source":"SE40", "meta-data":{"weight":1946.5135499143078}},{"source":"NBRM", "target":"KEM1", "meta-data":{"weight":1034.1058939973218}},{"target":"NBRM", "source":"KEM1", "meta-data":{"weight":1034.1058939973218}},{"source":"BJ59", "target":"CK74", "meta-data":{"weight":2530.146833683769}},{"target":"BJ59", "source":"CK74", "meta-data":{"weight":2530.146833683769}},{"source":"SB14", "target":"W12M", "meta-data":{"weight":4945.0888768555005}},{"target":"SB14", "source":"W12M", "meta-data":{"weight":4945.0888768555005}},{"source":"TM7", "target":"TM41", "meta-data":{"weight":1702.6285560861477}},{"target":"TM7", "source":"TM41", "meta-data":{"weight":1702.6285560861477}},{"source":"PL16", "target":"SB38", "meta-data":{"weight":6848.648698831033}},{"target":"PL16", "source":"SB38", "meta-data":{"weight":6848.648698831033}},{"source":"B74", "target":"IABY", "meta-data":{"weight":851.4076579406601}},{"target":"B74", "source":"IABY", "meta-data":{"weight":851.4076579406601}},{"source":"HG54", "target":"SE50", "meta-data":{"weight":1725.599895688453}},{"target":"HG54", "source":"SE50", "meta-data":{"weight":1725.599895688453}},{"source":"B97", "target":"TM41", "meta-data":{"weight":1550.4731535889293}},{"target":"B97", "source":"TM41", "meta-data":{"weight":1550.4731535889293}},{"source":"B85", "target":"TM7", "meta-data":{"weight":2337.0571238204684}},{"target":"B85", "source":"TM7", "meta-data":{"weight":2337.0571238204684}},{"source":"CK64", "target":"BJ59", "meta-data":{"weight":1929.4766129704708}},{"target":"CK64", "source":"BJ59", "meta-data":{"weight":1929.4766129704708}},{"source":"BL21", "target":"JM1", "meta-data":{"weight":1166.4716027405038}},{"target":"BL21", "source":"JM1", "meta-data":{"weight":1166.4716027405038}},{"source":"AM79", "target":"BE13", "meta-data":{"weight":3036.9629566394124}},{"target":"AM79", "source":"BE13", "meta-data":{"weight":3036.9629566394124}},{"source":"B85", "target":"MP5M", "meta-data":{"weight":2264.251531963708}},{"target":"B85", "source":"MP5M", "meta-data":{"weight":2264.251531963708}},{"source":"FR3M", "target":"KEM1", "meta-data":{"weight":5080.729179950453}},{"target":"FR3M", "source":"KEM1", "meta-data":{"weight":5080.729179950453}},{"source":"SE40", "target":"S101", "meta-data":{"weight":2490.237940438624}},{"target":"SE40", "source":"S101", "meta-data":{"weight":2490.237940438624}},{"source":"MP5M", "target":"HLM", "meta-data":{"weight":7095.281530707573}},{"target":"MP5M", "source":"HLM", "meta-data":{"weight":7095.281530707573}},{"source":"BBM6", "target":"BJ5", "meta-data":{"weight":2929.9556310633784}},{"target":"BBM6", "source":"BJ5", "meta-data":{"weight":2929.9556310633784}},{"source":"BKRM", "target":"KEM1", "meta-data":{"weight":338.52621759621513}},{"target":"BKRM", "source":"KEM1", "meta-data":{"weight":338.52621759621513}},{"source":"TBC2", "target":"HLM", "meta-data":{"weight":2577.0046565732086}},{"target":"TBC2", "source":"HLM", "meta-data":{"weight":2577.0046565732086}},{"source":"TM7", "target":"PM12", "meta-data":{"weight":1054.1669696969261}},{"target":"TM7", "source":"PM12", "meta-data":{"weight":1054.1669696969261}},{"source":"RHM3", "target":"KEM1", "meta-data":{"weight":3160.7594024221457}},{"target":"RHM3", "source":"KEM1", "meta-data":{"weight":3160.7594024221457}},{"source":"C28M", "target":"J58", "meta-data":{"weight":2122.2478648828933}},{"target":"C28M", "source":"J58", "meta-data":{"weight":2122.2478648828933}},{"source":"BKRM", "target":"TPM8", "meta-data":{"weight":2127.3871297909086}},{"target":"BKRM", "source":"TPM8", "meta-data":{"weight":2127.3871297909086}},{"source":"DRM2", "target":"JM17", "meta-data":{"weight":9883.29777958754}},{"target":"DRM2", "source":"JM17", "meta-data":{"weight":9883.29777958754}},{"source":"B74", "target":"IUPX", "meta-data":{"weight":1300.196908164298}},{"target":"B74", "source":"IUPX", "meta-data":{"weight":1300.196908164298}},{"source":"THM", "target":"DRM2", "meta-data":{"weight":1505.1568024627866}},{"target":"THM", "source":"DRM2", "meta-data":{"weight":1505.1568024627866}},{"source":"TM46", "target":"PM32", "meta-data":{"weight":2288.6153018801565}},{"target":"TM46", "source":"PM32", "meta-data":{"weight":2288.6153018801565}},{"source":"HG95", "target":"IUPX", "meta-data":{"weight":2594.5413852933625}},{"target":"HG95", "source":"IUPX", "meta-data":{"weight":2594.5413852933625}},{"source":"FR3M", "target":"TY1", "meta-data":{"weight":2537.7003369192353}},{"target":"FR3M", "source":"TY1", "meta-data":{"weight":2537.7003369192353}},{"source":"IABY", "target":"TM51", "meta-data":{"weight":1465.2463956618355}},{"target":"IABY", "source":"TM51", "meta-data":{"weight":1465.2463956618355}},{"source":"B85", "target":"TM41", "meta-data":{"weight":2371.9789206483265}},{"target":"B85", "source":"TM41", "meta-data":{"weight":2371.9789206483265}},{"source":"NBRM", "target":"KM3", "meta-data":{"weight":2162.396124672813}},{"target":"NBRM", "source":"KM3", "meta-data":{"weight":2162.396124672813}},{"source":"AM79", "target":"W574", "meta-data":{"weight":2594.8549092386647}},{"target":"AM79", "source":"W574", "meta-data":{"weight":2594.8549092386647}},{"source":"C28M", "target":"TGM1", "meta-data":{"weight":2577.308091788795}},{"target":"C28M", "source":"TGM1", "meta-data":{"weight":2577.308091788795}},{"source":"Y64M", "target":"SB38", "meta-data":{"weight":266.3231120274769}},{"target":"Y64M", "source":"SB38", "meta-data":{"weight":266.3231120274769}},{"source":"B71", "target":"B85", "meta-data":{"weight":1887.7486591175214}},{"target":"B71", "source":"B85", "meta-data":{"weight":1887.7486591175214}},{"source":"W63", "target":"W12M", "meta-data":{"weight":881.8163074019441}},{"target":"W63", "source":"W12M", "meta-data":{"weight":881.8163074019441}},{"source":"PL16", "target":"S101", "meta-data":{"weight":3328.0817297656617}},{"target":"PL16", "source":"S101", "meta-data":{"weight":3328.0817297656617}},{"source":"Y61M", "target":"Y64M", "meta-data":{"weight":1337.204172892083}},{"target":"Y61M", "source":"Y64M", "meta-data":{"weight":1337.204172892083}},{"source":"GMLM", "target":"C28M", "meta-data":{"weight":2171.2669112755348}},{"target":"GMLM", "source":"C28M", "meta-data":{"weight":2171.2669112755348}},{"source":"W95", "target":"SB38", "meta-data":{"weight":3439.606954289981}},{"target":"W95", "source":"SB38", "meta-data":{"weight":3439.606954289981}},{"source":"GSM", "target":"MP5M", "meta-data":{"weight":885.6235091730571}},{"target":"GSM", "source":"MP5M", "meta-data":{"weight":885.6235091730571}},{"source":"PL16", "target":"PM32", "meta-data":{"weight":2672.535126055409}},{"target":"PL16", "source":"PM32", "meta-data":{"weight":2672.535126055409}},{"source":"BBM6", "target":"CK74", "meta-data":{"weight":3092.2212081285516}},{"target":"BBM6", "source":"CK74", "meta-data":{"weight":3092.2212081285516}},{"source":"RHM3", "target":"FR3M", "meta-data":{"weight":2934.2397652543664}},{"target":"RHM3", "source":"FR3M", "meta-data":{"weight":2934.2397652543664}},{"source":"AM79", "target":"BJ59", "meta-data":{"weight":8705.85136560463}},{"target":"AM79", "source":"BJ59", "meta-data":{"weight":8705.85136560463}},{"source":"BBM7", "target":"CK74", "meta-data":{"weight":2863.5095599630886}},{"target":"BBM7", "source":"CK74", "meta-data":{"weight":2863.5095599630886}},{"source":"AM79", "target":"SE50", "meta-data":{"weight":700.3884636400003}},{"target":"AM79", "source":"SE50", "meta-data":{"weight":700.3884636400003}},{"source":"TJ39", "target":"JM17", "meta-data":{"weight":1974.8296129033513}},{"target":"TJ39", "source":"JM17", "meta-data":{"weight":1974.8296129033513}},{"source":"TPM8", "target":"TPMD", "meta-data":{"weight":1432.7250259557834}},{"target":"TPM8", "source":"TPMD", "meta-data":{"weight":1432.7250259557834}},{"source":"JM17", "target":"JM1", "meta-data":{"weight":1496.0788749260514}},{"target":"JM17", "source":"JM1", "meta-data":{"weight":1496.0788749260514}},{"source":"C28M", "target":"BBM6", "meta-data":{"weight":2128.2217929529806}},{"target":"C28M", "source":"BBM6", "meta-data":{"weight":2128.2217929529806}},{"source":"HG54", "target":"SE40", "meta-data":{"weight":739.2827605185988}},{"target":"HG54", "source":"SE40", "meta-data":{"weight":739.2827605185988}},{"source":"DRM2", "target":"TGM1", "meta-data":{"weight":6288.35208937922}},{"target":"DRM2", "source":"TGM1", "meta-data":{"weight":6288.35208937922}},{"source":"FR3M", "target":"TPMD", "meta-data":{"weight":4039.2108140081027}},{"target":"FR3M", "source":"TPMD", "meta-data":{"weight":4039.2108140081027}},{"source":"BKRM", "target":"TPMD", "meta-data":{"weight":1143.5300608204404}},{"target":"BKRM", "source":"TPMD", "meta-data":{"weight":1143.5300608204404}},{"source":"SK55", "target":"PM44", "meta-data":{"weight":2558.043197446048}},{"target":"SK55", "source":"PM44", "meta-data":{"weight":2558.043197446048}},{"source":"SH2", "target":"BE13", "meta-data":{"weight":1430.3709309126775}},{"target":"SH2", "source":"BE13", "meta-data":{"weight":1430.3709309126775}},{"source":"B74", "target":"GSM", "meta-data":{"weight":1253.8085978330184}},{"target":"B74", "source":"GSM", "meta-data":{"weight":1253.8085978330184}},{"source":"W63", "target":"W44", "meta-data":{"weight":1473.542669894564}},{"target":"W63", "source":"W44", "meta-data":{"weight":1473.542669894564}},{"source":"J58", "target":"JM1", "meta-data":{"weight":1740.926190279186}},{"target":"J58", "source":"JM1", "meta-data":{"weight":1740.926190279186}},{"source":"B71", "target":"GSM", "meta-data":{"weight":2780.5871682074635}},{"target":"B71", "source":"GSM", "meta-data":{"weight":2780.5871682074635}},{"source":"HG54", "target":"HG95", "meta-data":{"weight":567.9568645592726}},{"target":"HG54", "source":"HG95", "meta-data":{"weight":567.9568645592726}},{"source":"TPM8", "target":"IUPX", "meta-data":{"weight":4113.7718701940685}},{"target":"TPM8", "source":"IUPX", "meta-data":{"weight":4113.7718701940685}},{"source":"TJ39", "target":"JM1", "meta-data":{"weight":1881.7056092811117}},{"target":"TJ39", "source":"JM1", "meta-data":{"weight":1881.7056092811117}},{"source":"C28M", "target":"TY1", "meta-data":{"weight":1233.1646281012117}},{"target":"C28M", "source":"TY1", "meta-data":{"weight":1233.1646281012117}},{"source":"CK64", "target":"CK60", "meta-data":{"weight":337.36478772984}},{"target":"CK64", "source":"CK60", "meta-data":{"weight":337.36478772984}},{"source":"BJ5", "target":"AM79", "meta-data":{"weight":8709.139739377248}},{"target":"BJ5", "source":"AM79", "meta-data":{"weight":8709.139739377248}},{"source":"HG54", "target":"SE29", "meta-data":{"weight":591.4287784678727}},{"target":"HG54", "source":"SE29", "meta-data":{"weight":591.4287784678727}},{"source":"BE13", "target":"SE50", "meta-data":{"weight":1618.5771529340207}},{"target":"BE13", "source":"SE50", "meta-data":{"weight":1618.5771529340207}},{"source":"J58", "target":"TGM1", "meta-data":{"weight":1445.3840320136376}},{"target":"J58", "source":"TGM1", "meta-data":{"weight":1445.3840320136376}},{"source":"Y61M", "target":"Y54M", "meta-data":{"weight":856.929401992953}},{"target":"Y61M", "source":"Y54M", "meta-data":{"weight":856.929401992953}},{"source":"AM79", "target":"SE40", "meta-data":{"weight":2072.893629687737}},{"target":"AM79", "source":"SE40", "meta-data":{"weight":2072.893629687737}},{"source":"W44", "target":"W12M", "meta-data":{"weight":1840.9866919671092}},{"target":"W44", "source":"W12M", "meta-data":{"weight":1840.9866919671092}},{"source":"CK64", "target":"CK74", "meta-data":{"weight":2789.401548719725}},{"target":"CK64", "source":"CK74", "meta-data":{"weight":2789.401548719725}},{"source":"BJ5", "target":"CK74", "meta-data":{"weight":3319.5096023358633}},{"target":"BJ5", "source":"CK74", "meta-data":{"weight":3319.5096023358633}},{"source":"KTM6", "target":"RHM3", "meta-data":{"weight":1151.2271713263199}},{"target":"KTM6", "source":"RHM3", "meta-data":{"weight":1151.2271713263199}},{"source":"SE29", "target":"TPM8", "meta-data":{"weight":1107.318833940794}},{"target":"SE29", "source":"TPM8", "meta-data":{"weight":1107.318833940794}},{"source":"THM", "target":"FR3M", "meta-data":{"weight":1822.2129403557642}},{"target":"THM", "source":"FR3M", "meta-data":{"weight":1822.2129403557642}},{"source":"W95", "target":"W574", "meta-data":{"weight":1455.2044529893385}},{"target":"W95", "source":"W574", "meta-data":{"weight":1455.2044529893385}},{"source":"BBM7", "target":"JM1", "meta-data":{"weight":2551.4872133718404}},{"target":"BBM7", "source":"JM1", "meta-data":{"weight":2551.4872133718404}},{"source":"RHM3", "target":"THM", "meta-data":{"weight":1832.3768717160779}},{"target":"RHM3", "source":"THM", "meta-data":{"weight":1832.3768717160779}},{"source":"PL16", "target":"PM12", "meta-data":{"weight":4947.985448644731}},{"target":"PL16", "source":"PM12", "meta-data":{"weight":4947.985448644731}},{"source":"CK74", "target":"CK60", "meta-data":{"weight":3419.2116050341197}},{"target":"CK74", "source":"CK60", "meta-data":{"weight":3419.2116050341197}},{"source":"BJ5", "target":"SH2", "meta-data":{"weight":6625.219996347291}},{"target":"BJ5", "source":"SH2", "meta-data":{"weight":6625.219996347291}},{"source":"Y61M", "target":"S101", "meta-data":{"weight":2457.034798288376}},{"target":"Y61M", "source":"S101", "meta-data":{"weight":2457.034798288376}},{"source":"HG47", "target":"HG95", "meta-data":{"weight":1854.0140236794327}},{"target":"HG47", "source":"HG95", "meta-data":{"weight":1854.0140236794327}},{"source":"IABY", "target":"HG47", "meta-data":{"weight":2613.7528574828953}},{"target":"IABY", "source":"HG47", "meta-data":{"weight":2613.7528574828953}},{"source":"TM46", "target":"PM12", "meta-data":{"weight":2873.0033066462}},{"target":"TM46", "source":"PM12", "meta-data":{"weight":2873.0033066462}},{"source":"SH2", "target":"TY1", "meta-data":{"weight":6799.395487835665}},{"target":"SH2", "source":"TY1", "meta-data":{"weight":6799.395487835665}},{"source":"SH2", "target":"TPMD", "meta-data":{"weight":2241.433469902687}},{"target":"SH2", "source":"TPMD", "meta-data":{"weight":2241.433469902687}},{"source":"KEM1", "target":"TPMD", "meta-data":{"weight":2197.796396393442}},{"target":"KEM1", "source":"TPMD", "meta-data":{"weight":2197.796396393442}},{"source":"Y64M", "target":"S101", "meta-data":{"weight":866.643525332071}},{"target":"Y64M", "source":"S101", "meta-data":{"weight":866.643525332071}},{"source":"C22M", "target":"GMLM", "meta-data":{"weight":971.0689985783708}},{"target":"C22M", "source":"GMLM", "meta-data":{"weight":971.0689985783708}},{"source":"PL16", "target":"SK55", "meta-data":{"weight":1254.434135377382}},{"target":"PL16", "source":"SK55", "meta-data":{"weight":1254.434135377382}},{"source":"NBRM", "target":"BKRM", "meta-data":{"weight":1456.5490036383947}},{"target":"NBRM", "source":"BKRM", "meta-data":{"weight":1456.5490036383947}},{"source":"B71", "target":"MP5M", "meta-data":{"weight":1615.9207901379325}},{"target":"B71", "source":"MP5M", "meta-data":{"weight":1615.9207901379325}},{"source":"CK74", "target":"BL21", "meta-data":{"weight":2671.8982016536484}},{"target":"CK74", "source":"BL21", "meta-data":{"weight":2671.8982016536484}},{"source":"KTM6", "target":"HLM", "meta-data":{"weight":1780.4943133860327}},{"target":"KTM6", "source":"HLM", "meta-data":{"weight":1780.4943133860327}},{"source":"PM44", "target":"TM51", "meta-data":{"weight":2694.077949874502}},{"target":"PM44", "source":"TM51", "meta-data":{"weight":2694.077949874502}},{"source":"RHM3", "target":"DRM2", "meta-data":{"weight":752.3562985713618}},{"target":"RHM3", "source":"DRM2", "meta-data":{"weight":752.3562985713618}}]}}
+{
+  "graph": {
+    "directed": false,
+    "metadata": {
+      "coordinate-system": "EPSG:3414"
+    },
+    "nodes": [
+      {
+        "meta-data": {
+          "address": "BLK 132 JURONG GATEWAY ROAD",
+          "x": 17576.3345,
+          "y": 35155.1132
+        },
+        "id": "J58",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 517B JURONG WEST STREET 52",
+          "x": 15461.2578,
+          "y": 36356.8719
+        },
+        "id": "JM1",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 24 GHIM MOH LINK",
+          "x": 22713.9209,
+          "y": 32338.0954
+        },
+        "id": "GMLM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 596 ANG MO KIO STREEET 52",
+          "x": 30011.8783,
+          "y": 39373.9195
+        },
+        "id": "AM79",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 311A TAMPINES STREET 33",
+          "x": 41833.9252,
+          "y": 37212.6124
+        },
+        "id": "TM7",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 1A TOH YI DRIVE",
+          "x": 21441.5507,
+          "y": 35689.479
+        },
+        "id": "TY1",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 805 KEAT HONG CLOSE",
+          "x": 17972.7291,
+          "y": 39473.0169
+        },
+        "id": "CK74",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 168 SIMEI LANE",
+          "x": 41980.7224,
+          "y": 36124.2827
+        },
+        "id": "SIM6",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 23A TELOK BLANGAH CRESCENT",
+          "x": 26584.8423,
+          "y": 28673.052
+        },
+        "id": "TBC2",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "183 BOON LAY DRIVE",
+          "x": 14206.3144,
+          "y": 36819.8339
+        },
+        "id": "BL21",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 291F BUKIT BATOK STREET 24",
+          "x": 19289.8168,
+          "y": 36112.2533
+        },
+        "id": "BBM6",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 154A BUKIT BATOK WEST AVE 8",
+          "x": 18025.9428,
+          "y": 36609.4062
+        },
+        "id": "BBM7",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 511A CHOA CHU KANG STREET 51",
+          "x": 17736.9363,
+          "y": 41167.5327
+        },
+        "id": "CK34",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 840A YISHUN STREET 81",
+          "x": 28117.1717,
+          "y": 44138.2643
+        },
+        "id": "Y28M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 184 BEDOK NORTH RD",
+          "x": 40023.6834,
+          "y": 34256.9953
+        },
+        "id": "B85",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 1/6 TANJONG PAGAR MSCP",
+          "x": 28999.272,
+          "y": 28661.7751
+        },
+        "id": "TPM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 841A JURONG WEST STREET 81",
+          "x": 12393.9679,
+          "y": 36253.5458
+        },
+        "id": "J75M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 11A PINE CLOSE",
+          "x": 33523.1191,
+          "y": 32313.2942
+        },
+        "id": "KM3",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 395A BUKIT BATOK WEST AVE 5",
+          "x": 18924.8161,
+          "y": 38652.2819
+        },
+        "id": "BBM9",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 980 BUANGKOK CRESCENT",
+          "x": 33208.1321,
+          "y": 40209.8525
+        },
+        "id": "HG93",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 2 GEYLANG SERAI",
+          "x": 35236.2639,
+          "y": 33275.6378
+        },
+        "id": "GSM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 631A PASIR RIS DRIVE 3",
+          "x": 39883.2972,
+          "y": 40142.5172
+        },
+        "id": "PM32",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 135A BISHAN STREET 12",
+          "x": 30026.4687,
+          "y": 36336.1338
+        },
+        "id": "BE13",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 660 JURONG WEST ST 64",
+          "x": 13617.7777,
+          "y": 35278.113
+        },
+        "id": "JM17",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "129 CANBERRA STREET",
+          "x": 27930.3532,
+          "y": 47366.8059
+        },
+        "id": "SB38",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 161A LORONG 1 TOA PAYOH",
+          "x": 29290.1401,
+          "y": 34713.1702
+        },
+        "id": "TPMD",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 105 HOUGANG AVENUE 1",
+          "x": 34319.1474,
+          "y": 37341.5832
+        },
+        "id": "HG95",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 531A HONG LIM MSCP",
+          "x": 29357.8516,
+          "y": 29697.9551
+        },
+        "id": "HLM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 63A TEBAN GARDENS RD",
+          "x": 17489.3829,
+          "y": 33707.3408
+        },
+        "id": "TGM1",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 127 KIM TIAN ROAD",
+          "x": 27546.4706,
+          "y": 29366.694
+        },
+        "id": "KTM6",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 73 REDHILL RD",
+          "x": 26214.2901,
+          "y": 30036.7081
+        },
+        "id": "RHM3",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 256 SUMANG WALK",
+          "x": 34923.1009,
+          "y": 43042.4085
+        },
+        "id": "PL62",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 180 EDGEFIELD PLAINS",
+          "x": 36463.3164,
+          "y": 42276.7143
+        },
+        "id": "PL16",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 925 YISHUN CENTRAL 1",
+          "x": 28413.6222,
+          "y": 45450.4144
+        },
+        "id": "Y54M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 225A PETIR ROAD MSCP",
+          "x": 21297.0894,
+          "y": 39664.6547
+        },
+        "id": "BJ5",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 37B COMMONWEALTH DRIVE",
+          "x": 24057.579,
+          "y": 31174.2517
+        },
+        "id": "THM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 160 RIVERVALE CRESCENT",
+          "x": 36285.422,
+          "y": 41009.03
+        },
+        "id": "SK55",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 714A BEDOK RESERVOIR ROAD",
+          "x": 38037.1417,
+          "y": 35371.0192
+        },
+        "id": "B97",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 805 HOUGANG CENTRAL",
+          "x": 34748.896,
+          "y": 39244.171
+        },
+        "id": "HG47",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 52A PIPIT ROAD",
+          "x": 33873.4028,
+          "y": 34064.3335
+        },
+        "id": "MM2",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 316B ANG MO KIO STREET 31",
+          "x": 29595.2539,
+          "y": 38514.7606
+        },
+        "id": "AM22",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 431 YISHUN AVE 1",
+          "x": 29586.1001,
+          "y": 44649.9643
+        },
+        "id": "Y61M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 1 KAKI BUKIT@AUTOBAY KAKI BT AVE 6",
+          "x": 36787.2198,
+          "y": 35929.5704
+        },
+        "id": "IABY",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 220-222 HOUGANG STREET 21",
+          "x": 33679.7387,
+          "y": 37636.4156
+        },
+        "id": "HG54",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 334 YISHUN ST 31",
+          "x": 29307.9247,
+          "y": 46015.4036
+        },
+        "id": "Y64M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 109A CLEMENTI ST 11",
+          "x": 20977.2537,
+          "y": 33777.6046
+        },
+        "id": "C22M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 762A PASIR RIS STREET 71",
+          "x": 39126.6463,
+          "y": 39773.0358
+        },
+        "id": "PM44",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "208 CLEMWENTI AVE 6",
+          "x": 20070.902,
+          "y": 33845.674
+        },
+        "id": "C28M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 2A LORONG LEW LIAN",
+          "x": 32727.6274,
+          "y": 36890.9379
+        },
+        "id": "SE29",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 406A SEMBAWANG DRIVE",
+          "x": 26218.1896,
+          "y": 48230.524
+        },
+        "id": "SB14",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 574 WOODLANDS DRIVE 16",
+          "x": 24118.936,
+          "y": 45812.819
+        },
+        "id": "W574",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 488A SEGAR ROAD",
+          "x": 21094.1509,
+          "y": 41302.4805
+        },
+        "id": "BJ59",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 272A PASIR RIS STREET 21",
+          "x": 42657.807,
+          "y": 38550.2316
+        },
+        "id": "PM12",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 550A SERANGOON NORTH AVENUE 3",
+          "x": 32084.7485,
+          "y": 39394.1524
+        },
+        "id": "SE40",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 112C DEPOT ROAD",
+          "x": 25165.8976,
+          "y": 29305.1091
+        },
+        "id": "DRM2",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 34A MARSILING DR",
+          "x": 21198.8774,
+          "y": 47366.6434
+        },
+        "id": "W12M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 921A TAMPINES ST 91",
+          "x": 40033.712,
+          "y": 36628.1391
+        },
+        "id": "TM41",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 470 FERNVALE LINK",
+          "x": 33130.4351,
+          "y": 42095.6631
+        },
+        "id": "S101",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 238A SERANGOON AVENUE 2",
+          "x": 31927.5751,
+          "y": 37333.0762
+        },
+        "id": "SE50",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 11A LORONG 8 TOA PAYOH",
+          "x": 30889.8975,
+          "y": 35423.8667
+        },
+        "id": "TPM8",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 47A MARINE CRESCENT",
+          "x": 36809.7582,
+          "y": 31975.4666
+        },
+        "id": "MP5M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 683 CHOA CHU KANG CRESCENT",
+          "x": 18268.595,
+          "y": 42905.4416
+        },
+        "id": "CK60",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 3023 UBIPLEX UBI RD 3",
+          "x": 35077.1934,
+          "y": 34638.0926
+        },
+        "id": "IUPX",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 29C CHAI CHEE AVENUE",
+          "x": 38125.3637,
+          "y": 34059.3926
+        },
+        "id": "B71",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 441A PASIR RIS DRIVE 6",
+          "x": 41857.2031,
+          "y": 39071.4559
+        },
+        "id": "PRM1",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "138 YUAN CHING ROAD",
+          "x": 15758.1435,
+          "y": 34451.3136
+        },
+        "id": "TJ39",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 522 TAMPINES CTRL 7",
+          "x": 39699.2218,
+          "y": 37846.9485
+        },
+        "id": "TM46",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 413A WOODLANDS STREET 41",
+          "x": 21205.5217,
+          "y": 45525.4699
+        },
+        "id": "W44",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 217 COMPASSVALE DRIVE",
+          "x": 34802.6901,
+          "y": 41291.5425
+        },
+        "id": "S105",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 371A WOODLANDS AVENUE 1",
+          "x": 22773.7444,
+          "y": 46061.9793
+        },
+        "id": "W63",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 13 NORTH BRIDGE ROAD MSCP",
+          "x": 31304.4327,
+          "y": 31815.6323
+        },
+        "id": "NBRM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 320 SHUNFU ROAD",
+          "x": 28391.2848,
+          "y": 37128.1198
+        },
+        "id": "SH2",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 255A ANG MO KIO ST 21",
+          "x": 28117.7689,
+          "y": 39172.0389
+        },
+        "id": "AM32",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 671A JALAN DAMAI",
+          "x": 36428.7057,
+          "y": 35005.0793
+        },
+        "id": "B74",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 6A BOON KENG ROAD",
+          "x": 31121.6383,
+          "y": 33283.2558
+        },
+        "id": "BKRM",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 692 CHOA CHU KANG CRESCENT",
+          "x": 18872.7705,
+          "y": 42404.3378
+        },
+        "id": "CK64",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 8A EMPRESS ROAD",
+          "x": 24983.1434,
+          "y": 33218.9585
+        },
+        "id": "FR3M",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 671 KLANG LANE",
+          "x": 30136.2998,
+          "y": 32358.8836
+        },
+        "id": "KEM1",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 158A JALAN TECK WHYE",
+          "x": 19459.5932,
+          "y": 40178.8656
+        },
+        "id": "TWM2",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 788A WOODLANDS CRESCENT",
+          "x": 24490.3124,
+          "y": 47314.8499
+        },
+        "id": "W95",
+        "type": "transferable"
+      },
+      {
+        "meta-data": {
+          "address": "BLK 879C TAMPINES AVE 8",
+          "x": 38621.1252,
+          "y": 37032.665
+        },
+        "id": "TM51",
+        "type": "transferable"
+      }
+    ],
+    "edges": [
+      {
+        "source": "B85",
+        "target": "B97",
+        "meta-data": {
+          "weight": 2277.591051966968
+        }
+      },
+      {
+        "target": "B85",
+        "source": "B97",
+        "meta-data": {
+          "weight": 2277.591051966968
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "THM",
+        "meta-data": {
+          "weight": 1777.9853767677619
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "THM",
+        "meta-data": {
+          "weight": 1777.9853767677619
+        }
+      },
+      {
+        "source": "CK64",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 2302.095784280055
+        }
+      },
+      {
+        "target": "CK64",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 2302.095784280055
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "S105",
+        "meta-data": {
+          "weight": 2047.7121379725227
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "S105",
+        "meta-data": {
+          "weight": 2047.7121379725227
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 1904.6356606973418
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 1904.6356606973418
+        }
+      },
+      {
+        "source": "B97",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 1760.675154592692
+        }
+      },
+      {
+        "target": "B97",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 1760.675154592692
+        }
+      },
+      {
+        "source": "AM22",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 2613.997895944065
+        }
+      },
+      {
+        "target": "AM22",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 2613.997895944065
+        }
+      },
+      {
+        "source": "TPM",
+        "target": "MP5M",
+        "meta-data": {
+          "weight": 8484.025931124916
+        }
+      },
+      {
+        "target": "TPM",
+        "source": "MP5M",
+        "meta-data": {
+          "weight": 8484.025931124916
+        }
+      },
+      {
+        "source": "J75M",
+        "target": "CK60",
+        "meta-data": {
+          "weight": 8874.949520983204
+        }
+      },
+      {
+        "target": "J75M",
+        "source": "CK60",
+        "meta-data": {
+          "weight": 8874.949520983204
+        }
+      },
+      {
+        "source": "SH2",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 5186.768165245098
+        }
+      },
+      {
+        "target": "SH2",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 5186.768165245098
+        }
+      },
+      {
+        "source": "B71",
+        "target": "B74",
+        "meta-data": {
+          "weight": 1942.8651522944149
+        }
+      },
+      {
+        "target": "B71",
+        "source": "B74",
+        "meta-data": {
+          "weight": 1942.8651522944149
+        }
+      },
+      {
+        "source": "SIM6",
+        "target": "TM7",
+        "meta-data": {
+          "weight": 1097.8856953253376
+        }
+      },
+      {
+        "target": "SIM6",
+        "source": "TM7",
+        "meta-data": {
+          "weight": 1097.8856953253376
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "BBM9",
+        "meta-data": {
+          "weight": 3887.7574512821657
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "BBM9",
+        "meta-data": {
+          "weight": 3887.7574512821657
+        }
+      },
+      {
+        "source": "Y54M",
+        "target": "W574",
+        "meta-data": {
+          "weight": 4310.228416221117
+        }
+      },
+      {
+        "target": "Y54M",
+        "source": "W574",
+        "meta-data": {
+          "weight": 4310.228416221117
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "S101",
+        "meta-data": {
+          "weight": 2027.722367583886
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "S101",
+        "meta-data": {
+          "weight": 2027.722367583886
+        }
+      },
+      {
+        "source": "AM22",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 1617.8528981338197
+        }
+      },
+      {
+        "target": "AM22",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 1617.8528981338197
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "BJ5",
+        "meta-data": {
+          "weight": 1650.5311266377257
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "BJ5",
+        "meta-data": {
+          "weight": 1650.5311266377257
+        }
+      },
+      {
+        "source": "BBM6",
+        "target": "TY1",
+        "meta-data": {
+          "weight": 2193.178743285645
+        }
+      },
+      {
+        "target": "BBM6",
+        "source": "TY1",
+        "meta-data": {
+          "weight": 2193.178743285645
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "BE13",
+        "meta-data": {
+          "weight": 1782.0844536665484
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "BE13",
+        "meta-data": {
+          "weight": 1782.0844536665484
+        }
+      },
+      {
+        "source": "W574",
+        "target": "W63",
+        "meta-data": {
+          "weight": 1367.8545244286763
+        }
+      },
+      {
+        "target": "W574",
+        "source": "W63",
+        "meta-data": {
+          "weight": 1367.8545244286763
+        }
+      },
+      {
+        "source": "HG93",
+        "target": "SE40",
+        "meta-data": {
+          "weight": 1388.3807114765027
+        }
+      },
+      {
+        "target": "HG93",
+        "source": "SE40",
+        "meta-data": {
+          "weight": 1388.3807114765027
+        }
+      },
+      {
+        "source": "BE13",
+        "target": "AM22",
+        "meta-data": {
+          "weight": 2220.2353478854443
+        }
+      },
+      {
+        "target": "BE13",
+        "source": "AM22",
+        "meta-data": {
+          "weight": 2220.2353478854443
+        }
+      },
+      {
+        "source": "SB38",
+        "target": "SB14",
+        "meta-data": {
+          "weight": 1917.6652471169205
+        }
+      },
+      {
+        "target": "SB38",
+        "source": "SB14",
+        "meta-data": {
+          "weight": 1917.6652471169205
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 7338.8983505700635
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 7338.8983505700635
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "HG54",
+        "meta-data": {
+          "weight": 1930.912996486377
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "HG54",
+        "meta-data": {
+          "weight": 1930.912996486377
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "SK55",
+        "meta-data": {
+          "weight": 2340.4260295937574
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "SK55",
+        "meta-data": {
+          "weight": 2340.4260295937574
+        }
+      },
+      {
+        "source": "MM2",
+        "target": "TPM8",
+        "meta-data": {
+          "weight": 3278.8926484409335
+        }
+      },
+      {
+        "target": "MM2",
+        "source": "TPM8",
+        "meta-data": {
+          "weight": 3278.8926484409335
+        }
+      },
+      {
+        "source": "MM2",
+        "target": "IUPX",
+        "meta-data": {
+          "weight": 1333.8260756185568
+        }
+      },
+      {
+        "target": "MM2",
+        "source": "IUPX",
+        "meta-data": {
+          "weight": 1333.8260756185568
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 1984.0869436594758
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 1984.0869436594758
+        }
+      },
+      {
+        "source": "TGM1",
+        "target": "TJ39",
+        "meta-data": {
+          "weight": 1884.1170345814508
+        }
+      },
+      {
+        "target": "TGM1",
+        "source": "TJ39",
+        "meta-data": {
+          "weight": 1884.1170345814508
+        }
+      },
+      {
+        "source": "MM2",
+        "target": "BKRM",
+        "meta-data": {
+          "weight": 2860.6756194997015
+        }
+      },
+      {
+        "target": "MM2",
+        "source": "BKRM",
+        "meta-data": {
+          "weight": 2860.6756194997015
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "Y61M",
+        "meta-data": {
+          "weight": 5293.089929332394
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "Y61M",
+        "meta-data": {
+          "weight": 5293.089929332394
+        }
+      },
+      {
+        "source": "W12M",
+        "target": "W95",
+        "meta-data": {
+          "weight": 3292.410666973365
+        }
+      },
+      {
+        "target": "W12M",
+        "source": "W95",
+        "meta-data": {
+          "weight": 3292.410666973365
+        }
+      },
+      {
+        "source": "C22M",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 909.5454908909174
+        }
+      },
+      {
+        "target": "C22M",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 909.5454908909174
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "GSM",
+        "meta-data": {
+          "weight": 1964.6406796154863
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "GSM",
+        "meta-data": {
+          "weight": 1964.6406796154863
+        }
+      },
+      {
+        "source": "B97",
+        "target": "B71",
+        "meta-data": {
+          "weight": 1314.9479077134577
+        }
+      },
+      {
+        "target": "B97",
+        "source": "B71",
+        "meta-data": {
+          "weight": 1314.9479077134577
+        }
+      },
+      {
+        "source": "B97",
+        "target": "B74",
+        "meta-data": {
+          "weight": 1650.102118052092
+        }
+      },
+      {
+        "target": "B97",
+        "source": "B74",
+        "meta-data": {
+          "weight": 1650.102118052092
+        }
+      },
+      {
+        "source": "CK34",
+        "target": "CK64",
+        "meta-data": {
+          "weight": 1679.4835515717325
+        }
+      },
+      {
+        "target": "CK34",
+        "source": "CK64",
+        "meta-data": {
+          "weight": 1679.4835515717325
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 4460.165131472152
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 4460.165131472152
+        }
+      },
+      {
+        "source": "W12M",
+        "target": "CK60",
+        "meta-data": {
+          "weight": 5337.1735028945795
+        }
+      },
+      {
+        "target": "W12M",
+        "source": "CK60",
+        "meta-data": {
+          "weight": 5337.1735028945795
+        }
+      },
+      {
+        "source": "Y28M",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 4966.0
+        }
+      },
+      {
+        "target": "Y28M",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 4966.0
+        }
+      },
+      {
+        "source": "SB14",
+        "target": "W95",
+        "meta-data": {
+          "weight": 1955.7709477339108
+        }
+      },
+      {
+        "target": "SB14",
+        "source": "W95",
+        "meta-data": {
+          "weight": 1955.7709477339108
+        }
+      },
+      {
+        "source": "CK34",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 1986.6680648764655
+        }
+      },
+      {
+        "target": "CK34",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 1986.6680648764655
+        }
+      },
+      {
+        "source": "TPM",
+        "target": "TBC2",
+        "meta-data": {
+          "weight": 2415.0298134805707
+        }
+      },
+      {
+        "target": "TPM",
+        "source": "TBC2",
+        "meta-data": {
+          "weight": 2415.0298134805707
+        }
+      },
+      {
+        "source": "TBC2",
+        "target": "RHM3",
+        "meta-data": {
+          "weight": 1412.3275115921235
+        }
+      },
+      {
+        "target": "TBC2",
+        "source": "RHM3",
+        "meta-data": {
+          "weight": 1412.3275115921235
+        }
+      },
+      {
+        "source": "PL16",
+        "target": "PM44",
+        "meta-data": {
+          "weight": 3654.665237747501
+        }
+      },
+      {
+        "target": "PL16",
+        "source": "PM44",
+        "meta-data": {
+          "weight": 3654.665237747501
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "MM2",
+        "meta-data": {
+          "weight": 1785.63742120286
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "MM2",
+        "meta-data": {
+          "weight": 1785.63742120286
+        }
+      },
+      {
+        "source": "PM32",
+        "target": "PM44",
+        "meta-data": {
+          "weight": 842.1460680903284
+        }
+      },
+      {
+        "target": "PM32",
+        "source": "PM44",
+        "meta-data": {
+          "weight": 842.1460680903284
+        }
+      },
+      {
+        "source": "PM44",
+        "target": "TM46",
+        "meta-data": {
+          "weight": 2010.3875248319664
+        }
+      },
+      {
+        "target": "PM44",
+        "source": "TM46",
+        "meta-data": {
+          "weight": 2010.3875248319664
+        }
+      },
+      {
+        "source": "IABY",
+        "target": "IUPX",
+        "meta-data": {
+          "weight": 2142.610790601037
+        }
+      },
+      {
+        "target": "IABY",
+        "source": "IUPX",
+        "meta-data": {
+          "weight": 2142.610790601037
+        }
+      },
+      {
+        "source": "TM7",
+        "target": "TM46",
+        "meta-data": {
+          "weight": 2226.187772852955
+        }
+      },
+      {
+        "target": "TM7",
+        "source": "TM46",
+        "meta-data": {
+          "weight": 2226.187772852955
+        }
+      },
+      {
+        "source": "TM7",
+        "target": "TM41",
+        "meta-data": {
+          "weight": 1892.3678289381269
+        }
+      },
+      {
+        "target": "TM7",
+        "source": "TM41",
+        "meta-data": {
+          "weight": 1892.3678289381269
+        }
+      },
+      {
+        "source": "HG54",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 1778.0081552118934
+        }
+      },
+      {
+        "target": "HG54",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 1778.0081552118934
+        }
+      },
+      {
+        "source": "IABY",
+        "target": "B74",
+        "meta-data": {
+          "weight": 991.2905729401446
+        }
+      },
+      {
+        "target": "IABY",
+        "source": "B74",
+        "meta-data": {
+          "weight": 991.2905729401446
+        }
+      },
+      {
+        "source": "BBM9",
+        "target": "BJ5",
+        "meta-data": {
+          "weight": 2579.7815799016785
+        }
+      },
+      {
+        "target": "BBM9",
+        "source": "BJ5",
+        "meta-data": {
+          "weight": 2579.7815799016785
+        }
+      },
+      {
+        "source": "JM1",
+        "target": "BL21",
+        "meta-data": {
+          "weight": 1337.682324021664
+        }
+      },
+      {
+        "target": "JM1",
+        "source": "BL21",
+        "meta-data": {
+          "weight": 1337.682324021664
+        }
+      },
+      {
+        "source": "HG93",
+        "target": "S105",
+        "meta-data": {
+          "weight": 1926.5409416879777
+        }
+      },
+      {
+        "target": "HG93",
+        "source": "S105",
+        "meta-data": {
+          "weight": 1926.5409416879777
+        }
+      },
+      {
+        "source": "FR3M",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 5224.271145336927
+        }
+      },
+      {
+        "target": "FR3M",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 5224.271145336927
+        }
+      },
+      {
+        "source": "Y28M",
+        "target": "Y61M",
+        "meta-data": {
+          "weight": 1555.3398342484513
+        }
+      },
+      {
+        "target": "Y28M",
+        "source": "Y61M",
+        "meta-data": {
+          "weight": 1555.3398342484513
+        }
+      },
+      {
+        "source": "BKRM",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 1351.240171102088
+        }
+      },
+      {
+        "target": "BKRM",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 1351.240171102088
+        }
+      },
+      {
+        "source": "CK34",
+        "target": "CK60",
+        "meta-data": {
+          "weight": 1817.599515845006
+        }
+      },
+      {
+        "target": "CK34",
+        "source": "CK60",
+        "meta-data": {
+          "weight": 1817.599515845006
+        }
+      },
+      {
+        "source": "TM7",
+        "target": "PM12",
+        "meta-data": {
+          "weight": 1571.3751938986436
+        }
+      },
+      {
+        "target": "TM7",
+        "source": "PM12",
+        "meta-data": {
+          "weight": 1571.3751938986436
+        }
+      },
+      {
+        "source": "SIM6",
+        "target": "TM41",
+        "meta-data": {
+          "weight": 2011.1750296779244
+        }
+      },
+      {
+        "target": "SIM6",
+        "source": "TM41",
+        "meta-data": {
+          "weight": 2011.1750296779244
+        }
+      },
+      {
+        "source": "IUPX",
+        "target": "B74",
+        "meta-data": {
+          "weight": 1399.9607137344963
+        }
+      },
+      {
+        "target": "IUPX",
+        "source": "B74",
+        "meta-data": {
+          "weight": 1399.9607137344963
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "BBM9",
+        "meta-data": {
+          "weight": 1257.1177351385986
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "BBM9",
+        "meta-data": {
+          "weight": 1257.1177351385986
+        }
+      },
+      {
+        "source": "THM",
+        "target": "DRM2",
+        "meta-data": {
+          "weight": 2172.7459584590188
+        }
+      },
+      {
+        "target": "THM",
+        "source": "DRM2",
+        "meta-data": {
+          "weight": 2172.7459584590188
+        }
+      },
+      {
+        "source": "PM32",
+        "target": "TM46",
+        "meta-data": {
+          "weight": 2303.3610225060247
+        }
+      },
+      {
+        "target": "PM32",
+        "source": "TM46",
+        "meta-data": {
+          "weight": 2303.3610225060247
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 4318.750397973932
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 4318.750397973932
+        }
+      },
+      {
+        "source": "TGM1",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 2584.6866347779956
+        }
+      },
+      {
+        "target": "TGM1",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 2584.6866347779956
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "NBRM",
+        "meta-data": {
+          "weight": 2274.1954621360055
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "NBRM",
+        "meta-data": {
+          "weight": 2274.1954621360055
+        }
+      },
+      {
+        "source": "SB38",
+        "target": "Y64M",
+        "meta-data": {
+          "weight": 1929.0749078249917
+        }
+      },
+      {
+        "target": "SB38",
+        "source": "Y64M",
+        "meta-data": {
+          "weight": 1929.0749078249917
+        }
+      },
+      {
+        "source": "B85",
+        "target": "B71",
+        "meta-data": {
+          "weight": 1908.1962687312855
+        }
+      },
+      {
+        "target": "B85",
+        "source": "B71",
+        "meta-data": {
+          "weight": 1908.1962687312855
+        }
+      },
+      {
+        "source": "W12M",
+        "target": "W63",
+        "meta-data": {
+          "weight": 2045.397271925432
+        }
+      },
+      {
+        "target": "W12M",
+        "source": "W63",
+        "meta-data": {
+          "weight": 2045.397271925432
+        }
+      },
+      {
+        "source": "GSM",
+        "target": "MM2",
+        "meta-data": {
+          "weight": 1574.8936472028834
+        }
+      },
+      {
+        "target": "GSM",
+        "source": "MM2",
+        "meta-data": {
+          "weight": 1574.8936472028834
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "BBM7",
+        "meta-data": {
+          "weight": 2864.4903560668517
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "BBM7",
+        "meta-data": {
+          "weight": 2864.4903560668517
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 2798.6882641694842
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 2798.6882641694842
+        }
+      },
+      {
+        "source": "JM17",
+        "target": "TJ39",
+        "meta-data": {
+          "weight": 2295.1710175932426
+        }
+      },
+      {
+        "target": "JM17",
+        "source": "TJ39",
+        "meta-data": {
+          "weight": 2295.1710175932426
+        }
+      },
+      {
+        "source": "JM1",
+        "target": "JM17",
+        "meta-data": {
+          "weight": 2135.9822096637417
+        }
+      },
+      {
+        "target": "JM1",
+        "source": "JM17",
+        "meta-data": {
+          "weight": 2135.9822096637417
+        }
+      },
+      {
+        "source": "PRM1",
+        "target": "TM46",
+        "meta-data": {
+          "weight": 2481.448971871072
+        }
+      },
+      {
+        "target": "PRM1",
+        "source": "TM46",
+        "meta-data": {
+          "weight": 2481.448971871072
+        }
+      },
+      {
+        "source": "HG54",
+        "target": "SE40",
+        "meta-data": {
+          "weight": 2373.728923023857
+        }
+      },
+      {
+        "target": "HG54",
+        "source": "SE40",
+        "meta-data": {
+          "weight": 2373.728923023857
+        }
+      },
+      {
+        "source": "PM12",
+        "target": "PRM1",
+        "meta-data": {
+          "weight": 954.6941918750737
+        }
+      },
+      {
+        "target": "PM12",
+        "source": "PRM1",
+        "meta-data": {
+          "weight": 954.6941918750737
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "BKRM",
+        "meta-data": {
+          "weight": 2323.243637675567
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "BKRM",
+        "meta-data": {
+          "weight": 2323.243637675567
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 4559.086969997392
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 4559.086969997392
+        }
+      },
+      {
+        "source": "SK55",
+        "target": "PM44",
+        "meta-data": {
+          "weight": 3098.2215866525753
+        }
+      },
+      {
+        "target": "SK55",
+        "source": "PM44",
+        "meta-data": {
+          "weight": 3098.2215866525753
+        }
+      },
+      {
+        "source": "JM1",
+        "target": "J58",
+        "meta-data": {
+          "weight": 2432.2059945654273
+        }
+      },
+      {
+        "target": "JM1",
+        "source": "J58",
+        "meta-data": {
+          "weight": 2432.2059945654273
+        }
+      },
+      {
+        "source": "W44",
+        "target": "W63",
+        "meta-data": {
+          "weight": 1657.081772273173
+        }
+      },
+      {
+        "target": "W44",
+        "source": "W63",
+        "meta-data": {
+          "weight": 1657.081772273173
+        }
+      },
+      {
+        "source": "JM1",
+        "target": "TJ39",
+        "meta-data": {
+          "weight": 1928.0129667613753
+        }
+      },
+      {
+        "target": "JM1",
+        "source": "TJ39",
+        "meta-data": {
+          "weight": 1928.0129667613753
+        }
+      },
+      {
+        "source": "J58",
+        "target": "TGM1",
+        "meta-data": {
+          "weight": 1450.6112504733997
+        }
+      },
+      {
+        "target": "J58",
+        "source": "TGM1",
+        "meta-data": {
+          "weight": 1450.6112504733997
+        }
+      },
+      {
+        "source": "BE13",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 2146.581002431541
+        }
+      },
+      {
+        "target": "BE13",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 2146.581002431541
+        }
+      },
+      {
+        "source": "SE40",
+        "target": "AM79",
+        "meta-data": {
+          "weight": 2073.1063648544423
+        }
+      },
+      {
+        "target": "SE40",
+        "source": "AM79",
+        "meta-data": {
+          "weight": 2073.1063648544423
+        }
+      },
+      {
+        "source": "HG93",
+        "target": "HG54",
+        "meta-data": {
+          "weight": 2615.754193344627
+        }
+      },
+      {
+        "target": "HG93",
+        "source": "HG54",
+        "meta-data": {
+          "weight": 2615.754193344627
+        }
+      },
+      {
+        "source": "THM",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 2243.972370596394
+        }
+      },
+      {
+        "target": "THM",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 2243.972370596394
+        }
+      },
+      {
+        "source": "JM1",
+        "target": "BBM7",
+        "meta-data": {
+          "weight": 2576.452017795014
+        }
+      },
+      {
+        "target": "JM1",
+        "source": "BBM7",
+        "meta-data": {
+          "weight": 2576.452017795014
+        }
+      },
+      {
+        "source": "W574",
+        "target": "W95",
+        "meta-data": {
+          "weight": 1547.3810131961682
+        }
+      },
+      {
+        "target": "W574",
+        "source": "W95",
+        "meta-data": {
+          "weight": 1547.3810131961682
+        }
+      },
+      {
+        "source": "Y28M",
+        "target": "W574",
+        "meta-data": {
+          "weight": 4335.236671740079
+        }
+      },
+      {
+        "target": "Y28M",
+        "source": "W574",
+        "meta-data": {
+          "weight": 4335.236671740079
+        }
+      },
+      {
+        "source": "RHM3",
+        "target": "THM",
+        "meta-data": {
+          "weight": 2438.7892487871927
+        }
+      },
+      {
+        "target": "RHM3",
+        "source": "THM",
+        "meta-data": {
+          "weight": 2438.7892487871927
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "IABY",
+        "meta-data": {
+          "weight": 3891.882063989093
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "IABY",
+        "meta-data": {
+          "weight": 3891.882063989093
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "SH2",
+        "meta-data": {
+          "weight": 7097.409456977947
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "SH2",
+        "meta-data": {
+          "weight": 7097.409456977947
+        }
+      },
+      {
+        "source": "SE29",
+        "target": "MM2",
+        "meta-data": {
+          "weight": 3049.5232414264365
+        }
+      },
+      {
+        "target": "SE29",
+        "source": "MM2",
+        "meta-data": {
+          "weight": 3049.5232414264365
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "SH2",
+        "meta-data": {
+          "weight": 2576.902404050258
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "SH2",
+        "meta-data": {
+          "weight": 2576.902404050258
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "Y61M",
+        "meta-data": {
+          "weight": 5573.68980119992
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "Y61M",
+        "meta-data": {
+          "weight": 5573.68980119992
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 2502.3470982259837
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 2502.3470982259837
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 1645.659138460939
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 1645.659138460939
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "C22M",
+        "meta-data": {
+          "weight": 2254.865184440081
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "C22M",
+        "meta-data": {
+          "weight": 2254.865184440081
+        }
+      },
+      {
+        "source": "PL16",
+        "target": "SK55",
+        "meta-data": {
+          "weight": 1279.4424566974476
+        }
+      },
+      {
+        "target": "PL16",
+        "source": "SK55",
+        "meta-data": {
+          "weight": 1279.4424566974476
+        }
+      },
+      {
+        "source": "BJ5",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 1908.517749458988
+        }
+      },
+      {
+        "target": "BJ5",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 1908.517749458988
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "AM22",
+        "meta-data": {
+          "weight": 954.4301965046999
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "AM22",
+        "meta-data": {
+          "weight": 954.4301965046999
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "BL21",
+        "meta-data": {
+          "weight": 4607.219551964069
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "BL21",
+        "meta-data": {
+          "weight": 4607.219551964069
+        }
+      },
+      {
+        "source": "HLM",
+        "target": "KTM6",
+        "meta-data": {
+          "weight": 1841.0002715915064
+        }
+      },
+      {
+        "target": "HLM",
+        "source": "KTM6",
+        "meta-data": {
+          "weight": 1841.0002715915064
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "Y28M",
+        "meta-data": {
+          "weight": 5127.617477932612
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "Y28M",
+        "meta-data": {
+          "weight": 5127.617477932612
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "HG93",
+        "meta-data": {
+          "weight": 1817.367601780113
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "HG93",
+        "meta-data": {
+          "weight": 1817.367601780113
+        }
+      },
+      {
+        "source": "TM7",
+        "target": "PRM1",
+        "meta-data": {
+          "weight": 1859.154915546308
+        }
+      },
+      {
+        "target": "TM7",
+        "source": "PRM1",
+        "meta-data": {
+          "weight": 1859.154915546308
+        }
+      },
+      {
+        "source": "AM22",
+        "target": "SH2",
+        "meta-data": {
+          "weight": 1835.9226563229727
+        }
+      },
+      {
+        "target": "AM22",
+        "source": "SH2",
+        "meta-data": {
+          "weight": 1835.9226563229727
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "C22M",
+        "meta-data": {
+          "weight": 1967.495870389567
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "C22M",
+        "meta-data": {
+          "weight": 1967.495870389567
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "GMLM",
+        "meta-data": {
+          "weight": 3584.297002202803
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "GMLM",
+        "meta-data": {
+          "weight": 3584.297002202803
+        }
+      },
+      {
+        "source": "S101",
+        "target": "S105",
+        "meta-data": {
+          "weight": 1855.2627846210896
+        }
+      },
+      {
+        "target": "S101",
+        "source": "S105",
+        "meta-data": {
+          "weight": 1855.2627846210896
+        }
+      },
+      {
+        "source": "TM41",
+        "target": "TM46",
+        "meta-data": {
+          "weight": 1262.9647659376726
+        }
+      },
+      {
+        "target": "TM41",
+        "source": "TM46",
+        "meta-data": {
+          "weight": 1262.9647659376726
+        }
+      },
+      {
+        "source": "Y54M",
+        "target": "Y64M",
+        "meta-data": {
+          "weight": 1057.573165317653
+        }
+      },
+      {
+        "target": "Y54M",
+        "source": "Y64M",
+        "meta-data": {
+          "weight": 1057.573165317653
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "W63",
+        "meta-data": {
+          "weight": 5046.49601208601
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "W63",
+        "meta-data": {
+          "weight": 5046.49601208601
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "BKRM",
+        "meta-data": {
+          "weight": 2590.4640510920044
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "BKRM",
+        "meta-data": {
+          "weight": 2590.4640510920044
+        }
+      },
+      {
+        "source": "KTM6",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 3957.292508774149
+        }
+      },
+      {
+        "target": "KTM6",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 3957.292508774149
+        }
+      },
+      {
+        "source": "HLM",
+        "target": "NBRM",
+        "meta-data": {
+          "weight": 2876.9311774875673
+        }
+      },
+      {
+        "target": "HLM",
+        "source": "NBRM",
+        "meta-data": {
+          "weight": 2876.9311774875673
+        }
+      },
+      {
+        "source": "HG95",
+        "target": "IABY",
+        "meta-data": {
+          "weight": 2843.37264529291
+        }
+      },
+      {
+        "target": "HG95",
+        "source": "IABY",
+        "meta-data": {
+          "weight": 2843.37264529291
+        }
+      },
+      {
+        "source": "TBC2",
+        "target": "KTM6",
+        "meta-data": {
+          "weight": 1185.6192474820912
+        }
+      },
+      {
+        "target": "TBC2",
+        "source": "KTM6",
+        "meta-data": {
+          "weight": 1185.6192474820912
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "PL16",
+        "meta-data": {
+          "weight": 1719.9872092547664
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "PL16",
+        "meta-data": {
+          "weight": 1719.9872092547664
+        }
+      },
+      {
+        "source": "Y54M",
+        "target": "SB38",
+        "meta-data": {
+          "weight": 1975.941547718454
+        }
+      },
+      {
+        "target": "Y54M",
+        "source": "SB38",
+        "meta-data": {
+          "weight": 1975.941547718454
+        }
+      },
+      {
+        "source": "TBC2",
+        "target": "DRM2",
+        "meta-data": {
+          "weight": 1553.3785758790418
+        }
+      },
+      {
+        "target": "TBC2",
+        "source": "DRM2",
+        "meta-data": {
+          "weight": 1553.3785758790418
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "PM44",
+        "meta-data": {
+          "weight": 4409.844101552798
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "PM44",
+        "meta-data": {
+          "weight": 4409.844101552798
+        }
+      },
+      {
+        "source": "BL21",
+        "target": "JM17",
+        "meta-data": {
+          "weight": 1649.7278563447971
+        }
+      },
+      {
+        "target": "BL21",
+        "source": "JM17",
+        "meta-data": {
+          "weight": 1649.7278563447971
+        }
+      },
+      {
+        "source": "J58",
+        "target": "TJ39",
+        "meta-data": {
+          "weight": 1949.548665717273
+        }
+      },
+      {
+        "target": "J58",
+        "source": "TJ39",
+        "meta-data": {
+          "weight": 1949.548665717273
+        }
+      },
+      {
+        "source": "HLM",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 2772.681373688654
+        }
+      },
+      {
+        "target": "HLM",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 2772.681373688654
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "SB38",
+        "meta-data": {
+          "weight": 8221.86262351786
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "SB38",
+        "meta-data": {
+          "weight": 8221.86262351786
+        }
+      },
+      {
+        "source": "BL21",
+        "target": "CK34",
+        "meta-data": {
+          "weight": 5600.536045772762
+        }
+      },
+      {
+        "target": "BL21",
+        "source": "CK34",
+        "meta-data": {
+          "weight": 5600.536045772762
+        }
+      },
+      {
+        "source": "TPM",
+        "target": "HLM",
+        "meta-data": {
+          "weight": 1096.1113082164602
+        }
+      },
+      {
+        "target": "TPM",
+        "source": "HLM",
+        "meta-data": {
+          "weight": 1096.1113082164602
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "DRM2",
+        "meta-data": {
+          "weight": 3900.1785856547644
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "DRM2",
+        "meta-data": {
+          "weight": 3900.1785856547644
+        }
+      },
+      {
+        "source": "BE13",
+        "target": "TPM8",
+        "meta-data": {
+          "weight": 1256.3192269483102
+        }
+      },
+      {
+        "target": "BE13",
+        "source": "TPM8",
+        "meta-data": {
+          "weight": 1256.3192269483102
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "MP5M",
+        "meta-data": {
+          "weight": 3303.33770601796
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "MP5M",
+        "meta-data": {
+          "weight": 3303.33770601796
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "HLM",
+        "meta-data": {
+          "weight": 4919.24912969449
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "HLM",
+        "meta-data": {
+          "weight": 4919.24912969449
+        }
+      },
+      {
+        "source": "W44",
+        "target": "CK64",
+        "meta-data": {
+          "weight": 3896.604932502139
+        }
+      },
+      {
+        "target": "W44",
+        "source": "CK64",
+        "meta-data": {
+          "weight": 3896.604932502139
+        }
+      },
+      {
+        "source": "SK55",
+        "target": "S105",
+        "meta-data": {
+          "weight": 1509.5737809063855
+        }
+      },
+      {
+        "target": "SK55",
+        "source": "S105",
+        "meta-data": {
+          "weight": 1509.5737809063855
+        }
+      },
+      {
+        "source": "B97",
+        "target": "IABY",
+        "meta-data": {
+          "weight": 1368.8915223639892
+        }
+      },
+      {
+        "target": "B97",
+        "source": "IABY",
+        "meta-data": {
+          "weight": 1368.8915223639892
+        }
+      },
+      {
+        "source": "SE29",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 914.4665111418789
+        }
+      },
+      {
+        "target": "SE29",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 914.4665111418789
+        }
+      },
+      {
+        "source": "CK60",
+        "target": "W44",
+        "meta-data": {
+          "weight": 3935.7806087230015
+        }
+      },
+      {
+        "target": "CK60",
+        "source": "W44",
+        "meta-data": {
+          "weight": 3935.7806087230015
+        }
+      },
+      {
+        "source": "HG95",
+        "target": "SE29",
+        "meta-data": {
+          "weight": 1654.6495097149727
+        }
+      },
+      {
+        "target": "HG95",
+        "source": "SE29",
+        "meta-data": {
+          "weight": 1654.6495097149727
+        }
+      },
+      {
+        "source": "BJ5",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 6837.72359780651
+        }
+      },
+      {
+        "target": "BJ5",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 6837.72359780651
+        }
+      },
+      {
+        "source": "DRM2",
+        "target": "TJ39",
+        "meta-data": {
+          "weight": 10722.544707297797
+        }
+      },
+      {
+        "target": "DRM2",
+        "source": "TJ39",
+        "meta-data": {
+          "weight": 10722.544707297797
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "JM1",
+        "meta-data": {
+          "weight": 4002.6004047369006
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "JM1",
+        "meta-data": {
+          "weight": 4002.6004047369006
+        }
+      },
+      {
+        "source": "HG93",
+        "target": "S101",
+        "meta-data": {
+          "weight": 1887.6122483179643
+        }
+      },
+      {
+        "target": "HG93",
+        "source": "S101",
+        "meta-data": {
+          "weight": 1887.6122483179643
+        }
+      },
+      {
+        "source": "TM41",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 1468.6592525157087
+        }
+      },
+      {
+        "target": "TM41",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 1468.6592525157087
+        }
+      },
+      {
+        "source": "BBM6",
+        "target": "BBM7",
+        "meta-data": {
+          "weight": 1358.199175378928
+        }
+      },
+      {
+        "target": "BBM6",
+        "source": "BBM7",
+        "meta-data": {
+          "weight": 1358.199175378928
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "TGM1",
+        "meta-data": {
+          "weight": 5400.401559143542
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "TGM1",
+        "meta-data": {
+          "weight": 5400.401559143542
+        }
+      },
+      {
+        "source": "SE29",
+        "target": "IUPX",
+        "meta-data": {
+          "weight": 3254.843160583932
+        }
+      },
+      {
+        "target": "SE29",
+        "source": "IUPX",
+        "meta-data": {
+          "weight": 3254.843160583932
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 2434.6046907044274
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 2434.6046907044274
+        }
+      },
+      {
+        "source": "GSM",
+        "target": "IUPX",
+        "meta-data": {
+          "weight": 1372.2426899058344
+        }
+      },
+      {
+        "target": "GSM",
+        "source": "IUPX",
+        "meta-data": {
+          "weight": 1372.2426899058344
+        }
+      },
+      {
+        "source": "PL16",
+        "target": "S105",
+        "meta-data": {
+          "weight": 1931.0996867070328
+        }
+      },
+      {
+        "target": "PL16",
+        "source": "S105",
+        "meta-data": {
+          "weight": 1931.0996867070328
+        }
+      },
+      {
+        "source": "SE40",
+        "target": "SE50",
+        "meta-data": {
+          "weight": 2066.971214119829
+        }
+      },
+      {
+        "target": "SE40",
+        "source": "SE50",
+        "meta-data": {
+          "weight": 2066.971214119829
+        }
+      },
+      {
+        "source": "BBM9",
+        "target": "TWM2",
+        "meta-data": {
+          "weight": 1617.065552165403
+        }
+      },
+      {
+        "target": "BBM9",
+        "source": "TWM2",
+        "meta-data": {
+          "weight": 1617.065552165403
+        }
+      },
+      {
+        "source": "W63",
+        "target": "W95",
+        "meta-data": {
+          "weight": 2125.5818027072023
+        }
+      },
+      {
+        "target": "W63",
+        "source": "W95",
+        "meta-data": {
+          "weight": 2125.5818027072023
+        }
+      },
+      {
+        "source": "BL21",
+        "target": "J75M",
+        "meta-data": {
+          "weight": 1899.2959221774788
+        }
+      },
+      {
+        "target": "BL21",
+        "source": "J75M",
+        "meta-data": {
+          "weight": 1899.2959221774788
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "BJ5",
+        "meta-data": {
+          "weight": 3977.607446694558
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "BJ5",
+        "meta-data": {
+          "weight": 3977.607446694558
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "W44",
+        "meta-data": {
+          "weight": 4224.45854518659
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "W44",
+        "meta-data": {
+          "weight": 4224.45854518659
+        }
+      },
+      {
+        "source": "PM32",
+        "target": "PRM1",
+        "meta-data": {
+          "weight": 2245.8221211841333
+        }
+      },
+      {
+        "target": "PM32",
+        "source": "PRM1",
+        "meta-data": {
+          "weight": 2245.8221211841333
+        }
+      },
+      {
+        "source": "PL16",
+        "target": "PRM1",
+        "meta-data": {
+          "weight": 6274.333510421645
+        }
+      },
+      {
+        "target": "PL16",
+        "source": "PRM1",
+        "meta-data": {
+          "weight": 6274.333510421645
+        }
+      },
+      {
+        "source": "TM46",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 1350.8071661047702
+        }
+      },
+      {
+        "target": "TM46",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 1350.8071661047702
+        }
+      },
+      {
+        "source": "SB38",
+        "target": "W574",
+        "meta-data": {
+          "weight": 4116.583534923104
+        }
+      },
+      {
+        "target": "SB38",
+        "source": "W574",
+        "meta-data": {
+          "weight": 4116.583534923104
+        }
+      },
+      {
+        "source": "W574",
+        "target": "BJ59",
+        "meta-data": {
+          "weight": 5429.979373809812
+        }
+      },
+      {
+        "target": "W574",
+        "source": "BJ59",
+        "meta-data": {
+          "weight": 5429.979373809812
+        }
+      },
+      {
+        "source": "AM79",
+        "target": "S101",
+        "meta-data": {
+          "weight": 4139.739726118057
+        }
+      },
+      {
+        "target": "AM79",
+        "source": "S101",
+        "meta-data": {
+          "weight": 4139.739726118057
+        }
+      },
+      {
+        "source": "SE50",
+        "target": "TPM8",
+        "meta-data": {
+          "weight": 2173.8316402150376
+        }
+      },
+      {
+        "target": "SE50",
+        "source": "TPM8",
+        "meta-data": {
+          "weight": 2173.8316402150376
+        }
+      },
+      {
+        "source": "J58",
+        "target": "BBM6",
+        "meta-data": {
+          "weight": 1962.1972377923682
+        }
+      },
+      {
+        "target": "J58",
+        "source": "BBM6",
+        "meta-data": {
+          "weight": 1962.1972377923682
+        }
+      },
+      {
+        "source": "J58",
+        "target": "BBM7",
+        "meta-data": {
+          "weight": 1521.748008048639
+        }
+      },
+      {
+        "target": "J58",
+        "source": "BBM7",
+        "meta-data": {
+          "weight": 1521.748008048639
+        }
+      },
+      {
+        "source": "BBM6",
+        "target": "BBM9",
+        "meta-data": {
+          "weight": 2566.0913857460337
+        }
+      },
+      {
+        "target": "BBM6",
+        "source": "BBM9",
+        "meta-data": {
+          "weight": 2566.0913857460337
+        }
+      },
+      {
+        "source": "BBM7",
+        "target": "BBM9",
+        "meta-data": {
+          "weight": 2232.0506266659813
+        }
+      },
+      {
+        "target": "BBM7",
+        "source": "BBM9",
+        "meta-data": {
+          "weight": 2232.0506266659813
+        }
+      },
+      {
+        "source": "NBRM",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 1288.0500766662763
+        }
+      },
+      {
+        "target": "NBRM",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 1288.0500766662763
+        }
+      },
+      {
+        "source": "SB14",
+        "target": "W12M",
+        "meta-data": {
+          "weight": 5093.8095763387155
+        }
+      },
+      {
+        "target": "SB14",
+        "source": "W12M",
+        "meta-data": {
+          "weight": 5093.8095763387155
+        }
+      },
+      {
+        "source": "SB38",
+        "target": "PL16",
+        "meta-data": {
+          "weight": 9935.803389761695
+        }
+      },
+      {
+        "target": "SB38",
+        "source": "PL16",
+        "meta-data": {
+          "weight": 9935.803389761695
+        }
+      },
+      {
+        "source": "B85",
+        "target": "SIM6",
+        "meta-data": {
+          "weight": 2705.415494891681
+        }
+      },
+      {
+        "target": "B85",
+        "source": "SIM6",
+        "meta-data": {
+          "weight": 2705.415494891681
+        }
+      },
+      {
+        "source": "B97",
+        "target": "TM41",
+        "meta-data": {
+          "weight": 2358.8270390174857
+        }
+      },
+      {
+        "target": "B97",
+        "source": "TM41",
+        "meta-data": {
+          "weight": 2358.8270390174857
+        }
+      },
+      {
+        "source": "Y28M",
+        "target": "BJ59",
+        "meta-data": {
+          "weight": 7573.996633218158
+        }
+      },
+      {
+        "target": "Y28M",
+        "source": "BJ59",
+        "meta-data": {
+          "weight": 7573.996633218158
+        }
+      },
+      {
+        "source": "SIM6",
+        "target": "PM12",
+        "meta-data": {
+          "weight": 2518.6911283442437
+        }
+      },
+      {
+        "target": "SIM6",
+        "source": "PM12",
+        "meta-data": {
+          "weight": 2518.6911283442437
+        }
+      },
+      {
+        "source": "BJ59",
+        "target": "CK64",
+        "meta-data": {
+          "weight": 2480.259663825544
+        }
+      },
+      {
+        "target": "BJ59",
+        "source": "CK64",
+        "meta-data": {
+          "weight": 2480.259663825544
+        }
+      },
+      {
+        "source": "B85",
+        "target": "MP5M",
+        "meta-data": {
+          "weight": 3941.1618845208577
+        }
+      },
+      {
+        "target": "B85",
+        "source": "MP5M",
+        "meta-data": {
+          "weight": 3941.1618845208577
+        }
+      },
+      {
+        "source": "SE40",
+        "target": "S101",
+        "meta-data": {
+          "weight": 2896.466295332987
+        }
+      },
+      {
+        "target": "SE40",
+        "source": "S101",
+        "meta-data": {
+          "weight": 2896.466295332987
+        }
+      },
+      {
+        "source": "RHM3",
+        "target": "KEM1",
+        "meta-data": {
+          "weight": 4557.8249198493795
+        }
+      },
+      {
+        "target": "RHM3",
+        "source": "KEM1",
+        "meta-data": {
+          "weight": 4557.8249198493795
+        }
+      },
+      {
+        "source": "J58",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 2817.1148361399823
+        }
+      },
+      {
+        "target": "J58",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 2817.1148361399823
+        }
+      },
+      {
+        "source": "TPM8",
+        "target": "BKRM",
+        "meta-data": {
+          "weight": 2152.5389659655407
+        }
+      },
+      {
+        "target": "TPM8",
+        "source": "BKRM",
+        "meta-data": {
+          "weight": 2152.5389659655407
+        }
+      },
+      {
+        "source": "DRM2",
+        "target": "JM17",
+        "meta-data": {
+          "weight": 13001.270437922596
+        }
+      },
+      {
+        "target": "DRM2",
+        "source": "JM17",
+        "meta-data": {
+          "weight": 13001.270437922596
+        }
+      },
+      {
+        "source": "HG95",
+        "target": "IUPX",
+        "meta-data": {
+          "weight": 2807.2714510713067
+        }
+      },
+      {
+        "target": "HG95",
+        "source": "IUPX",
+        "meta-data": {
+          "weight": 2807.2714510713067
+        }
+      },
+      {
+        "source": "IABY",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 2140.132005274441
+        }
+      },
+      {
+        "target": "IABY",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 2140.132005274441
+        }
+      },
+      {
+        "source": "B85",
+        "target": "TM41",
+        "meta-data": {
+          "weight": 2372.0210791643485
+        }
+      },
+      {
+        "target": "B85",
+        "source": "TM41",
+        "meta-data": {
+          "weight": 2372.0210791643485
+        }
+      },
+      {
+        "source": "Y61M",
+        "target": "Y64M",
+        "meta-data": {
+          "weight": 1394.2012049915895
+        }
+      },
+      {
+        "target": "Y61M",
+        "source": "Y64M",
+        "meta-data": {
+          "weight": 1394.2012049915895
+        }
+      },
+      {
+        "source": "GMLM",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 3042.449342224123
+        }
+      },
+      {
+        "target": "GMLM",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 3042.449342224123
+        }
+      },
+      {
+        "source": "GSM",
+        "target": "MP5M",
+        "meta-data": {
+          "weight": 2040.6687629304272
+        }
+      },
+      {
+        "target": "GSM",
+        "source": "MP5M",
+        "meta-data": {
+          "weight": 2040.6687629304272
+        }
+      },
+      {
+        "source": "SB38",
+        "target": "W95",
+        "meta-data": {
+          "weight": 3440.393000806739
+        }
+      },
+      {
+        "target": "SB38",
+        "source": "W95",
+        "meta-data": {
+          "weight": 3440.393000806739
+        }
+      },
+      {
+        "source": "CK34",
+        "target": "J75M",
+        "meta-data": {
+          "weight": 7259.135279081111
+        }
+      },
+      {
+        "target": "CK34",
+        "source": "J75M",
+        "meta-data": {
+          "weight": 7259.135279081111
+        }
+      },
+      {
+        "source": "CK74",
+        "target": "CK34",
+        "meta-data": {
+          "weight": 1710.3601959821212
+        }
+      },
+      {
+        "target": "CK74",
+        "source": "CK34",
+        "meta-data": {
+          "weight": 1710.3601959821212
+        }
+      },
+      {
+        "source": "PL16",
+        "target": "PM32",
+        "meta-data": {
+          "weight": 4031.17303027295
+        }
+      },
+      {
+        "target": "PL16",
+        "source": "PM32",
+        "meta-data": {
+          "weight": 4031.17303027295
+        }
+      },
+      {
+        "source": "RHM3",
+        "target": "FR3M",
+        "meta-data": {
+          "weight": 3411.815499114804
+        }
+      },
+      {
+        "target": "RHM3",
+        "source": "FR3M",
+        "meta-data": {
+          "weight": 3411.815499114804
+        }
+      },
+      {
+        "source": "TPMD",
+        "target": "TPM8",
+        "meta-data": {
+          "weight": 1749.543083207727
+        }
+      },
+      {
+        "target": "TPMD",
+        "source": "TPM8",
+        "meta-data": {
+          "weight": 1749.543083207727
+        }
+      },
+      {
+        "source": "BBM6",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 2397.759370745947
+        }
+      },
+      {
+        "target": "BBM6",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 2397.759370745947
+        }
+      },
+      {
+        "source": "TGM1",
+        "target": "DRM2",
+        "meta-data": {
+          "weight": 8848.648484373192
+        }
+      },
+      {
+        "target": "TGM1",
+        "source": "DRM2",
+        "meta-data": {
+          "weight": 8848.648484373192
+        }
+      },
+      {
+        "source": "KM3",
+        "target": "TPM",
+        "meta-data": {
+          "weight": 5814.093222506843
+        }
+      },
+      {
+        "target": "KM3",
+        "source": "TPM",
+        "meta-data": {
+          "weight": 5814.093222506843
+        }
+      },
+      {
+        "source": "BE13",
+        "target": "SH2",
+        "meta-data": {
+          "weight": 1816.724800293099
+        }
+      },
+      {
+        "target": "BE13",
+        "source": "SH2",
+        "meta-data": {
+          "weight": 1816.724800293099
+        }
+      },
+      {
+        "source": "GSM",
+        "target": "B74",
+        "meta-data": {
+          "weight": 2100.89599932981
+        }
+      },
+      {
+        "target": "GSM",
+        "source": "B74",
+        "meta-data": {
+          "weight": 2100.89599932981
+        }
+      },
+      {
+        "source": "HG95",
+        "target": "HG54",
+        "meta-data": {
+          "weight": 704.7162549565605
+        }
+      },
+      {
+        "target": "HG95",
+        "source": "HG54",
+        "meta-data": {
+          "weight": 704.7162549565605
+        }
+      },
+      {
+        "source": "GSM",
+        "target": "B71",
+        "meta-data": {
+          "weight": 2993.4891013664974
+        }
+      },
+      {
+        "target": "GSM",
+        "source": "B71",
+        "meta-data": {
+          "weight": 2993.4891013664974
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "C28M",
+        "meta-data": {
+          "weight": 2297.8200538771525
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "C28M",
+        "meta-data": {
+          "weight": 2297.8200538771525
+        }
+      },
+      {
+        "source": "CK60",
+        "target": "CK64",
+        "meta-data": {
+          "weight": 784.7400843591463
+        }
+      },
+      {
+        "target": "CK60",
+        "source": "CK64",
+        "meta-data": {
+          "weight": 784.7400843591463
+        }
+      },
+      {
+        "source": "HG54",
+        "target": "SE29",
+        "meta-data": {
+          "weight": 1209.4709587253428
+        }
+      },
+      {
+        "target": "HG54",
+        "source": "SE29",
+        "meta-data": {
+          "weight": 1209.4709587253428
+        }
+      },
+      {
+        "source": "Y54M",
+        "target": "Y61M",
+        "meta-data": {
+          "weight": 1420.397831595078
+        }
+      },
+      {
+        "target": "Y54M",
+        "source": "Y61M",
+        "meta-data": {
+          "weight": 1420.397831595078
+        }
+      },
+      {
+        "source": "J75M",
+        "target": "JM17",
+        "meta-data": {
+          "weight": 1564.8645308779926
+        }
+      },
+      {
+        "target": "J75M",
+        "source": "JM17",
+        "meta-data": {
+          "weight": 1564.8645308779926
+        }
+      },
+      {
+        "source": "W12M",
+        "target": "W44",
+        "meta-data": {
+          "weight": 1841.0133079366917
+        }
+      },
+      {
+        "target": "W12M",
+        "source": "W44",
+        "meta-data": {
+          "weight": 1841.0133079366917
+        }
+      },
+      {
+        "source": "KTM6",
+        "target": "RHM3",
+        "meta-data": {
+          "weight": 1491.0144197827196
+        }
+      },
+      {
+        "target": "KTM6",
+        "source": "RHM3",
+        "meta-data": {
+          "weight": 1491.0144197827196
+        }
+      },
+      {
+        "source": "SE29",
+        "target": "TPM8",
+        "meta-data": {
+          "weight": 2351.6660051971667
+        }
+      },
+      {
+        "target": "SE29",
+        "source": "TPM8",
+        "meta-data": {
+          "weight": 2351.6660051971667
+        }
+      },
+      {
+        "source": "HG47",
+        "target": "HG95",
+        "meta-data": {
+          "weight": 1950.756263606502
+        }
+      },
+      {
+        "target": "HG47",
+        "source": "HG95",
+        "meta-data": {
+          "weight": 1950.756263606502
+        }
+      },
+      {
+        "source": "Y61M",
+        "target": "S101",
+        "meta-data": {
+          "weight": 4368.392381643389
+        }
+      },
+      {
+        "target": "Y61M",
+        "source": "S101",
+        "meta-data": {
+          "weight": 4368.392381643389
+        }
+      },
+      {
+        "source": "SH2",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 2062.283200726806
+        }
+      },
+      {
+        "target": "SH2",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 2062.283200726806
+        }
+      },
+      {
+        "source": "TPM",
+        "target": "KTM6",
+        "meta-data": {
+          "weight": 1615.0027863753053
+        }
+      },
+      {
+        "target": "TPM",
+        "source": "KTM6",
+        "meta-data": {
+          "weight": 1615.0027863753053
+        }
+      },
+      {
+        "source": "TY1",
+        "target": "AM32",
+        "meta-data": {
+          "weight": 7529.957835207313
+        }
+      },
+      {
+        "target": "TY1",
+        "source": "AM32",
+        "meta-data": {
+          "weight": 7529.957835207313
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "S105",
+        "meta-data": {
+          "weight": 1755.1757746732947
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "S105",
+        "meta-data": {
+          "weight": 1755.1757746732947
+        }
+      },
+      {
+        "source": "W12M",
+        "target": "J75M",
+        "meta-data": {
+          "weight": 14178.391798790157
+        }
+      },
+      {
+        "target": "W12M",
+        "source": "J75M",
+        "meta-data": {
+          "weight": 14178.391798790157
+        }
+      },
+      {
+        "source": "MP5M",
+        "target": "B71",
+        "meta-data": {
+          "weight": 2464.7336570104285
+        }
+      },
+      {
+        "target": "MP5M",
+        "source": "B71",
+        "meta-data": {
+          "weight": 2464.7336570104285
+        }
+      },
+      {
+        "source": "NBRM",
+        "target": "BKRM",
+        "meta-data": {
+          "weight": 1479.3623626414185
+        }
+      },
+      {
+        "target": "NBRM",
+        "source": "BKRM",
+        "meta-data": {
+          "weight": 1479.3623626414185
+        }
+      },
+      {
+        "source": "Y28M",
+        "target": "Y54M",
+        "meta-data": {
+          "weight": 1344.9758362141679
+        }
+      },
+      {
+        "target": "Y28M",
+        "source": "Y54M",
+        "meta-data": {
+          "weight": 1344.9758362141679
+        }
+      },
+      {
+        "source": "PL62",
+        "target": "Y64M",
+        "meta-data": {
+          "weight": 6354.383132924863
+        }
+      },
+      {
+        "target": "PL62",
+        "source": "Y64M",
+        "meta-data": {
+          "weight": 6354.383132924863
+        }
+      },
+      {
+        "source": "PM44",
+        "target": "TM51",
+        "meta-data": {
+          "weight": 2787.1322178899227
+        }
+      },
+      {
+        "target": "PM44",
+        "source": "TM51",
+        "meta-data": {
+          "weight": 2787.1322178899227
+        }
+      },
+      {
+        "source": "RHM3",
+        "target": "DRM2",
+        "meta-data": {
+          "weight": 1278.5781165028595
+        }
+      },
+      {
+        "target": "RHM3",
+        "source": "DRM2",
+        "meta-data": {
+          "weight": 1278.5781165028595
+        }
+      }
+    ]
+  }
+}

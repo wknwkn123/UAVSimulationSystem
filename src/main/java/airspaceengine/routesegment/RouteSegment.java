@@ -18,14 +18,14 @@ public class RouteSegment {
     private double targetSpeed;         // Estimated speed, used as 500m/s here to calculate the time to pass edge
     private double actualSpeed;         // Actual flying speed on that edge, may vary due to real-life conditions like weather, animal, or non-flying zone
     private int UAVCapacity;            // max weight that a UAV can carry
-    private final double weight;
+    private final double length;        // length of RouteSegment measured in meter
 
     //constructor
-    public RouteSegment(String edgeID, Waypoint origin, Waypoint end, double weight) {
+    public RouteSegment(String edgeID, Waypoint origin, Waypoint end, double length) {
         EdgeID = edgeID;
         this.sourceWaypoint = origin;
         this.destinationWaypoint = end;
-        this.weight = weight;
+        this.length = length;
     }
 
     //getter methods
@@ -45,8 +45,8 @@ public class RouteSegment {
         return actualSpeed;
     }
 
-    public double getWeight() {
-        return weight;
+    public double getLength() {
+        return length;
     }
 
     public String getEdgeID() {

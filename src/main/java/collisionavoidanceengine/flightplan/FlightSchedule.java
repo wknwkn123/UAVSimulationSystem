@@ -40,7 +40,7 @@ public class FlightSchedule {
 
         // Initialize edge availability by setting the static info
         for (Map.Entry<String, RouteSegment> entry : airmap.getEdges().getRouteSegMap().entrySet()) {
-            EdgeRecord rs = new EdgeRecord(entry.getKey(),entry.getValue().getWeight());
+            EdgeRecord rs = new EdgeRecord(entry.getKey(),entry.getValue().getLength());
             edgeAvailability.put(rs.getEdgeID(),rs);
         }
     }

@@ -76,10 +76,10 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
             Waypoint end = this.Nodes.getWaypointByID(destStr);
 
             // weight = time  = distance/speed , notice that distance is measured in hundred meters
-            double weight = curObj.getJSONObject("meta-data").getDouble("weight")*100/UAV_SPEED;
+            double length = curObj.getJSONObject("meta-data").getDouble("weight");
 
-            this.Edges.addRouteSegment(new RouteSegment(edgeID,origin,end, weight));
-            System.out.println("Route Segment " + edgeID + " initialized");
+            this.Edges.addRouteSegment(new RouteSegment(edgeID,origin,end, length));
+            System.out.println("Route Segment " + edgeID + " initialized \n");
 
             //find parental relationship between two nodes given an edge
             origin.addAdjacentWaypoint(end);
