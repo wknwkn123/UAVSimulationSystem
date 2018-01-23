@@ -4,6 +4,10 @@ import uav.UAVEngine;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Singleton runnable for simulation in order to separate main thread and simulation thread.
+ */
+
 public class SimulationApp implements Runnable{
     private boolean stopWork;
     private static SimulationApp instance = new SimulationApp();

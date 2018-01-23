@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import flight_plan.FlightPlan;
 import flight_plan.FlightSegment;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
+import simulationengine.SimulationConfiguration;
 import simulationengine.Time;
 import websocket.simple_v2.server.Websocket;
 
@@ -12,6 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * The UAV class is a thread. It updates itself at intervals and send it to the simulation engine.
+ */
 public class UAV implements Runnable{
     private UAVInfo UAVInfo;
     private UAVOperation operation;
@@ -80,20 +84,20 @@ public class UAV implements Runnable{
                             double prevY = origin.getY();
                             double prevZ = origin.getZ();
 
-                            while (Math.abs(operation.getCurrentX() - destination.getX()) > 5 || Math.abs(operation.getCurrentY() - destination.getY()) > 5 || Math.abs(operation.getCurrentZ() - destination.getZ()) > 5) {
-                                if (Math.abs(operation.getCurrentX() - destination.getX()) > 5) {
-                                    operation.setCurrentX(operation.getCurrentX() + (0.05) * xDirection);
+                            while (Math.abs(operation.getCurrentX() - destination.getX()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentY() - destination.getY()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentZ() - destination.getZ()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
+                                if (Math.abs(operation.getCurrentX() - destination.getX()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
+                                    operation.setCurrentX(operation.getCurrentX() + SimulationConfiguration.getInstance().getSpeed() * xDirection);
                                 }
 
-                                if (Math.abs(operation.getCurrentY() - destination.getY()) > 5) {
-                                    operation.setCurrentY(operation.getCurrentY() + (0.05) * yDirection);
+                                if (Math.abs(operation.getCurrentY() - destination.getY()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
+                                    operation.setCurrentY(operation.getCurrentY() + SimulationConfiguration.getInstance().getSpeed() * yDirection);
                                 }
 
-                                if (Math.abs(operation.getCurrentZ() - destination.getZ()) > 5) {
-                                    operation.setCurrentZ(operation.getCurrentZ() + (0.05) * zDirection);
+                                if (Math.abs(operation.getCurrentZ() - destination.getZ()) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
+                                    operation.setCurrentZ(operation.getCurrentZ() + SimulationConfiguration.getInstance().getSpeed() * zDirection);
                                 }
 
-                                if (Math.abs(operation.getCurrentX() - prevX) > 5 || Math.abs(operation.getCurrentY() - prevY) > 5 || Math.abs(operation.getCurrentZ() - prevZ) > 5) {
+                                if (Math.abs(operation.getCurrentX() - prevX) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentY() - prevY) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentZ() - prevZ) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
                                     setJSONData();
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();

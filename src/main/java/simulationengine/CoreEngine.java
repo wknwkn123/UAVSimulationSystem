@@ -11,6 +11,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Entry point for the application.
+ */
+
 public class CoreEngine {
 
     public static void main(String[] args) throws IOException {
@@ -22,10 +26,10 @@ public class CoreEngine {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-
+//
 //        //create airspace
 //        AirspaceEngine.getInstance().createAirspace(SimulationConfiguration.getInstance().getAirspaceType());
-
+//
 //        //create UAVs
 //        UAVEngine.getInstance().createUAVs("RANDOM");
 //

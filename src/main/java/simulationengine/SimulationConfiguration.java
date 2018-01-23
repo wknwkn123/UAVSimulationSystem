@@ -1,8 +1,12 @@
 package simulationengine;
 
+/**
+ * Configuration to hold all the parameters set by front end. The one source of truth.
+ */
 public class SimulationConfiguration {
     private static SimulationConfiguration ourInstance = new SimulationConfiguration();
-    private double speed;
+    private double coordinateDifferenceAllowed = 5;
+    private double speed = 0.05;
     private String airspaceType = "PLANARGRAPH";
     private String flightScheduleType = "RANDOM";
     private int numberOfUAVs;
@@ -12,6 +16,14 @@ public class SimulationConfiguration {
     }
 
     private SimulationConfiguration() {
+    }
+
+    public double getCoordinateDifferenceAllowed() {
+        return coordinateDifferenceAllowed;
+    }
+
+    public void setCoordinateDifferenceAllowed(double coordinateDifferenceAllowed) {
+        this.coordinateDifferenceAllowed = coordinateDifferenceAllowed;
     }
 
     public double getSpeed() {
