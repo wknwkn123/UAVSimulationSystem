@@ -4,16 +4,24 @@ import airspaceengine.routesegment.RouteSegment;
 import airspaceengine.waypoint.Waypoint;
 
 public class UAVOperation {
+    private double nextAvailableTime;
     private double currentX;
     private double currentY;
     // Ziji : For now, we just consider 2D case
     private double currentZ=10;
 
-    // TODO : calculate the actural position given time, currentRouteSegment, and currentWayPoint.
+    // TODO : calculate the actual position given time, currentRouteSegment, and currentWayPoint.
     private RouteSegment currentRouteSegment;
     private Waypoint currentWayPoint;
 
     private double remainingBatteryLevel;
+    private int state;
+
+    public UAVOperation() {
+        currentX = 10;
+        currentY = 10;
+        nextAvailableTime = 0;
+    }
 
     public double getCurrentX() {
         return currentX;
@@ -43,7 +51,13 @@ public class UAVOperation {
         return remainingBatteryLevel;
     }
 
-    public void setRemainingBatteryLevel(double remainingBatteryLevel) {
-        this.remainingBatteryLevel = remainingBatteryLevel;
-    }
+    public void setRemainingBatteryLevel(double remainingBatteryLevel) { this.remainingBatteryLevel = remainingBatteryLevel; }
+
+    public int getState() { return state; }
+
+    public void setState(int state) { this.state = state; }
+
+    public double getNextAvailableTime() { return nextAvailableTime; }
+
+    public void setNextAvailableTime(double nextAvailableTime) { this.nextAvailableTime = nextAvailableTime; }
 }
