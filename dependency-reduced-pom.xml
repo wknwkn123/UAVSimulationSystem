@@ -44,6 +44,7 @@
             <artifactId>websocket-api</artifactId>
             <version>9.0.0.M3</version>
         </dependency>
+
         <dependency>
             <groupId>groupId</groupId>
             <artifactId>SimulationUAV</artifactId>
