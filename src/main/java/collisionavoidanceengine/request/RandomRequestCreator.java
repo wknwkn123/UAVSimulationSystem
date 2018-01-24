@@ -69,7 +69,7 @@ public class RandomRequestCreator implements RequestCreator{
         String csvHeader = "requestID, startTime, sourceID, destinationID";
 
         try {
-            fileWriter = new FileWriter("data/RandomRequest.csv");
+            fileWriter = new FileWriter("data/output/RandomRequest.csv");
 
             fileWriter.append(csvHeader + "\n");
 

@@ -11,6 +11,7 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 import config.Config;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 
 import java.util.*;
@@ -69,19 +70,20 @@ public class FlightPlanScheduler {
         System.out.printf("\n");
     }
 
-    public void updateSchedule(double startTime, String flightID, ArrayList<String> flightPath){
+    public void updateSchedule(double startTime, String flightID){
         double reachTime = startTime;
-        for (int i = 0; i<flightPath.size();i++){
-            String currentWP  = flightPath.get(i);
-            String nextWP     = flightPath.get((i+i));
+        for (int i = 0; i<solutionSingleTripTemp.size()-1;i++){
+            String currentWP  = solutionSingleTripTemp.get(i);
+            String nextWP     = solutionSingleTripTemp.get((i+1));
             String routeSegID = "RS_"+currentWP.substring(3)+"-"+nextWP.substring(3);
 
             // Update the edge availability
+            System.out.printf("Updating "+routeSegID+" \n");
             currentFlightPlan.edgeAvailability.get(routeSegID).addRecord(flightID, reachTime);
 
             // Update the node availability
             reachTime += myAirMap.getEdges().getRouteSegmentByID(routeSegID).getLength()/UAV_SPEED;
-            if(i==0||i==flightPath.size()-1){
+            if(i==0||i==solutionSingleTripTemp.size()-1){
                 if(i==0)
                     // if this is the origin, set isTakingOff to true
                     currentFlightPlan.nodeAvailability.get(currentWP).addRecord(reachTime,flightID,false,true);
@@ -186,7 +188,6 @@ public class FlightPlanScheduler {
                 boolean hasUpdatedOpen = false;
 
                 // TODO : can optimize the code here by reducing search time
-                // TODO : make number of UAV to be an attribute of Node
                 for (WorkingTableEntry td : OPEN){
                     if(td.wp.getNodeID().equals(succ.getNodeID())){
                         // No need to have two same node in OPEN
@@ -216,7 +217,6 @@ public class FlightPlanScheduler {
                             wte.gCost = succGCost;
                             break;
                         }
-
                     }
                 }
                 if (hasUpdatedClosed)
@@ -234,7 +234,7 @@ public class FlightPlanScheduler {
     }
 
     public void doSegmentation(Request request){
-        // todo : be careful with current time
+        // Note : Be careful with current time
         int numNodesInSingleTrip = solutionSingleTripTemp.size();
         // try with only one en-route
         Request trip1 = new Request("REQ-Temp1",request.getOriginID(),solutionSingleTripTemp.get(numNodesInSingleTrip/2),request.getStartTime());
@@ -279,10 +279,8 @@ public class FlightPlanScheduler {
                 System.out.printf("\n");
 
                 // update all nodes and edges on the flight path
-                updateSchedule(currentRequest.getStartTime(), flightID, solutionSingleTripTemp);
+                updateSchedule(currentRequest.getStartTime(), flightID);
 
-                // Clean up the temporary variable
-                solutionSingleTripTemp = new ArrayList<>();
             } else
             // Find viable connections
             {   // Segment the flight path into multiple shorter trips with similar number of stops in between
@@ -296,6 +294,9 @@ public class FlightPlanScheduler {
                     currentRequest.setStartTime(currentTime + 1 + randomNum.nextInt(MAX_DELAY - 1));
                 }
             }
+
+            // Clean up the temporary variable
+            solutionSingleTripTemp = new ArrayList<>();
 
         }
         System.out.printf("All Requests Finished Scheduling. ");

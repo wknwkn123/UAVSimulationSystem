@@ -31,8 +31,7 @@ class FlightPlanSchedulerTest {
         // Passed
         Config config = new Config();
         FlightPlanScheduler fps = new FlightPlanScheduler(config);
-        Request req = new Request("RQ_1000","WP_JM1","WP_KEM1",2);
-        System.out.printf("Time needed is :"+fps.doModifiedAStar(req,0)+"\n");
+        fps.ScheduleFlight();
     }
 
     @Test
