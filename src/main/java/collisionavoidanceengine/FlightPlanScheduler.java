@@ -10,11 +10,9 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
-import com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor;
-import mapbuilder.triangulation.Node;
+import config.Config;
 
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
 import static collisionavoidanceengine.constants.Constant.*;
@@ -34,10 +32,10 @@ public class FlightPlanScheduler {
 
     public ArrayList<String> solutionSingleTripTemp ;
 
-    public FlightPlanScheduler(String airMapType, String requestQueueTyoe){
+    public FlightPlanScheduler(Config config){
         // Initialization
         try {
-            PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator("/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/result.json");
+            PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator(config.pathToMap);
             myAirMap=pl.createAirspaceStructure();
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,7 +44,7 @@ public class FlightPlanScheduler {
         // Notice that request must be initialized after AirMap is created
         // This is because RequestQueue will need the topology of AirMap
         try{
-            RequestCreatorSelector rcs = new RequestCreatorSelector("RANDOM");
+            RequestCreatorSelector rcs = new RequestCreatorSelector(config);
             myRequestQ = rcs.getRequestCreator().generateRequest(INITIAL_FLIGHT_CAPACITY,myAirMap);
         }
         catch (Exception e){

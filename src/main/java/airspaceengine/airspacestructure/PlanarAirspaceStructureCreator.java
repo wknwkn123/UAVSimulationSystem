@@ -30,7 +30,6 @@ public class PlanarAirspaceStructureCreator implements AirspaceStructureCreator{
     private RSMap Edges;
 
     public PlanarAirspaceStructureCreator(String pathToMapJSON) {
-        //pathToMapJSON = "/Users/StevenShi/Documents/2017Winter-UAV/uavsimulation/data/demo.json"
         pathToMap = pathToMapJSON;
         try {
             content = new String (Files.readAllBytes(Paths.get(pathToMap)));

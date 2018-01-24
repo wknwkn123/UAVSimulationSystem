@@ -1,6 +1,7 @@
 package airspaceengine;
 
 import airspaceengine.airspacestructure.*;
+import config.Config;
 
 import java.io.IOException;
 
@@ -17,23 +18,18 @@ public class AirspaceEngine {
         return singleton;
     }
 
-    public void createAirspace(String type) throws IOException {
-    		switch(type) {
+    public void createAirspace(Config config) throws IOException {
+    		switch(config.airMapType) {
     			case "RANDOM":
-    				AirspaceStructureCreator airspaceCreator = AirspaceStructureFactory.getAirspaceStructureCreator("RANDOM");
-    		        airMap = airspaceCreator.createAirspaceStructure();
+    				AirspaceStructureCreator airspaceCreator = AirspaceStructureFactory.getAirspaceStructureCreator("RANDOM", config.pathToMap);
+    		        this.airMap = airspaceCreator.createAirspaceStructure();
     		        break;
                 case "PLANARGRAPH":
-                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH");
-                    airMap = airspaceC.createAirspaceStructure();
-                    break;
-                default:
-                    System.out.println("Default is printed. This should not happen.");
-                    break;
+                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH",null);
+                    this.airMap = airspaceC.createAirspaceStructure();
+    		    default:
+    		    		System.out.println("Default is printed. This should not happen.");
+    		    		break;
     		}        
-    }
-
-    public AirspaceStructure getAirMap() {
-        return airMap;
     }
 }

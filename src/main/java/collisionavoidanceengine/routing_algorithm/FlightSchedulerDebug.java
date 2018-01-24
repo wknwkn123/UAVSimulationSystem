@@ -32,6 +32,7 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 import com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor;
+import config.Config;
 import mapbuilder.triangulation.Node;
 
 
@@ -67,7 +68,7 @@ class FlightPlanSchedulerDebug {
         // Notice that request must be initialized after AirMap is created
         // This is because RequestQueue will need the topology of AirMap
         try{
-            RequestCreatorSelector rcs = new RequestCreatorSelector("RANDOM");
+            RequestCreatorSelector rcs = new RequestCreatorSelector(new Config());
             myRequestQ = rcs.getRequestCreator().generateRequest(INITIAL_FLIGHT_CAPACITY,myAirMap);
         }
         catch (Exception e){
