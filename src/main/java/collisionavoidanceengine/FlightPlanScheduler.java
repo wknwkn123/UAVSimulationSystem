@@ -11,8 +11,6 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 import config.Config;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 
 import java.util.*;
 
@@ -22,7 +20,6 @@ import static collisionavoidanceengine.constants.Constant.*;
  * Created by StevenShi on 17/12/17.
  */
 public class FlightPlanScheduler {
-    public final int MAX_CONNECTIONS = 4;
     public int currentTime=0;
     public PriorityQueue<Request> myRequestQ;
     public AirspaceStructure myAirMap ;
@@ -60,7 +57,7 @@ public class FlightPlanScheduler {
     }
 
     // Print the Open PriorityQueue (the unexplored nodes)
-    public void printOpen(PriorityQueue<WorkingTableEntry> open){
+    public void printOpenList(PriorityQueue<WorkingTableEntry> open){
         System.out.printf("The current open list is:");
         PriorityQueue<WorkingTableEntry> openCopy = new PriorityQueue<>(open);
         for (WorkingTableEntry node : open){
@@ -238,13 +235,19 @@ public class FlightPlanScheduler {
         int numNodesInSingleTrip = solutionSingleTripTemp.size();
         // try with only one en-route
         Request trip1 = new Request("REQ-Temp1",request.getOriginID(),solutionSingleTripTemp.get(numNodesInSingleTrip/2),request.getStartTime());
+        System.out.printf(SPACER);
         double costTrip1 = doModifiedAStar(trip1,currentTime);
 
         double trip2StartTime = request.getStartTime()+costTrip1+WAITING_PENALTY_AT_LANDING_NODE;
+        System.out.printf(SPACER);
         Request trip2 = new Request("REQ-Temp2",solutionSingleTripTemp.get((numNodesInSingleTrip+1)/2),request.getDestinationID(), (int) trip2StartTime);
         double costTrip2 = doModifiedAStar(trip2,(int)trip2StartTime);
-         if (costTrip1>15 || costTrip2>15){
-             System.out.printf("Cannot do just two trips!");
+         if (costTrip1<=15 && costTrip2 <=15){
+             System.out.printf("  Can use 2 legs to deliver!\n");
+             return;
+         }
+         else{
+             System.out.printf("  ***Cannot do just two trips!***\n");
          }
 
     }
@@ -258,7 +261,7 @@ public class FlightPlanScheduler {
                 currentTime++;
 
             Request currentRequest = myRequestQ.poll();
-            System.out.printf("Now routing request "+currentRequest.getRequestID()+"\n");
+            System.out.printf("\nNow routing request "+currentRequest.getRequestID()+"\n");
             double requestedTime = doModifiedAStar(currentRequest, currentTime);
             if (requestedTime <= BATTERY_LIFE / 2 && requestedTime > 0) {
                 //  Make a new RoutingResult record
@@ -301,6 +304,42 @@ public class FlightPlanScheduler {
         }
         System.out.printf("All Requests Finished Scheduling. ");
     }
+
+    /**
+     *       Write the request priority queue into csv file in form of
+     *       < requestID, Time, source, destination>
+     */
+//    @Override
+//    public void writeToCsv(Config config， ) {
+//        FileWriter fileWriter = null;
+//
+//        String csvHeader = "requestID, UAVID, startTime, route";
+//
+//        try {
+//            fileWriter = new FileWriter(config.outputPathRoot+"/RoutingResult.csv");
+//
+//            fileWriter.append(csvHeader + "\n");
+//
+//            for (String wpID : solutionSingleTripTemp) {
+//                fileWriter.append(wpID + ",");
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Error in CsvFileWriter !!!");
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                fileWriter.flush();
+//                fileWriter.close();
+//            } catch (IOException e) {
+//                System.out.println("Error while flushing/closing fileWriter !!!");
+//                e.printStackTrace();
+//            }
+//
+//
+//        }
+//    }
+//}
+
 
 
 }
