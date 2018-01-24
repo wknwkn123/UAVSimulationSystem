@@ -24,6 +24,6 @@ public class Constant {
     // Spacer for printing
     public static final String SPACER = "       ";
     // Max number of en-routes
-    public final int MAX_CONNECTIONS = 4;
+    public static final int MAX_CONNECTIONS = 4;
 
 }

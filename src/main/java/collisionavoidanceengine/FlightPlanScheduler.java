@@ -230,26 +230,89 @@ public class FlightPlanScheduler {
         return -1;
     }
 
-    public void doSegmentation(Request request){
-        // Note : Be careful with current time
+    // return the total time after en-routing
+    public double doSegmentation(Request request){
+
+        double totalTravelTime =-1;
+
+        // Note : Be careful not to change current_time
         int numNodesInSingleTrip = solutionSingleTripTemp.size();
+
         // try with only one en-route
-        Request trip1 = new Request("REQ-Temp1",request.getOriginID(),solutionSingleTripTemp.get(numNodesInSingleTrip/2),request.getStartTime());
+        Request trip2_1 = new Request("REQ-Temp2_1",request.getOriginID(),solutionSingleTripTemp.get(numNodesInSingleTrip/2),request.getStartTime());
         System.out.printf(SPACER);
-        double costTrip1 = doModifiedAStar(trip1,currentTime);
+        double costTrip2_1 = doModifiedAStar(trip2_1,currentTime);
 
-        double trip2StartTime = request.getStartTime()+costTrip1+WAITING_PENALTY_AT_LANDING_NODE;
+        double trip2_2StartTime = request.getStartTime()+costTrip2_1+WAITING_PENALTY_AT_LANDING_NODE;
         System.out.printf(SPACER);
-        Request trip2 = new Request("REQ-Temp2",solutionSingleTripTemp.get((numNodesInSingleTrip+1)/2),request.getDestinationID(), (int) trip2StartTime);
-        double costTrip2 = doModifiedAStar(trip2,(int)trip2StartTime);
-         if (costTrip1<=15 && costTrip2 <=15){
+        Request trip2_2 = new Request("REQ-Temp2_2",solutionSingleTripTemp.get((numNodesInSingleTrip+1)/2),request.getDestinationID(), (int) trip2_2StartTime);
+        double costTrip2_2 = doModifiedAStar(trip2_2,(int)trip2_2StartTime);
+         if (costTrip2_1<=BATTERY_LIFE/2 && costTrip2_2 <=BATTERY_LIFE/2){
              System.out.printf("  Can use 2 legs to deliver!\n");
-             return;
+             // todo : update the states on the path
+             totalTravelTime = costTrip2_2+trip2_2StartTime-currentTime;
          }
-         else{
-             System.out.printf("  ***Cannot do just two trips!***\n");
-         }
+         else {
+             System.out.printf("  ***Cannot do just two trips!***\n\n");
 
+             // try with two en-routes
+             Request trip3_1 = new Request("REQ-Temp3_1", request.getOriginID(), solutionSingleTripTemp.get(numNodesInSingleTrip / 3), request.getStartTime());
+             System.out.printf(SPACER);
+             double costTrip3_1 = doModifiedAStar(trip3_1, currentTime);
+
+             // start time of second leg = start time of previous leg + cost of 1st leg + landing time
+             double trip3_2StartTime = request.getStartTime() + costTrip3_1 + WAITING_PENALTY_AT_LANDING_NODE;
+             System.out.printf(SPACER);
+             Request trip3_2 = new Request("REQ-Temp3_2", solutionSingleTripTemp.get(numNodesInSingleTrip / 3 + 1), solutionSingleTripTemp.get(numNodesInSingleTrip * 2 / 3), (int) trip3_2StartTime);
+             double costTrip3_2 = doModifiedAStar(trip3_2, (int) trip3_2StartTime);
+
+             double trip3_3StartTime = trip3_2StartTime + costTrip3_2 + WAITING_PENALTY_AT_LANDING_NODE;
+             System.out.printf(SPACER);
+             Request trip2 = new Request("REQ-Temp3_3", solutionSingleTripTemp.get(numNodesInSingleTrip * 2 / 3 + 1), request.getDestinationID(), (int) trip3_3StartTime);
+             double costTrip3_3 = doModifiedAStar(trip2, (int) trip3_3StartTime);
+
+
+             if (costTrip3_1 <= BATTERY_LIFE / 2 && costTrip3_2 <= BATTERY_LIFE / 2 && costTrip3_3 <= BATTERY_LIFE / 2) {
+                 System.out.printf("  Can use 2 legs to deliver!\n");
+
+                 // todo : update path
+                 totalTravelTime = costTrip3_3 + trip3_3StartTime - currentTime;
+             } else {
+                 System.out.printf("  ***Cannot do just three trips!***\n\n");
+
+                 // try with three en-routes
+                 Request trip4_1 = new Request("REQ-Temp4_1", request.getOriginID(), solutionSingleTripTemp.get(numNodesInSingleTrip / 4), request.getStartTime());
+                 System.out.printf(SPACER);
+                 double costTrip4_1 = doModifiedAStar(trip4_1, currentTime);
+
+                 double trip4_2StartTime = request.getStartTime() + costTrip4_1 + WAITING_PENALTY_AT_LANDING_NODE;
+                 System.out.printf(SPACER);
+                 Request trip4_2 = new Request("REQ-Temp4_2", solutionSingleTripTemp.get(numNodesInSingleTrip / 4 + 1), solutionSingleTripTemp.get(numNodesInSingleTrip / 2), (int) trip4_2StartTime);
+                 double costTrip4_2 = doModifiedAStar(trip4_2, (int) trip4_2StartTime);
+
+                 double trip4_3StartTime = trip4_2StartTime + costTrip4_2 + WAITING_PENALTY_AT_LANDING_NODE;
+                 System.out.printf(SPACER);
+                 Request trip4_3 = new Request("REQ-Temp4_3", solutionSingleTripTemp.get(numNodesInSingleTrip / 2 + 1), solutionSingleTripTemp.get(numNodesInSingleTrip * 3 / 4), (int) trip4_3StartTime);
+                 double costTrip4_3 = doModifiedAStar(trip4_3, (int) trip4_3StartTime);
+
+                 double trip4_4StartTime = trip4_3StartTime + costTrip4_3 + WAITING_PENALTY_AT_LANDING_NODE;
+                 System.out.printf(SPACER);
+                 Request trip4_4 = new Request("REQ-Temp4_4", solutionSingleTripTemp.get(numNodesInSingleTrip * 3 / 4 + 1), request.getDestinationID(), (int) trip4_4StartTime);
+                 double costTrip4_4 = doModifiedAStar(trip4_4, (int) trip4_4StartTime);
+
+
+                 if (costTrip4_1 <= BATTERY_LIFE / 2 && costTrip4_2 <= BATTERY_LIFE / 2 && costTrip4_3 <= BATTERY_LIFE / 2 && costTrip4_4 <= BATTERY_LIFE / 2) {
+                     System.out.printf("  Can use 3 legs to deliver!\n");
+                     // todo : update path
+                     totalTravelTime = trip4_4StartTime + costTrip4_4 - currentTime;
+                 } else {
+                     System.out.printf("!!!!! Unable to route this request !!!!!\n");
+                     // do something here.
+                 }
+
+             }
+         }
+        return totalTravelTime;
     }
 
     public void ScheduleFlight() {
@@ -288,7 +351,7 @@ public class FlightPlanScheduler {
             // Find viable connections
             {   // Segment the flight path into multiple shorter trips with similar number of stops in between
                 try {
-                    doSegmentation(currentRequest);
+                    double ReroutingTime  = doSegmentation(currentRequest);
                 } catch (Exception e) {
                     System.out.printf("");
                     // delay to re-route later
