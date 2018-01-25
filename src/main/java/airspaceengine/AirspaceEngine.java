@@ -32,4 +32,8 @@ public class AirspaceEngine {
     		    		break;
     		}        
     }
+
+    public AirspaceStructure getAirMap() {
+        return airMap;
+    }
 }

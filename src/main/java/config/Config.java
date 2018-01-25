@@ -24,6 +24,5 @@ public class Config {
         pathToRequest = inputPathRoot+"/RandomRequest.csv";
 
         outputPathRoot = "data/output";
-
     }
 }

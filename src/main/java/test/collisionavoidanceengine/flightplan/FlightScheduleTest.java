@@ -1,7 +1,8 @@
-package collisionavoidanceengine.flightplan;
+package test.collisionavoidanceengine.flightplan;
 
 import airspaceengine.airspacestructure.AirspaceStructure;
 import airspaceengine.airspacestructure.PlanarAirspaceStructureCreator;
+import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.RandomRequestCreator;
 import collisionavoidanceengine.request.Request;
 import org.junit.jupiter.api.Test;

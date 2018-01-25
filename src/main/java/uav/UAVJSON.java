@@ -1,0 +1,35 @@
+package uav;
+
+import simulationengine.Time;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UAVJSON {
+    private String id;
+    private String planID;
+    private Coordinate coordinate;
+    private double time;
+
+    public Coordinate getCoordinate() { return coordinate; }
+
+    public void setCoordinate(Coordinate coordinate) {
+        this.coordinate = coordinate;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setPlanID(String planID) {
+        this.planID = planID;
+    }
+
+    public String getPlanID() {
+        return planID;
+    }
+
+    public void setTime(double time) {
+        this.time = time;
+    }
+}
