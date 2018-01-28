@@ -18,7 +18,7 @@ public class Constant {
     // Assumes all UAV fly at a constant speed
     public static final double UAV_SPEED = 500;
     // Number of requested flights in a simulation
-    public static final int INITIAL_FLIGHT_CAPACITY = 1000;
+    public static final int INITIAL_FLIGHT_CAPACITY = 10;
     // Max allowable delay time
     public static final int MAX_DELAY=15;
     // Spacer for printing

@@ -21,18 +21,18 @@ public class CoreEngine {
     public static void main(String[] args) throws IOException {
         //start websocket server
         Websocket.getInstance().startServer();
-//
-//        try {
-//            TimeUnit.MILLISECONDS.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
+
+        try {
+            TimeUnit.MILLISECONDS.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+////
 //        //create airspace
 //        AirspaceEngine.getInstance().createAirspace(SimulationConfiguration.getInstance().getAirspaceType());
 //
 //        //create UAVs
-//        UAVEngine.getInstance().createUAVs("RANDOM");
+        UAVEngine.getInstance().createUAVs("RANDOM");
 //
 //        //create schedule/demand
 //        FlightPlanEngine.getInstance().createFlightPlans(SimulationConfiguration.getInstance().getFlightScheduleType(), AirspaceEngine.getInstance().getAirMap());
@@ -40,12 +40,12 @@ public class CoreEngine {
 //        //assign schedule to UAVs
 //        FlightPlanEngine.getInstance().assignFlightPlans("RANDOM");
 //
-//        //run simulation
-//        UAVEngine.getInstance().startThread();
-//        Thread t = new Thread(SimulationApp.getInstance());
-//        t.start();
+        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
+        scheduler.ScheduleFlight();
 
-//        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
-//        scheduler.ScheduleFlight();
+        //run simulation
+        UAVEngine.getInstance().startThread();
+        Thread t = new Thread(SimulationApp.getInstance());
+        t.start();
     }
 }

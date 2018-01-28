@@ -36,4 +36,8 @@ public class AirspaceEngine {
     public AirspaceStructure getAirMap() {
         return airMap;
     }
+
+    public void setAirMap(AirspaceStructure airMap) {
+        this.airMap = airMap;
+    }
 }

@@ -1,4 +1,4 @@
-package websocket.simple_v2.model;
+package websocket.simple_v2.encoder;
 
 import com.google.gson.Gson;
 import uav.UAV;
@@ -11,11 +11,11 @@ public class UAVEncoder {
         return instance;
     }
 
-    public void encode(final UAV uav) {
+    public String encode(final UAV uav) {
         Gson gson = new Gson();
         String jsonUAVs = gson.toJson(uav.getJsonData());
-        System.out.println("UAV JSON DATA = " + jsonUAVs);
-//        return jsonUAVs;
+//        System.out.println("UAV JSON DATA = " + jsonUAVs);
+        return jsonUAVs;
     }
 
 }

@@ -1,10 +1,8 @@
-package websocket.simple_v2.model;
+package websocket.simple_v2.encoder;
 
 import com.google.gson.Gson;
 import uav.UAV;
-import uav.UAVJSON;
 
-import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
 

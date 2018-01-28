@@ -1,10 +1,6 @@
-package websocket.simple_v2.model;
+package websocket.simple_v2.encoder;
 
-import uav.Coordinate;
 import uav.UAV;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Message {
     private String from;

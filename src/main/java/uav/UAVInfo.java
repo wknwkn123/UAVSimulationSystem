@@ -15,7 +15,7 @@ public class UAVInfo {
         modelType = model_type;
         maxSpeed = max_speed;
         maxAltitude = max_altitude;
-        id = "UA" + String.format("%05d", idCount);
+        id = "UV_" + String.format("%05d", idCount);
         idCount++;
     }
 
