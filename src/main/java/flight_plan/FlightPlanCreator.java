@@ -1,8 +1,9 @@
 package flight_plan;
 import airspaceengine.airspacestructure.AirspaceStructure;
+import collisionavoidanceengine.flightplan.FlightSchedule;
 
 import java.util.List;
 
 public interface FlightPlanCreator {
-    List<FlightPlan> createFlightPlans(AirspaceStructure airMap);
+    FlightSchedule createFlightPlans(AirspaceStructure airMap);
 }

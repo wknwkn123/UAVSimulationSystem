@@ -1,17 +1,22 @@
 package flight_plan;
 
 
+import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
 import collisionavoidanceengine.flightplan.Flight;
+import collisionavoidanceengine.flightplan.FlightSchedule;
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import uav.UAV;
 import uav.UAVEngine;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlightPlanEngine {
     private static FlightPlanEngine ourInstance = new FlightPlanEngine();
+    private List<Flight> flights = new ArrayList<>();
     private List<FlightPlan> flightPlans;
+    private FlightSchedule currentFlightPlan;
 
     public static FlightPlanEngine getInstance() {
         return ourInstance;
@@ -23,7 +28,7 @@ public class FlightPlanEngine {
         switch(type) {
             case "RANDOM":
                 FlightPlanCreator flightPlanCreator = FlightPlanFactory.getFlightPlanCreator("RANDOM");
-                setFlightPlans(flightPlanCreator.createFlightPlans(airMap));
+                setCurrentFlightPlan(flightPlanCreator.createFlightPlans(airMap));
                 break;
             default:
                 System.out.println("Default is printed. This should not happen.");
@@ -60,9 +65,34 @@ public class FlightPlanEngine {
                     i++;
                 }
                 break;
+            case "RANDOMPLAN":
+                int j = 0;
+                for (Flight plan :  FlightPlanEngine.getInstance().getFlights()) {
+                    UAV uav = UAVEngine.getInstance().getUAVs().get(j);
+                    uav.addFlightPlan(plan);
+                    System.out.println("Job " + plan.getFlightID() + " is assigned to UAV " + uav.getUAVInfo().getId());
+                    j++;
+                }
+                break;
             default:
                 System.out.println("Default printed. This should not happen.");
 
         }
+    }
+
+    public FlightSchedule getCurrentFlightPlan() {
+        return currentFlightPlan;
+    }
+
+    public void setCurrentFlightPlan(FlightSchedule currentFlightPlan) {
+        this.currentFlightPlan = currentFlightPlan;
+    }
+
+    public List<Flight> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(List<Flight> flights) {
+        this.flights = flights;
     }
 }

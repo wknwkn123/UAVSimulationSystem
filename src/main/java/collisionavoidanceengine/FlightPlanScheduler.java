@@ -12,6 +12,7 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 import config.Config;
+import flight_plan.FlightPlanEngine;
 
 import java.util.*;
 
@@ -367,6 +368,9 @@ public class FlightPlanScheduler {
             solutionSingleTripTemp = new ArrayList<>();
 
         }
+        //put the schedule into the flight plan engine for simulation purposes
+        FlightPlanEngine.getInstance().setCurrentFlightPlan(this.currentFlightPlan);
+
         System.out.printf("All Requests Finished Scheduling. ");
     }
 

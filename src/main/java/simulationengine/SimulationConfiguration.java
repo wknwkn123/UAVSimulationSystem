@@ -1,5 +1,7 @@
 package simulationengine;
 
+import config.Config;
+
 /**
  * Configuration to hold all the parameters set by front end. The one source of truth.
  */
@@ -10,6 +12,7 @@ public class SimulationConfiguration {
     private String airspaceType = "PLANARGRAPH";
     private String flightScheduleType = "RANDOM";
     private int numberOfUAVs;
+    private Config config = new Config();
 
     public static SimulationConfiguration getInstance() {
         return ourInstance;
@@ -56,5 +59,13 @@ public class SimulationConfiguration {
 
     public void setNumberOfUAVs(int numberOfUAVs) {
         this.numberOfUAVs = numberOfUAVs;
+    }
+
+    public Config getConfig() {
+        return config;
+    }
+
+    public void setConfig(Config config) {
+        this.config = config;
     }
 }

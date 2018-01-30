@@ -1,5 +1,6 @@
 package uav;
 import airspaceengine.waypoint.Waypoint;
+import collisionavoidanceengine.flightplan.Flight;
 import com.google.gson.Gson;
 import flight_plan.FlightPlan;
 import flight_plan.FlightSegment;
@@ -20,6 +21,7 @@ public class UAV implements Runnable{
     private UAVInfo UAVInfo;
     private UAVOperation operation;
     private List<FlightPlan> schedule;
+    private List<Flight> flightPlans = new ArrayList<>();
     private volatile boolean stopWork;
     private UAVJSON jsonData;
     private double speed;
@@ -50,6 +52,10 @@ public class UAV implements Runnable{
 
     public void addJob(FlightPlan job) {
         schedule.add(job);
+    }
+
+    public void addFlightPlan(Flight job) {
+        flightPlans.add(job);
     }
 
     public void setOrigin() {
@@ -147,4 +153,6 @@ public class UAV implements Runnable{
     public UAVOperation getOperation() {
         return operation;
     }
+
+    public List<Flight> getFlightPlans() { return flightPlans; }
 }

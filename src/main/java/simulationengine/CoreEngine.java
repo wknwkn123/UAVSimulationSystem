@@ -2,6 +2,7 @@ package simulationengine;
 
 import airspaceengine.AirspaceEngine;
 import collisionavoidanceengine.FlightPlanScheduler;
+import collisionavoidanceengine.flightplan.Flight;
 import config.Config;
 import flight_plan.FlightPlanEngine;
 import uav.UAVEngine;
@@ -10,6 +11,7 @@ import websocket.simple_v2.server.Websocket;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -19,33 +21,41 @@ import java.util.concurrent.TimeUnit;
 public class CoreEngine {
 
     public static void main(String[] args) throws IOException {
-        //start websocket server
-        Websocket.getInstance().startServer();
-
-        try {
-            TimeUnit.MILLISECONDS.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        //start websocket server
+//        Websocket.getInstance().startServer();
+//
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 ////
-//        //create airspace
-//        AirspaceEngine.getInstance().createAirspace(SimulationConfiguration.getInstance().getAirspaceType());
-//
-//        //create UAVs
-        UAVEngine.getInstance().createUAVs("RANDOM");
-//
-//        //create schedule/demand
-//        FlightPlanEngine.getInstance().createFlightPlans(SimulationConfiguration.getInstance().getFlightScheduleType(), AirspaceEngine.getInstance().getAirMap());
-//
-//        //assign schedule to UAVs
-//        FlightPlanEngine.getInstance().assignFlightPlans("RANDOM");
-//
-        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
-        scheduler.ScheduleFlight();
+        //create airspace
+        AirspaceEngine.getInstance().createAirspace(SimulationConfiguration.getInstance().getConfig());
 
-        //run simulation
-        UAVEngine.getInstance().startThread();
-        Thread t = new Thread(SimulationApp.getInstance());
-        t.start();
+        //create UAVs
+        UAVEngine.getInstance().createUAVs("RANDOM");
+
+        //create schedule/demand
+        FlightPlanEngine.getInstance().getFlights().add(new Flight("FL_00001", "RQ_001", "UV_000001", 0, 5));
+        FlightPlanEngine.getInstance().getFlights().add(new Flight("FL_00002", "RQ_002", "UV_000002", 2, 6));
+        FlightPlanEngine.getInstance().getFlights().add(new Flight("FL_00003", "RQ_003", "UV_000003", 4, 10));
+//        FlightPlanEngine.getInstance().createFlightPlans(SimulationConfiguration.getInstance().getFlightScheduleType(), AirspaceEngine.getInstance().getAirMap());
+
+//        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
+//        scheduler.ScheduleFlight();
+
+//        for (Map.Entry<String, Flight> entry : scheduler.currentFlightPlan.getFlightPlan().entrySet())
+//        {
+//            System.out.println(entry.getKey() + "/" + entry.getValue());
+//        }
+
+//        //assign schedule to UAVs
+        FlightPlanEngine.getInstance().assignFlightPlans("RANDOMPLAN");
+
+//        //run simulation
+//        UAVEngine.getInstance().startThread();
+//        Thread t = new Thread(SimulationApp.getInstance());
+//        t.start();
     }
 }

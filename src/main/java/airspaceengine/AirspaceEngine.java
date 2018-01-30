@@ -28,8 +28,8 @@ public class AirspaceEngine {
                     AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH",null);
                     this.airMap = airspaceC.createAirspaceStructure();
     		    default:
-    		    		System.out.println("Default is printed. This should not happen.");
-    		    		break;
+    		        System.out.println("Default is printed. This should not happen.");
+    		    	break;
     		}        
     }
 
