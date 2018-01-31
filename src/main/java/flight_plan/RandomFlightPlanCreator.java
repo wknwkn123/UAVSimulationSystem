@@ -10,7 +10,7 @@ import java.util.List;
 
 public class RandomFlightPlanCreator implements FlightPlanCreator {
     List<FlightPlan> flightPlans = new ArrayList<>();
-    FlightSchedule flightSchedule;
+    FlightSchedule flightSchedule = new FlightSchedule(AirspaceEngine.getInstance().getAirMap());
 
     public FlightSchedule createFlightPlans(AirspaceStructure airMap) {
         flightSchedule = new FlightSchedule(airMap);

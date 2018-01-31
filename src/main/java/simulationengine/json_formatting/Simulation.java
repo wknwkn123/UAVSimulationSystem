@@ -1,14 +1,22 @@
 package simulationengine.json_formatting;
 
 public class Simulation {
-    private StartSimulation startSimulation;
-    private  SimulationParameter parameter;
+    private String simulationStart;
+    private SimulationParameter simulationParameter;
 
-    public StartSimulation getStartSimulation() {
-        return startSimulation;
+    public String getSimulationStart() {
+        return simulationStart;
     }
 
-    public void setStartSimulation(StartSimulation startSimulation) {
-        this.startSimulation = startSimulation;
+    public void setSimulationStart(String simulationStart) {
+        this.simulationStart = simulationStart;
+    }
+
+    public SimulationParameter getParameter() {
+        return simulationParameter;
+    }
+
+    public void setParameter(SimulationParameter parameter) {
+        this.simulationParameter = parameter;
     }
 }

@@ -210,7 +210,7 @@ public class UAV implements Runnable{
 
     public void setJSONData() {
         jsonData.setTime(Time.getInstance().getRealTime());
-        jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentZ(), operation.getCurrentY()));
+        jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
         jsonData.setPlanID(flightPlans.get(0).getFlightID());
     }
 
