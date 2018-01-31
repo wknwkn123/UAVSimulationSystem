@@ -26,15 +26,15 @@ public class SimulationApp implements Runnable{
     public SimulationApp(){}
 
     public void run() {
-        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
-        scheduler.ScheduleFlight();
+//        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
+//        scheduler.ScheduleFlight();
 
         while (!stopWork) {
             Time.getInstance().setCompleted(false);
-            for (int j = 0; j < 70; j++) {
+            for (int j = 0; j < 200; j++) {
                 Time.getInstance().tick();
                 RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();
-                // Blocking Send of a TEXT message to remote endpoint
+//                 Blocking Send of a TEXT message to remote endpoint
                 try
                 {
                     for(UAV uav : UAVEngine.getInstance().getUAVs()) {

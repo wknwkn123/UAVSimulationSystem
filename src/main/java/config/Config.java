@@ -17,7 +17,7 @@ public class Config {
     public Config(){
         inputPathRoot = "data/input";
 
-        airMapType="RANDOM";
+        airMapType="PLANARGRAPH";
         pathToMap = inputPathRoot+"/AirSpaceMap2D.json";
 
         requestType = "RANDOM";

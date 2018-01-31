@@ -25,8 +25,9 @@ public class AirspaceEngine {
     		        this.airMap = airspaceCreator.createAirspaceStructure();
     		        break;
                 case "PLANARGRAPH":
-                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH",null);
+                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH", config.pathToMap);
                     this.airMap = airspaceC.createAirspaceStructure();
+                    break;
     		    default:
     		        System.out.println("Default is printed. This should not happen.");
     		    	break;
