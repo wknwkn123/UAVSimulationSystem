@@ -62,10 +62,10 @@ public class UAV implements Runnable{
     }
 
     public void setOrigin() {
-        if (schedule.size() > 0) {
-            operation.setCurrentX(schedule.get(0).getStartPoint().getX());
-            operation.setCurrentY(schedule.get(0).getStartPoint().getY());
-            operation.setCurrentZ(schedule.get(0).getStartPoint().getZ());
+        if (flightPlans.size() > 0) {
+            operation.setCurrentX(AirspaceEngine.getInstance().getAirMap().getWPByID(flightPlans.get(0).getFlightPath().get(0)).getX());
+            operation.setCurrentY(AirspaceEngine.getInstance().getAirMap().getWPByID(flightPlans.get(0).getFlightPath().get(0)).getY());
+            operation.setCurrentZ(AirspaceEngine.getInstance().getAirMap().getWPByID(flightPlans.get(0).getFlightPath().get(0)).getZ());
         }
     }
 
@@ -132,7 +132,7 @@ public class UAV implements Runnable{
                         }
                         System.out.println("Flight plan " + plan.getFlightID() + " completed.");
                         System.out.println();
-                        schedule.remove(0);
+                        flightPlans.remove(0);
                     }
                 }
             }

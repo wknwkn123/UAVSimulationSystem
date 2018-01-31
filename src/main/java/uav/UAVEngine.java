@@ -20,7 +20,6 @@ public class UAVEngine {
                 UAVCreator uavCreator = UAVFactory.getUAVCreator("RANDOM");
                 setUAVs(uavCreator.createUAVs());
                 for (UAV uav : UAVEngine.getInstance().getUAVs()) {
-                    uav.setOrigin();
                     UAVThread.add(new Thread(uav));
                 }
                 break;
