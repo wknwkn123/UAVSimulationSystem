@@ -4,10 +4,11 @@ import airspaceengine.waypoint.Waypoint;
 import collisionavoidanceengine.flightplan.Flight;
 import com.google.gson.Gson;
 import flight_plan.FlightPlan;
-import flight_plan.FlightSegment;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
 import simulationengine.SimulationConfiguration;
 import simulationengine.Time;
+import uav.uav_json_encoder.NodePoint;
+import uav.uav_json_encoder.UAVJSON;
 import websocket.simple_v2.server.Websocket;
 
 import java.io.IOException;
@@ -212,9 +213,9 @@ public class UAV implements Runnable{
         jsonData.setTime(Time.getInstance().getRealTime());
         jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
 //        Waypoint startPoint = schedule.get(0).getStartPoint();
-        jsonData.setStartPoint(new Coordinate(startPoint.getX(), startPoint.getY(), startPoint.getZ()));
+        jsonData.setStartPoint(new NodePoint(startPoint.getNodeID(), new Coordinate(startPoint.getX(), startPoint.getY(), startPoint.getZ())));
 //        Waypoint endPoint = schedule.get(0).getEndPoint();
-        jsonData.setEndPoint(new Coordinate(endPoint.getX(), endPoint.getY(), endPoint.getZ()));
+        jsonData.setEndPoint(new NodePoint(endPoint.getNodeID(), new Coordinate(endPoint.getX(), endPoint.getY(), endPoint.getZ())));
         jsonData.setPlanID(flightPlans.get(0).getFlightID());
     }
 

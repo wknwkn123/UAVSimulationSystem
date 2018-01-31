@@ -1,6 +1,8 @@
-package uav;
+package uav.uav_json_encoder;
 
+import airspaceengine.waypoint.Waypoint;
 import simulationengine.Time;
+import uav.Coordinate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +12,8 @@ public class UAVJSON {
     private String planID;
     private Coordinate coordinate;
     private double time;
-    private Coordinate startPoint;
-    private Coordinate endPoint;
+    private NodePoint startPoint;
+    private NodePoint endPoint;
 
     public Coordinate getCoordinate() { return coordinate; }
 
@@ -35,19 +37,19 @@ public class UAVJSON {
         this.time = time;
     }
 
-    public Coordinate getStartPoint() {
+    public NodePoint getStartPoint() {
         return startPoint;
     }
 
-    public void setStartPoint(Coordinate startPoint) {
+    public void setStartPoint(NodePoint startPoint) {
         this.startPoint = startPoint;
     }
 
-    public Coordinate getEndPoint() {
+    public NodePoint getEndPoint() {
         return endPoint;
     }
 
-    public void setEndPoint(Coordinate endPoint) {
+    public void setEndPoint(NodePoint endPoint) {
         this.endPoint = endPoint;
     }
 }
