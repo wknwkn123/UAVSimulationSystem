@@ -106,7 +106,7 @@ public class UAV implements Runnable{
                                 }
 
                                 if (Math.abs(operation.getCurrentX() - prevX) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentY() - prevY) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed() || Math.abs(operation.getCurrentZ() - prevZ) > SimulationConfiguration.getInstance().getCoordinateDifferenceAllowed()) {
-                                    setJSONData();
+                                    setJSONData(origin, destination);
                                     System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                                     prevX = operation.getCurrentX();
                                     prevY = operation.getCurrentY();
@@ -208,12 +208,12 @@ public class UAV implements Runnable{
 //        }
 //    }
 
-    public void setJSONData() {
+    public void setJSONData(Waypoint startPoint, Waypoint endPoint) {
         jsonData.setTime(Time.getInstance().getRealTime());
         jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
-        Waypoint startPoint = schedule.get(0).getStartPoint();
+//        Waypoint startPoint = schedule.get(0).getStartPoint();
         jsonData.setStartPoint(new Coordinate(startPoint.getX(), startPoint.getY(), startPoint.getZ()));
-        Waypoint endPoint = schedule.get(0).getEndPoint();
+//        Waypoint endPoint = schedule.get(0).getEndPoint();
         jsonData.setEndPoint(new Coordinate(endPoint.getX(), endPoint.getY(), endPoint.getZ()));
         jsonData.setPlanID(flightPlans.get(0).getFlightID());
     }
