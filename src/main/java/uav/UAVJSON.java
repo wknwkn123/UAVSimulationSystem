@@ -10,6 +10,8 @@ public class UAVJSON {
     private String planID;
     private Coordinate coordinate;
     private double time;
+    private Coordinate startPoint;
+    private Coordinate endPoint;
 
     public Coordinate getCoordinate() { return coordinate; }
 
@@ -31,5 +33,21 @@ public class UAVJSON {
 
     public void setTime(double time) {
         this.time = time;
+    }
+
+    public Coordinate getStartPoint() {
+        return startPoint;
+    }
+
+    public void setStartPoint(Coordinate startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    public Coordinate getEndPoint() {
+        return endPoint;
+    }
+
+    public void setEndPoint(Coordinate endPoint) {
+        this.endPoint = endPoint;
     }
 }
