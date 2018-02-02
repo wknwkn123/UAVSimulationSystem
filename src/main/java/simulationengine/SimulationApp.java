@@ -26,15 +26,12 @@ public class SimulationApp implements Runnable{
     public SimulationApp(){}
 
     public void run() {
-//        FlightPlanScheduler scheduler = new FlightPlanScheduler(new Config());
-//        scheduler.ScheduleFlight();
-
-        while (!stopWork) {
+        while (!this.stopWork) {
             Time.getInstance().setCompleted(false);
             for (int j = 0; j < 200; j++) {
                 Time.getInstance().tick();
                 RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();
-//                 Blocking Send of a TEXT message to remote endpoint
+                //Blocking Send of a TEXT message to remote endpoint
                 try
                 {
                     for(UAV uav : UAVEngine.getInstance().getUAVs()) {
@@ -50,6 +47,8 @@ public class SimulationApp implements Runnable{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                if (stopWork)
+                    break;
             }
             Time.getInstance().setCompleted(true);
             this.stopWork();
@@ -57,7 +56,7 @@ public class SimulationApp implements Runnable{
 	}
 
 	public void stopWork() {
-        stopWork = true;
+        this.stopWork = true;
         UAVEngine.getInstance().stopThread();
     }
 }

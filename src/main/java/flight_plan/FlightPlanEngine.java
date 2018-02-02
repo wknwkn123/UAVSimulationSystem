@@ -28,7 +28,8 @@ public class FlightPlanEngine {
         switch(type) {
             case "RANDOM":
                 FlightPlanCreator flightPlanCreator = FlightPlanFactory.getFlightPlanCreator("RANDOM");
-                setCurrentFlightPlan(flightPlanCreator.createFlightPlans(airMap));
+//                setCurrentFlightPlan(flightPlanCreator.createFlightPlans(airMap));
+                setFlights(flightPlanCreator.createFlightPlans(airMap));
                 break;
             default:
                 System.out.println("Default is printed. This should not happen.");

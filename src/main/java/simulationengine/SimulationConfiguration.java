@@ -8,7 +8,7 @@ import config.Config;
 public class SimulationConfiguration {
     private static SimulationConfiguration ourInstance = new SimulationConfiguration();
     private double coordinateDifferenceAllowed = 5;
-    private double speed = 0.01;
+    private double speed = 0.05;
     private String airspaceType = "PLANARGRAPH";
     private String flightScheduleType = "RANDOM";
     private int numberOfUAVs;
