@@ -8,6 +8,7 @@ import java.util.ArrayList;
  * This class models the individual flights
  */
 public class Flight {
+    private static int idCount = 1;
     private String flightID;
     private String requestID;
     private String UAVID;
@@ -16,8 +17,9 @@ public class Flight {
     private int arrivalTime;
 
 
-    public Flight(String flightID, String requestID, String UAVID, int departTime, int arrivalTime) {
-        this.flightID = flightID;
+    public Flight(String requestID, String UAVID, int departTime, int arrivalTime) {
+        this.flightID = "FL_" + String.format("%05d", idCount);
+        idCount++;
         this.requestID = requestID;
         this.UAVID = UAVID;
         this.departTime = departTime;
