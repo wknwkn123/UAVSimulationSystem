@@ -43,7 +43,7 @@ public class SimulationApp implements Runnable{
                     e.printStackTrace(System.err);
                 }
                 try {
-                    TimeUnit.MILLISECONDS.sleep(1000);
+                    TimeUnit.MILLISECONDS.sleep(500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

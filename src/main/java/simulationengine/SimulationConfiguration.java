@@ -11,7 +11,8 @@ public class SimulationConfiguration {
     private double speed = 0.05;
     private String airspaceType = "PLANARGRAPH";
     private String flightScheduleType = "RANDOM";
-    private int numberOfUAVs;
+    private int numberOfUAVs = 20;
+    private int numberOfFlights = 20;
     private Config config = new Config();
 
     public static SimulationConfiguration getInstance() {
@@ -67,5 +68,13 @@ public class SimulationConfiguration {
 
     public void setConfig(Config config) {
         this.config = config;
+    }
+
+    public int getNumberOfFlights() {
+        return numberOfFlights;
+    }
+
+    public void setNumberOfFlights(int numberOfFlights) {
+        this.numberOfFlights = numberOfFlights;
     }
 }

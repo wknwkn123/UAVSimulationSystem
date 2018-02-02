@@ -5,6 +5,7 @@ import airspaceengine.airspacestructure.AirspaceStructure;
 import airspaceengine.routesegment.RouteSegment;
 import collisionavoidanceengine.flightplan.Flight;
 import collisionavoidanceengine.flightplan.FlightSchedule;
+import simulationengine.SimulationConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
 
     public List<Flight> createFlightPlans(AirspaceStructure airMap) {
         Random random = new Random();
-        for (int i = 0; i < 100; i++){
+        for (int i = 0; i < SimulationConfiguration.getInstance().getNumberOfFlights(); i++){
             int randomInt = random.nextInt(50 - 1 + 1) + 1;
             flights.add(new Flight("RQ_"  + String.format("%03d", i + 1), "UV_"  + String.format("%05d", i + 1), randomInt, randomInt));
         }
@@ -27,7 +28,7 @@ public class RandomFlightPlanCreator implements FlightPlanCreator {
             path.add(segment.getTo().getNodeID());
             flights.get(j).setFlightPath(path);
             j++;
-            if (j >= 100)
+            if (j >= SimulationConfiguration.getInstance().getNumberOfFlights())
                 break;
         }
 //        ArrayList<String> path1 = new ArrayList<>();

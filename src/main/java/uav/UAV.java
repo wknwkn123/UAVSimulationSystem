@@ -76,7 +76,7 @@ public class UAV implements Runnable{
                     Flight plan = flightPlans.get(0);
                     if (plan.getDepartTime() > Time.getInstance().getUnit()) {
                         try {
-                            TimeUnit.MILLISECONDS.sleep(1000 * (plan.getDepartTime() - Time.getInstance().getUnit()));
+                            TimeUnit.MILLISECONDS.sleep(500 * (plan.getDepartTime() - Time.getInstance().getUnit()));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -115,7 +115,7 @@ public class UAV implements Runnable{
                                 }
 
                                 try {
-                                    TimeUnit.MILLISECONDS.sleep(1000);
+                                    TimeUnit.MILLISECONDS.sleep(500);
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }

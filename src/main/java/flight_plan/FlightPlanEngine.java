@@ -6,6 +6,7 @@ import airspaceengine.airspacestructure.AirspaceStructure;
 import collisionavoidanceengine.flightplan.Flight;
 import collisionavoidanceengine.flightplan.FlightSchedule;
 import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import simulationengine.SimulationConfiguration;
 import uav.UAV;
 import uav.UAVEngine;
 
@@ -60,7 +61,7 @@ public class FlightPlanEngine {
             case "RANDOM":
                 int i = 0;
                 for (FlightPlan plan :  FlightPlanEngine.getInstance().getFlightPlans()) {
-                    UAV uav = UAVEngine.getInstance().getUAVs().get(i % 100);
+                    UAV uav = UAVEngine.getInstance().getUAVs().get(i % SimulationConfiguration.getInstance().getNumberOfUAVs());
                     uav.addJob(plan);
                     System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
                     i++;

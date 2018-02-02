@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe3c4a24-d3f1-47ca-a69d-07fcb2eb825c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/Flight.java" afterPath="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/Flight.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" afterPath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" afterPath="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java" afterPath="$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uav/UAV.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
     </list>
@@ -19,32 +19,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+            <state relative-caret-position="140">
+              <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UAV.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UAV.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="117" column="68" lean-forward="false" selection-start-line="117" selection-start-column="68" selection-end-line="117" selection-end-column="68" />
+            <state relative-caret-position="155">
+              <caret line="78" column="59" lean-forward="false" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
               <folding>
                 <element signature="e#1818#1819#0" expanded="true" />
                 <element signature="e#1848#1849#0" expanded="true" />
                 <element signature="e#2023#2024#0" expanded="true" />
                 <element signature="e#2059#2060#0" expanded="true" />
-                <element signature="e#13779#13780#0" expanded="true" />
-                <element signature="e#13810#13811#0" expanded="true" />
-                <element signature="e#13839#13840#0" expanded="true" />
-                <element signature="e#13866#13867#0" expanded="true" />
-                <element signature="e#13908#13909#0" expanded="true" />
-                <element signature="e#13940#13941#0" expanded="true" />
+                <element signature="e#13777#13778#0" expanded="true" />
+                <element signature="e#13808#13809#0" expanded="true" />
+                <element signature="e#13837#13838#0" expanded="true" />
+                <element signature="e#13864#13865#0" expanded="true" />
+                <element signature="e#13906#13907#0" expanded="true" />
+                <element signature="e#13938#13939#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,15 +95,15 @@
         <option value="$PROJECT_DIR$/src/main/java/uav/uav_json_encoder/UAVJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/uav/uav_json_encoder/NodePoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/collisionavoidanceengine/flightplan/Flight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
       </list>
     </option>
   </component>
@@ -432,15 +432,16 @@
       <workItem from="1517384199463" duration="2744000" />
       <workItem from="1517414104778" duration="65000" />
       <workItem from="1517417257660" duration="5002000" />
-      <workItem from="1517424481757" duration="5612000" />
+      <workItem from="1517424481757" duration="6502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28258000" />
+    <option name="totallyTimeSpent" value="29148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -450,7 +451,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9726368" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33830845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3146766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -688,19 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uav/uav_json_encoder/NodePoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -826,17 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/AirspaceEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/waypoint/WPMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -853,14 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -869,46 +838,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/airspaceengine/AirspaceEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="62" column="75" lean-forward="false" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
+        <state relative-caret-position="-113">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="72" column="37" lean-forward="false" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+          <folding>
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1576#1577#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1955#1956#0" expanded="true" />
+            <element signature="e#2009#2010#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="315">
+          <caret line="30" column="79" lean-forward="false" selection-start-line="30" selection-start-column="79" selection-end-line="30" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uav/RandomUAVCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
+        <state relative-caret-position="120">
+          <caret line="11" column="83" lean-forward="false" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="117" column="68" lean-forward="false" selection-start-line="117" selection-start-column="68" selection-end-line="117" selection-end-column="68" />
+        <state relative-caret-position="155">
+          <caret line="78" column="59" lean-forward="false" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="59" />
           <folding>
             <element signature="e#1818#1819#0" expanded="true" />
             <element signature="e#1848#1849#0" expanded="true" />
             <element signature="e#2023#2024#0" expanded="true" />
             <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#13779#13780#0" expanded="true" />
-            <element signature="e#13810#13811#0" expanded="true" />
-            <element signature="e#13839#13840#0" expanded="true" />
-            <element signature="e#13866#13867#0" expanded="true" />
-            <element signature="e#13908#13909#0" expanded="true" />
-            <element signature="e#13940#13941#0" expanded="true" />
+            <element signature="e#13777#13778#0" expanded="true" />
+            <element signature="e#13808#13809#0" expanded="true" />
+            <element signature="e#13837#13838#0" expanded="true" />
+            <element signature="e#13864#13865#0" expanded="true" />
+            <element signature="e#13906#13907#0" expanded="true" />
+            <element signature="e#13938#13939#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
