@@ -36,8 +36,8 @@ public class UAVEngine {
     }
 
     public void stopThread() {
-        for (Thread uav : UAVThread)
-            uav.stop();
+        for (UAV uav : UAVs)
+            uav.stopWork();
     }
 
 

@@ -119,7 +119,11 @@ public class UAV implements Runnable{
                                 } catch (InterruptedException e) {
                                     e.printStackTrace();
                                 }
+                                if(stopWork)
+                                    break;
                             }
+                            if(stopWork)
+                                break;
                         }
                         System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
                         RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();

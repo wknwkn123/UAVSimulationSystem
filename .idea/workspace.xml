@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fe3c4a24-d3f1-47ca-a69d-07fcb2eb825c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanCreator.java" afterPath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" afterPath="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" afterPath="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java" afterPath="$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uav/UAV.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" afterPath="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +16,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServerEndpoint.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerEndpoint.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="78" column="51" lean-forward="true" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
+            <state relative-caret-position="515">
+              <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
               <folding>
                 <marker date="1517566703826" expanded="true" signature="1661:1884" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UAV.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3075">
+              <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+              <folding>
+                <element signature="e#2023#2024#0" expanded="true" />
+                <element signature="e#2059#2060#0" expanded="true" />
+                <element signature="e#13777#13778#0" expanded="true" />
+                <element signature="e#13808#13809#0" expanded="true" />
+                <element signature="e#13837#13838#0" expanded="true" />
+                <element signature="e#13864#13865#0" expanded="true" />
+                <element signature="e#13906#13907#0" expanded="true" />
+                <element signature="e#13938#13939#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulationApp.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
+      <file leaf-file-name="UAVEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            <state relative-caret-position="352">
+              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -95,14 +120,14 @@
         <option value="$PROJECT_DIR$/src/main/java/uav/UAVJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/uav/uav_json_encoder/UAVJSON.java" />
         <option value="$PROJECT_DIR$/src/main/java/uav/uav_json_encoder/NodePoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/RandomFlightPlanCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/flight_plan/FlightPlanEngine.java" />
         <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uav/UAV.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uav/UAVEngine.java" />
       </list>
     </option>
   </component>
@@ -431,12 +456,12 @@
       <workItem from="1517384199463" duration="2744000" />
       <workItem from="1517414104778" duration="65000" />
       <workItem from="1517417257660" duration="5002000" />
-      <workItem from="1517424481757" duration="3297000" />
+      <workItem from="1517424481757" duration="3626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25943000" />
+    <option name="totallyTimeSpent" value="26272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -450,9 +475,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.76616913" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.829602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21393035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3146766" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746781" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -694,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/json_formatting/StartSimulation.java" />
     <entry file="file://$PROJECT_DIR$/data/converter/converter.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -828,23 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="215" column="51" lean-forward="false" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
-          <folding>
-            <element signature="e#2023#2024#0" expanded="true" />
-            <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#13609#13610#0" expanded="true" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13669#13670#0" expanded="true" />
-            <element signature="e#13696#13697#0" expanded="true" />
-            <element signature="e#13738#13739#0" expanded="true" />
-            <element signature="e#13770#13771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/json_formatting/SimulationParameter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -870,6 +870,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1403">
+          <caret line="707" column="0" lean-forward="false" selection-start-line="707" selection-start-column="0" selection-end-line="707" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/CoreEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
@@ -878,29 +886,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="78" column="51" lean-forward="true" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
+        <state relative-caret-position="3075">
+          <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding>
-            <marker date="1517566703826" expanded="true" signature="1661:1884" ph="..." />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2059#2060#0" expanded="true" />
+            <element signature="e#13777#13778#0" expanded="true" />
+            <element signature="e#13808#13809#0" expanded="true" />
+            <element signature="e#13837#13838#0" expanded="true" />
+            <element signature="e#13864#13865#0" expanded="true" />
+            <element signature="e#13906#13907#0" expanded="true" />
+            <element signature="e#13938#13939#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/simulationengine/SimulationApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="48" column="17" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        <state relative-caret-position="568">
+          <caret line="59" column="39" lean-forward="false" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uav/UAVEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/websocket/simple_v2/server/ServerEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="78" column="45" lean-forward="true" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+          <folding>
+            <marker date="1517566703826" expanded="true" signature="1661:1884" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
