@@ -19,17 +19,19 @@ public class FlightPlanEngine {
     private FlightSchedule currentFlightPlan;
     private UAVEngine uavEngine;
     private int numberOfUAVs;
+    private SimulationConfiguration configuration;
 
-    public FlightPlanEngine() {
-        uavEngine = new UAVEngine();
+    public FlightPlanEngine(SimulationConfiguration config) {
+        uavEngine = new UAVEngine(config);
+        this.configuration = config;
     }
 
     public void createFlightPlans(String type, AirspaceStructure airMap) {
-        switch(type) {
+        switch(configuration.getFlightScheduleType()) {
             case "RANDOM":
                 FlightPlanCreator flightPlanCreator = FlightPlanFactory.getFlightPlanCreator("RANDOM");
 //                setCurrentFlightPlan(flightPlanCreator.createFlightPlans(airMap));
-                setFlights(flightPlanCreator.createFlightPlans(airMap));
+                setFlights(flightPlanCreator.createFlightPlans(airMap, this.configuration));
                 break;
             default:
                 System.out.println("Default is printed. This should not happen.");

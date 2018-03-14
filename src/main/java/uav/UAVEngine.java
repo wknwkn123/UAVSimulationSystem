@@ -1,19 +1,24 @@
 package uav;
 
+import simulationengine.SimulationConfiguration;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class UAVEngine {
     private List<UAV> UAVs;
     private List<Thread> UAVThread = new ArrayList<>();
+    private SimulationConfiguration config;
 
-    public UAVEngine() { }
+    public UAVEngine(SimulationConfiguration configuration) {
+        this.config = configuration;
+    }
 
     public void createUAVs(String type) {
         switch(type) {
             case "RANDOM":
                 UAVCreator uavCreator = UAVFactory.getUAVCreator("RANDOM");
-                setUAVs(uavCreator.createUAVs());
+                setUAVs(uavCreator.createUAVs(this.config.getNumberOfFlights()));
                 for (UAV uav : this.getUAVs()) {
                     UAVThread.add(new Thread(uav));
                 }
@@ -25,7 +30,6 @@ public class UAVEngine {
     }
 
     public void startThread() {
-        this.setOrigins();
         for (Thread uav : UAVThread)
             uav.start();
     }
@@ -46,10 +50,5 @@ public class UAVEngine {
 
     public List<Thread> getUAVThread() {
         return UAVThread;
-    }
-
-    public void setOrigins() {
-        for (UAV uav : UAVs)
-            uav.setOrigin();
     }
 }

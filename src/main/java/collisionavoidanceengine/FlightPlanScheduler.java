@@ -37,7 +37,7 @@ public class FlightPlanScheduler {
         try {
             PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator(config.pathToMap);
             myAirMap=pl.createAirspaceStructure();
-            AirspaceEngine.getInstance().setAirMap(myAirMap);
+//            AirspaceEngine.getInstance().setAirMap(myAirMap);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.printf("ERROR : CANNOT CREATE AIRMAP!");
@@ -369,7 +369,7 @@ public class FlightPlanScheduler {
 
         }
         //put the schedule into the flight plan engine for simulation purposes
-        FlightPlanEngine.getInstance().setCurrentFlightPlan(this.currentFlightPlan);
+//        FlightPlanEngine.getInstance().setCurrentFlightPlan(this.currentFlightPlan);
 
         System.out.printf("All Requests Finished Scheduling. ");
     }

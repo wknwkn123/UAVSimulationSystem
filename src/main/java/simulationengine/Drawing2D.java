@@ -71,62 +71,62 @@ public class Drawing2D {
 //        }
     }
 
-    static class CustomComponents0 extends JLabel {
-
-        private static final long serialVersionUID = 1L;
-
-        @Override
-        public Dimension getMinimumSize() {
-            return new Dimension(200, 100);
-        }
-
-        @Override
-        public Dimension getPreferredSize() {
-            return new Dimension(300, 200);
-        }
-
-        @Override
-        public void paintComponent(Graphics g) {
-            int margin = 10;
-            Dimension dim = getSize();
-            super.paintComponent(g);
-            g.setColor(Color.white);
-            g.fillRect(margin, margin, dim.width - margin * 2, dim.height - margin * 2);
-
-            setBackground(Color.WHITE);  // set background color for this JPanel
-
-                g.setColor(Color.black);    // set the drawing color
-                for (Waypoint wp : AirspaceEngine.getInstance().getAirMap().getNodes().getWaypointList()) {
-                    Double x = wp.getX();
-                    Double y = wp.getY();
-                    g.drawOval(x.intValue(), y.intValue(), 30, 30);
-                    g.fillOval(x.intValue(), y.intValue(), 30, 30);
-                }
-
-                g.setColor(Color.black);
-                for (Map.Entry<String, RouteSegment> rs : AirspaceEngine.getInstance().getAirMap().getEdges().getRouteSegMap().entrySet()) {
-                    Double x1 = rs.getValue().getFrom().getX();
-                    Double x2 = rs.getValue().getTo().getX();
-                    Double y1 = rs.getValue().getFrom().getY();
-                    Double y2 = rs.getValue().getTo().getY();
-                    g.drawLine(x1.intValue(), y1.intValue(), x2.intValue(), y2.intValue());
-                }
-
-                g.setColor(Color.red);
-                for (UAV uav : UAVEngine.getInstance().getUAVs()) {
-                    uav.setOrigin();
-                    Double x = uav.getOperation().getCurrentX();
-                    Double y = uav.getOperation().getCurrentY();
-                    g.drawRect(x.intValue(), y.intValue(), 15, 15);
-                    g.fillRect(x.intValue(), y.intValue(), 15, 15);
-                }
-
-                // Printing texts
-                g.setColor(Color.black);
-                g.setFont(new Font("Monospaced", Font.PLAIN, 12));
-                g.drawString("Airspace Simulation ...", 10, 20);
-        }
-    }
+//    static class CustomComponents0 extends JLabel {
+//
+//        private static final long serialVersionUID = 1L;
+//
+//        @Override
+//        public Dimension getMinimumSize() {
+//            return new Dimension(200, 100);
+//        }
+//
+//        @Override
+//        public Dimension getPreferredSize() {
+//            return new Dimension(300, 200);
+//        }
+//
+//        @Override
+//        public void paintComponent(Graphics g) {
+//            int margin = 10;
+//            Dimension dim = getSize();
+//            super.paintComponent(g);
+//            g.setColor(Color.white);
+//            g.fillRect(margin, margin, dim.width - margin * 2, dim.height - margin * 2);
+//
+//            setBackground(Color.WHITE);  // set background color for this JPanel
+//
+//                g.setColor(Color.black);    // set the drawing color
+//                for (Waypoint wp : AirspaceEngine.getInstance().getAirMap().getNodes().getWaypointList()) {
+//                    Double x = wp.getX();
+//                    Double y = wp.getY();
+//                    g.drawOval(x.intValue(), y.intValue(), 30, 30);
+//                    g.fillOval(x.intValue(), y.intValue(), 30, 30);
+//                }
+//
+//                g.setColor(Color.black);
+//                for (Map.Entry<String, RouteSegment> rs : AirspaceEngine.getInstance().getAirMap().getEdges().getRouteSegMap().entrySet()) {
+//                    Double x1 = rs.getValue().getFrom().getX();
+//                    Double x2 = rs.getValue().getTo().getX();
+//                    Double y1 = rs.getValue().getFrom().getY();
+//                    Double y2 = rs.getValue().getTo().getY();
+//                    g.drawLine(x1.intValue(), y1.intValue(), x2.intValue(), y2.intValue());
+//                }
+//
+//                g.setColor(Color.red);
+//                for (UAV uav : UAVEngine.getInstance().getUAVs()) {
+//                    uav.setOrigin();
+//                    Double x = uav.getOperation().getCurrentX();
+//                    Double y = uav.getOperation().getCurrentY();
+//                    g.drawRect(x.intValue(), y.intValue(), 15, 15);
+//                    g.fillRect(x.intValue(), y.intValue(), 15, 15);
+//                }
+//
+//                // Printing texts
+//                g.setColor(Color.black);
+//                g.setFont(new Font("Monospaced", Font.PLAIN, 12));
+//                g.drawString("Airspace Simulation ...", 10, 20);
+//        }
+//    }
 
 
 
