@@ -3,6 +3,8 @@ package simulationengine.json_formatting;
 public class SimulationParameter {
     private String airspaceType;
     private String flightScheduleType;
+    private double averageSpeed;
+    private int simulationRate;
 
     public String getAirspaceType() {
         return airspaceType;
@@ -18,6 +20,22 @@ public class SimulationParameter {
 
     public void setFlightScheduleType(String flightScheduleType) {
         this.flightScheduleType = flightScheduleType;
+    }
+
+    public double getAverageSpeed() {
+        return averageSpeed;
+    }
+
+    public void setAverageSpeed(double averageSpeed) {
+        this.averageSpeed = averageSpeed;
+    }
+
+    public int getSimulationRate() {
+        return simulationRate;
+    }
+
+    public void setSimulationRate(int simulationRate) {
+        this.simulationRate = simulationRate;
     }
 }
 

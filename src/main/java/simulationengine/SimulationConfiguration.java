@@ -8,15 +8,18 @@ import simulationengine.json_formatting.Simulation;
  */
 public class SimulationConfiguration {
     private double coordinateDifferenceAllowed = 5;
-    private double speed = 0.05;
+    private double averageSpeed;
     private String airspaceType;
     private String flightScheduleType;
     private int numberOfUAVs = 20;
     private int numberOfFlights = 20;
+    private int simulationRate;
 
     public SimulationConfiguration(Simulation param) {
-        airspaceType = param.getParameter().getAirspaceType();
-        flightScheduleType = param.getParameter().getFlightScheduleType();
+        this.airspaceType = param.getParameter().getAirspaceType();
+        this.flightScheduleType = param.getParameter().getFlightScheduleType();
+        this.simulationRate = param.getParameter().getSimulationRate();
+        this.averageSpeed = param.getParameter().getAverageSpeed();
     }
 
     public double getCoordinateDifferenceAllowed() {
@@ -28,11 +31,11 @@ public class SimulationConfiguration {
     }
 
     public double getSpeed() {
-        return speed;
+        return averageSpeed;
     }
 
     public void setSpeed(double speed) {
-        this.speed = speed;
+        this.averageSpeed = speed;
     }
 
     public String getAirspaceType() {
