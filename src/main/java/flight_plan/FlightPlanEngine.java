@@ -18,7 +18,6 @@ public class FlightPlanEngine {
     private List<FlightPlan> flightPlans;
     private FlightSchedule currentFlightPlan;
     private UAVEngine uavEngine;
-    private int numberOfUAVs;
     private SimulationConfiguration configuration;
 
     public FlightPlanEngine(SimulationConfiguration config) {
@@ -62,7 +61,7 @@ public class FlightPlanEngine {
             case "RANDOM":
                 int i = 0;
                 for (FlightPlan plan :  this.getFlightPlans()) {
-                    UAV uav = uavEngine.getUAVs().get(i % this.numberOfUAVs);
+                    UAV uav = uavEngine.getUAVs().get(i % this.configuration.getNumberOfUAVs());
                     uav.addJob(plan);
                     System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
                     i++;
@@ -100,12 +99,4 @@ public class FlightPlanEngine {
     }
 
     public UAVEngine getUavEngine() { return uavEngine; }
-
-    public void setNumberOfUAVs(int numberOfUAVs) {
-        this.numberOfUAVs = numberOfUAVs;
-    }
-
-    public int getNumberOfUAVs() {
-        return numberOfUAVs;
-    }
 }

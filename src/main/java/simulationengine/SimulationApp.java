@@ -27,7 +27,6 @@ public class SimulationApp implements Runnable{
     public SimulationApp(Simulation param){
         airspaceEngine = new AirspaceEngine();
         configuration = new SimulationConfiguration(param);
-        flightPlanEngine.setNumberOfUAVs(configuration.getNumberOfUAVs());
         flightPlanEngine = new FlightPlanEngine(this.configuration);
     }
 
