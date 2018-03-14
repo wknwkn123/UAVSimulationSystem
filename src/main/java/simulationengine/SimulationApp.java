@@ -1,8 +1,11 @@
 package simulationengine;
 
+import airspaceengine.AirspaceEngine;
 import collisionavoidanceengine.FlightPlanScheduler;
 import config.Config;
+import flight_plan.FlightPlanEngine;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
+import simulationengine.json_formatting.Simulation;
 import uav.UAV;
 import uav.UAVEngine;
 import websocket.simple_v2.encoder.UAVEncoder;
@@ -12,18 +15,47 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Singleton runnable for simulation in order to separate main thread and simulation thread.
+ * Runnable for simulation in order to separate main thread and simulation thread.
  */
 
 public class SimulationApp implements Runnable{
     private boolean stopWork;
-    private static SimulationApp instance = new SimulationApp();
+    private FlightPlanEngine flightPlanEngine;
+    private AirspaceEngine airspaceEngine;
+    private SimulationConfiguration configuration;
 
-    public static SimulationApp getInstance() {
-        return instance;
+    public SimulationApp(Simulation param){
+        flightPlanEngine = new FlightPlanEngine();
+        airspaceEngine = new AirspaceEngine();
+        configuration = new SimulationConfiguration(param);
+        flightPlanEngine.setNumberOfUAVs(configuration.getNumberOfUAVs());
     }
 
-    public SimulationApp(){}
+    public void startSimulation() {
+        this.configuration.setAirspaceType(configuration.getAirspaceType());
+        this.configuration.setFlightScheduleType(configuration.getFlightScheduleType());
+
+        //starting simulation
+        // create airspace
+        try {
+            airspaceEngine.createAirspace(new Config());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //create uavs
+        flightPlanEngine.getUavEngine().createUAVs("RANDOM");
+
+        //create schedule/demand
+        flightPlanEngine.createFlightPlans("RANDOM", airspaceEngine.getAirMap());
+
+        //assign schedule to UAVs
+        flightPlanEngine.assignFlightPlans("RANDOMPLAN");
+
+        flightPlanEngine.getUavEngine().startThread();
+        Thread t = new Thread(this);
+        t.start();
+    }
 
     public void run() {
         while (!this.stopWork) {
@@ -34,7 +66,7 @@ public class SimulationApp implements Runnable{
                 //Blocking Send of a TEXT message to remote endpoint
                 try
                 {
-                    for(UAV uav : UAVEngine.getInstance().getUAVs()) {
+                    for(UAV uav : flightPlanEngine.getUavEngine().getUAVs()) {
                         remote.sendString(UAVEncoder.getInstance().encode(uav));
                     }
                 }
@@ -57,6 +89,6 @@ public class SimulationApp implements Runnable{
 
 	public void stopWork() {
         this.stopWork = true;
-        UAVEngine.getInstance().stopThread();
+        this.flightPlanEngine.getUavEngine().stopThread();
     }
 }

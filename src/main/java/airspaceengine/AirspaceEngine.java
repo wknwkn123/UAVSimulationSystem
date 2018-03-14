@@ -6,17 +6,9 @@ import config.Config;
 import java.io.IOException;
 
 public class AirspaceEngine {
-    public AirspaceStructure airMap;
-    private static AirspaceEngine singleton;
+    private AirspaceStructure airMap;
 
     public AirspaceEngine(){}
-
-    public static AirspaceEngine getInstance() {
-        if(singleton == null) {
-            singleton = new AirspaceEngine();
-        }
-        return singleton;
-    }
 
     public void createAirspace(Config config) throws IOException {
     		switch(config.airMapType) {

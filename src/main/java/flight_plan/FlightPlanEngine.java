@@ -14,16 +14,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlightPlanEngine {
-    private static FlightPlanEngine ourInstance = new FlightPlanEngine();
     private List<Flight> flights = new ArrayList<>();
     private List<FlightPlan> flightPlans;
     private FlightSchedule currentFlightPlan;
+    private UAVEngine uavEngine;
+    private int numberOfUAVs;
 
-    public static FlightPlanEngine getInstance() {
-        return ourInstance;
+    public FlightPlanEngine() {
+        uavEngine = new UAVEngine();
     }
-
-    private FlightPlanEngine() { }
 
     public void createFlightPlans(String type, AirspaceStructure airMap) {
         switch(type) {
@@ -60,8 +59,8 @@ public class FlightPlanEngine {
         switch (type) {
             case "RANDOM":
                 int i = 0;
-                for (FlightPlan plan :  FlightPlanEngine.getInstance().getFlightPlans()) {
-                    UAV uav = UAVEngine.getInstance().getUAVs().get(i % SimulationConfiguration.getInstance().getNumberOfUAVs());
+                for (FlightPlan plan :  this.getFlightPlans()) {
+                    UAV uav = uavEngine.getUAVs().get(i % this.numberOfUAVs);
                     uav.addJob(plan);
                     System.out.println("Job " + plan.getId() + " is assigned to UAV " + uav.getUAVInfo().getId());
                     i++;
@@ -69,8 +68,8 @@ public class FlightPlanEngine {
                 break;
             case "RANDOMPLAN":
                 int j = 0;
-                for (Flight plan :  FlightPlanEngine.getInstance().getFlights()) {
-                    UAV uav = UAVEngine.getInstance().getUAVs().get(j);
+                for (Flight plan :  this.getFlights()) {
+                    UAV uav = uavEngine.getUAVs().get(j);
                     uav.addFlightPlan(plan);
                     System.out.println("Job " + plan.getFlightID() + " is assigned to UAV " + uav.getUAVInfo().getId());
                     j++;
@@ -96,5 +95,15 @@ public class FlightPlanEngine {
 
     public void setFlights(List<Flight> flights) {
         this.flights = flights;
+    }
+
+    public UAVEngine getUavEngine() { return uavEngine; }
+
+    public void setNumberOfUAVs(int numberOfUAVs) {
+        this.numberOfUAVs = numberOfUAVs;
+    }
+
+    public int getNumberOfUAVs() {
+        return numberOfUAVs;
     }
 }

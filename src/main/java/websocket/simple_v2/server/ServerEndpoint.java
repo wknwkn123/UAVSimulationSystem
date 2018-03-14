@@ -43,40 +43,12 @@ public class ServerEndpoint {
     public void onMessage(String message) {
         Gson gson = new Gson();
         Simulation parameter = gson.fromJson(message, Simulation.class);
-//        System.out.println(message);
-//        System.out.println();
-//        System.out.println(parameter.getParameter().getAirspaceType());
-//        System.out.println();
-//        System.out.println(parameter.getParameter().getFlightScheduleType());
-//        System.out.println();
-//        System.out.println(parameter.getSimulationStart());
 
         if (parameter.getSimulationStart().equalsIgnoreCase("start")){
-            SimulationConfiguration.getInstance().setAirspaceType(parameter.getParameter().getAirspaceType());
-            SimulationConfiguration.getInstance().setFlightScheduleType(parameter.getParameter().getFlightScheduleType());
-
-            //starting simulation
-            // create airspace
-            try {
-                AirspaceEngine.getInstance().createAirspace(SimulationConfiguration.getInstance().getConfig());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            //create uavs
-            UAVEngine.getInstance().createUAVs("RANDOM");
-
-            //create schedule/demand
-            FlightPlanEngine.getInstance().createFlightPlans("RANDOM", AirspaceEngine.getInstance().getAirMap());
-
-            //assign schedule to UAVs
-            FlightPlanEngine.getInstance().assignFlightPlans("RANDOMPLAN");
-
-            UAVEngine.getInstance().startThread();
-            Thread t = new Thread(SimulationApp.getInstance());
-            t.start();
+            SimulationApp simApp = new SimulationApp(parameter);
+            simApp.startSimulation();
         } else {
-            SimulationApp.getInstance().stopWork();
+//            SimulationApp.getInstance().stopWork();
         }
     }
 

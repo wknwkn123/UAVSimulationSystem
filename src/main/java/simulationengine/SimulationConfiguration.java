@@ -1,25 +1,22 @@
 package simulationengine;
 
 import config.Config;
+import simulationengine.json_formatting.Simulation;
 
 /**
  * Configuration to hold all the parameters set by front end. The one source of truth.
  */
 public class SimulationConfiguration {
-    private static SimulationConfiguration ourInstance = new SimulationConfiguration();
     private double coordinateDifferenceAllowed = 5;
     private double speed = 0.05;
-    private String airspaceType = "PLANARGRAPH";
-    private String flightScheduleType = "RANDOM";
+    private String airspaceType;
+    private String flightScheduleType;
     private int numberOfUAVs = 20;
     private int numberOfFlights = 20;
-    private Config config = new Config();
 
-    public static SimulationConfiguration getInstance() {
-        return ourInstance;
-    }
-
-    private SimulationConfiguration() {
+    public SimulationConfiguration(Simulation param) {
+        airspaceType = param.getParameter().getAirspaceType();
+        flightScheduleType = param.getParameter().getFlightScheduleType();
     }
 
     public double getCoordinateDifferenceAllowed() {
@@ -60,14 +57,6 @@ public class SimulationConfiguration {
 
     public void setNumberOfUAVs(int numberOfUAVs) {
         this.numberOfUAVs = numberOfUAVs;
-    }
-
-    public Config getConfig() {
-        return config;
-    }
-
-    public void setConfig(Config config) {
-        this.config = config;
     }
 
     public int getNumberOfFlights() {

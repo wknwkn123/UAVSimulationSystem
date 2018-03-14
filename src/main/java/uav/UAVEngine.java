@@ -4,22 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UAVEngine {
-    private static UAVEngine ourInstance = new UAVEngine();
     private List<UAV> UAVs;
     private List<Thread> UAVThread = new ArrayList<>();
 
-    public static UAVEngine getInstance() {
-        return ourInstance;
-    }
-
-    private UAVEngine() { }
+    public UAVEngine() { }
 
     public void createUAVs(String type) {
         switch(type) {
             case "RANDOM":
                 UAVCreator uavCreator = UAVFactory.getUAVCreator("RANDOM");
                 setUAVs(uavCreator.createUAVs());
-                for (UAV uav : UAVEngine.getInstance().getUAVs()) {
+                for (UAV uav : this.getUAVs()) {
                     UAVThread.add(new Thread(uav));
                 }
                 break;
