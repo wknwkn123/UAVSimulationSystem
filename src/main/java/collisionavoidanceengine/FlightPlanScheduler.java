@@ -1,5 +1,6 @@
 package collisionavoidanceengine;
 
+import airspaceengine.AirspaceEngine;
 import airspaceengine.airspacestructure.AirspaceStructure;
 import airspaceengine.airspacestructure.PlanarAirspaceStructureCreator;
 import airspaceengine.waypoint.Waypoint;
@@ -11,6 +12,7 @@ import collisionavoidanceengine.flightplan.FlightSchedule;
 import collisionavoidanceengine.request.Request;
 import collisionavoidanceengine.request.RequestCreatorSelector;
 import config.Config;
+import flight_plan.FlightPlanEngine;
 
 import java.util.*;
 
@@ -35,6 +37,7 @@ public class FlightPlanScheduler {
         try {
             PlanarAirspaceStructureCreator pl  = new PlanarAirspaceStructureCreator(config.pathToMap);
             myAirMap=pl.createAirspaceStructure();
+//            AirspaceEngine.getInstance().setAirMap(myAirMap);
         } catch (Exception e) {
             e.printStackTrace();
             System.out.printf("ERROR : CANNOT CREATE AIRMAP!");
@@ -332,7 +335,7 @@ public class FlightPlanScheduler {
 
                 // UAVID value is incremented by 1
                 UAVCounter++;
-                currentRequest.setUAVID("UV_" + UAVCounter);
+                currentRequest.setUAVID("UV_" + String.format("%05d", UAVCounter));
 
                 // Add this routing result to solution
                 RoutingResult curResult = new RoutingResult(flightID, currentRequest.getStartTime(), requestedTime, solutionSingleTripTemp);
@@ -365,6 +368,9 @@ public class FlightPlanScheduler {
             solutionSingleTripTemp = new ArrayList<>();
 
         }
+        //put the schedule into the flight plan engine for simulation purposes
+//        FlightPlanEngine.getInstance().setCurrentFlightPlan(this.currentFlightPlan);
+
         System.out.printf("All Requests Finished Scheduling. ");
     }
 

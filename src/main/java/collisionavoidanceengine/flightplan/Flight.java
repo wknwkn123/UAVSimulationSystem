@@ -1,5 +1,7 @@
 package collisionavoidanceengine.flightplan;
 
+import airspaceengine.waypoint.Waypoint;
+
 import java.util.ArrayList;
 
 /**
@@ -8,16 +10,18 @@ import java.util.ArrayList;
  * This class models the individual flights
  */
 public class Flight {
+    private static int idCount = 1;
     private String flightID;
     private String requestID;
     private String UAVID;
-    private ArrayList<String> flightPath;    // An array list of nodes on the flight path
+    private ArrayList<Waypoint> flightPath;    // An array list of nodes on the flight path
     private int departTime;
     private int arrivalTime;
 
 
-    public Flight(String flightID, String requestID, String UAVID, int departTime, int arrivalTime) {
-        this.flightID = flightID;
+    public Flight(String requestID, String UAVID, int departTime, int arrivalTime) {
+        this.flightID = "FL_" + String.format("%05d", idCount);
+        idCount++;
         this.requestID = requestID;
         this.UAVID = UAVID;
         this.departTime = departTime;
@@ -32,7 +36,7 @@ public class Flight {
         return requestID;
     }
 
-    public ArrayList<String> getFlightPath() {
+    public ArrayList<Waypoint> getFlightPath() {
         return flightPath;
     }
 
@@ -60,7 +64,7 @@ public class Flight {
         this.UAVID = UAVID;
     }
 
-    public void setFlightPath(ArrayList<String> flightPath) {
+    public void setFlightPath(ArrayList<Waypoint> flightPath) {
         this.flightPath = flightPath;
     }
 }

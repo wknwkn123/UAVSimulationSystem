@@ -17,13 +17,12 @@ public class Config {
     public Config(){
         inputPathRoot = "data/input";
 
-        airMapType="PLANAR";
+        airMapType="PLANARGRAPH";
         pathToMap = inputPathRoot+"/AirSpaceMap2D.json";
 
         requestType = "RANDOM";
         pathToRequest = inputPathRoot+"/RandomRequest.csv";
 
         outputPathRoot = "data/output";
-
     }
 }

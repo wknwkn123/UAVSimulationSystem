@@ -6,17 +6,9 @@ import config.Config;
 import java.io.IOException;
 
 public class AirspaceEngine {
-    public AirspaceStructure airMap;
-    private static AirspaceEngine singleton;
+    private AirspaceStructure airMap;
 
     public AirspaceEngine(){}
-
-    public static AirspaceEngine getInstance() {
-        if(singleton == null) {
-            singleton = new AirspaceEngine();
-        }
-        return singleton;
-    }
 
     public void createAirspace(Config config) throws IOException {
     		switch(config.airMapType) {
@@ -25,11 +17,20 @@ public class AirspaceEngine {
     		        this.airMap = airspaceCreator.createAirspaceStructure();
     		        break;
                 case "PLANARGRAPH":
-                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH",null);
+                    AirspaceStructureCreator airspaceC = AirspaceStructureFactory.getAirspaceStructureCreator("PLANARGRAPH", config.pathToMap);
                     this.airMap = airspaceC.createAirspaceStructure();
+                    break;
     		    default:
-    		    		System.out.println("Default is printed. This should not happen.");
-    		    		break;
+    		        System.out.println("Default is printed. This should not happen.");
+    		    	break;
     		}        
+    }
+
+    public AirspaceStructure getAirMap() {
+        return airMap;
+    }
+
+    public void setAirMap(AirspaceStructure airMap) {
+        this.airMap = airMap;
     }
 }

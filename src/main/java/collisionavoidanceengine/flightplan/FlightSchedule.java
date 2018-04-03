@@ -85,7 +85,7 @@ public class FlightSchedule {
         return this.flightPlan.get(flightID);
     }
 
-    public void setFlightPlanByID(String flightID, ArrayList<String> path) {
+    public void setFlightPlanByID(String flightID, ArrayList<Waypoint> path) {
         this.flightPlan.get(flightID).setFlightPath(path);
     }
 }
