@@ -12,6 +12,7 @@ import websocket.simple_v2.encoder.UAVEncoder;
 import websocket.simple_v2.server.Websocket;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -74,12 +75,14 @@ public class SimulationApp implements Runnable{
             for (int j = 0; j < 200; j++) {
                 Time.getInstance().tick();
                 RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();
+                ArrayList<String> uavPositions = new ArrayList<>();
                 //Blocking Send of a TEXT message to remote endpoint
                 try
                 {
                     for(UAV uav : flightPlanEngine.getUavEngine().getUAVs()) {
-                        remote.sendString(UAVEncoder.getInstance().encode(uav));
+                        uavPositions.add(UAVEncoder.getInstance().encode(uav));
                     }
+                    remote.sendString(uavPositions.toString());
                 }
                 catch (IOException e)
                 {
