@@ -99,7 +99,6 @@ modules.xml
 *.idea/misc.xml
 .idea/workspace.xml
 *.ipr
-*.idea
 
 # Sonarlint plugin
 .idea/sonarlint
