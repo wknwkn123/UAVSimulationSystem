@@ -1,10 +1,9 @@
-package websocket.simple_v2.server;
+package websocket.servers.server;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.server.WebSocketHandler;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
-import simulationengine.SimulationApp;
 
 
 public class Websocket implements Runnable{

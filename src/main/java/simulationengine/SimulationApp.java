@@ -1,15 +1,13 @@
 package simulationengine;
 
 import airspaceengine.AirspaceEngine;
-import collisionavoidanceengine.FlightPlanScheduler;
 import config.Config;
 import flight_plan.FlightPlanEngine;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
 import simulationengine.json_formatting.Simulation;
 import uav.UAV;
-import uav.UAVEngine;
-import websocket.simple_v2.encoder.UAVEncoder;
-import websocket.simple_v2.server.Websocket;
+import websocket.servers.encoder.UAVEncoder;
+import websocket.servers.server.Websocket;
 
 import java.io.IOException;
 import java.util.ArrayList;

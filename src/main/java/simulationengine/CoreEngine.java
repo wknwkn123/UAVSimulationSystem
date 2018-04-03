@@ -1,7 +1,7 @@
 package simulationengine;
 
-import websocket.simple_v2.server.HTTPServer;
-import websocket.simple_v2.server.Websocket;
+import websocket.servers.server.HTTPServer;
+import websocket.servers.server.Websocket;
 
 /**
  * Entry point for the application.

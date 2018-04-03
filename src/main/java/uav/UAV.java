@@ -1,15 +1,13 @@
 package uav;
-import airspaceengine.AirspaceEngine;
 import airspaceengine.waypoint.Waypoint;
 import collisionavoidanceengine.flightplan.Flight;
 import com.google.gson.Gson;
 import flight_plan.FlightPlan;
 import org.eclipse.jetty.websocket.api.RemoteEndpoint;
-import simulationengine.SimulationConfiguration;
 import simulationengine.Time;
 import uav.uav_json_encoder.NodePoint;
 import uav.uav_json_encoder.UAVJSON;
-import websocket.simple_v2.server.Websocket;
+import websocket.servers.server.Websocket;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -138,82 +136,10 @@ public class UAV implements Runnable{
         }
     }
 
-//    public void run() {
-//        while(!stopWork && !done) {
-//            while(!Time.getInstance().isCompleted()) {
-//                if (schedule.size() > 0) {
-//                    FlightPlan plan = schedule.get(0);
-//                    if (plan.getTargetStartTime() > Time.getInstance().getUnit()) {
-//                        try {
-//                            TimeUnit.MILLISECONDS.sleep(300 * (plan.getTargetStartTime() - Time.getInstance().getUnit()));
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                    if (plan.getTargetStartTime() <= Time.getInstance().getUnit()) {
-//                        System.out.println("Flight plan " + plan.getId() + " started");
-//                        for (FlightSegment segment : plan.getFlightPath()) {
-//                            Waypoint origin = segment.getSegment().getFrom();
-//                            Waypoint destination = segment.getSegment().getTo();
-//                            double xDirection = destination.getX() - origin.getX();
-//                            double yDirection = destination.getY() - origin.getY();
-//                            double zDirection = destination.getZ() - origin.getZ();
-//                            double prevX = origin.getX();
-//                            double prevY = origin.getY();
-//                            double prevZ = origin.getZ();
-//
-//                            while (Math.abs(operation.getCurrentX() - destination.getX()) > this.errorMargin || Math.abs(operation.getCurrentY() - destination.getY()) > this.errorMargin || Math.abs(operation.getCurrentZ() - destination.getZ()) > this.errorMargin) {
-//                                if (Math.abs(operation.getCurrentX() - destination.getX()) > this.errorMargin) {
-//                                    operation.setCurrentX(operation.getCurrentX() + SimulationConfiguration.getInstance().getSpeed() * xDirection);
-//                                }
-//
-//                                if (Math.abs(operation.getCurrentY() - destination.getY()) > this.errorMargin) {
-//                                    operation.setCurrentY(operation.getCurrentY() + SimulationConfiguration.getInstance().getSpeed() * yDirection);
-//                                }
-//
-//                                if (Math.abs(operation.getCurrentZ() - destination.getZ()) > this.errorMargin) {
-//                                    operation.setCurrentZ(operation.getCurrentZ() + SimulationConfiguration.getInstance().getSpeed() * zDirection);
-//                                }
-//
-//                                if (Math.abs(operation.getCurrentX() - prevX) > this.errorMargin || Math.abs(operation.getCurrentY() - prevY) > this.errorMargin || Math.abs(operation.getCurrentZ() - prevZ) > this.errorMargin) {
-//                                    setJSONData();
-//                                    System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
-//                                    prevX = operation.getCurrentX();
-//                                    prevY = operation.getCurrentY();
-//                                    prevZ = operation.getCurrentZ();
-//                                }
-//
-//                                try {
-//                                    TimeUnit.MILLISECONDS.sleep(250);
-//                                } catch (InterruptedException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }
-//                        System.out.println("UAV " + this.getUAVInfo().getId() + " is now at (" + operation.getCurrentX() + ", " + operation.getCurrentY() + ", " + operation.getCurrentZ() + ")");
-//                        RemoteEndpoint remote = Websocket.getInstance().getSession().getRemote();
-//                        try {
-//                            Gson gson = new Gson();
-//                            String jsonData = gson.toJson(this.jsonData);
-//                            remote.sendString(jsonData);
-//                        } catch (IOException e) {
-//                            e.printStackTrace();
-//                        }
-//                        System.out.println("Flight plan " + plan.getId() + " completed.");
-//                        System.out.println();
-//                        schedule.remove(0);
-//                    }
-//                }
-//            }
-//        }
-//    }
-
     public void setJSONData(Waypoint startPoint, Waypoint endPoint) {
         jsonData.setTime(Time.getInstance().getRealTime());
         jsonData.setCoordinate(new Coordinate(operation.getCurrentX(), operation.getCurrentY(), operation.getCurrentZ()));
-//        Waypoint startPoint = schedule.get(0).getStartPoint();
         jsonData.setStartPoint(new NodePoint(startPoint.getNodeID(), new Coordinate(startPoint.getX(), startPoint.getY(), startPoint.getZ())));
-//        Waypoint endPoint = schedule.get(0).getEndPoint();
         jsonData.setEndPoint(new NodePoint(endPoint.getNodeID(), new Coordinate(endPoint.getX(), endPoint.getY(), endPoint.getZ())));
         jsonData.setPlanID(flightPlans.get(0).getFlightID());
     }
@@ -222,9 +148,7 @@ public class UAV implements Runnable{
         stopWork = true;
     }
 
-    protected void done() {
-        done = true;
-    }
+    protected void done() { done = true; }
 
     public UAVOperation getOperation() {
         return operation;

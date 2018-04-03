@@ -38,14 +38,6 @@ public class AirspaceStructure {
         return edges.getSize();
     }
 
-//	public void removeNode(EnroutePoint node) {
-//		List<EnroutePoint> deleteCandidates = new ArrayList<EnroutePoint>();
-//		deleteCandidates.add(node);
-//		for (EnroutePoint deleteCandidate : deleteCandidates) {
-//			edges.remove(deleteCandidate);
-//		 }
-//	}
-
     public WPMap getNodes(){
         return nodes;
     }

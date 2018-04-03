@@ -1,4 +1,4 @@
-package websocket.simple_v2.encoder;
+package websocket.servers.encoder;
 
 import uav.UAV;
 

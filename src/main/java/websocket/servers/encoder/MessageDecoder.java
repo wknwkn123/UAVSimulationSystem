@@ -1,4 +1,4 @@
-package websocket.simple_v2.encoder;
+package websocket.servers.encoder;
 
 import com.google.gson.Gson;
 import uav.uav_json_encoder.UAVJSON;
