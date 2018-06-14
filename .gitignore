@@ -1,18 +1,42 @@
-/bin/
-target/
+# Client
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+client/node_modules
+client/semantic/*
+
+# testing
+client/coverage
+
+# production
+client/build
+
+# misc
+client/.DS_Store
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+server/bin/
+server/target/
 
 # General
-.DS_Store
-.AppleDouble
-.LSOverride
-.class
+server/.DS_Store
+server/.AppleDouble
+server/.LSOverride
+server/.class
 
 # Icon must end with two \r
-Icon
+server/Icon
 
 
 # Thumbnails
-._*
+server/._*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -42,79 +66,79 @@ misc.xml
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
+server/.idea/**/workspace.xml
+server/.idea/**/tasks.xml
+server/.idea/dictionaries
 
 # Sensitive or high-churn files:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
+server/.idea/**/dataSources/
+server/.idea/**/dataSources.ids
+server/.idea/**/dataSources.xml
+server/.idea/**/dataSources.local.xml
+server/.idea/**/sqlDataSources.xml
+server/.idea/**/dynamic.xml
+server/.idea/**/uiDesigner.xml
 
 # Gradle:
-.idea/**/gradle.xml
-.idea/**/libraries
+server/.idea/**/gradle.xml
+server/.idea/**/libraries
 
 # CMake
-cmake-build-debug/
+server/cmake-build-debug/
 
 # Mongo Explorer plugin:
-.idea/**/mongoSettings.xml
+server/.idea/**/mongoSettings.xml
 
 ## File-based project format:
-*.iws
+server/*.iws
 
 ## Plugin-specific files:
 
 # IntelliJ
-/out/
+server/out/
 
 # mpeltonen/sbt-idea plugin
-.idea_modules/
+server/.idea_modules/
 
 # JIRA plugin
-atlassian-ide-plugin.xml
+server/atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-.idea/replstate.xml
+server/.idea/replstate.xml
 
 # Ruby plugin and RubyMine
-/.rakeTasks
+server/.rakeTasks
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+server/com_crashlytics_export_strings.xml
+server/crashlytics.properties
+server/crashlytics-build.properties
+server/fabric.properties
 
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-*.iml
-modules.xml
-*.idea/misc.xml
-.idea/workspace.xml
-*.ipr
+server/*.iml
+server/modules.xml
+server/*.idea/misc.xml
+server/.idea/workspace.xml
+server/*.ipr
 
 # Sonarlint plugin
-.idea/sonarlint
+server/.idea/sonarlint
 
 ### Java ###
 # Compiled class file
-*.class
+server/*.class
 
 # Log file
-*.log
+server/*.log
 
 # BlueJ files
-*.ctxt
+server/*.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+server/.mtj.tmp/
 
 # Package Files #
 *.jar
@@ -125,7 +149,7 @@ modules.xml
 *.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+server/hs_err_pid*
 
 
 # End of https://www.gitignore.io/api/java,intellij
