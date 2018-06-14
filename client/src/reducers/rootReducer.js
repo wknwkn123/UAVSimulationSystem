@@ -1,13 +1,17 @@
 import { combineReducers } from 'redux'
 
-import map from './mapReducer'
+import location from './locationReducer'
+import node from './nodeReducer'
+import edge from './edgeReducer'
 import file from './fileReducer'
 import uav from './uavReducer'
-import param from './paramReducer'
+import ui from './uiReducer'
 
 export default combineReducers({
-    map,
-    uav,
-    file,
-    param
+  location,
+  node,
+  edge,
+  file,
+  uav,
+  ui
 })

@@ -1,0 +1,49 @@
+.table-header,
+.table-content {
+  width: 90% !important;
+  margin: 0 auto 0px auto !important;
+}
+
+.table-content {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.table-header {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+tr > td {
+  padding: 1px !important;
+  font-size: 0.875em !important;
+}
+
+.option-button {
+  padding: 5px !important;
+}
+
+.option-container {
+  padding-bottom: 2px !important;
+}
+
+.uav-table-cell {
+  padding: 0px !important;
+  font-size: 1em !important;
+  height: 15px !important;
+  margin: 0px !important;
+}
+
+.uav-table-cell .ui.small.progress {
+  margin: 4px !important;
+}
+
+.uav-table-cell .ui.small.progress div.progress {
+  background: rgba(0, 0, 0, 0);
+}
+
+.option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
