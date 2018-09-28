@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<!-- websockets.html -->
+<input id="input" type="text" />
+<button onclick="send()">Send</button>
+<pre id="output"></pre>
+<script>
+	var input = document.getElementById("input");
+	var output = document.getElementById("output");
+	console.log('tart connect');
+	var socket = new WebSocket("ws://10.25.200.80:9001/");//10.25.200.80:9000
+
+	socket.onopen = function () {
+		output.innerHTML += "Status: Connected\n";
+	};
+
+	var count = 0;
+	socket.onmessage = function (e) {
+		console.log(e.data + "\t" + ++count);
+		//count++
+		//output.innerHTML += "Server: " + e.data + "\t"+count+"\n";
+	};
+
+	function send() {
+		socket.send(input.value);
+		input.value = "";
+	}
+</script>
+
+</body>
+</html>
