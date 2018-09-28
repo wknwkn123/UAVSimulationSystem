@@ -1,0 +1,29 @@
+.mapboxgl-popup-content {
+  padding: 5px !important;
+}
+
+.info-popup-outer {
+  width: 120px !important;
+  font-size: 0.875em !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-width: 1px !important;
+  padding: 5px !important;
+}
+
+.info-popup-main {
+  flex: 0.9;
+  width: 100%;
+  height: 100%;
+  padding: 2px !important;
+  text-align: left;
+}
+
+.info-popup-main p {
+  margin: 1px 0px !important;
+  font-size: 14px !important;
+  font-weight: normal;
+}
