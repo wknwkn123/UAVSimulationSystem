@@ -1,15 +1,22 @@
-UAV_Simulation
+UAV Simulation Sysstem
 
-Services
+  Main Services
 
-Client
+    WebService
+      Web React Client and Node Webserver
 
-Web Server
+    MapBuilder
+      Uav Waypoint Map and Flight path generation ervice
 
-MapBuilder
+    Simulator
+      Simulate Ffying UAV's Acoording to the received flight paths from 'MapBuilder' service.
+      Produze drone Data to a Kafka Topic.
 
-Simulator
+    Consumer
+      Consumes data from Kafka Topin on request of Web Client.
 
-Consumer
-
-KafkaBroker
+    KafkaBroker
+      Dockerized Kafka Message Broker.
+      Zookeeper to manage Kafka Services.
+ 
+ Please refer the README.md files inside each service to setup.
