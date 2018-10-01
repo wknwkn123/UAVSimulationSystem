@@ -29,10 +29,10 @@ export const RANDOM = 'RANDOM'
 
 export const START_SIMULATION_JSON = {
   simulationStart: 'start',
-  simulationParameter: {
-    airspaceType: PLANAR_GRAPH,
-    flightScheduleType: RANDOM
-  }
+  // simulationParameter: {
+  //   airspaceType: PLANAR_GRAPH,
+  //   flightScheduleType: RANDOM
+  // }
 }
 
 export const STOP_SIMULATION = {

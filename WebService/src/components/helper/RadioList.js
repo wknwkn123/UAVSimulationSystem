@@ -19,6 +19,7 @@ class RadioList extends Component {
   }
 
   handleChange = (e, { value }) => {
+    this.setState({ value });
     this.props.onChange && this.props.onChange(value)
   }
 

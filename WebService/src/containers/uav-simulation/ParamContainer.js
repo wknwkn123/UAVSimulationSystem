@@ -30,8 +30,8 @@ class ParamContainer extends Component {
   handleParamClick = () => {
     const { type } = this.props.param
     switch (type) {
-      case 'start':{
-        //sending param to flight planning server is at componentss/websssockets/Webssocket.js
+      case 'start': {
+        //sending param to flight planning server is at containerss/uav-ssimulation/UAVWebsocket.js
         //this.props.doSendFlightParams && this.props.doSendFlightParams()
         this.props.onSendParam('stop', this.state)
       }
@@ -45,7 +45,8 @@ class ParamContainer extends Component {
   }
 
   handleChange = key => value => {
-    this.setState({ [key]: value })
+    this.setState({ [key]: value }, () => {
+    })
   }
 
   renderParamComponent = param => {
@@ -102,7 +103,7 @@ class ParamContainer extends Component {
           size='tiny'
           color={type === 'start' ? 'black' : 'green'}
           className={'param-button'}
-          onClick={this.handleParamClick}
+          onClick={() => this.handleParamClick()}
         >
           {type === 'start' ? 'Stop' : 'Start'}
         </Button>

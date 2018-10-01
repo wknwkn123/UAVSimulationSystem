@@ -41,7 +41,8 @@ class UAV_Websocket extends Component {
     const { data, type } = nextProps.param
     switch (type) {
       case 'start':
-        this.sendStartParam()
+        //console.log('data tesst', data);
+        this.sendStartParam(data)
         break
       case 'stop':
         this.sendStopParam()
@@ -51,10 +52,10 @@ class UAV_Websocket extends Component {
     }
   }
 
-  sendStartParam = (config = {}) => {
-    const param = { ...CONSTANT.START_SIMULATION_JSON, ...config }
+  sendStartParam = (config)=> {
+    const param = { ...CONSTANT.START_SIMULATION_JSON, simulationParameter : { ...config}}
+    //console.log('param : ', param)
     this. sendParamsPOST(param)
-    //console.log('sending start to ws', param)
     this.state.ws.send(param)
   }
 
@@ -62,7 +63,7 @@ class UAV_Websocket extends Component {
 
     console.log('sending start to HTTP Server', param)
 
-    fetch(BASE_URL + URL.FLIGHT_PARAMS, {
+    fetch(BASE_URL+URL.FLIGHT_PARAMS, {
       method: POST,
       body: JSON.stringify(param)
     })
@@ -73,7 +74,7 @@ class UAV_Websocket extends Component {
       .catch(error => {
         console.log(error)
       })
-}
+  }
 
   sendStopParam = (config = {}) => {
     const param = { ...CONSTANT.STOP_SIMULATION, ...config }
