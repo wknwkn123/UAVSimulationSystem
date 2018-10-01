@@ -11,7 +11,7 @@ public class FlightConfiguration {
     private String airspaceType;
     private String flightScheduleType;
     private int numberOfUAVs = 0;
-    private int numberOfFlights = 10;
+    private int numberOfFlights = 0;
     private int simulationRate;
 
     public FlightConfiguration(Simulation param) {
@@ -19,6 +19,7 @@ public class FlightConfiguration {
         this.flightScheduleType = param.getParameter().getFlightScheduleType();
         this.simulationRate = param.getParameter().getSimulationRate();
         this.averageSpeed = param.getParameter().getAverageSpeed();
+        this.numberOfFlights = param.getParameter().getUAV();
     }
 
     public double getCoordinateDifferenceAllowed() {

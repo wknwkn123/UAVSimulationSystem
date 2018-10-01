@@ -71,11 +71,10 @@ class StartHandle implements HttpHandler {
 
             String jsonString = IOUtils.toString(reader);
             //String jsonString = "{\"simulationStart\":\"start\",\"simulationParameter\":{\"airspaceType\":\"PLANARGRAPH\",\"flightScheduleType\":\"RANDOM\"}}";
-            System.out.print(jsonString);
+            System.out.println(jsonString);
 
             //Starting Simulation
             Gson gson = new Gson();
-            System.out.print(gson.toJson(jsonString).toString());
             Simulation parameter = gson.fromJson(jsonString, Simulation.class);
 
             FlightGenerationApp simApp = new FlightGenerationApp(parameter);

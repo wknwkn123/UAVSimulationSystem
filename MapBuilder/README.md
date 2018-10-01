@@ -1,6 +1,11 @@
-Core modules for UAV Flight Simulation
+Map Builder Service for UAV Ssimulation
+
+This REST interface for this service is on  port 8080.
+
+Setup:
+    Import project to your IDE using maven.
+
+Run:
+    Main Class : 'flightEngine.Main'
 
 
-* Dependency
-
-To parse json file, go to [http://mvnrepository.com/artifact/org.json/json], download the 20171018 version of jar file. Then add it to the project (the actural way to do this is IDE-dependent).

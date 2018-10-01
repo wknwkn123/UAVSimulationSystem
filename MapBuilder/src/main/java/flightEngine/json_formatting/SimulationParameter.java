@@ -5,6 +5,7 @@ public class SimulationParameter {
     private String flightScheduleType;
     private double averageSpeed;
     private int simulationRate;
+    private int UAV;
 
     public String getAirspaceType() {
         return airspaceType;
@@ -36,6 +37,14 @@ public class SimulationParameter {
 
     public void setSimulationRate(int simulationRate) {
         this.simulationRate = simulationRate;
+    }
+
+    public int getUAV() {
+        return UAV;
+    }
+
+    public void setUAV(int UAV) {
+        this.UAV = UAV;
     }
 }
 
