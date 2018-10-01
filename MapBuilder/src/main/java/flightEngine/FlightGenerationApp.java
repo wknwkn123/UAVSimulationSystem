@@ -1,9 +1,9 @@
 package flightEngine;
 
 import airspaceEngine.AirspaceEngine;
-import collisionAvoidanceEngine.flightplan.Flight;
 import com.google.gson.Gson;
 import config.Config;
+import flightPlan.Flight;
 import flightPlan.FlightPlanEngine;
 import flightPlan.Flight_JSON;
 import org.eclipse.jetty.client.HttpClient;
