@@ -4,30 +4,30 @@ Setup dockerized Kafka Service
 
 1. Run Zookeeper
 
-    docker run -d \
-    --name zookeeper \
-    -p 2181:2181 \
-    jplock/zookeeper
+        docker run -d \
+        --name zookeeper \
+        -p 2181:2181 \
+        jplock/zookeeper
 
 2. Run Kafka Service
 
-    docker run -d \
-    --name kafka \
-    -p 7203:7203 \
-    -p 9092:9092 \
-    -e KAFKA_ADVERTISED_HOST_NAME=155.69.150.28 \
-    -e ZOOKEEPER_IP=155.69.150.28 \
-    ches/kafka
+        docker run -d \
+        --name kafka \
+        -p 7203:7203 \
+        -p 9092:9092 \
+        -e KAFKA_ADVERTISED_HOST_NAME=155.69.150.28 \
+        -e ZOOKEEPER_IP=155.69.150.28 \
+        ches/kafka
 
  3. Create topic
 
-    docker run \
-    --rm ches/kafka kafka-topics.sh \
-    --create \
-    --topic mavz \
-    --replication-factor 1 \
-    --partitions 1 \
-    --zookeeper 155.69.150.28:2181
+        docker run \
+        --rm ches/kafka kafka-topics.sh \
+        --create \
+        --topic mavz \
+        --replication-factor 1 \
+        --partitions 1 \
+        --zookeeper 155.69.150.28:2181
 
 4. Test Services
   4.1 List topics
